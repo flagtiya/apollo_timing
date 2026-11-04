@@ -1,0 +1,56 @@
+{
+  "analyzer_sha256": "f8d2ece356f88caea434a7b09a9c3a14029a3f185f295bfb2952c718dde6dc01",
+  "arms": [
+    "baseline",
+    "phase_grid13",
+    "retained_budget",
+    "f1_zero",
+    "f1_width_broad"
+  ],
+  "date": "2026-10-08",
+  "de421_sha256": "a20a7139da04cbc462454634918e9a9ca69127044e2cc9d4f9c16e238d2deedc",
+  "original_par_sha256": "77148abcfee6ac2314d1d65131edd48081ba53c39a5e645a16cc2da7b46ab1b1",
+  "plan": "${EXTERNAL_RESOURCE}",
+  "prefix_manifest_sha256": "73ee2ecdaf334e14f5eff64005da6d999c4b00c88401390748f9c2ca1c303ec1",
+  "reference_used_only_after_inference": true,
+  "runner_sha256": "db9893b26bcb5c739df353f75abd6661f643a00870a22619cdbc6bbd7e4e42cb",
+  "schedule": [
+    0.1,
+    0.05,
+    0.02,
+    0.01,
+    0.005,
+    0.002,
+    0.001,
+    0.0005,
+    0.0002,
+    0.0001,
+    0.0
+  ],
+  "single_thread_environment": {
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "source_sha256": "3d80867a913edb633c77f044e9fa480249fbf42c219eb027b7a11dea0bf7d821",
+  "tasks": [
+    "${BUNDLE}/recorded/control_archive/tasks/n17_baseline.json",
+    "${BUNDLE}/recorded/control_archive/tasks/n17_phase_grid13.json",
+    "${BUNDLE}/recorded/control_archive/tasks/n17_retained_budget.json",
+    "${BUNDLE}/recorded/control_archive/tasks/n17_f1_zero.json",
+    "${BUNDLE}/recorded/control_archive/tasks/n17_f1_width_broad.json",
+    "${BUNDLE}/recorded/control_archive/tasks/n18_baseline.json",
+    "${BUNDLE}/recorded/control_archive/tasks/n18_phase_grid13.json",
+    "${BUNDLE}/recorded/control_archive/tasks/n18_retained_budget.json",
+    "${BUNDLE}/recorded/control_archive/tasks/n18_f1_zero.json",
+    "${BUNDLE}/recorded/control_archive/tasks/n18_f1_width_broad.json",
+    "${BUNDLE}/recorded/control_archive/tasks/n19_baseline.json",
+    "${BUNDLE}/recorded/control_archive/tasks/n19_phase_grid13.json",
+    "${BUNDLE}/recorded/control_archive/tasks/n19_retained_budget.json",
+    "${BUNDLE}/recorded/control_archive/tasks/n19_f1_zero.json",
+    "${BUNDLE}/recorded/control_archive/tasks/n19_f1_width_broad.json"
+  ],
+  "timeout_seconds": 3600
+}

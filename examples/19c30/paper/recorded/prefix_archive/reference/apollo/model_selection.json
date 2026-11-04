@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "architecture": "apollo_blind_orbit_discovery_plus_phase_lattice_solver",
+  "selected_family": "ell1",
+  "discovery_error": null,
+  "blind_discovery": null,
+  "binary_candidate_attempts": [],
+  "binary_model_selection": null,
+  "isolated_update_model_selection": null
+}

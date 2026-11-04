@@ -1,0 +1,16 @@
+case_id,session_count,arm,status,status_reason,expected_toa_count,initial_par_f1,qualified_accepted_candidates,qualified_distinct_accepted_paths,qualified_reference_matching_paths,wall_seconds,timeout,user_cpu_seconds,system_cpu_seconds,max_rss_kib
+n17_baseline,17,baseline,completed,all emitted models have solver results; acceptance is reported separately,72,-2.5785972142075262648e-14,1,1,1,659.704028291,False,654.954877,1.236231,259712
+n17_phase_grid13,17,phase_grid13,completed,all emitted models have solver results; acceptance is reported separately,72,-2.5785972142075262648e-14,1,1,1,615.678770255,False,612.509888,0.668172,260504
+n17_retained_budget,17,retained_budget,completed,all emitted models have solver results; acceptance is reported separately,72,-2.5785972142075262648e-14,1,1,1,927.1929181650003,False,923.871099,0.696198,261056
+n17_f1_zero,17,f1_zero,completed,all emitted models have solver results; acceptance is reported separately,72,0,1,1,1,666.3031622640001,False,662.933927,0.752265,262904
+n17_f1_width_broad,17,f1_width_broad,completed,all emitted models have solver results; acceptance is reported separately,72,-2.5785972142075262648e-14,1,1,1,585.8416829750004,False,582.402745,0.7319019999999999,262848
+n18_baseline,18,baseline,completed,all emitted models have solver results; acceptance is reported separately,76,-2.5785972142075262648e-14,1,1,1,735.162793813,False,733.048114,0.380224,262204
+n18_phase_grid13,18,phase_grid13,completed,all emitted models have solver results; acceptance is reported separately,76,-2.5785972142075262648e-14,1,1,1,680.88799257,False,679.20826,0.17607,266208
+n18_retained_budget,18,retained_budget,completed,all emitted models have solver results; acceptance is reported separately,76,-2.5785972142075262648e-14,1,1,1,1080.179053787,False,1078.447873,0.248138,260996
+n18_f1_zero,18,f1_zero,completed,all emitted models have solver results; acceptance is reported separately,76,0,1,1,1,746.6195963949999,False,744.917577,0.17210999999999999,262732
+n18_f1_width_broad,18,f1_width_broad,completed,all emitted models have solver results; acceptance is reported separately,76,-2.5785972142075262648e-14,2,2,1,643.7925431829999,False,641.877342,0.20005499999999998,260880
+n19_baseline,19,baseline,completed,all emitted models have solver results; acceptance is reported separately,80,-2.5785972142075262648e-14,1,1,1,755.575843406,False,753.319807,0.300188,262260
+n19_phase_grid13,19,phase_grid13,completed,all emitted models have solver results; acceptance is reported separately,80,-2.5785972142075262648e-14,1,1,1,688.910052781,False,687.025429,0.232072,266468
+n19_retained_budget,19,retained_budget,completed,all emitted models have solver results; acceptance is reported separately,80,-2.5785972142075262648e-14,1,1,1,1062.763035906,False,1061.111509,0.20011199999999998,267084
+n19_f1_zero,19,f1_zero,completed,all emitted models have solver results; acceptance is reported separately,80,0,1,1,1,765.1930228370002,False,763.236935,0.22411399999999998,262912
+n19_f1_width_broad,19,f1_width_broad,completed,all emitted models have solver results; acceptance is reported separately,80,-2.5785972142075262648e-14,1,1,1,655.9246213239999,False,653.750497,0.23605199999999998,263360

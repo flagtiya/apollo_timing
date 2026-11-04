@@ -1,0 +1,475 @@
+{
+  "accepted_path_groups": [
+    {
+      "candidate_indices": [
+        0
+      ],
+      "path_group": "accepted_0000",
+      "tim_artifacts": [
+        "${BUNDLE}/recorded/control_archive/runs/n19_phase_grid13/blind_binary_candidates/blind_ell1_000/candidates/candidate_0000/solution.tim"
+      ],
+      "toa_count": 80
+    }
+  ],
+  "candidates": [
+    {
+      "accepted": true,
+      "active_bounds": [],
+      "annealed_total_chi2": 138.32637409387496,
+      "candidate_id": "candidate_0000",
+      "chi2": 138.32645877068308,
+      "conflicting_copies": false,
+      "destination_cell_id": "C000008",
+      "diagnostics": {
+        "annealing": {
+          "checkpoint": "${BUNDLE}/recorded/control_archive/runs/n19_phase_grid13/blind_binary_candidates/blind_ell1_000/checkpoints/annealing/0000_C000008_-1_-1.json",
+          "completed_schedule": true,
+          "failure_reason": null,
+          "final_trace": {
+            "converged": true,
+            "function_evaluations": 10,
+            "integer_offsets": [
+              659,
+              662,
+              678,
+              701,
+              877,
+              959,
+              994,
+              1007,
+              1012,
+              1028,
+              1052,
+              1085,
+              1121,
+              1145,
+              1177,
+              1224,
+              1283,
+              1311
+            ],
+            "lattice_log_likelihood": -54.14988372795557,
+            "lattice_log_mass_increment": 0.0,
+            "lattice_mass_converged": true,
+            "lattice_strict_score": 138.3263967195994,
+            "lattice_visited_nodes": 6501,
+            "normalized_values": [
+              -0.029776271360834283,
+              0.4243642565377228,
+              0.0011752392660671386,
+              -0.0001528641320385115,
+              -0.009164093084483193,
+              -0.0047508400890173535,
+              0.0012221888965227266,
+              0.2796840464210397,
+              0.022752289891421255
+            ],
+            "phase_chi2": 21.12668631748738,
+            "phase_sigma_cycles": 0.0,
+            "shape_chi2": 117.19968777638758,
+            "total_chi2": 138.32637409387496
+          },
+          "interpretation": "Trace lattice log_likelihood is not path-level model evidence.",
+          "mode_converged": true,
+          "phase_chi2": 21.12668631748738,
+          "shape_chi2": 117.19968777638758,
+          "total_chi2": 138.32637409387496
+        },
+        "conditional_modes": [
+          {
+            "cell_id": "C000008",
+            "lattice_log_mass_increment": 0.44352732807685635,
+            "lattice_mass_converged": false,
+            "lattice_visited_nodes": 14747,
+            "log_likelihood": -83.76849303894987,
+            "posterior_weight": 0.0327870050650377,
+            "strict_score": 93.176197295067
+          }
+        ],
+        "scientific_contract": {
+          "cell_shape_pruning": "forbidden",
+          "fit_parameters": [
+            "RAJ",
+            "DECJ",
+            "F0",
+            "F1",
+            "PB",
+            "A1",
+            "TASC",
+            "EPS1",
+            "EPS2"
+          ],
+          "global_optimum_claim": "Finite all-cell and posterior-beam search; no exhaustive-global claim.",
+          "historical_solution_seed": "forbidden",
+          "manual_integer_wrap": "forbidden",
+          "orbital_cycle_cell_policy": "all cells must be searched",
+          "parameter_expansion": "disabled",
+          "prohibited_automatic_parameters": [
+            "PBDOT",
+            "EPS1DOT",
+            "EPS2DOT"
+          ],
+          "source_class_prior": "forbidden"
+        },
+        "solver_config": {
+          "annealed_chi2_window": 2000.0,
+          "annealing": {
+            "beam_size": 4,
+            "coordinate_prior_sigma": 0.2,
+            "finite_difference_step": 2e-05,
+            "lattice": {
+              "added_session_phase_sigma_cycles": 0.0,
+              "initial_lattice_candidates": 32,
+              "lattice_log_mass_tolerance": 1e-06,
+              "maximum_lattice_candidates": 128,
+              "maximum_lattice_nodes": 1000000
+            },
+            "maximum_closure_evaluations": 300,
+            "paths_per_state": 3,
+            "phase_sigma_schedule": [
+              0.1,
+              0.05,
+              0.02,
+              0.01,
+              0.005,
+              0.002,
+              0.001,
+              0.0005,
+              0.0002,
+              0.0001,
+              0.0
+            ]
+          },
+          "astrometric_bound_arcsec": 300.0,
+          "cell_search": {
+            "fast_prior_sigma": 0.75,
+            "fast_shape_maximum_evaluations": 60,
+            "finite_difference_step": 2e-05,
+            "lattice": {
+              "added_session_phase_sigma_cycles": 0.05,
+              "initial_lattice_candidates": 32,
+              "lattice_log_mass_tolerance": 1e-05,
+              "maximum_lattice_candidates": 128,
+              "maximum_lattice_nodes": 500000
+            },
+            "local_integer_radius": 0,
+            "modes_per_cell": 32,
+            "orbital_samples_per_cell": 2,
+            "phase_samples": 13
+          },
+          "conditional_score_window": 2000.0,
+          "disk_reload_chi2_tolerance": 0.01,
+          "fit_iterations": 10,
+          "maximum_cell_width": 0.25,
+          "maximum_modes_to_anneal": 24,
+          "maximum_modes_to_certify": 16,
+          "minimum_eccentricity_half_width": 0.005,
+          "minimum_f1_half_width": 1e-10,
+          "strict_reduced_chi2_threshold": 20.0,
+          "support_width_scale": 1.0,
+          "target_reduced_chi2_threshold": 10.0
+        }
+      },
+      "disk_reload_chi2": 138.3273957463452,
+      "disk_reload_chi2_delta": 0.0009369756621140368,
+      "error": null,
+      "integer_offsets": [
+        659,
+        662,
+        678,
+        701,
+        877,
+        959,
+        994,
+        1007,
+        1012,
+        1028,
+        1052,
+        1085,
+        1121,
+        1145,
+        1177,
+        1224,
+        1283,
+        1311
+      ],
+      "numerical_fit_completed": true,
+      "path_group": "accepted_0000",
+      "pulse_path_error": null,
+      "reason": null,
+      "record_index": 0,
+      "reduced_chi2": 1.9760922681526154,
+      "reference_comparison": {
+        "agrees_modulo_global_integer": true,
+        "available": true,
+        "candidate_coverage_complete": true,
+        "candidate_toas": 80,
+        "global_integer_offset": "166.0",
+        "matched_toas": 80,
+        "reason": "agrees",
+        "reference_toas": 96
+      },
+      "run_fingerprint": "43638de08c3db025466ff1791ecfe58a54a7f05c3f689549183fbdb11b3f7993",
+      "source_cell_id": "C000008",
+      "source_portfolios": [
+        "${BUNDLE}/recorded/control_archive/runs/n19_phase_grid13/blind_binary_candidates/blind_ell1_000/candidate_portfolio.json"
+      ],
+      "support_boundary_hit": false,
+      "support_valid": true,
+      "target_reached": true,
+      "tim": "${BUNDLE}/recorded/control_archive/runs/n19_phase_grid13/blind_binary_candidates/blind_ell1_000/candidates/candidate_0000/solution.tim",
+      "weighted_rms_us": 4.661970972663624
+    },
+    {
+      "accepted": false,
+      "active_bounds": [],
+      "annealed_total_chi2": 1523.715695963282,
+      "candidate_id": "candidate_0001",
+      "chi2": 1523.7145253246488,
+      "conflicting_copies": false,
+      "destination_cell_id": "C000008",
+      "diagnostics": {
+        "annealing": {
+          "checkpoint": "${BUNDLE}/recorded/control_archive/runs/n19_phase_grid13/blind_binary_candidates/blind_ell1_000/checkpoints/annealing/0000_C000008_-1_-1.json",
+          "completed_schedule": true,
+          "failure_reason": null,
+          "final_trace": {
+            "converged": true,
+            "function_evaluations": 13,
+            "integer_offsets": [
+              -2555,
+              -2595,
+              -2626,
+              -2709,
+              -2649,
+              -2620,
+              -2659,
+              -2722,
+              -2738,
+              -2741,
+              -2710,
+              -2639,
+              -2540,
+              -2478,
+              -2397,
+              -2272,
+              -2140,
+              -2038
+            ],
+            "lattice_log_likelihood": -54.14988027200491,
+            "lattice_log_mass_increment": 0.0,
+            "lattice_mass_converged": true,
+            "lattice_strict_score": 857.0117659859275,
+            "lattice_visited_nodes": 6625,
+            "normalized_values": [
+              -0.03023519132868879,
+              0.42417599468767514,
+              0.0010762790814381699,
+              0.010386133704484109,
+              0.0033979230838539327,
+              0.057232644748882955,
+              -0.11450713338223456,
+              0.9152270902564967,
+              -0.9030719400376194
+            ],
+            "phase_chi2": 1023.9258223779207,
+            "phase_sigma_cycles": 0.0,
+            "shape_chi2": 499.7898735853613,
+            "total_chi2": 1523.715695963282
+          },
+          "interpretation": "Trace lattice log_likelihood is not path-level model evidence.",
+          "mode_converged": true,
+          "phase_chi2": 1023.9258223779207,
+          "shape_chi2": 499.7898735853613,
+          "total_chi2": 1523.715695963282
+        },
+        "conditional_modes": [
+          {
+            "cell_id": "C000008",
+            "lattice_log_mass_increment": 0.44352732807685635,
+            "lattice_mass_converged": false,
+            "lattice_visited_nodes": 14747,
+            "log_likelihood": -83.76849303894987,
+            "posterior_weight": 0.0327870050650377,
+            "strict_score": 93.176197295067
+          }
+        ],
+        "scientific_contract": {
+          "cell_shape_pruning": "forbidden",
+          "fit_parameters": [
+            "RAJ",
+            "DECJ",
+            "F0",
+            "F1",
+            "PB",
+            "A1",
+            "TASC",
+            "EPS1",
+            "EPS2"
+          ],
+          "global_optimum_claim": "Finite all-cell and posterior-beam search; no exhaustive-global claim.",
+          "historical_solution_seed": "forbidden",
+          "manual_integer_wrap": "forbidden",
+          "orbital_cycle_cell_policy": "all cells must be searched",
+          "parameter_expansion": "disabled",
+          "prohibited_automatic_parameters": [
+            "PBDOT",
+            "EPS1DOT",
+            "EPS2DOT"
+          ],
+          "source_class_prior": "forbidden"
+        },
+        "solver_config": {
+          "annealed_chi2_window": 2000.0,
+          "annealing": {
+            "beam_size": 4,
+            "coordinate_prior_sigma": 0.2,
+            "finite_difference_step": 2e-05,
+            "lattice": {
+              "added_session_phase_sigma_cycles": 0.0,
+              "initial_lattice_candidates": 32,
+              "lattice_log_mass_tolerance": 1e-06,
+              "maximum_lattice_candidates": 128,
+              "maximum_lattice_nodes": 1000000
+            },
+            "maximum_closure_evaluations": 300,
+            "paths_per_state": 3,
+            "phase_sigma_schedule": [
+              0.1,
+              0.05,
+              0.02,
+              0.01,
+              0.005,
+              0.002,
+              0.001,
+              0.0005,
+              0.0002,
+              0.0001,
+              0.0
+            ]
+          },
+          "astrometric_bound_arcsec": 300.0,
+          "cell_search": {
+            "fast_prior_sigma": 0.75,
+            "fast_shape_maximum_evaluations": 60,
+            "finite_difference_step": 2e-05,
+            "lattice": {
+              "added_session_phase_sigma_cycles": 0.05,
+              "initial_lattice_candidates": 32,
+              "lattice_log_mass_tolerance": 1e-05,
+              "maximum_lattice_candidates": 128,
+              "maximum_lattice_nodes": 500000
+            },
+            "local_integer_radius": 0,
+            "modes_per_cell": 32,
+            "orbital_samples_per_cell": 2,
+            "phase_samples": 13
+          },
+          "conditional_score_window": 2000.0,
+          "disk_reload_chi2_tolerance": 0.01,
+          "fit_iterations": 10,
+          "maximum_cell_width": 0.25,
+          "maximum_modes_to_anneal": 24,
+          "maximum_modes_to_certify": 16,
+          "minimum_eccentricity_half_width": 0.005,
+          "minimum_f1_half_width": 1e-10,
+          "strict_reduced_chi2_threshold": 20.0,
+          "support_width_scale": 1.0,
+          "target_reduced_chi2_threshold": 10.0
+        }
+      },
+      "disk_reload_chi2": 1523.7280513364788,
+      "disk_reload_chi2_delta": 0.013526011829981144,
+      "error": null,
+      "integer_offsets": [
+        -2555,
+        -2595,
+        -2626,
+        -2709,
+        -2649,
+        -2620,
+        -2659,
+        -2722,
+        -2738,
+        -2741,
+        -2710,
+        -2639,
+        -2540,
+        -2478,
+        -2397,
+        -2272,
+        -2140,
+        -2038
+      ],
+      "numerical_fit_completed": true,
+      "path_group": "rejected_0000",
+      "pulse_path_error": null,
+      "reason": null,
+      "record_index": 1,
+      "reduced_chi2": 21.767350361780696,
+      "reference_comparison": {
+        "available": false,
+        "reason": "rejected_candidate_not_compared"
+      },
+      "run_fingerprint": "43638de08c3db025466ff1791ecfe58a54a7f05c3f689549183fbdb11b3f7993",
+      "source_cell_id": "C000008",
+      "source_portfolios": [
+        "${BUNDLE}/recorded/control_archive/runs/n19_phase_grid13/blind_binary_candidates/blind_ell1_000/candidate_portfolio.json"
+      ],
+      "support_boundary_hit": false,
+      "support_valid": true,
+      "target_reached": false,
+      "tim": "${BUNDLE}/recorded/control_archive/runs/n19_phase_grid13/blind_binary_candidates/blind_ell1_000/candidates/candidate_0001/solution.tim",
+      "weighted_rms_us": 15.47279385535845
+    }
+  ],
+  "counts": {
+    "accepted_candidates": 1,
+    "accepted_reference_agreements": 1,
+    "attempted_numerical_fits": 2,
+    "completed_numerical_fits": 2,
+    "conflicting_candidate_copies": 0,
+    "distinct_accepted_paths": 1,
+    "distinct_rejected_paths": 1,
+    "failed_numerical_fits": 0,
+    "portfolio_files": 1,
+    "raw_candidate_records": 2,
+    "rejected_candidates": 1,
+    "rejected_paths_distinct_from_accepted": 1,
+    "unavailable_accepted_paths": 0,
+    "unavailable_rejected_paths": 0
+  },
+  "interpretation": "Post-inference counts in the recorded finite portfolio; no global uniqueness or evidence weights.",
+  "output": "${BUNDLE}/recorded/control_archive/runs/n19_phase_grid13",
+  "provenance": {
+    "analyzer_sha256": "f8d2ece356f88caea434a7b09a9c3a14029a3f185f295bfb2952c718dde6dc01",
+    "artifact_sha256": {
+      "${BUNDLE}/recorded/prefix_archive/reference/apollo/solution.tim": "4fcdf642306692d18ff8b41f9ce1b4ff20bffd6330109d9c6b5e02ff1a79c6d2",
+      "${BUNDLE}/recorded/control_archive/runs/n19_phase_grid13/blind_binary_candidates/blind_ell1_000/audit.json": "c96d3a7a5b459d8569da3168880dfc374396a080307afbb59f3b0f652efdd12b",
+      "${BUNDLE}/recorded/control_archive/runs/n19_phase_grid13/blind_binary_candidates/blind_ell1_000/candidate_portfolio.json": "9f956c36326b1a0fc85ba99a02d7ac5e199377e4b10a7f81e462a6436e9223b9",
+      "${BUNDLE}/recorded/control_archive/runs/n19_phase_grid13/blind_binary_candidates/blind_ell1_000/candidates/candidate_0000/solution.par": "c7f6397e41f00ae3f77c962f9083417bc73bd9ced11e6dd456b68ff002e326aa",
+      "${BUNDLE}/recorded/control_archive/runs/n19_phase_grid13/blind_binary_candidates/blind_ell1_000/candidates/candidate_0000/solution.tim": "4c000c4e907ac31f4b13ac0b0acdd7bbd6f014298544013a7af54ea648b716f4",
+      "${BUNDLE}/recorded/control_archive/runs/n19_phase_grid13/blind_binary_candidates/blind_ell1_000/candidates/candidate_0001/solution.par": "b80807ad8966e1e4b4726a2308f6459849e9c995574caddf8dda2e93dafe15a9",
+      "${BUNDLE}/recorded/control_archive/runs/n19_phase_grid13/blind_binary_candidates/blind_ell1_000/candidates/candidate_0001/solution.tim": "c24fb96a40b5d346e54cf07143a7374f4ca3fb0cad601e538c4ffbee893129d7",
+      "${BUNDLE}/recorded/control_archive/runs/n19_phase_grid13/blind_binary_candidates/blind_ell1_000/checkpoints/annealing/0000_C000008_-1_-1.json": "8f77bef5a711d1c908e5357e1453bea19426426914d8894fbbf58cd788defd01"
+    },
+    "path_equivalence": "Identical complete TOA coverage and one integer global PN offset",
+    "reference_error": null,
+    "reference_tim": "${BUNDLE}/recorded/prefix_archive/reference/apollo/solution.tim",
+    "toa_identity": "name, Decimal frequency, Decimal MJD rounded to 1e-12 day, Decimal error, observatory, duplicate occurrence"
+  },
+  "rejected_path_groups": [
+    {
+      "candidate_indices": [
+        1
+      ],
+      "matches_accepted_path_group": null,
+      "path_group": "rejected_0000",
+      "tim_artifacts": [
+        "${BUNDLE}/recorded/control_archive/runs/n19_phase_grid13/blind_binary_candidates/blind_ell1_000/candidates/candidate_0001/solution.tim"
+      ],
+      "toa_count": 80
+    }
+  ],
+  "schema_version": 1
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "operation": "canonical_tempo2_normalization",
+  "source_tim": {
+    "path": "${BUNDLE}/recorded/prefix_archive/inputs/prefixes/sessions_15_chronological_prefix.tim",
+    "sha256": "3321a8a0eab8fc5a088bf91aa45291044b6157708aaa7f9992f36b1cbdbe479d"
+  },
+  "normalized_tim": {
+    "path": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n15/input.normalized.tim",
+    "sha256": "3321a8a0eab8fc5a088bf91aa45291044b6157708aaa7f9992f36b1cbdbe479d"
+  },
+  "source_tim_was_modified": false
+}

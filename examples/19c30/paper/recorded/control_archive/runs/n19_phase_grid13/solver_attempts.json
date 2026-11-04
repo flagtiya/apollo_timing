@@ -1,0 +1,57 @@
+[
+  {
+    "mode": {
+      "mode_id": "blind_ell1_000",
+      "model_name": "ELL1",
+      "par": "${BUNDLE}/recorded/control_archive/runs/n19_phase_grid13/frozen_discovery_inputs/blind_ell1_000.par",
+      "par_sha256": "ad6fb3601bfabacf3c693a241b2ea98e4fb0c823cbb4f4063ac4ae783faae74e",
+      "parameter_values": {
+        "A1": 23.4647600688036,
+        "ECC": 9.999999999845258e-11,
+        "F0": 189.04722621350035,
+        "F1": 2.997187642473046e-14,
+        "MASS_FUNCTION": 0.0451599445788905,
+        "OM": 5.72957795063197e-09,
+        "PB": 17.526243445761732,
+        "STATE_COVARIANCE_TRACE": 4.676838916100684e-08,
+        "T0": 59362.51413932828
+      },
+      "random_seed": 0
+    },
+    "output": "${BUNDLE}/recorded/control_archive/runs/n19_phase_grid13/blind_binary_candidates/blind_ell1_000",
+    "result": {
+      "accepted": true,
+      "annealed_modes": 4,
+      "certified_modes": 2,
+      "chi2": 138.32645877068308,
+      "disk_reload_chi2": 138.3273957463452,
+      "engine": "mature_ell1_phase_adapted",
+      "fit_parameters": [
+        "RAJ",
+        "DECJ",
+        "F0",
+        "F1",
+        "PB",
+        "A1",
+        "TASC",
+        "EPS1",
+        "EPS2"
+      ],
+      "model_family": "ell1",
+      "model_name": "ELL1",
+      "observation_plan_dir": null,
+      "observation_plan_status": "not_required_qualified_solution",
+      "output_dir": "${BUNDLE}/recorded/control_archive/runs/n19_phase_grid13/blind_binary_candidates/blind_ell1_000",
+      "reduced_chi2": 1.9760922681526154,
+      "residuals_csv": "${BUNDLE}/recorded/control_archive/runs/n19_phase_grid13/blind_binary_candidates/blind_ell1_000/residuals.csv",
+      "residuals_png": "${BUNDLE}/recorded/control_archive/runs/n19_phase_grid13/blind_binary_candidates/blind_ell1_000/residuals.png",
+      "resumed": false,
+      "scientific_status": "not_evaluated",
+      "searched_cells": 18,
+      "solution_par": "${BUNDLE}/recorded/control_archive/runs/n19_phase_grid13/blind_binary_candidates/blind_ell1_000/solution.par",
+      "solution_tim": "${BUNDLE}/recorded/control_archive/runs/n19_phase_grid13/blind_binary_candidates/blind_ell1_000/solution.tim",
+      "target_reached": true,
+      "weighted_rms_us": 4.661970972663624
+    }
+  }
+]

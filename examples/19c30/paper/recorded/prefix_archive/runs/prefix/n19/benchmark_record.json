@@ -1,0 +1,366 @@
+{
+  "accepted": true,
+  "accepted_wrong_path": false,
+  "apollo_result": {
+    "accepted": true,
+    "chi2": 138.32645877068308,
+    "disk_reload_chi2_delta": 0.0009369756621140368,
+    "fit_parameters": [
+      "RAJ",
+      "DECJ",
+      "F0",
+      "F1",
+      "PB",
+      "A1",
+      "TASC",
+      "EPS1",
+      "EPS2"
+    ],
+    "portfolio_counts": {
+      "annealed_modes": 4,
+      "certified_modes": 2,
+      "conditional_modes": 433,
+      "searched_cells": 18,
+      "selected_annealed_modes": 2,
+      "selected_conditional_modes": 1
+    },
+    "reduced_chi2": 1.9760922681526154,
+    "weighted_rms_us": 4.661970972663624
+  },
+  "arm": "blind",
+  "case": {
+    "design": "chronological_prefix",
+    "maximum_gap_days": 604.3383912063509,
+    "seed": null,
+    "selected_session_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "session_count": 19,
+    "toa_count": 80
+  },
+  "case_id": "sessions_19_chronological_prefix",
+  "certification": {
+    "accepted": true,
+    "active_bounds": [],
+    "annealed_phase_chi2": 21.12668631748738,
+    "annealed_shape_chi2": 117.19968777638758,
+    "annealed_total_chi2": 138.32637409387496,
+    "architecture": "apollo_blind_orbit_discovery_plus_phase_lattice_solver",
+    "artifacts": {
+      "par": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n19/solution.par",
+      "residuals_csv": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n19/residuals.csv",
+      "residuals_png": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n19/residuals.png",
+      "tim": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n19/solution.tim"
+    },
+    "blind_orbit_discovery": {
+      "audit": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n19/blind_orbit_discovery/audit.json",
+      "emitted_mode_count": 1,
+      "normalized_tim": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n19/blind_orbit_discovery/input.normalized.tim",
+      "selected_candidate_output": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n19/blind_binary_candidates/blind_ell1_000"
+    },
+    "candidate_id": "candidate_0000",
+    "chi2": 138.32645877068308,
+    "covariance_parameter_names": [
+      "RAJ",
+      "DECJ",
+      "F0",
+      "F1",
+      "PB",
+      "A1",
+      "TASC",
+      "EPS1",
+      "EPS2"
+    ],
+    "destination_cell_id": "C000008",
+    "disk_reload_chi2": 138.3273957463452,
+    "disk_reload_chi2_delta": 0.0009369756621140368,
+    "disk_reload_reduced_chi2": 1.976105653519217,
+    "disk_reload_weighted_rms_us": 4.661986761927588,
+    "engine": "blind_keplerian_discovery_plus_phase_lattice",
+    "fit_parameters": [
+      "RAJ",
+      "DECJ",
+      "F0",
+      "F1",
+      "PB",
+      "A1",
+      "TASC",
+      "EPS1",
+      "EPS2"
+    ],
+    "fitted_parameters": {
+      "A1": 23.447645645726446,
+      "DECJ": -12.256105439224726,
+      "EPS1": -2.5674801236386844e-05,
+      "EPS2": 6.604700603751157e-06,
+      "F0": 189.04723947771473,
+      "F1": -3.0276572616336145e-16,
+      "PB": 17.526125706938593,
+      "RAJ": 19.20958259778634,
+      "TASC": 59362.521450295986
+    },
+    "integer_offsets": [
+      659,
+      662,
+      678,
+      701,
+      877,
+      959,
+      994,
+      1007,
+      1012,
+      1028,
+      1052,
+      1085,
+      1121,
+      1145,
+      1177,
+      1224,
+      1283,
+      1311
+    ],
+    "optimizer_fallback_reason": null,
+    "optimizer_function_evaluations": null,
+    "optimizer_mode": "pint_wls",
+    "optimizer_optimality": null,
+    "optimizer_termination_message": null,
+    "optimizer_termination_status": null,
+    "parameter_covariance": [
+      [
+        3.6489192719223114e-17,
+        -1.2571419407261593e-15,
+        1.1536063115516222e-20,
+        -3.2547201594040176e-28,
+        -5.152444224470058e-18,
+        7.001303843467409e-16,
+        2.223660861345746e-16,
+        1.1323161320034054e-18,
+        -3.73182881321772e-17
+      ],
+      [
+        -1.2571419407261593e-15,
+        2.568711264061424e-13,
+        -1.1253407743948876e-18,
+        2.0615917936091026e-26,
+        2.7074819106962364e-15,
+        -4.8975082077993547e-14,
+        -1.226791492495508e-13,
+        1.0520279663820857e-15,
+        -3.3519092052631725e-15
+      ],
+      [
+        1.1536063115516222e-20,
+        -1.1253407743948876e-18,
+        2.561827521431724e-22,
+        -4.049889885551786e-30,
+        7.557852498458225e-20,
+        -6.614734570703973e-18,
+        -4.269336862108218e-18,
+        -4.604823176972354e-19,
+        3.732523104508386e-19
+      ],
+      [
+        -3.2547201594040176e-28,
+        2.0615917936091026e-26,
+        -4.049889885551786e-30,
+        6.806075747206168e-38,
+        -9.436650306032727e-28,
+        9.893897792445058e-26,
+        5.203286382520169e-26,
+        7.082252193366343e-27,
+        -6.420608573316689e-27
+      ],
+      [
+        -5.152444224470058e-18,
+        2.7074819106962364e-15,
+        7.557852498458225e-20,
+        -9.436650306032727e-28,
+        1.6059560709795952e-16,
+        -1.6827631775278724e-15,
+        -8.246595837443917e-15,
+        -2.5696956765893416e-16,
+        -3.4962902466217436e-16
+      ],
+      [
+        7.001303843467409e-16,
+        -4.8975082077993547e-14,
+        -6.614734570703973e-18,
+        9.893897792445058e-26,
+        -1.6827631775278724e-15,
+        4.813298233249814e-13,
+        8.713859942897385e-14,
+        1.477899797243568e-14,
+        -1.2419541399386073e-14
+      ],
+      [
+        2.223660861345746e-16,
+        -1.226791492495508e-13,
+        -4.269336862108218e-18,
+        5.203286382520169e-26,
+        -8.246595837443917e-15,
+        8.713859942897385e-14,
+        4.397860292510805e-13,
+        1.1448401949965965e-14,
+        1.4815783635054188e-14
+      ],
+      [
+        1.1323161320034054e-18,
+        1.0520279663820857e-15,
+        -4.604823176972354e-19,
+        7.082252193366343e-27,
+        -2.5696956765893416e-16,
+        1.477899797243568e-14,
+        1.1448401949965965e-14,
+        4.808718977285679e-15,
+        -5.211169261172507e-16
+      ],
+      [
+        -3.73182881321772e-17,
+        -3.3519092052631725e-15,
+        3.732523104508386e-19,
+        -6.420608573316689e-27,
+        -3.4962902466217436e-16,
+        -1.2419541399386073e-14,
+        1.4815783635054188e-14,
+        -5.211169261172507e-16,
+        6.341179536384503e-15
+      ]
+    ],
+    "parameter_expansion": "disabled",
+    "portfolio_counts": {
+      "annealed_modes": 4,
+      "certified_modes": 2,
+      "conditional_modes": 433,
+      "searched_cells": 18,
+      "selected_annealed_modes": 2,
+      "selected_conditional_modes": 1
+    },
+    "prohibited_automatic_parameters": [
+      "PBDOT",
+      "EPS1DOT",
+      "EPS2DOT"
+    ],
+    "reduced_chi2": 1.9760922681526154,
+    "run_fingerprint": "8fff21e66c976b37cc6167fcb5ba54d4909789304327903892c6deb0185d2ab0",
+    "schema_version": 2,
+    "source_cell_id": "C000008",
+    "source_grid_index": [
+      -1,
+      -1
+    ],
+    "support_boundary_hit": false,
+    "support_valid": true,
+    "target_reached": true,
+    "thresholds": {
+      "disk_reload_chi2_tolerance": 0.01,
+      "strict_reduced_chi2": 20.0,
+      "target_reduced_chi2": 10.0
+    },
+    "weighted_rms_us": 4.661970972663624
+  },
+  "command": [
+    "python",
+    "-m",
+    "timing_accelerator.pipeline.apollo_timing",
+    "--par",
+    "${BUNDLE}/recorded/prefix_archive/inputs/blind_f1_initial.par",
+    "--tim",
+    "${BUNDLE}/recorded/prefix_archive/inputs/prefixes/sessions_19_chronological_prefix.tim",
+    "--output",
+    "${BUNDLE}/recorded/prefix_archive/runs/prefix/n19",
+    "--source-type",
+    "binary",
+    "--orbital-samples-per-cell",
+    "2",
+    "--phase-samples",
+    "12",
+    "--modes-per-cell",
+    "32",
+    "--chart-evaluations",
+    "60",
+    "--maximum-modes-to-anneal",
+    "24",
+    "--maximum-modes-to-certify",
+    "16",
+    "--blind-workers",
+    "1",
+    "--no-observation-plan"
+  ],
+  "finished_unix": 1788278120.110234,
+  "input": {
+    "par": "${BUNDLE}/recorded/prefix_archive/inputs/blind_f1_initial.par",
+    "tim": "${BUNDLE}/recorded/prefix_archive/inputs/prefixes/sessions_19_chronological_prefix.tim"
+  },
+  "max_rss_kib": 279412,
+  "orbit_discovery": {
+    "available": true,
+    "best_candidate": {
+      "A1": 23.4647600688036,
+      "PB": 17.526243445761732,
+      "TASC": 59362.51413932801,
+      "eccentricity": 9.999999999845258e-11
+    },
+    "initialized_modes": 1,
+    "matching_modes": 1,
+    "orbit_initialized": true,
+    "prior_boundary": false
+  },
+  "outcome": "phase_connected",
+  "outcome_reason": "blind_certified_path",
+  "par_sha256": "77148abcfee6ac2314d1d65131edd48081ba53c39a5e645a16cc2da7b46ab1b1",
+  "phase_timings": {},
+  "protocol_sha256": "04b92592fe8af0cbb2073fa5c23b4638e52e9c18f471b182a80ff7ad39ecaa96",
+  "pulse_path": {
+    "exact": true,
+    "global_offset": -166.0,
+    "matched_toas": 80
+  },
+  "result_artifacts": {
+    "audit.json": {
+      "path": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n19/audit.json",
+      "sha256": "48b66d1d546196c07481bea49eb4663c973c7e506766a4cba9585d6c3123796a"
+    },
+    "certification.json": {
+      "path": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n19/certification.json",
+      "sha256": "9ad79297bdd37c2fe1505c789996689709653190c35f56b983f86ecfa1a3e534"
+    },
+    "solution.par": {
+      "path": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n19/solution.par",
+      "sha256": "43cec97c0caa41ecb470abf4be63a9e5708d3c211b5746c5109a3e4a0d8c1e6a"
+    },
+    "solution.tim": {
+      "path": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n19/solution.tim",
+      "sha256": "40b078968f17cb5d940ce8779589c424322ecb77fad6f70900377738fa5acb07"
+    }
+  },
+  "return_code": 0,
+  "run_tag": "blind_f1_chronological_prefix_20260901",
+  "schema_version": 2,
+  "started_unix": 1788277348.999063,
+  "stderr_sha256": "dae3b9788dfd8511c2330f1f6498c118ed5899fe3e2c4fbbe6636436acde4611",
+  "stdout_sha256": "512afe6293015669ff1426006f7ab69ba4772b4f102e14a41dc5306603f4d2e2",
+  "system_cpu_seconds": 0.31213100000000005,
+  "tim_sha256": "1d6eff51080098aed745c1af54a447e443a0a3b64cce2d4d4829ab03ff196015",
+  "timeout": false,
+  "timeout_seconds": 43200,
+  "user_cpu_seconds": 769.0626480000001,
+  "wall_seconds": 771.0698794270866
+}

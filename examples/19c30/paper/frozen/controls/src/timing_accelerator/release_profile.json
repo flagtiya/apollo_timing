@@ -1,0 +1,28 @@
+{
+  "build_date": "20261001",
+  "development_revision": "organization.20261008",
+  "distribution_version": "0.7.1+singlebinary.20261001",
+  "excluded_public_capabilities": [
+    "hierarchical-triple"
+  ],
+  "internal_compatibility_modules": [],
+  "project": "APOLLO-Timing",
+  "public_entry_points": [
+    "apollo-timing",
+    "apollo-bootstrap-binary",
+    "apollo-bootstrap-ell1",
+    "apollo-observe"
+  ],
+  "public_source_types": [
+    "auto",
+    "single",
+    "binary"
+  ],
+  "release_profile": "single-binary",
+  "source_provenance": {
+    "pint_solution_artifacts.py": {
+      "sha256": "9293fa5abf27f5f0fc5b4809e7fe4ee81dd2f07a481509982cce69eca75eefa8"
+    }
+  },
+  "source_version": "0.7.1"
+}

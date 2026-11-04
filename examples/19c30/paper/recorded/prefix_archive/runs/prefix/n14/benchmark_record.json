@@ -1,0 +1,356 @@
+{
+  "accepted": true,
+  "accepted_wrong_path": true,
+  "apollo_result": {
+    "accepted": true,
+    "chi2": 70.90753096214902,
+    "disk_reload_chi2_delta": 0.0009970967218322357,
+    "fit_parameters": [
+      "RAJ",
+      "DECJ",
+      "F0",
+      "F1",
+      "PB",
+      "A1",
+      "TASC",
+      "EPS1",
+      "EPS2"
+    ],
+    "portfolio_counts": {
+      "annealed_modes": 4,
+      "certified_modes": 2,
+      "conditional_modes": 385,
+      "searched_cells": 16,
+      "selected_annealed_modes": 2,
+      "selected_conditional_modes": 1
+    },
+    "reduced_chi2": 1.4181506192429805,
+    "weighted_rms_us": 3.927457852307362
+  },
+  "arm": "blind",
+  "case": {
+    "design": "chronological_prefix",
+    "maximum_gap_days": 604.3383912063509,
+    "seed": null,
+    "selected_session_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "session_count": 14,
+    "toa_count": 60
+  },
+  "case_id": "sessions_14_chronological_prefix",
+  "certification": {
+    "accepted": true,
+    "active_bounds": [],
+    "annealed_phase_chi2": 5.009996962990114,
+    "annealed_shape_chi2": 65.89751723127465,
+    "annealed_total_chi2": 70.90751419426476,
+    "architecture": "apollo_blind_orbit_discovery_plus_phase_lattice_solver",
+    "artifacts": {
+      "par": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n14/solution.par",
+      "residuals_csv": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n14/residuals.csv",
+      "residuals_png": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n14/residuals.png",
+      "tim": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n14/solution.tim"
+    },
+    "blind_orbit_discovery": {
+      "audit": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n14/blind_orbit_discovery/audit.json",
+      "emitted_mode_count": 1,
+      "normalized_tim": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n14/blind_orbit_discovery/input.normalized.tim",
+      "selected_candidate_output": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n14/blind_binary_candidates/blind_ell1_000"
+    },
+    "candidate_id": "candidate_0000",
+    "chi2": 70.90753096214902,
+    "covariance_parameter_names": [
+      "RAJ",
+      "DECJ",
+      "F0",
+      "F1",
+      "PB",
+      "A1",
+      "TASC",
+      "EPS1",
+      "EPS2"
+    ],
+    "destination_cell_id": "C000007",
+    "disk_reload_chi2": 70.90653386542719,
+    "disk_reload_chi2_delta": 0.0009970967218322357,
+    "disk_reload_reduced_chi2": 1.4181306773085438,
+    "disk_reload_weighted_rms_us": 3.9274302383920032,
+    "engine": "blind_keplerian_discovery_plus_phase_lattice",
+    "fit_parameters": [
+      "RAJ",
+      "DECJ",
+      "F0",
+      "F1",
+      "PB",
+      "A1",
+      "TASC",
+      "EPS1",
+      "EPS2"
+    ],
+    "fitted_parameters": {
+      "A1": 23.46413727873525,
+      "DECJ": -12.206705466944415,
+      "EPS1": 0.00022780400625437976,
+      "EPS2": -0.00012973757200779152,
+      "F0": 189.04722354658202,
+      "F1": 1.8653358377032871e-13,
+      "PB": 17.52616204315947,
+      "RAJ": 19.21046511032178,
+      "TASC": 59362.5201164608
+    },
+    "integer_offsets": [
+      96,
+      84,
+      81,
+      67,
+      231,
+      319,
+      349,
+      342,
+      335,
+      328,
+      343,
+      364,
+      413
+    ],
+    "optimizer_fallback_reason": null,
+    "optimizer_function_evaluations": null,
+    "optimizer_mode": "pint_wls",
+    "optimizer_optimality": null,
+    "optimizer_termination_message": null,
+    "optimizer_termination_status": null,
+    "parameter_covariance": [
+      [
+        1.4788880948597122e-16,
+        -9.3635035166471e-16,
+        3.854134829033791e-21,
+        1.491135911963845e-27,
+        -7.464081665508121e-17,
+        -1.6772976838427745e-14,
+        2.5583900566731954e-15,
+        -7.321325288712679e-16,
+        8.7149410807102785e-16
+      ],
+      [
+        -9.3635035166471e-16,
+        2.9794675907039034e-13,
+        -1.9219942074034794e-18,
+        3.6709111858244344e-26,
+        2.2955835550459124e-15,
+        -1.2018784171332127e-13,
+        -1.0731916473695925e-13,
+        -1.3713415833740338e-15,
+        -6.899290991917815e-15
+      ],
+      [
+        3.854134829033791e-21,
+        -1.9219942074034794e-18,
+        3.7033661179012604e-22,
+        -5.9740497230146774e-30,
+        6.986956318869535e-20,
+        -1.215643207758138e-17,
+        -4.164099562744388e-18,
+        -7.651544509052936e-19,
+        7.318840894718129e-19
+      ],
+      [
+        1.491135911963845e-27,
+        3.6709111858244344e-26,
+        -5.9740497230146774e-30,
+        1.263438651643885e-37,
+        -1.958794890828172e-27,
+        -8.173828781937794e-26,
+        8.812927380076057e-26,
+        6.3604596859876275e-28,
+        1.84241651109113e-27
+      ],
+      [
+        -7.464081665508121e-17,
+        2.2955835550459124e-15,
+        6.986956318869535e-20,
+        -1.958794890828172e-27,
+        2.5016975330915734e-16,
+        1.3033721380318266e-14,
+        -1.1702384724800042e-14,
+        4.410965510751791e-16,
+        -1.053319244329948e-15
+      ],
+      [
+        -1.6772976838427745e-14,
+        -1.2018784171332127e-13,
+        -1.215643207758138e-17,
+        -8.173828781937794e-26,
+        1.3033721380318266e-14,
+        3.94249084366715e-12,
+        -4.320443319554019e-13,
+        1.670572678747279e-13,
+        -1.7907399462768962e-13
+      ],
+      [
+        2.5583900566731954e-15,
+        -1.0731916473695925e-13,
+        -4.164099562744388e-18,
+        8.812927380076057e-26,
+        -1.1702384724800042e-14,
+        -4.320443319554019e-13,
+        5.755661444358829e-13,
+        -1.374808378142449e-14,
+        3.9347365264134106e-14
+      ],
+      [
+        -7.321325288712679e-16,
+        -1.3713415833740338e-15,
+        -7.651544509052936e-19,
+        6.3604596859876275e-28,
+        4.410965510751791e-16,
+        1.670572678747279e-13,
+        -1.374808378142449e-14,
+        1.1758190875839894e-14,
+        -8.13058272244905e-15
+      ],
+      [
+        8.7149410807102785e-16,
+        -6.899290991917815e-15,
+        7.318840894718129e-19,
+        1.84241651109113e-27,
+        -1.053319244329948e-15,
+        -1.7907399462768962e-13,
+        3.9347365264134106e-14,
+        -8.13058272244905e-15,
+        1.609750495942184e-14
+      ]
+    ],
+    "parameter_expansion": "disabled",
+    "portfolio_counts": {
+      "annealed_modes": 4,
+      "certified_modes": 2,
+      "conditional_modes": 385,
+      "searched_cells": 16,
+      "selected_annealed_modes": 2,
+      "selected_conditional_modes": 1
+    },
+    "prohibited_automatic_parameters": [
+      "PBDOT",
+      "EPS1DOT",
+      "EPS2DOT"
+    ],
+    "reduced_chi2": 1.4181506192429805,
+    "run_fingerprint": "2643571b5549a753e320f8f025e7ae3e1059745f50b38ec1d11fde8ba273da2d",
+    "schema_version": 2,
+    "source_cell_id": "C000007",
+    "source_grid_index": [
+      -1,
+      -1
+    ],
+    "support_boundary_hit": false,
+    "support_valid": true,
+    "target_reached": true,
+    "thresholds": {
+      "disk_reload_chi2_tolerance": 0.01,
+      "strict_reduced_chi2": 20.0,
+      "target_reduced_chi2": 10.0
+    },
+    "weighted_rms_us": 3.927457852307362
+  },
+  "command": [
+    "python",
+    "-m",
+    "timing_accelerator.pipeline.apollo_timing",
+    "--par",
+    "${BUNDLE}/recorded/prefix_archive/inputs/blind_f1_initial.par",
+    "--tim",
+    "${BUNDLE}/recorded/prefix_archive/inputs/prefixes/sessions_14_chronological_prefix.tim",
+    "--output",
+    "${BUNDLE}/recorded/prefix_archive/runs/prefix/n14",
+    "--source-type",
+    "binary",
+    "--orbital-samples-per-cell",
+    "2",
+    "--phase-samples",
+    "12",
+    "--modes-per-cell",
+    "32",
+    "--chart-evaluations",
+    "60",
+    "--maximum-modes-to-anneal",
+    "24",
+    "--maximum-modes-to-certify",
+    "16",
+    "--blind-workers",
+    "1",
+    "--no-observation-plan"
+  ],
+  "finished_unix": 1788281539.7040343,
+  "input": {
+    "par": "${BUNDLE}/recorded/prefix_archive/inputs/blind_f1_initial.par",
+    "tim": "${BUNDLE}/recorded/prefix_archive/inputs/prefixes/sessions_14_chronological_prefix.tim"
+  },
+  "max_rss_kib": 282676,
+  "orbit_discovery": {
+    "available": true,
+    "best_candidate": {
+      "A1": 23.459905245353077,
+      "PB": 17.526293995681332,
+      "TASC": 59362.51388568822,
+      "eccentricity": 9.999999999994069e-11
+    },
+    "initialized_modes": 1,
+    "matching_modes": 1,
+    "orbit_initialized": true,
+    "prior_boundary": false
+  },
+  "outcome": "failed_or_ambiguous",
+  "outcome_reason": "accepted_wrong_path",
+  "par_sha256": "77148abcfee6ac2314d1d65131edd48081ba53c39a5e645a16cc2da7b46ab1b1",
+  "phase_timings": {},
+  "protocol_sha256": "04b92592fe8af0cbb2073fa5c23b4638e52e9c18f471b182a80ff7ad39ecaa96",
+  "pulse_path": {
+    "exact": false,
+    "global_offset": -130.0,
+    "matched_toas": 60
+  },
+  "result_artifacts": {
+    "audit.json": {
+      "path": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n14/audit.json",
+      "sha256": "d187c4450186e8554f2dfd5845d98bb32b703f582b2dd818b2270c19ecfa357b"
+    },
+    "certification.json": {
+      "path": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n14/certification.json",
+      "sha256": "66cd4c1c6ef1a8bdcc131057893994619ec9767d737e43a52a81e44e0cccb57f"
+    },
+    "solution.par": {
+      "path": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n14/solution.par",
+      "sha256": "135ad25055d05aed5fc0b827aa18877416887d0eaea4d03d19fef058d856cfd6"
+    },
+    "solution.tim": {
+      "path": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n14/solution.tim",
+      "sha256": "b3307672c4803b2f51ee2a7cef264dd9650bbf52d493567f8f19f5ef259b8be8"
+    }
+  },
+  "return_code": 0,
+  "run_tag": "blind_f1_chronological_prefix_20260901",
+  "schema_version": 2,
+  "started_unix": 1788280889.277595,
+  "stderr_sha256": "d6b347874234e0a6523a7fe8d96e1dfa4032a0ebb1f8936e01b6c7f5e5659284",
+  "stdout_sha256": "e57355ab8f271213a71e8183db792176c057bf591bd484824ce213a85cb9a4ea",
+  "system_cpu_seconds": 0.28001699999999996,
+  "tim_sha256": "8488b7913cf991040a09e01363295b24536bc0d67708e40afc32e22218974931",
+  "timeout": false,
+  "timeout_seconds": 43200,
+  "user_cpu_seconds": 648.6226900000001,
+  "wall_seconds": 650.387556314934
+}

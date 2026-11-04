@@ -69,6 +69,33 @@ python examples/19c30/run.py --workflow auto-discovery \
 
 Input checks and fixed-path evaluation are not blind searches. The solve and discovery commands can take substantially longer.
 
+### 19C30: Paper Experiments
+
+The [paper experiment bundle](examples/19c30/paper/README.md) includes the original 12–23-session prefixes, all 15 stability controls, the 16-to-15 fixed-path diagnostic, the independent PEPOCH-60604 run, and the retained historical engines. Check the recorded results without repeating the long searches:
+
+```bash
+python examples/19c30/paper/run.py --task verify \
+  --output "$HOME/apollo-runs/paper-verify"
+```
+
+Rerun the prefix matrix, stability controls, transferred-path diagnostic or full-data epoch check using a local DE421 kernel:
+
+```bash
+python examples/19c30/paper/run.py --task prefixes \
+  --ephem-file /path/to/de421.bsp --output "$HOME/apollo-runs/paper-prefixes"
+
+python examples/19c30/paper/run.py --task controls --workers 1 \
+  --ephem-file /path/to/de421.bsp --output "$HOME/apollo-runs/paper-controls"
+
+python examples/19c30/paper/run.py --task transfer \
+  --ephem-file /path/to/de421.bsp --output "$HOME/apollo-runs/paper-transfer"
+
+python examples/19c30/paper/run.py --task epoch60604 \
+  --ephem-file /path/to/de421.bsp --output "$HOME/apollo-runs/paper-epoch60604"
+```
+
+Plot commands and resource requirements are in the bundle guide. The historical paper records are separate from runs with the current 0.8.3 solver.
+
 ### J1928: Initialize An Incomplete Binary Model
 
 This example requires DE440.

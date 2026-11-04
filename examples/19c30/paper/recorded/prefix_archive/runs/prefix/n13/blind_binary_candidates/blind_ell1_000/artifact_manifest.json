@@ -1,0 +1,35 @@
+{
+  "schema_version": 2,
+  "architecture": "apollo_bayesian_ell1_dual_lattice_annealed_solver",
+  "run_fingerprint": "e78a90ae2bca2335d19bb0fe6c3733832b6f7dd0d26dc7c50c940e7a7535b308",
+  "artifacts": {
+    "solution.par": {
+      "path": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n13/blind_binary_candidates/blind_ell1_000/solution.par",
+      "sha256": "bc1654e24c09c5f4cee63383ba85902ab07de1a23e988a1c624c996c027bd703"
+    },
+    "solution.tim": {
+      "path": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n13/blind_binary_candidates/blind_ell1_000/solution.tim",
+      "sha256": "6ed011feac0649934b7d74bcd330f5c787274571d59d255f109b40e323a00c51"
+    },
+    "residuals.csv": {
+      "path": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n13/blind_binary_candidates/blind_ell1_000/residuals.csv",
+      "sha256": "2465af0748a81c585afc5903e624f7a5da50ac1d01b17a5589913b4e894a48ce"
+    },
+    "residuals.png": {
+      "path": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n13/blind_binary_candidates/blind_ell1_000/residuals.png",
+      "sha256": "1b5bd37a716cb8b73fb800f5d2c02eab6334a5a816bdf55030a1f73c3879c52b"
+    },
+    "audit.json": {
+      "path": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n13/blind_binary_candidates/blind_ell1_000/audit.json",
+      "sha256": "515e9cc98a9d68d44298905a4f625e6f3be102ca0a5b2e77bbf2156b77780530"
+    },
+    "certification.json": {
+      "path": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n13/blind_binary_candidates/blind_ell1_000/certification.json",
+      "sha256": "d766c01dea7d1e59879282870aad41bace5a7f4a0974728f6abb8ae37ce663b6"
+    },
+    "candidate_portfolio.json": {
+      "path": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n13/blind_binary_candidates/blind_ell1_000/candidate_portfolio.json",
+      "sha256": "acda47534c2c71023b84526f007349f5293f6d0f6ddada0be004e3ab11611cc8"
+    }
+  }
+}

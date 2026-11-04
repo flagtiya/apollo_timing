@@ -1,0 +1,239 @@
+{
+  "config": {
+    "a1_prior_envelope_scale": 1.5,
+    "annealed_chi2_window": 2000.0,
+    "annealing": {
+      "beam_size": 4,
+      "coordinate_prior_sigma": 0.2,
+      "finite_difference_step": 2e-05,
+      "integer_path_proposal": "block",
+      "integer_path_transport": false,
+      "lattice": {
+        "added_session_phase_sigma_cycles": 0.0,
+        "initial_lattice_candidates": 32,
+        "lattice_log_mass_tolerance": 1e-06,
+        "maximum_lattice_candidates": 128,
+        "maximum_lattice_nodes": 1000000
+      },
+      "maximum_closure_evaluations": 300,
+      "paths_per_state": 3,
+      "phase_sigma_schedule": [
+        0.1,
+        0.05,
+        0.02,
+        0.01,
+        0.005,
+        0.002,
+        0.001,
+        0.0005,
+        0.0002,
+        0.0001,
+        0.0
+      ]
+    },
+    "astrometric_bound_arcsec": 300.0,
+    "cell_search": {
+      "chart_maximum_evaluations": 60,
+      "coordinate_prior_sigma": 0.75,
+      "finite_difference_step": 2e-05,
+      "lattice": {
+        "added_session_phase_sigma_cycles": 0.05,
+        "initial_lattice_candidates": 32,
+        "lattice_log_mass_tolerance": 1e-05,
+        "maximum_lattice_candidates": 128,
+        "maximum_lattice_nodes": 500000
+      },
+      "local_integer_radius": 0,
+      "modes_per_cell": 32,
+      "orbital_samples_per_cell": 2,
+      "paths_per_component": 8,
+      "phase_samples": 12
+    },
+    "coarse_binary_bootstrap": {
+      "atlas_eccentricities": [
+        0.05,
+        0.35,
+        0.75
+      ],
+      "eccentricity_seed_grid": [
+        0.0,
+        0.03,
+        0.1,
+        0.25,
+        0.45,
+        0.7,
+        0.88
+      ],
+      "exact_mode_chi2_window": 2000.0,
+      "exact_refinement_max_nfev": 2000,
+      "full_solver_support_width_scale": 1.0,
+      "informative_session_reduced_chi2_threshold": 5.0,
+      "legacy_ell1_support_width_scale": 0.01,
+      "longitude_seed_count": 12,
+      "maximum_eccentricity": 0.95,
+      "maximum_ell1_eccentricity": 0.05,
+      "minimum_informative_session_toas": 8,
+      "orbital_phase_seed_count": 24,
+      "pair_enumeration_chunk_rows": 128,
+      "projected_semimajor_axis_stages_seconds": [
+        2.5,
+        5.0,
+        10.0,
+        20.0,
+        40.0
+      ],
+      "retained_exact_modes": 4,
+      "retained_keplerian_seeds_per_harmonic_mode": 12,
+      "retained_lattice_modes": 256
+    },
+    "conditional_score_window": 2000.0,
+    "disk_reload_chi2_tolerance": 0.01,
+    "fit_iterations": 10,
+    "isolated_cold_start": {
+      "astrometric_bound_arcsec": 7200.0,
+      "component_prior_sigma": 0.15,
+      "enabled": true,
+      "frequency_derivative_half_width_hz_s": 2e-11,
+      "frequency_half_width_hz": 0.0005,
+      "maximum_function_evaluations": 160,
+      "minimum_normalized_mode_separation": 0.02,
+      "phase_noise": {
+        "contamination_probability": 0.02,
+        "contamination_sigma_cycles": 0.25,
+        "enabled": true,
+        "jitter_mad_scale": 1.0,
+        "maximum_em_iterations": 12,
+        "maximum_jitter_cycles": 0.02,
+        "minimum_jitter_cycles": 0.0
+      },
+      "proper_motion_half_width_mas_per_year": 500.0,
+      "proposal_frequency_derivative_half_width_hz_s": 2e-13,
+      "proposal_frequency_half_width_hz": 2e-05,
+      "random_seed": 2337,
+      "retained_modes": 8,
+      "robust_loss_scale": 1.5,
+      "sobol_power": 4
+    },
+    "isolated_update_model_selection": {
+      "changepoint_epoch_fractions": [
+        0.01,
+        0.5,
+        0.99
+      ],
+      "enabled": true,
+      "fit_iterations": 30,
+      "maximum_changepoint_intervals": 3,
+      "maximum_spin_frequency_order": 5,
+      "minimum_added_parameter_sigma": 5.0,
+      "minimum_delta_bic": 10.0,
+      "minimum_residual_degrees_of_freedom": 5,
+      "toa_white_noise": {
+        "enabled": true,
+        "maximum_equad_cycles": 0.02,
+        "minimum_noise_delta_bic": 10.0,
+        "minimum_path_delta_bic": 10.0,
+        "noise_fit_iterations": 4,
+        "timing_fit_iterations": 10
+      }
+    },
+    "maximum_cell_width": 0.25,
+    "maximum_modes_to_anneal": 24,
+    "maximum_modes_to_certify": 16,
+    "minimum_eccentricity_half_width": 0.005,
+    "observation_planner": {
+      "annual_phase_samples": 8,
+      "baseline_count": 10,
+      "design": {
+        "branch_resolution_log_odds": 2.0,
+        "branch_resolution_probability": 0.9,
+        "covariance_floor": 1e-12,
+        "max_reported_pairs": 5,
+        "posterior_samples_per_mode": 256,
+        "random_seed": 1729
+      },
+      "dominant_mode_probability": 0.9,
+      "duration_min": 20.0,
+      "enable_joint_sequence": true,
+      "horizon_days": 180.0,
+      "joint_candidate_pool": 8,
+      "maximum_joint_sessions": 2,
+      "maximum_modes": 8,
+      "maximum_recommendations": 20,
+      "maximum_unique_entropy_nats": 0.35,
+      "minimum_parameter_information_nats": 1.0,
+      "orbital_phase_samples": 8,
+      "significant_mode_probability": 0.05,
+      "toas_per_session": 8
+    },
+    "partial_ell1_bootstrap": {
+      "exact_mode_chi2_window": 2000.0,
+      "full_solver_support_width_scale": 0.01,
+      "informative_session_reduced_chi2_threshold": 5.0,
+      "maximum_eccentricity": 0.05,
+      "minimum_informative_session_toas": 8,
+      "pair_enumeration_chunk_rows": 128,
+      "projected_semimajor_axis_stages_seconds": [
+        2.5,
+        5.0,
+        10.0,
+        20.0
+      ],
+      "retained_exact_modes": 4,
+      "retained_lattice_modes": 256
+    },
+    "physical_model_selection": {
+      "ell1_truncation_fraction_of_toa_error": 0.25,
+      "enabled": true,
+      "enabled_models": [
+        "ELL1",
+        "ELL1H",
+        "ELL1K",
+        "BT",
+        "DD",
+        "DDS",
+        "DDGR",
+        "DDH",
+        "DDK",
+        "BT_PIECEWISE"
+      ],
+      "extension_trigger_reduced_chi2": 1.5,
+      "maximum_component_mass_solar": 5.0,
+      "maximum_multistarts_per_hypothesis": 8,
+      "minimum_block_significance_sigma": 5.0,
+      "minimum_component_mass_solar": 0.05,
+      "minimum_delta_bic": 10.0,
+      "minimum_orbital_phase_bins_for_shapiro": 6,
+      "minimum_toas_for_extension": 24,
+      "orbital_phase_bins": 8,
+      "representation_equivalence_delta_chi2": 2.0
+    },
+    "plan_observations_on_failure": false,
+    "strict_reduced_chi2_threshold": 20.0,
+    "support_width_scale": 1.0,
+    "target_reduced_chi2_threshold": 10.0,
+    "timing_update_prior": {
+      "baseline_fit_iterations": 10,
+      "baseline_posterior_weight": 0.98,
+      "broad_escape_normalized_sigma": 0.2,
+      "broad_escape_weight": 0.02,
+      "maximum_normalized_sigma": 0.05,
+      "minimum_normalized_sigma": 1e-07,
+      "posterior_covariance_scale": 4.0
+    },
+    "use_mature_ell1_engine": true
+  },
+  "cpu": 1,
+  "imported_source": "${BUNDLE}/frozen/controls/src/timing_accelerator/__init__.py",
+  "package": "0.7.1+singlebinary.20261001",
+  "python": "3.11.14 (main, Oct 21 2025, 18:31:21) [GCC 11.2.0]",
+  "source_sha256": "3d80867a913edb633c77f044e9fa480249fbf42c219eb027b7a11dea0bf7d821",
+  "task_sha256": "6d0cff85caef425f26a654f17a3ba70479a6b0665978b5609db9ef059a4fdafa",
+  "threads": {
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "wall_started_unix": 1791451411.9191806
+}

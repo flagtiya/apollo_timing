@@ -1,0 +1,74 @@
+{
+  "reference_verification": {
+    "passed": true,
+    "outcome": "reference_path_recovered",
+    "toa_count": 96,
+    "same_pulse_path": true,
+    "global_pulse_offset": "-4.0",
+    "fitted_pepoch": 60604.0,
+    "expected_pepoch": 60604.0,
+    "epoch_matches": true,
+    "metrics": {
+      "chi2": {
+        "value": 188.0051436968989,
+        "expected": 188.00517911734016,
+        "absolute_tolerance": 0.1,
+        "passed": true
+      },
+      "weighted_rms_us": {
+        "value": 5.075426777380637,
+        "expected": 5.075427255489491,
+        "absolute_tolerance": 0.01,
+        "passed": true
+      }
+    },
+    "solver_solution_claim": null,
+    "portfolio_counts": {
+      "searched_cells": 20,
+      "conditional_modes": 481,
+      "selected_conditional_modes": 1,
+      "annealed_modes": 4,
+      "selected_annealed_modes": 1,
+      "certified_modes": 1
+    }
+  },
+  "fitted_pepoch": 60604.0,
+  "parameter_comparison": {
+    "F0": {
+      "old_at_60604": 189.04723944540234,
+      "new": 189.04723944540234,
+      "delta": 0.0
+    },
+    "F1": {
+      "old_at_60604": -3.024046163616531e-16,
+      "new": -3.0240461626822717e-16,
+      "delta": 9.342593099287568e-26
+    },
+    "PB": {
+      "old_at_60604": 17.526125680190386,
+      "new": 17.526125680190386,
+      "delta": 0.0
+    },
+    "A1": {
+      "old_at_60604": 23.447645442631803,
+      "new": 23.44764544263151,
+      "delta": -2.913225216616411e-13
+    },
+    "EPS1": {
+      "old_at_60604": -2.5576760269359472e-05,
+      "new": -2.5576760298466238e-05,
+      "delta": -2.910676596122076e-14
+    },
+    "EPS2": {
+      "old_at_60604": 6.7557996402297595e-06,
+      "new": 6.755799561287544e-06,
+      "delta": -7.894221538127296e-14
+    }
+  },
+  "tasc_whole_orbit_shift": 71,
+  "tasc_remainder_seconds": 7.8580342233181e-08,
+  "disk_old_chi2": 188.0073376461241,
+  "disk_new_chi2": 188.00734078078676,
+  "residual_difference_rms_us": 2.950877847256641e-06,
+  "residual_difference_max_abs_us": 8.065336016842328e-06
+}

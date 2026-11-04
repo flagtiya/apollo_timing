@@ -1,0 +1,16 @@
+{
+  "arm": "f1_zero",
+  "baseline": "${BUNDLE}/recorded/control_archive/runs/n18_baseline",
+  "case_id": "n18_f1_zero",
+  "inference_contract": "no reference solution; no manual orbit or pulse-path seed; all emitted models; no resume",
+  "output": "${BUNDLE}/recorded/control_archive/runs/n18_f1_zero",
+  "par": "${BUNDLE}/recorded/control_archive/inputs/blind_zero_f1.par",
+  "par_sha256": "f92d4e49a8c6d39c0c1a1a3da9ff08dd44b83128ea921aed58b41658af18d9f3",
+  "session_count": 18,
+  "source_sha256": "3d80867a913edb633c77f044e9fa480249fbf42c219eb027b7a11dea0bf7d821",
+  "source_snapshot": "${BUNDLE}/frozen/controls",
+  "tim": "${BUNDLE}/recorded/control_archive/inputs/sessions_18_chronological_prefix.tim",
+  "tim_sha256": "faf9a9495bcfaae27c426e5e33808f23201135491f966f13198e4590fb308644",
+  "timeout_seconds": 3600,
+  "toa_count": 76
+}

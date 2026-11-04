@@ -1,0 +1,64 @@
+{
+  "discovery": {
+    "audit_path": "${BUNDLE}/recorded/control_archive/runs/n18_f1_zero/blind_orbit_discovery/audit.json",
+    "modes": [
+      {
+        "continuous_mode_index": 0,
+        "ell1_tolerance_seconds": 1.020625e-06,
+        "ell1_truncation_seconds": 2.3468580338773083e-19,
+        "initial_max_wrapped_residual_cycles": 0.028871359303593636,
+        "initial_wrapped_rms_cycles": 0.0071822000402855645,
+        "mode_id": "blind_ell1_000",
+        "model_name": "ELL1",
+        "par_path": "${BUNDLE}/recorded/control_archive/runs/n18_f1_zero/blind_orbit_discovery/modes/blind_ell1_000.par",
+        "parameter_values": {
+          "A1": 23.468580341491442,
+          "ECC": 9.999999999420851e-11,
+          "F0": 189.0472258055455,
+          "F1": 6.208320179756502e-14,
+          "MASS_FUNCTION": 0.045182052032786926,
+          "OM": 5.729577951623413e-09,
+          "PB": 17.526234420308885,
+          "STATE_COVARIANCE_TRACE": 4.5904142594524946e-08,
+          "T0": 59362.514224810184
+        },
+        "path_acquisition_tolerance_seconds": 0.001322420886816666,
+        "period_stratum_days": [
+          17.524964693294574,
+          17.529966110362743
+        ],
+        "pint_shape_chi2": 2328.7902565056283,
+        "pint_shape_reduced_chi2": 45.662554049129966,
+        "random_seed": 0,
+        "refined_relative_chi2": 639.6854526032805,
+        "refined_relative_reduced_chi2": 12.54285201182903,
+        "representation_policy": "ell1_only_final_precision",
+        "surrogate_score": 6.751960507528833
+      }
+    ],
+    "normalized_tim_path": "${BUNDLE}/recorded/control_archive/runs/n18_f1_zero/blind_orbit_discovery/input.normalized.tim",
+    "observation_span_days": 1208.6854861040483,
+    "session_count": 18,
+    "toa_count": 76
+  },
+  "modes": [
+    {
+      "mode_id": "blind_ell1_000",
+      "model_name": "ELL1",
+      "par": "${BUNDLE}/recorded/control_archive/runs/n18_f1_zero/blind_orbit_discovery/modes/blind_ell1_000.par",
+      "par_sha256": "2821f71aa543e56e7f8228ed1954ceaf1c3a363450d2cda5ec2ecd20b802df72",
+      "parameter_values": {
+        "A1": 23.468580341491442,
+        "ECC": 9.999999999420851e-11,
+        "F0": 189.0472258055455,
+        "F1": 6.208320179756502e-14,
+        "MASS_FUNCTION": 0.045182052032786926,
+        "OM": 5.729577951623413e-09,
+        "PB": 17.526234420308885,
+        "STATE_COVARIANCE_TRACE": 4.5904142594524946e-08,
+        "T0": 59362.514224810184
+      },
+      "random_seed": 0
+    }
+  ]
+}

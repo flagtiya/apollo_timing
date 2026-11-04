@@ -69,6 +69,33 @@ python examples/19c30/run.py --workflow auto-discovery \
 
 输入检查与固定路径评价不执行盲搜。完整求解和轨道发现可能需要较长时间。
 
+### 19C30：论文实验
+
+[论文实验包](examples/19c30/paper/README.zh-CN.md) 包含原始 12–23 会话前缀、全部 15 组稳定性对照、16→15 会话固定路径诊断、PEPOCH 60604 独立运行及保存的历史代码。无需重做长时搜索即可核对已有记录：
+
+```bash
+python examples/19c30/paper/run.py --task verify \
+  --output "$HOME/apollo-runs/paper-verify"
+```
+
+指定本地 DE421 星历，分别重跑前缀矩阵、稳定性对照、路径转移诊断或完整数据历元检查：
+
+```bash
+python examples/19c30/paper/run.py --task prefixes \
+  --ephem-file /path/to/de421.bsp --output "$HOME/apollo-runs/paper-prefixes"
+
+python examples/19c30/paper/run.py --task controls --workers 1 \
+  --ephem-file /path/to/de421.bsp --output "$HOME/apollo-runs/paper-controls"
+
+python examples/19c30/paper/run.py --task transfer \
+  --ephem-file /path/to/de421.bsp --output "$HOME/apollo-runs/paper-transfer"
+
+python examples/19c30/paper/run.py --task epoch60604 \
+  --ephem-file /path/to/de421.bsp --output "$HOME/apollo-runs/paper-epoch60604"
+```
+
+绘图命令与资源要求见实验包说明。论文历史记录与当前 0.8.3 求解器的新运行分开保存。
+
 ### J1928：不完整双星模型初始化
 
 此例使用 DE440。

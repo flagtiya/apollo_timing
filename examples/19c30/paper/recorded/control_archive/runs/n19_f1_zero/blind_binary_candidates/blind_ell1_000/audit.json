@@ -1,0 +1,2313 @@
+{
+  "schema_version": 2,
+  "architecture": "apollo_bayesian_ell1_dual_lattice_annealed_solver",
+  "run_fingerprint": "a5f97da57688096050263c2aad283b25613e7e6b210cc9dc3e4d7a036ad78191",
+  "inputs": {
+    "par": "${BUNDLE}/recorded/control_archive/runs/n19_f1_zero/blind_orbit_discovery/modes/blind_ell1_000.par",
+    "tim": "${BUNDLE}/recorded/control_archive/runs/n19_f1_zero/input.normalized.tim",
+    "clock_override": null,
+    "par_sha256": "05ab08ff6514edee209584f98089e7f833334cb645c6fb8eaff86c39f623bdcf",
+    "tim_sha256": "1d6eff51080098aed745c1af54a447e443a0a3b64cce2d4d4829ab03ff196015",
+    "clock_override_sha256": null
+  },
+  "solver_config": {
+    "maximum_cell_width": 0.25,
+    "support_width_scale": 1.0,
+    "minimum_f1_half_width": 1e-10,
+    "minimum_eccentricity_half_width": 0.005,
+    "astrometric_bound_arcsec": 300.0,
+    "cell_search": {
+      "orbital_samples_per_cell": 2,
+      "phase_samples": 12,
+      "modes_per_cell": 32,
+      "fast_shape_maximum_evaluations": 60,
+      "finite_difference_step": 2e-05,
+      "fast_prior_sigma": 0.75,
+      "local_integer_radius": 0,
+      "lattice": {
+        "initial_lattice_candidates": 32,
+        "maximum_lattice_candidates": 128,
+        "lattice_log_mass_tolerance": 1e-05,
+        "maximum_lattice_nodes": 500000,
+        "added_session_phase_sigma_cycles": 0.05
+      }
+    },
+    "annealing": {
+      "phase_sigma_schedule": [
+        0.1,
+        0.05,
+        0.02,
+        0.01,
+        0.005,
+        0.002,
+        0.001,
+        0.0005,
+        0.0002,
+        0.0001,
+        0.0
+      ],
+      "coordinate_prior_sigma": 0.2,
+      "paths_per_state": 3,
+      "beam_size": 4,
+      "finite_difference_step": 2e-05,
+      "maximum_closure_evaluations": 300,
+      "lattice": {
+        "initial_lattice_candidates": 32,
+        "maximum_lattice_candidates": 128,
+        "lattice_log_mass_tolerance": 1e-06,
+        "maximum_lattice_nodes": 1000000,
+        "added_session_phase_sigma_cycles": 0.0
+      }
+    },
+    "maximum_modes_to_anneal": 24,
+    "conditional_score_window": 2000.0,
+    "maximum_modes_to_certify": 16,
+    "annealed_chi2_window": 2000.0,
+    "fit_iterations": 10,
+    "strict_reduced_chi2_threshold": 20.0,
+    "target_reduced_chi2_threshold": 10.0,
+    "disk_reload_chi2_tolerance": 0.01
+  },
+  "scientific_contract": {
+    "fit_parameters": [
+      "RAJ",
+      "DECJ",
+      "F0",
+      "F1",
+      "PB",
+      "A1",
+      "TASC",
+      "EPS1",
+      "EPS2"
+    ],
+    "parameter_expansion": "disabled",
+    "prohibited_automatic_parameters": [
+      "PBDOT",
+      "EPS1DOT",
+      "EPS2DOT"
+    ],
+    "source_class_prior": "forbidden",
+    "historical_solution_seed": "forbidden",
+    "manual_integer_wrap": "forbidden",
+    "orbital_cycle_cell_policy": "all cells must be searched",
+    "cell_shape_pruning": "forbidden",
+    "global_optimum_claim": "Finite all-cell and posterior-beam search; no exhaustive-global claim."
+  },
+  "toa_count": 80,
+  "session_count": 19,
+  "observation_span_days": 1251.6049303769323,
+  "cell_count": 18,
+  "physical_support_lower": [
+    19.20247324197222,
+    -12.341334797222222,
+    189.04533660977532,
+    -1e-10,
+    17.000448516927907,
+    21.59006266245882,
+    59352.87501844596,
+    -0.005,
+    -0.0049999999000000005
+  ],
+  "physical_support_upper": [
+    19.213584353083334,
+    -12.174668130555554,
+    189.04911755431695,
+    1.0004428670072716e-10,
+    18.05202265199561,
+    25.3448561689734,
+    59372.15387758887,
+    0.005,
+    0.0050000001
+  ],
+  "search": {
+    "cells": [
+      {
+        "cell_id": "C000000",
+        "mode_count": 24,
+        "resumed": false,
+        "best_strict_score": 5211161.317859468,
+        "lattice_mass_converged": false
+      },
+      {
+        "cell_id": "C000001",
+        "mode_count": 24,
+        "resumed": false,
+        "best_strict_score": 5778201.513480915,
+        "lattice_mass_converged": false
+      },
+      {
+        "cell_id": "C000002",
+        "mode_count": 24,
+        "resumed": false,
+        "best_strict_score": 5060965.788052762,
+        "lattice_mass_converged": false
+      },
+      {
+        "cell_id": "C000003",
+        "mode_count": 24,
+        "resumed": false,
+        "best_strict_score": 5381262.208511419,
+        "lattice_mass_converged": false
+      },
+      {
+        "cell_id": "C000004",
+        "mode_count": 24,
+        "resumed": false,
+        "best_strict_score": 5854693.403737724,
+        "lattice_mass_converged": false
+      },
+      {
+        "cell_id": "C000005",
+        "mode_count": 24,
+        "resumed": false,
+        "best_strict_score": 4958533.770927672,
+        "lattice_mass_converged": false
+      },
+      {
+        "cell_id": "C000006",
+        "mode_count": 24,
+        "resumed": false,
+        "best_strict_score": 5125842.745803881,
+        "lattice_mass_converged": false
+      },
+      {
+        "cell_id": "C000007",
+        "mode_count": 24,
+        "resumed": false,
+        "best_strict_score": 4749251.252869636,
+        "lattice_mass_converged": false
+      },
+      {
+        "cell_id": "C000008",
+        "mode_count": 25,
+        "resumed": false,
+        "best_strict_score": 92.16340168205639,
+        "lattice_mass_converged": false
+      },
+      {
+        "cell_id": "C000009",
+        "mode_count": 24,
+        "resumed": false,
+        "best_strict_score": 4187952.4319570903,
+        "lattice_mass_converged": false
+      },
+      {
+        "cell_id": "C000010",
+        "mode_count": 24,
+        "resumed": false,
+        "best_strict_score": 4871521.224507148,
+        "lattice_mass_converged": false
+      },
+      {
+        "cell_id": "C000011",
+        "mode_count": 24,
+        "resumed": false,
+        "best_strict_score": 4009756.378877062,
+        "lattice_mass_converged": false
+      },
+      {
+        "cell_id": "C000012",
+        "mode_count": 24,
+        "resumed": false,
+        "best_strict_score": 5333929.387853777,
+        "lattice_mass_converged": false
+      },
+      {
+        "cell_id": "C000013",
+        "mode_count": 24,
+        "resumed": false,
+        "best_strict_score": 5377506.099529741,
+        "lattice_mass_converged": false
+      },
+      {
+        "cell_id": "C000014",
+        "mode_count": 24,
+        "resumed": false,
+        "best_strict_score": 5812958.132059474,
+        "lattice_mass_converged": false
+      },
+      {
+        "cell_id": "C000015",
+        "mode_count": 24,
+        "resumed": false,
+        "best_strict_score": 5489460.337722764,
+        "lattice_mass_converged": false
+      },
+      {
+        "cell_id": "C000016",
+        "mode_count": 24,
+        "resumed": false,
+        "best_strict_score": 5018819.005443241,
+        "lattice_mass_converged": false
+      },
+      {
+        "cell_id": "C000017",
+        "mode_count": 24,
+        "resumed": false,
+        "best_strict_score": 5432494.0974467555,
+        "lattice_mass_converged": false
+      }
+    ],
+    "selected_conditional_modes": [
+      {
+        "cell_id": "C000008",
+        "grid_index": [
+          -1,
+          -1
+        ],
+        "normalized_values": [
+          -0.029835125267086888,
+          0.4243652090427218,
+          0.001143505044269927,
+          0.0013130722622595793,
+          -0.004237599401325599,
+          0.010905894428047756,
+          -0.008012164260454766,
+          0.30991774185588017,
+          0.9817183536023031
+        ],
+        "parameter_values": [
+          19.20975056276031,
+          -12.176191601088696,
+          189.04722783385063,
+          1.534796524086937e-13,
+          17.5261488177986,
+          23.4595982930623,
+          59362.52016594774,
+          5.8914740734132464e-05,
+          -4.3282519620828966e-05
+        ],
+        "local_integer_offsets": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "shape_chi2": 161.4129651629503,
+        "strict_score": 92.16340168205639,
+        "log_likelihood": -83.28229856406912,
+        "integer_offsets": [
+          243,
+          234,
+          237,
+          225,
+          368,
+          464,
+          504,
+          503,
+          499,
+          494,
+          502,
+          525,
+          563,
+          591,
+          630,
+          695,
+          778,
+          834
+        ],
+        "posterior_weight": 0.0334721146381322,
+        "lattice_mass_converged": false,
+        "lattice_log_mass_increment": 0.4619348300070034,
+        "lattice_visited_nodes": 13911,
+        "posterior_in_support": true,
+        "source_cell_id": "C000008",
+        "posterior_transport_fraction": 1.0
+      }
+    ],
+    "annealing": [
+      {
+        "mode_id": "0000_C000008_-1_-1",
+        "source_strict_score": 92.16340168205639,
+        "output_mode_count": 4,
+        "best_total_chi2": 138.32638854628703,
+        "diagnostics": {
+          "stages": [
+            {
+              "phase_sigma_cycles": 0.1,
+              "input_particle_count": 1,
+              "profile_lattice_failure_count": 0,
+              "empty_path_posterior_count": 0,
+              "attempted_path_count": 3,
+              "closure_failure_count": 0,
+              "closure_nonconverged_count": 0,
+              "nonfinite_objective_count": 0,
+              "candidate_count": 3,
+              "retained_particle_count": 3,
+              "failure_reasons": []
+            },
+            {
+              "phase_sigma_cycles": 0.05,
+              "input_particle_count": 3,
+              "profile_lattice_failure_count": 0,
+              "empty_path_posterior_count": 0,
+              "attempted_path_count": 9,
+              "closure_failure_count": 0,
+              "closure_nonconverged_count": 0,
+              "nonfinite_objective_count": 0,
+              "candidate_count": 9,
+              "retained_particle_count": 4,
+              "failure_reasons": []
+            },
+            {
+              "phase_sigma_cycles": 0.02,
+              "input_particle_count": 4,
+              "profile_lattice_failure_count": 0,
+              "empty_path_posterior_count": 0,
+              "attempted_path_count": 12,
+              "closure_failure_count": 0,
+              "closure_nonconverged_count": 0,
+              "nonfinite_objective_count": 0,
+              "candidate_count": 12,
+              "retained_particle_count": 4,
+              "failure_reasons": []
+            },
+            {
+              "phase_sigma_cycles": 0.01,
+              "input_particle_count": 4,
+              "profile_lattice_failure_count": 0,
+              "empty_path_posterior_count": 0,
+              "attempted_path_count": 12,
+              "closure_failure_count": 0,
+              "closure_nonconverged_count": 0,
+              "nonfinite_objective_count": 0,
+              "candidate_count": 12,
+              "retained_particle_count": 4,
+              "failure_reasons": []
+            },
+            {
+              "phase_sigma_cycles": 0.005,
+              "input_particle_count": 4,
+              "profile_lattice_failure_count": 0,
+              "empty_path_posterior_count": 0,
+              "attempted_path_count": 12,
+              "closure_failure_count": 0,
+              "closure_nonconverged_count": 0,
+              "nonfinite_objective_count": 0,
+              "candidate_count": 12,
+              "retained_particle_count": 4,
+              "failure_reasons": []
+            },
+            {
+              "phase_sigma_cycles": 0.002,
+              "input_particle_count": 4,
+              "profile_lattice_failure_count": 0,
+              "empty_path_posterior_count": 0,
+              "attempted_path_count": 12,
+              "closure_failure_count": 0,
+              "closure_nonconverged_count": 0,
+              "nonfinite_objective_count": 0,
+              "candidate_count": 12,
+              "retained_particle_count": 4,
+              "failure_reasons": []
+            },
+            {
+              "phase_sigma_cycles": 0.001,
+              "input_particle_count": 4,
+              "profile_lattice_failure_count": 0,
+              "empty_path_posterior_count": 0,
+              "attempted_path_count": 12,
+              "closure_failure_count": 0,
+              "closure_nonconverged_count": 0,
+              "nonfinite_objective_count": 0,
+              "candidate_count": 12,
+              "retained_particle_count": 4,
+              "failure_reasons": []
+            },
+            {
+              "phase_sigma_cycles": 0.0005,
+              "input_particle_count": 4,
+              "profile_lattice_failure_count": 0,
+              "empty_path_posterior_count": 0,
+              "attempted_path_count": 12,
+              "closure_failure_count": 0,
+              "closure_nonconverged_count": 0,
+              "nonfinite_objective_count": 0,
+              "candidate_count": 12,
+              "retained_particle_count": 4,
+              "failure_reasons": []
+            },
+            {
+              "phase_sigma_cycles": 0.0002,
+              "input_particle_count": 4,
+              "profile_lattice_failure_count": 0,
+              "empty_path_posterior_count": 0,
+              "attempted_path_count": 12,
+              "closure_failure_count": 0,
+              "closure_nonconverged_count": 0,
+              "nonfinite_objective_count": 0,
+              "candidate_count": 12,
+              "retained_particle_count": 4,
+              "failure_reasons": []
+            },
+            {
+              "phase_sigma_cycles": 0.0001,
+              "input_particle_count": 4,
+              "profile_lattice_failure_count": 0,
+              "empty_path_posterior_count": 0,
+              "attempted_path_count": 12,
+              "closure_failure_count": 0,
+              "closure_nonconverged_count": 0,
+              "nonfinite_objective_count": 0,
+              "candidate_count": 12,
+              "retained_particle_count": 4,
+              "failure_reasons": []
+            },
+            {
+              "phase_sigma_cycles": 0.0,
+              "input_particle_count": 4,
+              "profile_lattice_failure_count": 0,
+              "empty_path_posterior_count": 0,
+              "attempted_path_count": 12,
+              "closure_failure_count": 0,
+              "closure_nonconverged_count": 0,
+              "nonfinite_objective_count": 0,
+              "candidate_count": 12,
+              "retained_particle_count": 4,
+              "failure_reasons": []
+            }
+          ],
+          "completed_schedule": true,
+          "failure_stage_index": null,
+          "failure_reason": null
+        },
+        "resumed": false
+      }
+    ],
+    "selected_annealed_modes": [
+      {
+        "cell_id": "C000008",
+        "source_grid_index": [
+          -1,
+          -1
+        ],
+        "normalized_values": [
+          -0.02979120954399971,
+          0.4243642564960525,
+          0.0010317624704687136,
+          -0.00022441146867300285,
+          -0.010599988809676882,
+          -0.004750322322483583,
+          0.0012219940553854205,
+          0.2796840465349371,
+          0.02275229598239341
+        ],
+        "parameter_values": [
+          19.209582597786305,
+          -12.256105439223688,
+          189.04723947771473,
+          -3.02765725496849e-16,
+          17.52612570693864,
+          23.447645645724037,
+          59362.521450295986,
+          -2.5674801342830337e-05,
+          6.604700294363617e-06
+        ],
+        "local_integer_offsets": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "integer_offsets": [
+          593,
+          595,
+          609,
+          627,
+          782,
+          855,
+          881,
+          885,
+          887,
+          896,
+          915,
+          943,
+          973,
+          994,
+          1023,
+          1062,
+          1113,
+          1132
+        ],
+        "shape_chi2": 117.19972010395344,
+        "phase_chi2": 21.126668442333603,
+        "total_chi2": 138.32638854628703,
+        "converged": true,
+        "trace": [
+          {
+            "phase_sigma_cycles": 0.1,
+            "integer_offsets": [
+              360,
+              352,
+              356,
+              343,
+              477,
+              568,
+              599,
+              587,
+              579,
+              566,
+              568,
+              584,
+              613,
+              636,
+              670,
+              724,
+              794,
+              832
+            ],
+            "normalized_values": [
+              -0.029796390268137348,
+              0.4243654307624915,
+              0.000909695502577484,
+              0.0004966687685712893,
+              -0.00681557267954599,
+              0.04324003124479461,
+              0.010194269754490079,
+              0.3175448691221876,
+              0.9627769029469899
+            ],
+            "shape_chi2": 87.89472358519134,
+            "phase_chi2": 1.1380095172923776,
+            "total_chi2": 89.03273310248372,
+            "lattice_strict_score": 89.11777487467646,
+            "lattice_log_likelihood": -75.6103027595369,
+            "lattice_mass_converged": false,
+            "lattice_log_mass_increment": 0.5502893431538824,
+            "lattice_visited_nodes": 11006,
+            "function_evaluations": 15,
+            "converged": true
+          },
+          {
+            "phase_sigma_cycles": 0.05,
+            "integer_offsets": [
+              360,
+              352,
+              356,
+              343,
+              477,
+              568,
+              599,
+              587,
+              579,
+              566,
+              568,
+              584,
+              613,
+              636,
+              670,
+              724,
+              794,
+              832
+            ],
+            "normalized_values": [
+              -0.029794706033497934,
+              0.4243657803357365,
+              0.0009096992057013847,
+              0.0004967201041326271,
+              -0.0068149077817950526,
+              0.043352258089749816,
+              0.010434265517039918,
+              0.3175597217518768,
+              0.9625298610832159
+            ],
+            "shape_chi2": 88.44959812497717,
+            "phase_chi2": 3.380281254702303,
+            "total_chi2": 91.82987937967947,
+            "lattice_strict_score": 91.82974177319704,
+            "lattice_log_likelihood": -71.22867316230995,
+            "lattice_mass_converged": false,
+            "lattice_log_mass_increment": 0.3768229222721611,
+            "lattice_visited_nodes": 13914,
+            "function_evaluations": 15,
+            "converged": true
+          },
+          {
+            "phase_sigma_cycles": 0.02,
+            "integer_offsets": [
+              243,
+              234,
+              237,
+              225,
+              368,
+              464,
+              504,
+              503,
+              499,
+              494,
+              502,
+              525,
+              563,
+              591,
+              630,
+              695,
+              778,
+              834
+            ],
+            "normalized_values": [
+              -0.029835038777005496,
+              0.42436523644141283,
+              0.0011435033971068842,
+              0.0013130613621505068,
+              -0.004237209728093216,
+              0.01078733318918612,
+              -0.007935632884306341,
+              0.3103818059628554,
+              0.9774114847297097
+            ],
+            "shape_chi2": 88.67290057011229,
+            "phase_chi2": 12.799646204580997,
+            "total_chi2": 101.47254677469328,
+            "lattice_strict_score": 101.5355736586776,
+            "lattice_log_likelihood": -68.80046433515074,
+            "lattice_mass_converged": false,
+            "lattice_log_mass_increment": 0.0869034959454078,
+            "lattice_visited_nodes": 15082,
+            "function_evaluations": 14,
+            "converged": true
+          },
+          {
+            "phase_sigma_cycles": 0.01,
+            "integer_offsets": [
+              73,
+              60,
+              61,
+              49,
+              226,
+              316,
+              337,
+              317,
+              309,
+              303,
+              317,
+              351,
+              404,
+              440,
+              487,
+              562,
+              647,
+              695
+            ],
+            "normalized_values": [
+              -0.029835561354653786,
+              0.42435402582028625,
+              0.0011597114259297575,
+              0.001830859864339156,
+              -0.003844077287025833,
+              -0.0030965910714499823,
+              0.005830069649680967,
+              0.5325995513037938,
+              0.29977236861574463
+            ],
+            "shape_chi2": 95.7401935998561,
+            "phase_chi2": 7.266727733303723,
+            "total_chi2": 103.00692133315982,
+            "lattice_strict_score": 115.05590769232059,
+            "lattice_log_likelihood": -71.32773051070383,
+            "lattice_mass_converged": false,
+            "lattice_log_mass_increment": 0.002871650213565502,
+            "lattice_visited_nodes": 16355,
+            "function_evaluations": 18,
+            "converged": true
+          },
+          {
+            "phase_sigma_cycles": 0.005,
+            "integer_offsets": [
+              593,
+              595,
+              609,
+              627,
+              782,
+              855,
+              881,
+              885,
+              887,
+              896,
+              915,
+              943,
+              973,
+              994,
+              1023,
+              1062,
+              1113,
+              1132
+            ],
+            "normalized_values": [
+              -0.029791231212402368,
+              0.4243642463598518,
+              0.0010317621571476609,
+              -0.0002244109755367051,
+              -0.010599962123594861,
+              -0.0047419678497211395,
+              0.0011770850207503058,
+              0.27968524456299,
+              0.02275896526466734
+            ],
+            "shape_chi2": 117.19318446672239,
+            "phase_chi2": 0.14435449411647946,
+            "total_chi2": 117.33753896083887,
+            "lattice_strict_score": 121.17284837447328,
+            "lattice_log_likelihood": -68.28093355179539,
+            "lattice_mass_converged": true,
+            "lattice_log_mass_increment": 5.143263592799485e-11,
+            "lattice_visited_nodes": 6042,
+            "function_evaluations": 17,
+            "converged": true
+          },
+          {
+            "phase_sigma_cycles": 0.002,
+            "integer_offsets": [
+              593,
+              595,
+              609,
+              627,
+              782,
+              855,
+              881,
+              885,
+              887,
+              896,
+              915,
+              943,
+              973,
+              994,
+              1023,
+              1062,
+              1113,
+              1132
+            ],
+            "normalized_values": [
+              -0.029791204959242673,
+              0.42436425865021854,
+              0.0010317620035957234,
+              -0.00022441204724677318,
+              -0.010600195467218895,
+              -0.004743628997232581,
+              0.0012104794066106215,
+              0.2796854460103468,
+              0.022753460487256665
+            ],
+            "shape_chi2": 117.19727728833368,
+            "phase_chi2": 0.6808149275103649,
+            "total_chi2": 117.87809221584405,
+            "lattice_strict_score": 117.87802929254815,
+            "lattice_log_likelihood": -58.72408364989292,
+            "lattice_mass_converged": true,
+            "lattice_log_mass_increment": 0.0,
+            "lattice_visited_nodes": 6351,
+            "function_evaluations": 10,
+            "converged": true
+          },
+          {
+            "phase_sigma_cycles": 0.001,
+            "integer_offsets": [
+              593,
+              595,
+              609,
+              627,
+              782,
+              855,
+              881,
+              885,
+              887,
+              896,
+              915,
+              943,
+              973,
+              994,
+              1023,
+              1062,
+              1113,
+              1132
+            ],
+            "normalized_values": [
+              -0.02979120618635609,
+              0.42436425786726584,
+              0.0010317620777936605,
+              -0.0002244119347862792,
+              -0.010600167923628239,
+              -0.004744882525603194,
+              0.0012112258971384228,
+              0.2796852329390383,
+              0.0227534309767407
+            ],
+            "shape_chi2": 117.19766503069029,
+            "phase_chi2": 2.382696644397957,
+            "total_chi2": 119.58036167508824,
+            "lattice_strict_score": 119.58036625746522,
+            "lattice_log_likelihood": -53.89505272029246,
+            "lattice_mass_converged": true,
+            "lattice_log_mass_increment": 0.0,
+            "lattice_visited_nodes": 8426,
+            "function_evaluations": 10,
+            "converged": true
+          },
+          {
+            "phase_sigma_cycles": 0.0005,
+            "integer_offsets": [
+              593,
+              595,
+              609,
+              627,
+              782,
+              855,
+              881,
+              885,
+              887,
+              896,
+              915,
+              943,
+              973,
+              994,
+              1023,
+              1062,
+              1113,
+              1132
+            ],
+            "normalized_values": [
+              -0.029791208545544033,
+              0.4243642569464193,
+              0.001031762227623338,
+              -0.00022441169613754324,
+              -0.01060010387741972,
+              -0.004746584003479225,
+              0.001213597632135998,
+              0.27968481358584024,
+              0.02275341396085503
+            ],
+            "shape_chi2": 117.19816806438803,
+            "phase_chi2": 6.62235275188768,
+            "total_chi2": 123.8205208162757,
+            "lattice_strict_score": 123.82049925075191,
+            "lattice_log_likelihood": -51.42011141686561,
+            "lattice_mass_converged": true,
+            "lattice_log_mass_increment": 0.0,
+            "lattice_visited_nodes": 7067,
+            "function_evaluations": 10,
+            "converged": true
+          },
+          {
+            "phase_sigma_cycles": 0.0002,
+            "integer_offsets": [
+              593,
+              595,
+              609,
+              627,
+              782,
+              855,
+              881,
+              885,
+              887,
+              896,
+              915,
+              943,
+              973,
+              994,
+              1023,
+              1062,
+              1113,
+              1132
+            ],
+            "normalized_values": [
+              -0.02979121007755919,
+              0.4243642563976077,
+              0.0010317624035908377,
+              -0.0002244114904555818,
+              -0.010600021641692731,
+              -0.004748916066900436,
+              0.0012185234839120383,
+              0.2796843067735127,
+              0.022752884501469568
+            ],
+            "shape_chi2": 117.19901824754302,
+            "phase_chi2": 14.882699239898061,
+            "total_chi2": 132.0817174874411,
+            "lattice_strict_score": 132.08173517588506,
+            "lattice_log_likelihood": -52.21756979474026,
+            "lattice_mass_converged": true,
+            "lattice_log_mass_increment": 0.0,
+            "lattice_visited_nodes": 6964,
+            "function_evaluations": 10,
+            "converged": true
+          },
+          {
+            "phase_sigma_cycles": 0.0001,
+            "integer_offsets": [
+              593,
+              595,
+              609,
+              627,
+              782,
+              855,
+              881,
+              885,
+              887,
+              896,
+              915,
+              943,
+              973,
+              994,
+              1023,
+              1062,
+              1113,
+              1132
+            ],
+            "normalized_values": [
+              -0.029791209845667743,
+              0.42436425642920944,
+              0.0010317624509195798,
+              -0.00022441146904396612,
+              -0.010599997998377382,
+              -0.004749866709978866,
+              0.0012208355910340364,
+              0.27968413047036805,
+              0.022752502696737086
+            ],
+            "shape_chi2": 117.199484044608,
+            "phase_chi2": 18.982204527395258,
+            "total_chi2": 136.18168857200325,
+            "lattice_strict_score": 136.18169451684645,
+            "lattice_log_likelihood": -53.417511604228096,
+            "lattice_mass_converged": true,
+            "lattice_log_mass_increment": 0.0,
+            "lattice_visited_nodes": 6636,
+            "function_evaluations": 12,
+            "converged": true
+          },
+          {
+            "phase_sigma_cycles": 0.0,
+            "integer_offsets": [
+              593,
+              595,
+              609,
+              627,
+              782,
+              855,
+              881,
+              885,
+              887,
+              896,
+              915,
+              943,
+              973,
+              994,
+              1023,
+              1062,
+              1113,
+              1132
+            ],
+            "normalized_values": [
+              -0.02979120954399971,
+              0.4243642564960525,
+              0.0010317624704687136,
+              -0.00022441146867300285,
+              -0.010599988809676882,
+              -0.004750322322483583,
+              0.0012219940553854205,
+              0.2796840465349371,
+              0.02275229598239341
+            ],
+            "shape_chi2": 117.19972010395344,
+            "phase_chi2": 21.126668442333603,
+            "total_chi2": 138.32638854628703,
+            "lattice_strict_score": 138.32638628007544,
+            "lattice_log_likelihood": -54.150062531405894,
+            "lattice_mass_converged": true,
+            "lattice_log_mass_increment": 0.0,
+            "lattice_visited_nodes": 6497,
+            "function_evaluations": 9,
+            "converged": true
+          }
+        ],
+        "source_cell_id": "C000008"
+      },
+      {
+        "cell_id": "C000008",
+        "source_grid_index": [
+          -1,
+          -1
+        ],
+        "normalized_values": [
+          -0.030250129455162183,
+          0.4241759945766301,
+          0.0009328080565453379,
+          0.01031383222273103,
+          0.0019605794902436665,
+          0.0572260587893501,
+          -0.11449386865932318,
+          0.9152270690253753,
+          -0.903071771166243
+        ],
+        "parameter_values": [
+          19.213113392355698,
+          -12.33325744481941,
+          189.04715084180023,
+          1.053754955437182e-12,
+          17.526367218753123,
+          23.47124285250719,
+          59362.509765675466,
+          0.00030898756892403726,
+          -0.0006182005818628855
+        ],
+        "local_integer_offsets": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "integer_offsets": [
+          -2621,
+          -2662,
+          -2695,
+          -2783,
+          -2744,
+          -2724,
+          -2772,
+          -2844,
+          -2863,
+          -2873,
+          -2847,
+          -2781,
+          -2688,
+          -2629,
+          -2551,
+          -2434,
+          -2310,
+          -2217
+        ],
+        "shape_chi2": 499.78963304582925,
+        "phase_chi2": 1023.9265596963342,
+        "total_chi2": 1523.7161927421635,
+        "converged": true,
+        "trace": [
+          {
+            "phase_sigma_cycles": 0.1,
+            "integer_offsets": [
+              360,
+              352,
+              356,
+              343,
+              477,
+              568,
+              599,
+              587,
+              579,
+              566,
+              568,
+              584,
+              613,
+              636,
+              670,
+              724,
+              794,
+              832
+            ],
+            "normalized_values": [
+              -0.029796390268137348,
+              0.4243654307624915,
+              0.000909695502577484,
+              0.0004966687685712893,
+              -0.00681557267954599,
+              0.04324003124479461,
+              0.010194269754490079,
+              0.3175448691221876,
+              0.9627769029469899
+            ],
+            "shape_chi2": 87.89472358519134,
+            "phase_chi2": 1.1380095172923776,
+            "total_chi2": 89.03273310248372,
+            "lattice_strict_score": 89.11777487467646,
+            "lattice_log_likelihood": -75.6103027595369,
+            "lattice_mass_converged": false,
+            "lattice_log_mass_increment": 0.5502893431538824,
+            "lattice_visited_nodes": 11006,
+            "function_evaluations": 15,
+            "converged": true
+          },
+          {
+            "phase_sigma_cycles": 0.05,
+            "integer_offsets": [
+              360,
+              352,
+              356,
+              343,
+              477,
+              568,
+              599,
+              587,
+              579,
+              566,
+              568,
+              584,
+              613,
+              636,
+              670,
+              724,
+              794,
+              832
+            ],
+            "normalized_values": [
+              -0.029794706033497934,
+              0.4243657803357365,
+              0.0009096992057013847,
+              0.0004967201041326271,
+              -0.0068149077817950526,
+              0.043352258089749816,
+              0.010434265517039918,
+              0.3175597217518768,
+              0.9625298610832159
+            ],
+            "shape_chi2": 88.44959812497717,
+            "phase_chi2": 3.380281254702303,
+            "total_chi2": 91.82987937967947,
+            "lattice_strict_score": 91.82974177319704,
+            "lattice_log_likelihood": -71.22867316230995,
+            "lattice_mass_converged": false,
+            "lattice_log_mass_increment": 0.3768229222721611,
+            "lattice_visited_nodes": 13914,
+            "function_evaluations": 15,
+            "converged": true
+          },
+          {
+            "phase_sigma_cycles": 0.02,
+            "integer_offsets": [
+              243,
+              234,
+              237,
+              225,
+              368,
+              464,
+              504,
+              503,
+              499,
+              494,
+              502,
+              525,
+              563,
+              591,
+              630,
+              695,
+              778,
+              834
+            ],
+            "normalized_values": [
+              -0.029835038777005496,
+              0.42436523644141283,
+              0.0011435033971068842,
+              0.0013130613621505068,
+              -0.004237209728093216,
+              0.01078733318918612,
+              -0.007935632884306341,
+              0.3103818059628554,
+              0.9774114847297097
+            ],
+            "shape_chi2": 88.67290057011229,
+            "phase_chi2": 12.799646204580997,
+            "total_chi2": 101.47254677469328,
+            "lattice_strict_score": 101.5355736586776,
+            "lattice_log_likelihood": -68.80046433515074,
+            "lattice_mass_converged": false,
+            "lattice_log_mass_increment": 0.0869034959454078,
+            "lattice_visited_nodes": 15082,
+            "function_evaluations": 14,
+            "converged": true
+          },
+          {
+            "phase_sigma_cycles": 0.01,
+            "integer_offsets": [
+              73,
+              60,
+              61,
+              49,
+              226,
+              316,
+              337,
+              317,
+              309,
+              303,
+              317,
+              351,
+              404,
+              440,
+              487,
+              562,
+              647,
+              695
+            ],
+            "normalized_values": [
+              -0.029835561354653786,
+              0.42435402582028625,
+              0.0011597114259297575,
+              0.001830859864339156,
+              -0.003844077287025833,
+              -0.0030965910714499823,
+              0.005830069649680967,
+              0.5325995513037938,
+              0.29977236861574463
+            ],
+            "shape_chi2": 95.7401935998561,
+            "phase_chi2": 7.266727733303723,
+            "total_chi2": 103.00692133315982,
+            "lattice_strict_score": 115.05590769232059,
+            "lattice_log_likelihood": -71.32773051070383,
+            "lattice_mass_converged": false,
+            "lattice_log_mass_increment": 0.002871650213565502,
+            "lattice_visited_nodes": 16355,
+            "function_evaluations": 18,
+            "converged": true
+          },
+          {
+            "phase_sigma_cycles": 0.005,
+            "integer_offsets": [
+              593,
+              595,
+              609,
+              627,
+              782,
+              855,
+              881,
+              885,
+              887,
+              896,
+              915,
+              943,
+              973,
+              994,
+              1023,
+              1062,
+              1113,
+              1132
+            ],
+            "normalized_values": [
+              -0.029791231212402368,
+              0.4243642463598518,
+              0.0010317621571476609,
+              -0.0002244109755367051,
+              -0.010599962123594861,
+              -0.0047419678497211395,
+              0.0011770850207503058,
+              0.27968524456299,
+              0.02275896526466734
+            ],
+            "shape_chi2": 117.19318446672239,
+            "phase_chi2": 0.14435449411647946,
+            "total_chi2": 117.33753896083887,
+            "lattice_strict_score": 121.17284837447328,
+            "lattice_log_likelihood": -68.28093355179539,
+            "lattice_mass_converged": true,
+            "lattice_log_mass_increment": 5.143263592799485e-11,
+            "lattice_visited_nodes": 6042,
+            "function_evaluations": 17,
+            "converged": true
+          },
+          {
+            "phase_sigma_cycles": 0.002,
+            "integer_offsets": [
+              593,
+              595,
+              609,
+              627,
+              782,
+              855,
+              881,
+              885,
+              887,
+              896,
+              915,
+              943,
+              973,
+              994,
+              1023,
+              1062,
+              1113,
+              1132
+            ],
+            "normalized_values": [
+              -0.029791204959242673,
+              0.42436425865021854,
+              0.0010317620035957234,
+              -0.00022441204724677318,
+              -0.010600195467218895,
+              -0.004743628997232581,
+              0.0012104794066106215,
+              0.2796854460103468,
+              0.022753460487256665
+            ],
+            "shape_chi2": 117.19727728833368,
+            "phase_chi2": 0.6808149275103649,
+            "total_chi2": 117.87809221584405,
+            "lattice_strict_score": 117.87802929254815,
+            "lattice_log_likelihood": -58.72408364989292,
+            "lattice_mass_converged": true,
+            "lattice_log_mass_increment": 0.0,
+            "lattice_visited_nodes": 6351,
+            "function_evaluations": 10,
+            "converged": true
+          },
+          {
+            "phase_sigma_cycles": 0.001,
+            "integer_offsets": [
+              593,
+              595,
+              609,
+              627,
+              782,
+              855,
+              881,
+              885,
+              887,
+              896,
+              915,
+              943,
+              973,
+              994,
+              1023,
+              1062,
+              1113,
+              1132
+            ],
+            "normalized_values": [
+              -0.02979120618635609,
+              0.42436425786726584,
+              0.0010317620777936605,
+              -0.0002244119347862792,
+              -0.010600167923628239,
+              -0.004744882525603194,
+              0.0012112258971384228,
+              0.2796852329390383,
+              0.0227534309767407
+            ],
+            "shape_chi2": 117.19766503069029,
+            "phase_chi2": 2.382696644397957,
+            "total_chi2": 119.58036167508824,
+            "lattice_strict_score": 119.58036625746522,
+            "lattice_log_likelihood": -53.89505272029246,
+            "lattice_mass_converged": true,
+            "lattice_log_mass_increment": 0.0,
+            "lattice_visited_nodes": 8426,
+            "function_evaluations": 10,
+            "converged": true
+          },
+          {
+            "phase_sigma_cycles": 0.0005,
+            "integer_offsets": [
+              593,
+              595,
+              609,
+              627,
+              782,
+              855,
+              881,
+              885,
+              887,
+              896,
+              915,
+              943,
+              973,
+              994,
+              1023,
+              1062,
+              1113,
+              1132
+            ],
+            "normalized_values": [
+              -0.029791208545544033,
+              0.4243642569464193,
+              0.001031762227623338,
+              -0.00022441169613754324,
+              -0.01060010387741972,
+              -0.004746584003479225,
+              0.001213597632135998,
+              0.27968481358584024,
+              0.02275341396085503
+            ],
+            "shape_chi2": 117.19816806438803,
+            "phase_chi2": 6.62235275188768,
+            "total_chi2": 123.8205208162757,
+            "lattice_strict_score": 123.82049925075191,
+            "lattice_log_likelihood": -51.42011141686561,
+            "lattice_mass_converged": true,
+            "lattice_log_mass_increment": 0.0,
+            "lattice_visited_nodes": 7067,
+            "function_evaluations": 10,
+            "converged": true
+          },
+          {
+            "phase_sigma_cycles": 0.0002,
+            "integer_offsets": [
+              593,
+              595,
+              609,
+              627,
+              782,
+              855,
+              881,
+              885,
+              887,
+              896,
+              915,
+              943,
+              973,
+              994,
+              1023,
+              1062,
+              1113,
+              1132
+            ],
+            "normalized_values": [
+              -0.02979121007755919,
+              0.4243642563976077,
+              0.0010317624035908377,
+              -0.0002244114904555818,
+              -0.010600021641692731,
+              -0.004748916066900436,
+              0.0012185234839120383,
+              0.2796843067735127,
+              0.022752884501469568
+            ],
+            "shape_chi2": 117.19901824754302,
+            "phase_chi2": 14.882699239898061,
+            "total_chi2": 132.0817174874411,
+            "lattice_strict_score": 132.08173517588506,
+            "lattice_log_likelihood": -52.21756979474026,
+            "lattice_mass_converged": true,
+            "lattice_log_mass_increment": 0.0,
+            "lattice_visited_nodes": 6964,
+            "function_evaluations": 10,
+            "converged": true
+          },
+          {
+            "phase_sigma_cycles": 0.0001,
+            "integer_offsets": [
+              593,
+              595,
+              609,
+              627,
+              782,
+              855,
+              881,
+              885,
+              887,
+              896,
+              915,
+              943,
+              973,
+              994,
+              1023,
+              1062,
+              1113,
+              1132
+            ],
+            "normalized_values": [
+              -0.029791209845667743,
+              0.42436425642920944,
+              0.0010317624509195798,
+              -0.00022441146904396612,
+              -0.010599997998377382,
+              -0.004749866709978866,
+              0.0012208355910340364,
+              0.27968413047036805,
+              0.022752502696737086
+            ],
+            "shape_chi2": 117.199484044608,
+            "phase_chi2": 18.982204527395258,
+            "total_chi2": 136.18168857200325,
+            "lattice_strict_score": 136.18169451684645,
+            "lattice_log_likelihood": -53.417511604228096,
+            "lattice_mass_converged": true,
+            "lattice_log_mass_increment": 0.0,
+            "lattice_visited_nodes": 6636,
+            "function_evaluations": 12,
+            "converged": true
+          },
+          {
+            "phase_sigma_cycles": 0.0,
+            "integer_offsets": [
+              -2621,
+              -2662,
+              -2695,
+              -2783,
+              -2744,
+              -2724,
+              -2772,
+              -2844,
+              -2863,
+              -2873,
+              -2847,
+              -2781,
+              -2688,
+              -2629,
+              -2551,
+              -2434,
+              -2310,
+              -2217
+            ],
+            "normalized_values": [
+              -0.030250129455162183,
+              0.4241759945766301,
+              0.0009328080565453379,
+              0.01031383222273103,
+              0.0019605794902436665,
+              0.0572260587893501,
+              -0.11449386865932318,
+              0.9152270690253753,
+              -0.903071771166243
+            ],
+            "shape_chi2": 499.78963304582925,
+            "phase_chi2": 1023.9265596963342,
+            "total_chi2": 1523.7161927421635,
+            "lattice_strict_score": 856.127553373622,
+            "lattice_log_likelihood": -54.150062531405894,
+            "lattice_mass_converged": true,
+            "lattice_log_mass_increment": 0.0,
+            "lattice_visited_nodes": 6497,
+            "function_evaluations": 18,
+            "converged": true
+          }
+        ],
+        "source_cell_id": "C000008"
+      }
+    ],
+    "candidate_certifications": [
+      {
+        "schema_version": 2,
+        "run_fingerprint": "a5f97da57688096050263c2aad283b25613e7e6b210cc9dc3e4d7a036ad78191",
+        "candidate_id": "candidate_0000",
+        "source_cell_id": "C000008",
+        "destination_cell_id": "C000008",
+        "source_grid_index": [
+          -1,
+          -1
+        ],
+        "annealed_total_chi2": 138.32638854628703,
+        "annealed_shape_chi2": 117.19972010395344,
+        "annealed_phase_chi2": 21.126668442333603,
+        "integer_offsets": [
+          593,
+          595,
+          609,
+          627,
+          782,
+          855,
+          881,
+          885,
+          887,
+          896,
+          915,
+          943,
+          973,
+          994,
+          1023,
+          1062,
+          1113,
+          1132
+        ],
+        "fit_parameters": [
+          "RAJ",
+          "DECJ",
+          "F0",
+          "F1",
+          "PB",
+          "A1",
+          "TASC",
+          "EPS1",
+          "EPS2"
+        ],
+        "prohibited_automatic_parameters": [
+          "PBDOT",
+          "EPS1DOT",
+          "EPS2DOT"
+        ],
+        "parameter_expansion": "disabled",
+        "optimizer_mode": "pint_wls",
+        "optimizer_fallback_reason": null,
+        "optimizer_function_evaluations": null,
+        "optimizer_termination_status": null,
+        "optimizer_termination_message": null,
+        "optimizer_optimality": null,
+        "support_valid": true,
+        "active_bounds": [],
+        "support_boundary_hit": false,
+        "chi2": 138.32643540698527,
+        "reduced_chi2": 1.9760919343855037,
+        "weighted_rms_us": 4.66197057895411,
+        "disk_reload_chi2": 138.3273667618732,
+        "disk_reload_reduced_chi2": 1.9761052394553316,
+        "disk_reload_weighted_rms_us": 4.661986273502172,
+        "disk_reload_chi2_delta": 0.000931354887939051,
+        "accepted": true,
+        "target_reached": true,
+        "fitted_parameters": {
+          "RAJ": 19.20958259778636,
+          "DECJ": -12.256105439224736,
+          "F0": 189.04723947771473,
+          "F1": -3.0276572635193135e-16,
+          "PB": 17.526125706938597,
+          "A1": 23.447645645724574,
+          "TASC": 59362.521450295986,
+          "EPS1": -2.5674801225840606e-05,
+          "EPS2": 6.604700585094761e-06
+        },
+        "covariance_parameter_names": [
+          "RAJ",
+          "DECJ",
+          "F0",
+          "F1",
+          "PB",
+          "A1",
+          "TASC",
+          "EPS1",
+          "EPS2"
+        ],
+        "parameter_covariance": [
+          [
+            3.6489192719223324e-17,
+            -1.2571419407261865e-15,
+            1.1536063115515084e-20,
+            -3.254720159403855e-28,
+            -5.1524442244693465e-18,
+            7.001303843467198e-16,
+            2.223660861345431e-16,
+            1.1323161320040307e-18,
+            -3.7318288132188466e-17
+          ],
+          [
+            -1.2571419407261865e-15,
+            2.568711264061492e-13,
+            -1.1253407743945519e-18,
+            2.0615917936087097e-26,
+            2.7074819106961816e-15,
+            -4.8975082077996715e-14,
+            -1.2267914924954895e-13,
+            1.0520279663811702e-15,
+            -3.3519092052617944e-15
+          ],
+          [
+            1.1536063115515084e-20,
+            -1.1253407743945519e-18,
+            2.561827521431834e-22,
+            -4.049889885551905e-30,
+            7.557852498459017e-20,
+            -6.6147345707037525e-18,
+            -4.269336862108637e-18,
+            -4.604823176972029e-19,
+            3.732523104507895e-19
+          ],
+          [
+            -3.254720159403855e-28,
+            2.0615917936087097e-26,
+            -4.049889885551905e-30,
+            6.806075747206293e-38,
+            -9.436650306033502e-28,
+            9.893897792444581e-26,
+            5.203286382520585e-26,
+            7.082252193365928e-27,
+            -6.420608573315898e-27
+          ],
+          [
+            -5.1524442244693465e-18,
+            2.7074819106961816e-15,
+            7.557852498459017e-20,
+            -9.436650306033502e-28,
+            1.605956070979394e-16,
+            -1.682763177528074e-15,
+            -8.246595837442892e-15,
+            -2.5696956765889635e-16,
+            -3.4962902466210756e-16
+          ],
+          [
+            7.001303843467198e-16,
+            -4.8975082077996715e-14,
+            -6.6147345707037525e-18,
+            9.893897792444581e-26,
+            -1.682763177528074e-15,
+            4.813298233249576e-13,
+            8.713859942898278e-14,
+            1.477899797243432e-14,
+            -1.2419541399379707e-14
+          ],
+          [
+            2.223660861345431e-16,
+            -1.2267914924954895e-13,
+            -4.269336862108637e-18,
+            5.203286382520585e-26,
+            -8.246595837442892e-15,
+            8.713859942898278e-14,
+            4.397860292510262e-13,
+            1.1448401949964063e-14,
+            1.4815783635051342e-14
+          ],
+          [
+            1.1323161320040307e-18,
+            1.0520279663811702e-15,
+            -4.604823176972029e-19,
+            7.082252193365928e-27,
+            -2.5696956765889635e-16,
+            1.477899797243432e-14,
+            1.1448401949964063e-14,
+            4.808718977285261e-15,
+            -5.211169261170565e-16
+          ],
+          [
+            -3.7318288132188466e-17,
+            -3.3519092052617944e-15,
+            3.732523104507895e-19,
+            -6.420608573315898e-27,
+            -3.4962902466210756e-16,
+            -1.2419541399379707e-14,
+            1.4815783635051342e-14,
+            -5.211169261170565e-16,
+            6.341179536383272e-15
+          ]
+        ],
+        "artifacts": {
+          "par": "${BUNDLE}/recorded/control_archive/runs/n19_f1_zero/blind_binary_candidates/blind_ell1_000/candidates/candidate_0000/solution.par",
+          "tim": "${BUNDLE}/recorded/control_archive/runs/n19_f1_zero/blind_binary_candidates/blind_ell1_000/candidates/candidate_0000/solution.tim",
+          "residuals_csv": "${BUNDLE}/recorded/control_archive/runs/n19_f1_zero/blind_binary_candidates/blind_ell1_000/candidates/candidate_0000/solution_residuals.csv",
+          "residuals_png": "${BUNDLE}/recorded/control_archive/runs/n19_f1_zero/blind_binary_candidates/blind_ell1_000/candidates/candidate_0000/solution_residuals.png"
+        }
+      },
+      {
+        "schema_version": 2,
+        "run_fingerprint": "a5f97da57688096050263c2aad283b25613e7e6b210cc9dc3e4d7a036ad78191",
+        "candidate_id": "candidate_0001",
+        "source_cell_id": "C000008",
+        "destination_cell_id": "C000008",
+        "source_grid_index": [
+          -1,
+          -1
+        ],
+        "annealed_total_chi2": 1523.7161927421635,
+        "annealed_shape_chi2": 499.78963304582925,
+        "annealed_phase_chi2": 1023.9265596963342,
+        "integer_offsets": [
+          -2621,
+          -2662,
+          -2695,
+          -2783,
+          -2744,
+          -2724,
+          -2772,
+          -2844,
+          -2863,
+          -2873,
+          -2847,
+          -2781,
+          -2688,
+          -2629,
+          -2551,
+          -2434,
+          -2310,
+          -2217
+        ],
+        "fit_parameters": [
+          "RAJ",
+          "DECJ",
+          "F0",
+          "F1",
+          "PB",
+          "A1",
+          "TASC",
+          "EPS1",
+          "EPS2"
+        ],
+        "prohibited_automatic_parameters": [
+          "PBDOT",
+          "EPS1DOT",
+          "EPS2DOT"
+        ],
+        "parameter_expansion": "disabled",
+        "optimizer_mode": "pint_wls",
+        "optimizer_fallback_reason": null,
+        "optimizer_function_evaluations": null,
+        "optimizer_termination_status": null,
+        "optimizer_termination_message": null,
+        "optimizer_optimality": null,
+        "support_valid": true,
+        "active_bounds": [],
+        "support_boundary_hit": false,
+        "chi2": 1523.7144116725722,
+        "reduced_chi2": 21.767348738179603,
+        "weighted_rms_us": 15.47279327830968,
+        "disk_reload_chi2": 1523.72798557294,
+        "disk_reload_reduced_chi2": 21.767542651042,
+        "disk_reload_weighted_rms_us": 15.472862197289842,
+        "disk_reload_chi2_delta": 0.013573900367873648,
+        "accepted": false,
+        "target_reached": false,
+        "fitted_parameters": {
+          "RAJ": 19.213113392461363,
+          "DECJ": -12.333257455970468,
+          "F0": 189.04715084180026,
+          "F1": 1.0537549547400814e-12,
+          "PB": 17.52636721869192,
+          "A1": 23.471242856170377,
+          "TASC": 59362.50976567834,
+          "EPS1": 0.00030898750774785975,
+          "EPS2": -0.0006182012613064788
+        },
+        "covariance_parameter_names": [
+          "RAJ",
+          "DECJ",
+          "F0",
+          "F1",
+          "PB",
+          "A1",
+          "TASC",
+          "EPS1",
+          "EPS2"
+        ],
+        "parameter_covariance": [
+          [
+            3.6760559208997217e-17,
+            -1.2909744369522416e-15,
+            1.1573403357486361e-20,
+            -3.264875757884202e-28,
+            -5.365056429077161e-18,
+            7.062021672440726e-16,
+            2.3116810221529035e-16,
+            1.5824845895418042e-18,
+            -3.7161995247504284e-17
+          ],
+          [
+            -1.2909744369522416e-15,
+            2.6080593955402593e-13,
+            -1.1204078042026157e-18,
+            2.0600063453668665e-26,
+            2.720786719967305e-15,
+            -4.8838081779771664e-14,
+            -1.2321889541998324e-13,
+            1.0675536412181203e-15,
+            -3.3242849534053078e-15
+          ],
+          [
+            1.1573403357486361e-20,
+            -1.1204078042026157e-18,
+            2.573626631566468e-22,
+            -4.063966895140712e-30,
+            7.639780299950696e-20,
+            -6.634152860912049e-18,
+            -4.316410858374502e-18,
+            -4.599273155591724e-19,
+            3.7332345800789233e-19
+          ],
+          [
+            -3.264875757884202e-28,
+            2.0600063453668665e-26,
+            -4.063966895140712e-30,
+            6.822158443241018e-38,
+            -9.545616505328377e-28,
+            9.92133081577428e-26,
+            5.265608751717599e-26,
+            7.071445626153455e-27,
+            -6.4105391064350044e-27
+          ],
+          [
+            -5.365056429077161e-18,
+            2.720786719967305e-15,
+            7.639780299950696e-20,
+            -9.545616505328377e-28,
+            1.6028439892749534e-16,
+            -1.6534764532252444e-15,
+            -8.229009927681651e-15,
+            -2.556206815427872e-16,
+            -3.4943611049208766e-16
+          ],
+          [
+            7.062021672440726e-16,
+            -4.8838081779771664e-14,
+            -6.634152860912049e-18,
+            9.92133081577428e-26,
+            -1.6534764532252444e-15,
+            4.818917971287184e-13,
+            8.586233949989579e-14,
+            1.4746894223185276e-14,
+            -1.2685499999874609e-14
+          ],
+          [
+            2.3116810221529035e-16,
+            -1.2321889541998324e-13,
+            -4.316410858374502e-18,
+            5.265608751717599e-26,
+            -8.229009927681651e-15,
+            8.586233949989579e-14,
+            4.387829998892757e-13,
+            1.1393638401182252e-14,
+            1.4799673245736312e-14
+          ],
+          [
+            1.5824845895418042e-18,
+            1.0675536412181203e-15,
+            -4.599273155591724e-19,
+            7.071445626153455e-27,
+            -2.556206815427872e-16,
+            1.4746894223185276e-14,
+            1.1393638401182252e-14,
+            4.792258285258976e-15,
+            -5.212345927591698e-16
+          ],
+          [
+            -3.7161995247504284e-17,
+            -3.3242849534053078e-15,
+            3.7332345800789233e-19,
+            -6.4105391064350044e-27,
+            -3.4943611049208766e-16,
+            -1.2685499999874609e-14,
+            1.4799673245736312e-14,
+            -5.212345927591698e-16,
+            6.341521698410211e-15
+          ]
+        ],
+        "artifacts": {
+          "par": "${BUNDLE}/recorded/control_archive/runs/n19_f1_zero/blind_binary_candidates/blind_ell1_000/candidates/candidate_0001/solution.par",
+          "tim": "${BUNDLE}/recorded/control_archive/runs/n19_f1_zero/blind_binary_candidates/blind_ell1_000/candidates/candidate_0001/solution.tim",
+          "residuals_csv": "${BUNDLE}/recorded/control_archive/runs/n19_f1_zero/blind_binary_candidates/blind_ell1_000/candidates/candidate_0001/solution_residuals.csv",
+          "residuals_png": "${BUNDLE}/recorded/control_archive/runs/n19_f1_zero/blind_binary_candidates/blind_ell1_000/candidates/candidate_0001/solution_residuals.png"
+        }
+      }
+    ]
+  },
+  "status": "completed"
+}

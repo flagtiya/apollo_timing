@@ -1,0 +1,3910 @@
+{
+  "schema_version": 1,
+  "architecture": "apollo_blind_keplerian_session_mixture",
+  "inputs": {
+    "par": "${BUNDLE}/recorded/prefix_archive/inputs/blind_f1_initial.par",
+    "tim": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n17/input.normalized.tim",
+    "par_sha256": "77148abcfee6ac2314d1d65131edd48081ba53c39a5e645a16cc2da7b46ab1b1",
+    "tim_sha256": "7f20cbef04d622fbb16734f0025aac849fdc4385732b30140a5175d6e1048f5c"
+  },
+  "scientific_contract": {
+    "historical_solution_seed": "forbidden",
+    "source_class_prior": "forbidden",
+    "manual_orbital_parameter_seed": "forbidden",
+    "manual_integer_wrap": "forbidden",
+    "local_integer_policy": "marginalized session derivative mixture",
+    "global_model": "Kepler equation constrained DD coordinates",
+    "candidate_ranker": "uncompressed TOA session-shape likelihood",
+    "path_acquisition_representation": "ELL1 when its truncation is below the integer-path gate; DD is retained when ELL1 is not final-precision accurate",
+    "final_certifier": "downstream APOLLO lattice and PINT WLS"
+  },
+  "config": {
+    "period_strata_days": [
+      [
+        0.2,
+        2.0
+      ],
+      [
+        2.0,
+        10.0
+      ],
+      [
+        10.0,
+        30.0
+      ],
+      [
+        30.0,
+        80.0
+      ],
+      [
+        80.0,
+        200.0
+      ],
+      [
+        200.0,
+        600.0
+      ],
+      [
+        600.0,
+        2000.0
+      ]
+    ],
+    "random_seeds": [
+      19,
+      73,
+      181
+    ],
+    "sparse_session_threshold": 10,
+    "sparse_period_strata_to_expand": 2,
+    "sparse_random_seeds": [
+      5,
+      11,
+      17,
+      23,
+      31,
+      43,
+      59,
+      71,
+      89,
+      107,
+      127,
+      149,
+      173,
+      199,
+      227,
+      257,
+      293,
+      331,
+      373,
+      419,
+      467,
+      521,
+      577,
+      631
+    ],
+    "parallel_workers": 1,
+    "minimum_frequency_support_hz": 0.02,
+    "fractional_frequency_support": 0.0015,
+    "local_integer_chi2_window": 100.0,
+    "maximum_session_modes": 512,
+    "frequency_temperature_hz": 0.0001,
+    "acceleration_temperature_hz_per_s": 1e-09,
+    "maximum_eccentricity": 0.95,
+    "maximum_projected_semimajor_axis_seconds": 5000.0,
+    "maximum_mass_function_solar": 100.0,
+    "spin_frequency_offset_hz": 3e-06,
+    "spin_frequency_derivative_hz_per_day": 1e-07,
+    "differential_evolution_population": 14,
+    "differential_evolution_iterations": 550,
+    "conditional_period_strata": 2,
+    "conditional_period_samples": 4096,
+    "conditional_period_anchor_modes": 34,
+    "conditional_period_max_anchor_combinations": 16384,
+    "conditional_period_em_iterations": 8,
+    "conditional_period_modes_per_stratum": 8,
+    "conditional_period_refinement_samples": 65,
+    "conditional_period_temperature_factors": [
+      10.0,
+      5.0,
+      2.0,
+      1.0
+    ],
+    "circular_period_scout_random_seeds": [
+      19,
+      73
+    ],
+    "circular_period_scout_population": 6,
+    "circular_period_scout_iterations": 50,
+    "maximum_initial_wrapped_residual": 0.25,
+    "maximum_modes_to_refine": 8,
+    "maximum_modes_to_emit": 4,
+    "exact_refinement_evaluations": 10000,
+    "maximum_pint_shape_reduced_chi2": 25.0,
+    "ell1_truncation_fraction_of_toa_error": 0.25
+  },
+  "toa_count": 72,
+  "session_count": 17,
+  "observation_span_days": 1166.8347915560735,
+  "keplerian_scout_modes": [],
+  "broad_keplerian_fallback": {
+    "triggered": false,
+    "trigger_reason": "deterministic_period_scan_passed_initial_gate",
+    "mode_count": 0
+  },
+  "conditional_circular_search": {
+    "triggered": true,
+    "trigger_reason": "primary_deterministic_period_scan",
+    "cell_search_executed": false,
+    "task_count": 0,
+    "potential_task_count": 112,
+    "period_proposal_count": 56,
+    "eligible_period_proposal_count": 1,
+    "period_scan": {
+      "selected_period_strata_days": [
+        [
+          0.2,
+          2.0
+        ],
+        [
+          2.0,
+          10.0
+        ],
+        [
+          10.0,
+          30.0
+        ],
+        [
+          30.0,
+          80.0
+        ],
+        [
+          80.0,
+          200.0
+        ],
+        [
+          200.0,
+          600.0
+        ],
+        [
+          600.0,
+          2000.0
+        ]
+      ],
+      "anchor_session_indices": [
+        0,
+        1,
+        16
+      ],
+      "anchor_mode_limits": [
+        1,
+        1,
+        34
+      ],
+      "anchor_combination_count": 34,
+      "strata": [
+        {
+          "period_stratum_days": [
+            0.2,
+            2.0
+          ],
+          "period_sample_count": 4096,
+          "coarse_temperature_hz": 0.001,
+          "refinement_sample_count": 65,
+          "finite_period_count": 4096,
+          "minimum_regularized_mixture_score": 28.38720257969415,
+          "selected_modes": [
+            {
+              "period_days": 0.30362053102142894,
+              "period_cell_days": [
+                0.3035863303819719,
+                0.3036876440303232
+              ],
+              "refined_period_cell_days": [
+                0.3036205186553814,
+                0.3036205433874785
+              ],
+              "regularized_mixture_score": 574.0657536973063,
+              "temperature_refinement": [
+                {
+                  "temperature_hz": 0.001,
+                  "period_days": 0.303636970303637,
+                  "period_cell_days": [
+                    0.3035863303819719,
+                    0.3036876440303232
+                  ],
+                  "regularized_mixture_score": 28.38720257969415
+                },
+                {
+                  "temperature_hz": 0.0005,
+                  "period_days": 0.30362114932305245,
+                  "period_cell_days": [
+                    0.303620357896848,
+                    0.3036219407575088
+                  ],
+                  "regularized_mixture_score": 92.29729533402269
+                },
+                {
+                  "temperature_hz": 0.0002,
+                  "period_days": 0.30362053102142894,
+                  "period_cell_days": [
+                    0.3036205186553814,
+                    0.3036205433874785
+                  ],
+                  "regularized_mixture_score": 574.0657536973063
+                }
+              ],
+              "state": [
+                -1.191976610511872,
+                0.0,
+                0.0,
+                6.116739853304944,
+                -2.535885230092875,
+                -1.6829060777458944e-06,
+                -8.787800916259718e-08
+              ]
+            },
+            {
+              "period_days": 0.7763376111503404,
+              "period_cell_days": [
+                0.776119544122739,
+                0.776782045041868
+              ],
+              "refined_period_cell_days": [
+                0.776337530302224,
+                0.7763376919984906
+              ],
+              "regularized_mixture_score": 550.2220701345888,
+              "temperature_refinement": [
+                {
+                  "temperature_hz": 0.001,
+                  "period_days": 0.7764505119453926,
+                  "period_cell_days": [
+                    0.776119544122739,
+                    0.776782045041868
+                  ],
+                  "regularized_mixture_score": 28.498429790874003
+                },
+                {
+                  "temperature_hz": 0.0005,
+                  "period_days": 0.7763368026353631,
+                  "period_cell_days": [
+                    0.776331628434582,
+                    0.7763419769740898
+                  ],
+                  "regularized_mixture_score": 88.46944833069095
+                },
+                {
+                  "temperature_hz": 0.0002,
+                  "period_days": 0.7763376111503404,
+                  "period_cell_days": [
+                    0.776337530302224,
+                    0.7763376919984906
+                  ],
+                  "regularized_mixture_score": 550.2220701345888
+                }
+              ],
+              "state": [
+                -0.25316778749726543,
+                0.0,
+                0.0,
+                5.366686770926283,
+                -1.5808219338581662,
+                -1.8467591977640372e-06,
+                -9.984532850366639e-08
+              ]
+            },
+            {
+              "period_days": 0.878377548047321,
+              "period_cell_days": [
+                0.8779548593916964,
+                0.8788027157592375
+              ],
+              "refined_period_cell_days": [
+                0.8783774445495218,
+                0.8783776515451692
+              ],
+              "regularized_mixture_score": 706.4839369011536,
+              "temperature_refinement": [
+                {
+                  "temperature_hz": 0.001,
+                  "period_days": 0.8783783783783784,
+                  "period_cell_days": [
+                    0.8779548593916964,
+                    0.8788027157592375
+                  ],
+                  "regularized_mixture_score": 28.586050505674816
+                },
+                {
+                  "temperature_hz": 0.0005,
+                  "period_days": 0.8783785829768274,
+                  "period_cell_days": [
+                    0.8783719592003989,
+                    0.8783852069530591
+                  ],
+                  "regularized_mixture_score": 113.08810719671101
+                },
+                {
+                  "temperature_hz": 0.0002,
+                  "period_days": 0.878377548047321,
+                  "period_cell_days": [
+                    0.8783774445495218,
+                    0.8783776515451692
+                  ],
+                  "regularized_mixture_score": 706.4839369011536
+                }
+              ],
+              "state": [
+                -0.12967876860895242,
+                0.0,
+                0.0,
+                3.0063931690432795,
+                1.4573650496635246,
+                1.110894106097311e-07,
+                9.112621106133987e-08
+              ]
+            },
+            {
+              "period_days": 1.3939358599277274,
+              "period_cell_days": [
+                1.392502727941142,
+                1.3946368342430877
+              ],
+              "refined_period_cell_days": [
+                1.39391917885101,
+                1.3939525418029657
+              ],
+              "regularized_mixture_score": 93.52992612489311,
+              "temperature_refinement": [
+                {
+                  "temperature_hz": 0.001,
+                  "period_days": 1.3935681470137826,
+                  "period_cell_days": [
+                    1.392502727941142,
+                    1.3946368342430877
+                  ],
+                  "regularized_mixture_score": 31.13743155162283
+                },
+                {
+                  "temperature_hz": 0.0005,
+                  "period_days": 1.3939358599277274,
+                  "period_cell_days": [
+                    1.39391917885101,
+                    1.3939525418029657
+                  ],
+                  "regularized_mixture_score": 93.52992612489311
+                }
+              ],
+              "state": [
+                0.3321312997501619,
+                0.0,
+                0.0,
+                1.6822135941697034,
+                -0.9868345110342538,
+                -3.384512255043169e-07,
+                -2.728168387923519e-08
+              ]
+            },
+            {
+              "period_days": 1.2603423889381906,
+              "period_cell_days": [
+                1.259516174143592,
+                1.261261866982223
+              ],
+              "refined_period_cell_days": [
+                1.2603421758566582,
+                1.2603426020198674
+              ],
+              "regularized_mixture_score": 2168.8043457684466,
+              "temperature_refinement": [
+                {
+                  "temperature_hz": 0.001,
+                  "period_days": 1.260387811634349,
+                  "period_cell_days": [
+                    1.259516174143592,
+                    1.261261866982223
+                  ],
+                  "regularized_mixture_score": 32.37443161327573
+                },
+                {
+                  "temperature_hz": 0.0005,
+                  "period_days": 1.2603338655840914,
+                  "period_cell_days": [
+                    1.2603202288409525,
+                    1.2603475029174511
+                  ],
+                  "regularized_mixture_score": 84.44119501540688
+                },
+                {
+                  "temperature_hz": 0.0002,
+                  "period_days": 1.2603423889381906,
+                  "period_cell_days": [
+                    1.2603421758566582,
+                    1.2603426020198674
+                  ],
+                  "regularized_mixture_score": 2168.8043457684466
+                }
+              ],
+              "state": [
+                0.23138342130203876,
+                0.0,
+                0.0,
+                2.364458864352856,
+                2.228180696226993,
+                -3.239915829788426e-07,
+                7.619103794942363e-08
+              ]
+            },
+            {
+              "period_days": 0.2627017414679361,
+              "period_cell_days": [
+                0.2626641705741013,
+                0.2627400083629047
+              ],
+              "refined_period_cell_days": [
+                0.2627017413232874,
+                0.2627017414679361
+              ],
+              "regularized_mixture_score": 15591.399759983276,
+              "temperature_refinement": [
+                {
+                  "temperature_hz": 0.001,
+                  "period_days": 0.26270207852193994,
+                  "period_cell_days": [
+                    0.2626641705741013,
+                    0.2627400083629047
+                  ],
+                  "regularized_mixture_score": 33.0886903028467
+                },
+                {
+                  "temperature_hz": 0.0005,
+                  "period_days": 0.2627020839952212,
+                  "period_cell_days": [
+                    0.262701491515181,
+                    0.2627026764806064
+                  ],
+                  "regularized_mixture_score": 131.11252530154468
+                },
+                {
+                  "temperature_hz": 0.0002,
+                  "period_days": 0.26270173221041787,
+                  "period_cell_days": [
+                    0.26270172295290095,
+                    0.2627017414679361
+                  ],
+                  "regularized_mixture_score": 587.6575025684654
+                },
+                {
+                  "temperature_hz": 0.0001,
+                  "period_days": 0.2627017414679361,
+                  "period_cell_days": [
+                    0.2627017413232874,
+                    0.2627017414679361
+                  ],
+                  "regularized_mixture_score": 15591.399759983276
+                }
+              ],
+              "state": [
+                -1.3367359531998018,
+                0.0,
+                0.0,
+                1.8987751580685877,
+                1.4194684693271578,
+                -4.242398215427106e-07,
+                -8.702893291173764e-08
+              ]
+            },
+            {
+              "period_days": 0.8250346137119842,
+              "period_cell_days": [
+                0.8246490138883413,
+                0.825396995160863
+              ],
+              "refined_period_cell_days": [
+                0.8250346122852827,
+                0.8250346137119842
+              ],
+              "regularized_mixture_score": 17523.802398105683,
+              "temperature_refinement": [
+                {
+                  "temperature_hz": 0.001,
+                  "period_days": 0.8250226654578422,
+                  "period_cell_days": [
+                    0.8246490138883413,
+                    0.825396995160863
+                  ],
+                  "regularized_mixture_score": 35.500637027991424
+                },
+                {
+                  "temperature_hz": 0.0005,
+                  "period_days": 0.8250345223616963,
+                  "period_cell_days": [
+                    0.8250286786764244,
+                    0.8250403662125353
+                  ],
+                  "regularized_mixture_score": 138.118807307511
+                },
+                {
+                  "temperature_hz": 0.0002,
+                  "period_days": 0.8250345224030879,
+                  "period_cell_days": [
+                    0.8250344310942324,
+                    0.8250346137119842
+                  ],
+                  "regularized_mixture_score": 2680.3233272994853
+                },
+                {
+                  "temperature_hz": 0.0001,
+                  "period_days": 0.8250346137119842,
+                  "period_cell_days": [
+                    0.8250346122852827,
+                    0.8250346137119842
+                  ],
+                  "regularized_mixture_score": 17523.802398105683
+                }
+              ],
+              "state": [
+                -0.19232993751305877,
+                0.0,
+                0.0,
+                4.8033223064333,
+                2.1795218937998224,
+                2.142038639320408e-06,
+                -7.425610846226694e-08
+              ]
+            },
+            {
+              "period_days": 0.3572833316330009,
+              "period_cell_days": [
+                0.35721296763699595,
+                0.3573532437002885
+              ],
+              "refined_period_cell_days": [
+                0.35728331450943734,
+                0.35728334875656775
+              ],
+              "regularized_mixture_score": 1893.140931329724,
+              "temperature_refinement": [
+                {
+                  "temperature_hz": 0.001,
+                  "period_days": 0.3572830781311347,
+                  "period_cell_days": [
+                    0.35721296763699595,
+                    0.3573532437002885
+                  ],
+                  "regularized_mixture_score": 35.79443512311132
+                },
+                {
+                  "temperature_hz": 0.0005,
+                  "period_days": 0.35728309189988744,
+                  "period_cell_days": [
+                    0.3572819959999082,
+                    0.3572841878133127
+                  ],
+                  "regularized_mixture_score": 141.9194442300698
+                },
+                {
+                  "temperature_hz": 0.0002,
+                  "period_days": 0.3572833316330009,
+                  "period_cell_days": [
+                    0.35728331450943734,
+                    0.35728334875656775
+                  ],
+                  "regularized_mixture_score": 1893.140931329724
+                }
+              ],
+              "state": [
+                -1.029226165942161,
+                0.0,
+                0.0,
+                6.160599377346313,
+                1.4995066333024765,
+                -2.9100495729572327e-06,
+                -7.391301472039397e-08
+              ]
+            }
+          ]
+        },
+        {
+          "period_stratum_days": [
+            2.0,
+            10.0
+          ],
+          "period_sample_count": 4096,
+          "coarse_temperature_hz": 0.001,
+          "refinement_sample_count": 65,
+          "finite_period_count": 4096,
+          "minimum_regularized_mixture_score": 23.029114719958756,
+          "selected_modes": [
+            {
+              "period_days": 3.5043805782508746,
+              "period_cell_days": [
+                3.503293797487757,
+                3.504493042332503
+              ],
+              "refined_period_cell_days": [
+                3.504371206594958,
+                3.5043899500070417
+              ],
+              "regularized_mixture_score": 89.76718824421653,
+              "temperature_refinement": [
+                {
+                  "temperature_hz": 0.001,
+                  "period_days": 3.503893214682981,
+                  "period_cell_days": [
+                    3.503293797487757,
+                    3.504493042332503
+                  ],
+                  "regularized_mixture_score": 23.029114719958756
+                },
+                {
+                  "temperature_hz": 0.0005,
+                  "period_days": 3.5043805782508746,
+                  "period_cell_days": [
+                    3.504371206594958,
+                    3.5043899500070417
+                  ],
+                  "regularized_mixture_score": 89.76718824421653
+                }
+              ],
+              "state": [
+                1.254013779690752,
+                0.0,
+                0.0,
+                4.983332309849216,
+                -0.06772854119513927,
+                -3.1674854095831505e-07,
+                -2.2549603367046153e-08
+              ]
+            },
+            {
+              "period_days": 4.777895929721641,
+              "period_cell_days": [
+                4.776624545512989,
+                4.778854268965345
+              ],
+              "refined_period_cell_days": [
+                4.777895929721641,
+                4.777896201922559
+              ],
+              "regularized_mixture_score": 2230.629946998447,
+              "temperature_refinement": [
+                {
+                  "temperature_hz": 0.001,
+                  "period_days": 4.777738886944348,
+                  "period_cell_days": [
+                    4.776624545512989,
+                    4.778854268965345
+                  ],
+                  "regularized_mixture_score": 29.665662534540008
+                },
+                {
+                  "temperature_hz": 0.0005,
+                  "period_days": 4.777913350578446,
+                  "period_cell_days": [
+                    4.777895929721641,
+                    4.77793077168933
+                  ],
+                  "regularized_mixture_score": 115.523910042076
+                },
+                {
+                  "temperature_hz": 0.0002,
+                  "period_days": 4.777895929721641,
+                  "period_cell_days": [
+                    4.777895929721641,
+                    4.777896201922559
+                  ],
+                  "regularized_mixture_score": 2230.629946998447
+                }
+              ],
+              "state": [
+                1.5640002675281972,
+                0.0,
+                0.0,
+                4.196618287415813,
+                2.444789071809879,
+                -1.4508264732433322e-06,
+                9.096128736749387e-08
+              ]
+            },
+            {
+              "period_days": 2.6705796492478373,
+              "period_cell_days": [
+                2.6700137377817565,
+                2.6707102782705388
+              ],
+              "refined_period_cell_days": [
+                2.6705742066602958,
+                2.670585091879747
+              ],
+              "regularized_mixture_score": 124.937157669273,
+              "temperature_refinement": [
+                {
+                  "temperature_hz": 0.001,
+                  "period_days": 2.6703619171829147,
+                  "period_cell_days": [
+                    2.6700137377817565,
+                    2.6707102782705388
+                  ],
+                  "regularized_mixture_score": 31.806095566769095
+                },
+                {
+                  "temperature_hz": 0.0005,
+                  "period_days": 2.6705796492478373,
+                  "period_cell_days": [
+                    2.6705742066602958,
+                    2.670585091879747
+                  ],
+                  "regularized_mixture_score": 124.937157669273
+                }
+              ],
+              "state": [
+                0.9822955459465619,
+                0.0,
+                0.0,
+                2.979158943635572,
+                -0.15423855985444226,
+                -1.0297567874415523e-07,
+                -6.379524454413403e-08
+              ]
+            },
+            {
+              "period_days": 3.394704416768722,
+              "period_cell_days": [
+                3.3941153025508926,
+                3.3952409523275873
+              ],
+              "refined_period_cell_days": [
+                3.394704279358181,
+                3.3947044167687226
+              ],
+              "regularized_mixture_score": 2375.639184436274,
+              "temperature_refinement": [
+                {
+                  "temperature_hz": 0.001,
+                  "period_days": 3.3946779408107433,
+                  "period_cell_days": [
+                    3.3941153025508926,
+                    3.3952409523275873
+                  ],
+                  "regularized_mixture_score": 32.51021147624892
+                },
+                {
+                  "temperature_hz": 0.0005,
+                  "period_days": 3.3946956224933915,
+                  "period_cell_days": [
+                    3.3946868283091893,
+                    3.3947044167687226
+                  ],
+                  "regularized_mixture_score": 128.1278119774838
+                },
+                {
+                  "temperature_hz": 0.0002,
+                  "period_days": 3.394704416768722,
+                  "period_cell_days": [
+                    3.394704279358181,
+                    3.3947044167687226
+                  ],
+                  "regularized_mixture_score": 2375.639184436274
+                }
+              ],
+              "state": [
+                1.2222166929401452,
+                0.0,
+                0.0,
+                6.181473481983891,
+                2.82710052419348,
+                -2.809186808052465e-06,
+                6.328968103565878e-08
+              ]
+            },
+            {
+              "period_days": 9.351318585164533,
+              "period_cell_days": [
+                9.347182956925742,
+                9.355725051381594
+              ],
+              "refined_period_cell_days": [
+                9.351251852922886,
+                9.351385319311074
+              ],
+              "regularized_mixture_score": 130.91635739388238,
+              "temperature_refinement": [
+                {
+                  "temperature_hz": 0.001,
+                  "period_days": 9.351450102763188,
+                  "period_cell_days": [
+                    9.347182956925742,
+                    9.355725051381594
+                  ],
+                  "regularized_mixture_score": 33.0401876535425
+                },
+                {
+                  "temperature_hz": 0.0005,
+                  "period_days": 9.351318585164533,
+                  "period_cell_days": [
+                    9.351251852922886,
+                    9.351385319311074
+                  ],
+                  "regularized_mixture_score": 130.91635739388238
+                }
+              ],
+              "state": [
+                2.235517358508771,
+                0.0,
+                0.0,
+                2.748967191018547,
+                0.9723252396686155,
+                -8.210972672649546e-08,
+                -4.700689965748734e-08
+              ]
+            },
+            {
+              "period_days": 5.372231543140085,
+              "period_cell_days": [
+                5.370492172761622,
+                5.373310959226552
+              ],
+              "refined_period_cell_days": [
+                5.372231543140085,
+                5.372231887272571
+              ],
+              "regularized_mixture_score": 798.3051723351323,
+              "temperature_refinement": [
+                {
+                  "temperature_hz": 0.001,
+                  "period_days": 5.37190082644628,
+                  "period_cell_days": [
+                    5.370492172761622,
+                    5.373310959226552
+                  ],
+                  "regularized_mixture_score": 33.11498193203451
+                },
+                {
+                  "temperature_hz": 0.0005,
+                  "period_days": 5.372253567616382,
+                  "period_cell_days": [
+                    5.372231543140085,
+                    5.372275592453857
+                  ],
+                  "regularized_mixture_score": 128.17922313376562
+                },
+                {
+                  "temperature_hz": 0.0002,
+                  "period_days": 5.372231543140085,
+                  "period_cell_days": [
+                    5.372231543140085,
+                    5.372231887272571
+                  ],
+                  "regularized_mixture_score": 798.3051723351323
+                }
+              ],
+              "state": [
+                1.681243379582484,
+                0.0,
+                0.0,
+                4.619963881447684,
+                1.941600452569305,
+                -2.927903771385307e-06,
+                -8.150458760819729e-08
+              ]
+            },
+            {
+              "period_days": 2.149941369556573,
+              "period_cell_days": [
+                2.1497191690591784,
+                2.1501706721763156
+              ],
+              "refined_period_cell_days": [
+                2.1499413144416306,
+                2.149941369556573
+              ],
+              "regularized_mixture_score": 2325.8519295050432,
+              "temperature_refinement": [
+                {
+                  "temperature_hz": 0.001,
+                  "period_days": 2.149944873208379,
+                  "period_cell_days": [
+                    2.1497191690591784,
+                    2.1501706721763156
+                  ],
+                  "regularized_mixture_score": 38.275697574179375
+                },
+                {
+                  "temperature_hz": 0.0005,
+                  "period_days": 2.149937842200084,
+                  "period_cell_days": [
+                    2.1499343148667434,
+                    2.149941369556573
+                  ],
+                  "regularized_mixture_score": 151.91762704185936
+                },
+                {
+                  "temperature_hz": 0.0002,
+                  "period_days": 2.149941369556573,
+                  "period_cell_days": [
+                    2.1499413144416306,
+                    2.149941369556573
+                  ],
+                  "regularized_mixture_score": 2325.8519295050432
+                }
+              ],
+              "state": [
+                0.765440571794052,
+                0.0,
+                0.0,
+                2.7167769589429636,
+                -0.6468481025789364,
+                -1.597206336729151e-06,
+                -8.16180113184869e-09
+              ]
+            },
+            {
+              "period_days": 3.738449861962375,
+              "period_cell_days": [
+                3.737336986799768,
+                3.7387018502110623
+              ],
+              "refined_period_cell_days": [
+                3.738449695314708,
+                3.738450028610072
+              ],
+              "regularized_mixture_score": 6176.148953256419,
+              "temperature_refinement": [
+                {
+                  "temperature_hz": 0.001,
+                  "period_days": 3.7380191693290734,
+                  "period_cell_days": [
+                    3.737336986799768,
+                    3.7387018502110623
+                  ],
+                  "regularized_mixture_score": 38.54949751184773
+                },
+                {
+                  "temperature_hz": 0.0005,
+                  "period_days": 3.7384458623918593,
+                  "period_cell_days": [
+                    3.738435197023889,
+                    3.7384565278815396
+                  ],
+                  "regularized_mixture_score": 152.1930364375904
+                },
+                {
+                  "temperature_hz": 0.0002,
+                  "period_days": 3.738449861962375,
+                  "period_cell_days": [
+                    3.738449695314708,
+                    3.738450028610072
+                  ],
+                  "regularized_mixture_score": 6176.148953256419
+                }
+              ],
+              "state": [
+                1.318671050096636,
+                0.0,
+                0.0,
+                4.187645565731627,
+                1.5800913324396082,
+                1.798468782813362e-06,
+                -3.865056554983057e-09
+              ]
+            }
+          ]
+        },
+        {
+          "period_stratum_days": [
+            10.0,
+            30.0
+          ],
+          "period_sample_count": 4096,
+          "coarse_temperature_hz": 0.001,
+          "refinement_sample_count": 65,
+          "finite_period_count": 4096,
+          "minimum_regularized_mixture_score": 0.48223341218793425,
+          "selected_modes": [
+            {
+              "period_days": 17.52623736629301,
+              "period_cell_days": [
+                17.524964693294574,
+                17.529966110362743
+              ],
+              "refined_period_cell_days": [
+                17.5262373567549,
+                17.52623736629301
+              ],
+              "regularized_mixture_score": 0.6729206645202636,
+              "temperature_refinement": [
+                {
+                  "temperature_hz": 0.001,
+                  "period_days": 17.527464688257954,
+                  "period_cell_days": [
+                    17.524964693294574,
+                    17.529966110362743
+                  ],
+                  "regularized_mixture_score": 0.48223341218793425
+                },
+                {
+                  "temperature_hz": 0.0005,
+                  "period_days": 17.52621477999168,
+                  "period_cell_days": [
+                    17.52617571216998,
+                    17.52625384816173
+                  ],
+                  "regularized_mixture_score": 0.39213968571133867
+                },
+                {
+                  "temperature_hz": 0.0002,
+                  "period_days": 17.526236755854,
+                  "period_cell_days": [
+                    17.526236145415076,
+                    17.52623736629301
+                  ],
+                  "regularized_mixture_score": 0.45350703638912787
+                },
+                {
+                  "temperature_hz": 0.0001,
+                  "period_days": 17.52623736629301,
+                  "period_cell_days": [
+                    17.5262373567549,
+                    17.52623736629301
+                  ],
+                  "regularized_mixture_score": 0.6729206645202636
+                }
+              ],
+              "state": [
+                2.863699036208098,
+                0.0,
+                0.0,
+                2.2250824167939434,
+                3.154863122471075,
+                -5.9562554038097834e-08,
+                -1.0332775168432198e-09
+              ]
+            },
+            {
+              "period_days": 16.161151358820003,
+              "period_cell_days": [
+                16.160221274110164,
+                16.164473964066374
+              ],
+              "refined_period_cell_days": [
+                16.161118139733716,
+                16.161184578179423
+              ],
+              "regularized_mixture_score": 143.85184517647278,
+              "temperature_refinement": [
+                {
+                  "temperature_hz": 0.001,
+                  "period_days": 16.16234705959742,
+                  "period_cell_days": [
+                    16.160221274110164,
+                    16.164473964066374
+                  ],
+                  "regularized_mixture_score": 36.27839411677358
+                },
+                {
+                  "temperature_hz": 0.0005,
+                  "period_days": 16.161151358820003,
+                  "period_cell_days": [
+                    16.161118139733716,
+                    16.161184578179423
+                  ],
+                  "regularized_mixture_score": 143.85184517647278
+                }
+              ],
+              "state": [
+                2.782610298006703,
+                0.0,
+                0.0,
+                4.248015717533439,
+                1.5051812941878284,
+                1.1784456594239354e-07,
+                4.6360496707851616e-08
+              ]
+            },
+            {
+              "period_days": 10.074910946111178,
+              "period_cell_days": [
+                10.074626933425899,
+                10.07627959534666
+              ],
+              "refined_period_cell_days": [
+                10.074898036112817,
+                10.074923856175712
+              ],
+              "regularized_mixture_score": 140.00029986018703,
+              "temperature_refinement": [
+                {
+                  "temperature_hz": 0.001,
+                  "period_days": 10.075453128844417,
+                  "period_cell_days": [
+                    10.074626933425899,
+                    10.07627959534666
+                  ],
+                  "regularized_mixture_score": 37.03306912065033
+                },
+                {
+                  "temperature_hz": 0.0005,
+                  "period_days": 10.074910946111178,
+                  "period_cell_days": [
+                    10.074898036112817,
+                    10.074923856175712
+                  ],
+                  "regularized_mixture_score": 140.00029986018703
+                }
+              ],
+              "state": [
+                2.310048268698017,
+                0.0,
+                0.0,
+                3.768473623017115,
+                3.656335437122084,
+                1.2002394495623114e-07,
+                2.203118323134373e-08
+              ]
+            },
+            {
+              "period_days": 17.770768322914194,
+              "period_cell_days": [
+                17.768296582282495,
+                17.77343787201802
+              ],
+              "refined_period_cell_days": [
+                17.77076831310807,
+                17.770768322914194
+              ],
+              "regularized_mixture_score": 17850.255280718702,
+              "temperature_refinement": [
+                {
+                  "temperature_hz": 0.001,
+                  "period_days": 17.770866483437004,
+                  "period_cell_days": [
+                    17.768296582282495,
+                    17.77343787201802
+                  ],
+                  "regularized_mixture_score": 39.83405919423194
+                },
+                {
+                  "temperature_hz": 0.0005,
+                  "period_days": 17.77078652300632,
+                  "period_cell_days": [
+                    17.770746357225804,
+                    17.770826689149967
+                  ],
+                  "regularized_mixture_score": 156.44157867642522
+                },
+                {
+                  "temperature_hz": 0.0002,
+                  "period_days": 17.770767695322323,
+                  "period_cell_days": [
+                    17.77076706773054,
+                    17.770768322914194
+                  ],
+                  "regularized_mixture_score": 973.0277127870031
+                },
+                {
+                  "temperature_hz": 0.0001,
+                  "period_days": 17.770768322914194,
+                  "period_cell_days": [
+                    17.77076831310807,
+                    17.770768322914194
+                  ],
+                  "regularized_mixture_score": 17850.255280718702
+                }
+              ],
+              "state": [
+                2.87755487831201,
+                0.0,
+                0.0,
+                3.932850593198167,
+                5.537006474552117,
+                -2.021628788661286e-06,
+                -3.171264171374517e-08
+              ]
+            },
+            {
+              "period_days": 18.026702027347504,
+              "period_cell_days": [
+                18.02376799359333,
+                18.029058210432147
+              ],
+              "refined_period_cell_days": [
+                18.026702027347504,
+                18.026702673146687
+              ],
+              "regularized_mixture_score": 996.0965666312569,
+              "temperature_refinement": [
+                {
+                  "temperature_hz": 0.001,
+                  "period_days": 18.026412325752016,
+                  "period_cell_days": [
+                    18.02376799359333,
+                    18.029058210432147
+                  ],
+                  "regularized_mixture_score": 40.23455582478203
+                },
+                {
+                  "temperature_hz": 0.0005,
+                  "period_days": 18.026743358492315,
+                  "period_cell_days": [
+                    18.026702027347504,
+                    18.026784690016182
+                  ],
+                  "regularized_mixture_score": 159.73161997032008
+                },
+                {
+                  "temperature_hz": 0.0002,
+                  "period_days": 18.026702027347504,
+                  "period_cell_days": [
+                    18.026702027347504,
+                    18.026702673146687
+                  ],
+                  "regularized_mixture_score": 996.0965666312569
+                }
+              ],
+              "state": [
+                2.8918541046409048,
+                0.0,
+                0.0,
+                2.445377824596363,
+                3.2953503594717306,
+                1.4390507650947027e-06,
+                -3.6587755001026466e-08
+              ]
+            },
+            {
+              "period_days": 12.335692108624814,
+              "period_cell_days": [
+                12.334337473733662,
+                12.336814745820927
+              ],
+              "refined_period_cell_days": [
+                12.335672754633176,
+                12.335711462737912
+              ],
+              "regularized_mixture_score": 170.4134339306982,
+              "temperature_refinement": [
+                {
+                  "temperature_hz": 0.001,
+                  "period_days": 12.335575861030224,
+                  "period_cell_days": [
+                    12.334337473733662,
+                    12.336814745820927
+                  ],
+                  "regularized_mixture_score": 43.02465172001529
+                },
+                {
+                  "temperature_hz": 0.0005,
+                  "period_days": 12.335692108624814,
+                  "period_cell_days": [
+                    12.335672754633176,
+                    12.335711462737912
+                  ],
+                  "regularized_mixture_score": 170.4134339306982
+                }
+              ],
+              "state": [
+                2.5124968577404334,
+                0.0,
+                0.0,
+                5.973009430112402,
+                4.273826834172496,
+                3.885170954183645e-07,
+                3.0694458478864575e-08
+              ]
+            },
+            {
+              "period_days": 13.445608243748715,
+              "period_cell_days": [
+                13.44386096204901,
+                13.446804013993876
+              ],
+              "refined_period_cell_days": [
+                13.445585250290627,
+                13.445631237364093
+              ],
+              "regularized_mixture_score": 171.43424550116492,
+              "temperature_refinement": [
+                {
+                  "temperature_hz": 0.001,
+                  "period_days": 13.44533216591879,
+                  "period_cell_days": [
+                    13.44386096204901,
+                    13.446804013993876
+                  ],
+                  "regularized_mixture_score": 43.16302111559826
+                },
+                {
+                  "temperature_hz": 0.0005,
+                  "period_days": 13.445608243748715,
+                  "period_cell_days": [
+                    13.445585250290627,
+                    13.445631237364093
+                  ],
+                  "regularized_mixture_score": 171.43424550116492
+                }
+              ],
+              "state": [
+                2.598652528098726,
+                0.0,
+                0.0,
+                1.385614393565796,
+                2.931198754120569,
+                -4.951478002551776e-07,
+                -3.3942414997179274e-09
+              ]
+            },
+            {
+              "period_days": 16.330193200171262,
+              "period_cell_days": [
+                16.32775148459453,
+                16.332092817235228
+              ],
+              "refined_period_cell_days": [
+                16.33015928252437,
+                16.33022711809994
+              ],
+              "regularized_mixture_score": 179.3958570703951,
+              "temperature_refinement": [
+                {
+                  "temperature_hz": 0.001,
+                  "period_days": 16.329921573840224,
+                  "period_cell_days": [
+                    16.32775148459453,
+                    16.332092817235228
+                  ],
+                  "regularized_mixture_score": 43.7475460422496
+                },
+                {
+                  "temperature_hz": 0.0005,
+                  "period_days": 16.330193200171262,
+                  "period_cell_days": [
+                    16.33015928252437,
+                    16.33022711809994
+                  ],
+                  "regularized_mixture_score": 179.3958570703951
+                }
+              ],
+              "state": [
+                2.793015737908791,
+                0.0,
+                0.0,
+                2.4537096762759933,
+                5.48621495481736,
+                -3.4577102433197635e-08,
+                -9.850952849028313e-08
+              ]
+            }
+          ]
+        },
+        {
+          "period_stratum_days": [
+            30.0,
+            80.0
+          ],
+          "period_sample_count": 4096,
+          "coarse_temperature_hz": 0.001,
+          "refinement_sample_count": 65,
+          "finite_period_count": 4096,
+          "minimum_regularized_mixture_score": 34.7121942169899,
+          "selected_modes": [
+            {
+              "period_days": 52.565484032609085,
+              "period_cell_days": [
+                52.563177835018365,
+                52.57723780016888
+              ],
+              "refined_period_cell_days": [
+                52.565482316613256,
+                52.565484032609085
+              ],
+              "regularized_mixture_score": 844.8100935725859,
+              "temperature_refinement": [
+                {
+                  "temperature_hz": 0.001,
+                  "period_days": 52.57020593741642,
+                  "period_cell_days": [
+                    52.563177835018365,
+                    52.57723780016888
+                  ],
+                  "regularized_mixture_score": 34.7121942169899
+                },
+                {
+                  "temperature_hz": 0.0005,
+                  "period_days": 52.56537420886884,
+                  "period_cell_days": [
+                    52.565264386046394,
+                    52.565484032609085
+                  ],
+                  "regularized_mixture_score": 135.70375555652373
+                },
+                {
+                  "temperature_hz": 0.0002,
+                  "period_days": 52.565484032609085,
+                  "period_cell_days": [
+                    52.565482316613256,
+                    52.565484032609085
+                  ],
+                  "regularized_mixture_score": 844.8100935725859
+                }
+              ],
+              "state": [
+                3.96205970725343,
+                0.0,
+                0.0,
+                0.6145999141111133,
+                5.780834968373935,
+                -1.819123032641909e-06,
+                9.670070394010459e-08
+              ]
+            },
+            {
+              "period_days": 52.52817046674522,
+              "period_cell_days": [
+                52.521043021621836,
+                52.53508045176944
+              ],
+              "refined_period_cell_days": [
+                52.52816875318473,
+                52.52817046674522
+              ],
+              "regularized_mixture_score": 1137.8763934878052,
+              "temperature_refinement": [
+                {
+                  "temperature_hz": 0.001,
+                  "period_days": 52.52805986103688,
+                  "period_cell_days": [
+                    52.521043021621836,
+                    52.53508045176944
+                  ],
+                  "regularized_mixture_score": 36.55100129203235
+                },
+                {
+                  "temperature_hz": 0.0005,
+                  "period_days": 52.52806079886623,
+                  "period_cell_days": [
+                    52.52795113190308,
+                    52.52817046674522
+                  ],
+                  "regularized_mixture_score": 144.5279210059935
+                },
+                {
+                  "temperature_hz": 0.0002,
+                  "period_days": 52.52817046674522,
+                  "period_cell_days": [
+                    52.52816875318473,
+                    52.52817046674522
+                  ],
+                  "regularized_mixture_score": 1137.8763934878052
+                }
+              ],
+              "state": [
+                3.961349606008792,
+                0.0,
+                0.0,
+                0.6680701212385108,
+                6.120024688092224,
+                1.1006617733550233e-06,
+                6.915703667753721e-08
+              ]
+            },
+            {
+              "period_days": 43.214246977067646,
+              "period_cell_days": [
+                43.214246977067646,
+                43.22374983534622
+              ],
+              "refined_period_cell_days": [
+                43.214246977067646,
+                43.214321202080825
+              ],
+              "regularized_mixture_score": 162.13226985286371,
+              "temperature_refinement": [
+                {
+                  "temperature_hz": 0.001,
+                  "period_days": 43.21899736147757,
+                  "period_cell_days": [
+                    43.214246977067646,
+                    43.22374983534622
+                  ],
+                  "regularized_mixture_score": 41.80463229326481
+                },
+                {
+                  "temperature_hz": 0.0005,
+                  "period_days": 43.214246977067646,
+                  "period_cell_days": [
+                    43.214246977067646,
+                    43.214321202080825
+                  ],
+                  "regularized_mixture_score": 162.13226985286371
+                }
+              ],
+              "state": [
+                3.7661702320167465,
+                0.0,
+                0.0,
+                0.9708691717474652,
+                5.590651998819817,
+                1.6623552381286364e-07,
+                3.593660592462954e-08
+              ]
+            },
+            {
+              "period_days": 37.738312721778065,
+              "period_cell_days": [
+                37.738312721778065,
+                37.74555963746074
+              ],
+              "refined_period_cell_days": [
+                37.738312721778065,
+                37.73831316401045
+              ],
+              "regularized_mixture_score": 1645.797175266251,
+              "temperature_refinement": [
+                {
+                  "temperature_hz": 0.001,
+                  "period_days": 37.74193548387097,
+                  "period_cell_days": [
+                    37.738312721778065,
+                    37.74555963746074
+                  ],
+                  "regularized_mixture_score": 58.026150846188685
+                },
+                {
+                  "temperature_hz": 0.0005,
+                  "period_days": 37.738312721778065,
+                  "period_cell_days": [
+                    37.738312721778065,
+                    37.73836932760662
+                  ],
+                  "regularized_mixture_score": 263.8744913004094
+                },
+                {
+                  "temperature_hz": 0.0002,
+                  "period_days": 37.738312721778065,
+                  "period_cell_days": [
+                    37.738312721778065,
+                    37.73831316401045
+                  ],
+                  "regularized_mixture_score": 1645.797175266251
+                }
+              ],
+              "state": [
+                3.6306758309859677,
+                0.0,
+                0.0,
+                3.278370911203213,
+                5.873867631967206,
+                1.0185423906082104e-06,
+                -6.279798156987419e-08
+              ]
+            },
+            {
+              "period_days": 43.03448327432349,
+              "period_cell_days": [
+                43.03448327432349,
+                43.04390722796546
+              ],
+              "refined_period_cell_days": [
+                43.03448327432349,
+                43.034556883093884
+              ],
+              "regularized_mixture_score": 373.6778374489283,
+              "temperature_refinement": [
+                {
+                  "temperature_hz": 0.001,
+                  "period_days": 43.039194219400045,
+                  "period_cell_days": [
+                    43.03448327432349,
+                    43.04390722796546
+                  ],
+                  "regularized_mixture_score": 58.643233044468545
+                },
+                {
+                  "temperature_hz": 0.0005,
+                  "period_days": 43.03448327432349,
+                  "period_cell_days": [
+                    43.03448327432349,
+                    43.034556883093884
+                  ],
+                  "regularized_mixture_score": 373.6778374489283
+                }
+              ],
+              "state": [
+                3.7620017309263774,
+                0.0,
+                0.0,
+                3.5819494763870896,
+                0.45591564293629094,
+                -1.0827019241987387e-06,
+                3.488833742731276e-08
+              ]
+            },
+            {
+              "period_days": 71.06953327538268,
+              "period_cell_days": [
+                71.05006557765171,
+                71.07575715972432
+              ],
+              "refined_period_cell_days": [
+                71.06953327538268,
+                71.06953641214702
+              ],
+              "regularized_mixture_score": 2327.0851085208396,
+              "temperature_refinement": [
+                {
+                  "temperature_hz": 0.001,
+                  "period_days": 71.06290672451193,
+                  "period_cell_days": [
+                    71.05006557765171,
+                    71.07575715972432
+                  ],
+                  "regularized_mixture_score": 59.760101237087525
+                },
+                {
+                  "temperature_hz": 0.0005,
+                  "period_days": 71.06973402828275,
+                  "period_cell_days": [
+                    71.06953327538268,
+                    71.06993478345115
+                  ],
+                  "regularized_mixture_score": 239.3013833446139
+                },
+                {
+                  "temperature_hz": 0.0002,
+                  "period_days": 71.06953327538268,
+                  "period_cell_days": [
+                    71.06953327538268,
+                    71.06953641214702
+                  ],
+                  "regularized_mixture_score": 2327.0851085208396
+                }
+              ],
+              "state": [
+                4.263658739705698,
+                0.0,
+                0.0,
+                2.235216363337076,
+                6.137870362116374,
+                -2.0491015150094953e-06,
+                3.097518084925945e-08
+              ]
+            },
+            {
+              "period_days": 54.97978049405233,
+              "period_cell_days": [
+                54.97413056741915,
+                54.98951009818386
+              ],
+              "refined_period_cell_days": [
+                54.97977861680759,
+                54.97978237129732
+              ],
+              "regularized_mixture_score": 1486.4516255521166,
+              "temperature_refinement": [
+                {
+                  "temperature_hz": 0.001,
+                  "period_days": 54.981818181818184,
+                  "period_cell_days": [
+                    54.97413056741915,
+                    54.98951009818386
+                  ],
+                  "regularized_mixture_score": 59.92281298159202
+                },
+                {
+                  "temperature_hz": 0.0005,
+                  "period_days": 54.9798968832177,
+                  "period_cell_days": [
+                    54.979776739562865,
+                    54.9800170279227
+                  ],
+                  "regularized_mixture_score": 238.24705845092453
+                },
+                {
+                  "temperature_hz": 0.0002,
+                  "period_days": 54.97978049405233,
+                  "period_cell_days": [
+                    54.97977861680759,
+                    54.97978237129732
+                  ],
+                  "regularized_mixture_score": 1486.4516255521166
+                }
+              ],
+              "state": [
+                4.006965490260092,
+                0.0,
+                0.0,
+                5.642380912486197,
+                5.654266261577146,
+                1.5206513367528503e-06,
+                6.284798085319395e-08
+              ]
+            },
+            {
+              "period_days": 38.98543644176601,
+              "period_cell_days": [
+                38.98066473626298,
+                38.988396694113426
+              ],
+              "refined_period_cell_days": [
+                38.98543644176601,
+                38.98543738565243
+              ],
+              "regularized_mixture_score": 1486.916484142188,
+              "temperature_refinement": [
+                {
+                  "temperature_hz": 0.001,
+                  "period_days": 38.98452994843316,
+                  "period_cell_days": [
+                    38.98066473626298,
+                    38.988396694113426
+                  ],
+                  "regularized_mixture_score": 59.92621872520607
+                },
+                {
+                  "temperature_hz": 0.0005,
+                  "period_days": 38.985496850494165,
+                  "period_cell_days": [
+                    38.98543644176601,
+                    38.98555725959673
+                  ],
+                  "regularized_mixture_score": 238.26210491742498
+                },
+                {
+                  "temperature_hz": 0.0002,
+                  "period_days": 38.98543644176601,
+                  "period_cell_days": [
+                    38.98543644176601,
+                    38.98543738565243
+                  ],
+                  "regularized_mixture_score": 1486.916484142188
+                }
+              ],
+              "state": [
+                3.663188151819227,
+                0.0,
+                0.0,
+                1.941715057512848,
+                5.515370629842825,
+                1.3488302135072128e-06,
+                2.8176948987317202e-08
+              ]
+            }
+          ]
+        },
+        {
+          "period_stratum_days": [
+            80.0,
+            200.0
+          ],
+          "period_sample_count": 4096,
+          "coarse_temperature_hz": 0.001,
+          "refinement_sample_count": 65,
+          "finite_period_count": 4096,
+          "minimum_regularized_mixture_score": 40.60168194894498,
+          "selected_modes": [
+            {
+              "period_days": 110.2772722166178,
+              "period_cell_days": [
+                110.26961639250436,
+                110.29189083319562
+              ],
+              "refined_period_cell_days": [
+                110.27709820908413,
+                110.27744622524975
+              ],
+              "regularized_mixture_score": 160.86544624249274,
+              "temperature_refinement": [
+                {
+                  "temperature_hz": 0.001,
+                  "period_days": 110.28075136336092,
+                  "period_cell_days": [
+                    110.26961639250436,
+                    110.29189083319562
+                  ],
+                  "regularized_mixture_score": 40.60168194894498
+                },
+                {
+                  "temperature_hz": 0.0005,
+                  "period_days": 110.2772722166178,
+                  "period_cell_days": [
+                    110.27709820908413,
+                    110.27744622524975
+                  ],
+                  "regularized_mixture_score": 160.86544624249274
+                }
+              ],
+              "state": [
+                4.702997850780925,
+                0.0,
+                0.0,
+                0.4233124468019411,
+                6.037144749949204,
+                -1.0181422605545691e-07,
+                -4.0546947298509504e-08
+              ]
+            },
+            {
+              "period_days": 101.98801414617256,
+              "period_cell_days": [
+                101.9703062397914,
+                101.98935364952682
+              ],
+              "refined_period_cell_days": [
+                101.98801182067618,
+                101.98801414617256
+              ],
+              "regularized_mixture_score": 5578.6434166700965,
+              "temperature_refinement": [
+                {
+                  "temperature_hz": 0.001,
+                  "period_days": 101.9798281658573,
+                  "period_cell_days": [
+                    101.9703062397914,
+                    101.98935364952682
+                  ],
+                  "regularized_mixture_score": 44.48081411657866
+                },
+                {
+                  "temperature_hz": 0.0005,
+                  "period_days": 101.98786531439715,
+                  "period_cell_days": [
+                    101.9877164834905,
+                    101.98801414617256
+                  ],
+                  "regularized_mixture_score": 176.32850417713985
+                },
+                {
+                  "temperature_hz": 0.0002,
+                  "period_days": 101.98801414617256,
+                  "period_cell_days": [
+                    101.98801182067618,
+                    101.98801414617256
+                  ],
+                  "regularized_mixture_score": 5578.6434166700965
+                }
+              ],
+              "state": [
+                4.6248552980087645,
+                0.0,
+                0.0,
+                0.9601559148990608,
+                4.852101317018791,
+                1.2171886056848361e-06,
+                -3.3976037858176024e-09
+              ]
+            },
+            {
+              "period_days": 152.57756564193699,
+              "period_cell_days": [
+                152.53527326537017,
+                152.57789874510195
+              ],
+              "refined_period_cell_days": [
+                152.57756564193699,
+                152.57756824429987
+              ],
+              "regularized_mixture_score": 5412.452323991107,
+              "temperature_refinement": [
+                {
+                  "temperature_hz": 0.001,
+                  "period_days": 152.55658005029338,
+                  "period_cell_days": [
+                    152.53527326537017,
+                    152.57789874510195
+                  ],
+                  "regularized_mixture_score": 49.3022189026442
+                },
+                {
+                  "temperature_hz": 0.0005,
+                  "period_days": 152.57789874510195,
+                  "period_cell_days": [
+                    152.57756564193699,
+                    152.57789874510195
+                  ],
+                  "regularized_mixture_score": 263.2992018748014
+                },
+                {
+                  "temperature_hz": 0.0002,
+                  "period_days": 152.57756564193699,
+                  "period_cell_days": [
+                    152.57756564193699,
+                    152.57756824429987
+                  ],
+                  "regularized_mixture_score": 5412.452323991107
+                }
+              ],
+              "state": [
+                5.027673093900759,
+                0.0,
+                0.0,
+                2.6047007150526467,
+                5.464278840090423,
+                9.539330239575101e-08,
+                6.956592605847341e-08
+              ]
+            },
+            {
+              "period_days": 135.7285760223963,
+              "period_cell_days": [
+                135.70274846076413,
+                135.7364843843573
+              ],
+              "refined_period_cell_days": [
+                135.7283124267135,
+                135.7288396201268
+              ],
+              "regularized_mixture_score": 234.89087301629658,
+              "temperature_refinement": [
+                {
+                  "temperature_hz": 0.001,
+                  "period_days": 135.71961222967934,
+                  "period_cell_days": [
+                    135.70274846076413,
+                    135.7364843843573
+                  ],
+                  "regularized_mixture_score": 59.03696234740705
+                },
+                {
+                  "temperature_hz": 0.0005,
+                  "period_days": 135.7285760223963,
+                  "period_cell_days": [
+                    135.7283124267135,
+                    135.7288396201268
+                  ],
+                  "regularized_mixture_score": 234.89087301629658
+                }
+              ],
+              "state": [
+                4.910657127003063,
+                0.0,
+                0.0,
+                5.707586013866916,
+                3.351651393145732,
+                -1.097551181676246e-06,
+                -3.547876039256404e-08
+              ]
+            },
+            {
+              "period_days": 80.56067915479487,
+              "period_cell_days": [
+                80.54879441922927,
+                80.56067915479487
+              ],
+              "refined_period_cell_days": [
+                80.56058629181268,
+                80.56067915479487
+              ],
+              "regularized_mixture_score": 484.7818656143303,
+              "temperature_refinement": [
+                {
+                  "temperature_hz": 0.001,
+                  "period_days": 80.55473591029802,
+                  "period_cell_days": [
+                    80.54879441922927,
+                    80.56067915479487
+                  ],
+                  "regularized_mixture_score": 59.15644759151148
+                },
+                {
+                  "temperature_hz": 0.0005,
+                  "period_days": 80.56067915479487,
+                  "period_cell_days": [
+                    80.56058629181268,
+                    80.56067915479487
+                  ],
+                  "regularized_mixture_score": 484.7818656143303
+                }
+              ],
+              "state": [
+                4.389010678796753,
+                0.0,
+                0.0,
+                5.85306439734524,
+                6.037999461639037,
+                4.328990315240621e-07,
+                3.898380148443718e-08
+              ]
+            },
+            {
+              "period_days": 173.3608552979782,
+              "period_cell_days": [
+                173.3608552979782,
+                173.41591671263302
+              ],
+              "refined_period_cell_days": [
+                173.3608552979782,
+                173.36128533083087
+              ],
+              "regularized_mixture_score": 322.4303574844207,
+              "temperature_refinement": [
+                {
+                  "temperature_hz": 0.001,
+                  "period_days": 173.38837726262307,
+                  "period_cell_days": [
+                    173.3608552979782,
+                    173.41591671263302
+                  ],
+                  "regularized_mixture_score": 61.710993157837045
+                },
+                {
+                  "temperature_hz": 0.0005,
+                  "period_days": 173.3608552979782,
+                  "period_cell_days": [
+                    173.3608552979782,
+                    173.36128533083087
+                  ],
+                  "regularized_mixture_score": 322.4303574844207
+                }
+              ],
+              "state": [
+                5.155375290868323,
+                0.0,
+                0.0,
+                4.125141173322158,
+                5.363941208083415,
+                3.5262780577664597e-07,
+                4.0843659247653493e-08
+              ]
+            },
+            {
+              "period_days": 80.63671294295614,
+              "period_cell_days": [
+                80.63206128286062,
+                80.64397060450042
+              ],
+              "refined_period_cell_days": [
+                80.63661990460184,
+                80.63680598173983
+              ],
+              "regularized_mixture_score": 449.0998844116045,
+              "temperature_refinement": [
+                {
+                  "temperature_hz": 0.001,
+                  "period_days": 80.63801506424457,
+                  "period_cell_days": [
+                    80.63206128286062,
+                    80.64397060450042
+                  ],
+                  "regularized_mixture_score": 61.79412013626796
+                },
+                {
+                  "temperature_hz": 0.0005,
+                  "period_days": 80.63671294295614,
+                  "period_cell_days": [
+                    80.63661990460184,
+                    80.63680598173983
+                  ],
+                  "regularized_mixture_score": 449.0998844116045
+                }
+              ],
+              "state": [
+                4.389954041376141,
+                0.0,
+                0.0,
+                2.564662458400969,
+                6.673506340977594,
+                -8.922412361990326e-07,
+                7.824243273617621e-08
+              ]
+            },
+            {
+              "period_days": 100.84033699437285,
+              "period_cell_days": [
+                100.82171630584664,
+                100.84033699437285
+              ],
+              "refined_period_cell_days": [
+                100.84019149379611,
+                100.84033699437285
+              ],
+              "regularized_mixture_score": 639.8215647643178,
+              "temperature_refinement": [
+                {
+                  "temperature_hz": 0.001,
+                  "period_days": 100.83102493074792,
+                  "period_cell_days": [
+                    100.82171630584664,
+                    100.84033699437285
+                  ],
+                  "regularized_mixture_score": 61.976530865365206
+                },
+                {
+                  "temperature_hz": 0.0005,
+                  "period_days": 100.84033699437285,
+                  "period_cell_days": [
+                    100.84019149379611,
+                    100.84033699437285
+                  ],
+                  "regularized_mixture_score": 639.8215647643178
+                }
+              ],
+              "state": [
+                4.613538444186139,
+                0.0,
+                0.0,
+                4.956146684849226,
+                5.40669202969082,
+                -2.625693512153953e-07,
+                5.375921459610035e-08
+              ]
+            }
+          ]
+        },
+        {
+          "period_stratum_days": [
+            200.0,
+            600.0
+          ],
+          "period_sample_count": 4096,
+          "coarse_temperature_hz": 0.001,
+          "refinement_sample_count": 65,
+          "finite_period_count": 4096,
+          "minimum_regularized_mixture_score": 66.3730198190938,
+          "selected_modes": [
+            {
+              "period_days": 203.41877385475576,
+              "period_cell_days": [
+                203.39404112891185,
+                203.42772121566748
+              ],
+              "refined_period_cell_days": [
+                203.41851070933717,
+                203.419037001536
+              ],
+              "regularized_mixture_score": 263.78423652334635,
+              "temperature_refinement": [
+                {
+                  "temperature_hz": 0.001,
+                  "period_days": 203.41087838397218,
+                  "period_cell_days": [
+                    203.39404112891185,
+                    203.42772121566748
+                  ],
+                  "regularized_mixture_score": 66.3730198190938
+                },
+                {
+                  "temperature_hz": 0.0005,
+                  "period_days": 203.41877385475576,
+                  "period_cell_days": [
+                    203.41851070933717,
+                    203.419037001536
+                  ],
+                  "regularized_mixture_score": 263.78423652334635
+                }
+              ],
+              "state": [
+                5.315266779525935,
+                0.0,
+                0.0,
+                3.0772775040434808,
+                6.897889263138588,
+                -5.658828028120888e-07,
+                -7.906436181769382e-08
+              ]
+            },
+            {
+              "period_days": 240.40397784706755,
+              "period_cell_days": [
+                240.3639232551725,
+                240.4109612058295
+              ],
+              "refined_period_cell_days": [
+                240.40397784706755,
+                240.40397789193264
+              ],
+              "regularized_mixture_score": 6789.924864537425,
+              "temperature_refinement": [
+                {
+                  "temperature_hz": 0.001,
+                  "period_days": 240.38743762841207,
+                  "period_cell_days": [
+                    240.3639232551725,
+                    240.4109612058295
+                  ],
+                  "regularized_mixture_score": 66.96760213606943
+                },
+                {
+                  "temperature_hz": 0.0005,
+                  "period_days": 240.4043453816188,
+                  "period_cell_days": [
+                    240.40397784706755,
+                    240.40471291841766
+                  ],
+                  "regularized_mixture_score": 266.4594832825257
+                },
+                {
+                  "temperature_hz": 0.0002,
+                  "period_days": 240.40397784706755,
+                  "period_cell_days": [
+                    240.40397784706755,
+                    240.4039835897952
+                  ],
+                  "regularized_mixture_score": 1697.9291259687197
+                },
+                {
+                  "temperature_hz": 0.0001,
+                  "period_days": 240.40397784706755,
+                  "period_cell_days": [
+                    240.40397784706755,
+                    240.40397789193264
+                  ],
+                  "regularized_mixture_score": 6789.924864537425
+                }
+              ],
+              "state": [
+                5.482320749308963,
+                0.0,
+                0.0,
+                1.6967204004907925,
+                5.701624473539732,
+                2.3037196847635645e-06,
+                -7.642384956126575e-08
+              ]
+            },
+            {
+              "period_days": 240.0135561698419,
+              "period_cell_days": [
+                239.9882812503354,
+                240.03517227921992
+              ],
+              "refined_period_cell_days": [
+                240.0135561698419,
+                240.01356189393204
+              ],
+              "regularized_mixture_score": 1691.2206466564503,
+              "temperature_refinement": [
+                {
+                  "temperature_hz": 0.001,
+                  "period_days": 240.01172218423366,
+                  "period_cell_days": [
+                    239.9882812503354,
+                    240.03517227921992
+                  ],
+                  "regularized_mixture_score": 68.04536513910267
+                },
+                {
+                  "temperature_hz": 0.0005,
+                  "period_days": 240.01392251159314,
+                  "period_cell_days": [
+                    240.0135561698419,
+                    240.01428885558101
+                  ],
+                  "regularized_mixture_score": 270.98739421880606
+                },
+                {
+                  "temperature_hz": 0.0002,
+                  "period_days": 240.0135561698419,
+                  "period_cell_days": [
+                    240.0135561698419,
+                    240.01356189393204
+                  ],
+                  "regularized_mixture_score": 1691.2206466564503
+                }
+              ],
+              "state": [
+                5.480695405787836,
+                0.0,
+                0.0,
+                1.6986735643886248,
+                5.69834800995192,
+                6.713056671201722e-07,
+                -8.216720866743872e-08
+              ]
+            },
+            {
+              "period_days": 306.40686368964003,
+              "period_cell_days": [
+                306.3591070074052,
+                306.4355248464018
+              ],
+              "refined_period_cell_days": [
+                306.4062666403822,
+                306.4074607435514
+              ],
+              "regularized_mixture_score": 284.97320148028456,
+              "temperature_refinement": [
+                {
+                  "temperature_hz": 0.001,
+                  "period_days": 306.3973063973064,
+                  "period_cell_days": [
+                    306.3591070074052,
+                    306.4355248464018
+                  ],
+                  "regularized_mixture_score": 71.5468992110438
+                },
+                {
+                  "temperature_hz": 0.0005,
+                  "period_days": 306.40686368964003,
+                  "period_cell_days": [
+                    306.4062666403822,
+                    306.4074607435514
+                  ],
+                  "regularized_mixture_score": 284.97320148028456
+                }
+              ],
+              "state": [
+                5.724913838691385,
+                0.0,
+                0.0,
+                0.40869414014791605,
+                7.093561881970666,
+                -1.8674671837362415e-07,
+                7.217008965347707e-08
+              ]
+            },
+            {
+              "period_days": 203.71471685075562,
+              "period_cell_days": [
+                203.69756399332985,
+                203.73134468434048
+              ],
+              "refined_period_cell_days": [
+                203.71471272712563,
+                203.71471685075562
+              ],
+              "regularized_mixture_score": 4817.499683678292,
+              "temperature_refinement": [
+                {
+                  "temperature_hz": 0.001,
+                  "period_days": 203.71445153801508,
+                  "period_cell_days": [
+                    203.69756399332985,
+                    203.73134468434048
+                  ],
+                  "regularized_mixture_score": 77.55843887123174
+                },
+                {
+                  "temperature_hz": 0.0005,
+                  "period_days": 203.71445293842513,
+                  "period_cell_days": [
+                    203.71418902746223,
+                    203.71471685075562
+                  ],
+                  "regularized_mixture_score": 308.4422669546915
+                },
+                {
+                  "temperature_hz": 0.0002,
+                  "period_days": 203.71471685075562,
+                  "period_cell_days": [
+                    203.71471272712563,
+                    203.71471685075562
+                  ],
+                  "regularized_mixture_score": 4817.499683678292
+                }
+              ],
+              "state": [
+                5.316720568294872,
+                0.0,
+                0.0,
+                6.041360686751073,
+                6.282969077797305,
+                -1.9200726166580385e-06,
+                5.92634456543321e-08
+              ]
+            },
+            {
+              "period_days": 596.033754524696,
+              "period_cell_days": [
+                595.7808303750578,
+                596.0699040773807
+              ],
+              "refined_period_cell_days": [
+                596.0314953318011,
+                596.0360137518439
+              ],
+              "regularized_mixture_score": 309.8809856508421,
+              "temperature_refinement": [
+                {
+                  "temperature_hz": 0.001,
+                  "period_days": 595.9252971137521,
+                  "period_cell_days": [
+                    595.7808303750578,
+                    596.0699040773807
+                  ],
+                  "regularized_mixture_score": 77.7905062925709
+                },
+                {
+                  "temperature_hz": 0.0005,
+                  "period_days": 596.033754524696,
+                  "period_cell_days": [
+                    596.0314953318011,
+                    596.0360137518439
+                  ],
+                  "regularized_mixture_score": 309.8809856508421
+                }
+              ],
+              "state": [
+                6.390297300570193,
+                0.0,
+                0.0,
+                1.1513540708688306,
+                8.056760635393893,
+                1.940240144682518e-07,
+                2.119339611068939e-08
+              ]
+            },
+            {
+              "period_days": 404.3446172208271,
+              "period_cell_days": [
+                404.2448283168007,
+                404.3778911378056
+              ],
+              "refined_period_cell_days": [
+                404.34357750182846,
+                404.3456569505198
+              ],
+              "regularized_mixture_score": 328.1460146222564,
+              "temperature_refinement": [
+                {
+                  "temperature_hz": 0.001,
+                  "period_days": 404.3113378311667,
+                  "period_cell_days": [
+                    404.2448283168007,
+                    404.3778911378056
+                  ],
+                  "regularized_mixture_score": 82.26990268292386
+                },
+                {
+                  "temperature_hz": 0.0005,
+                  "period_days": 404.3446172208271,
+                  "period_cell_days": [
+                    404.34357750182846,
+                    404.3456569505198
+                  ],
+                  "regularized_mixture_score": 328.1460146222564
+                }
+              ],
+              "state": [
+                6.002267527275227,
+                0.0,
+                0.0,
+                2.434084196244933,
+                7.738889756998391,
+                2.4875145826576886e-07,
+                -2.044783960248022e-08
+              ]
+            },
+            {
+              "period_days": 346.202620825701,
+              "period_cell_days": [
+                346.1538530244859,
+                346.25141612109576
+              ],
+              "refined_period_cell_days": [
+                346.1538530244859,
+                346.25141612109576
+              ],
+              "regularized_mixture_score": 83.23635281973812,
+              "temperature_refinement": [
+                {
+                  "temperature_hz": 0.001,
+                  "period_days": 346.202620825701,
+                  "period_cell_days": [
+                    346.1538530244859,
+                    346.25141612109576
+                  ],
+                  "regularized_mixture_score": 83.23635281973812
+                }
+              ],
+              "state": [
+                5.847024212978333,
+                0.0,
+                0.0,
+                5.676154481212503,
+                3.8647294208659613,
+                -2.266902781680005e-07,
+                1.2668252647405624e-08
+              ]
+            }
+          ]
+        },
+        {
+          "period_stratum_days": [
+            600.0,
+            2000.0
+          ],
+          "period_sample_count": 4096,
+          "coarse_temperature_hz": 0.001,
+          "refinement_sample_count": 65,
+          "finite_period_count": 4096,
+          "minimum_regularized_mixture_score": 64.09551048753471,
+          "selected_modes": [
+            {
+              "period_days": 1054.3706818864523,
+              "period_cell_days": [
+                1054.2123679702531,
+                1054.529090943226
+              ],
+              "refined_period_cell_days": [
+                1054.2123679702531,
+                1054.529090943226
+              ],
+              "regularized_mixture_score": 64.09551048753471,
+              "temperature_refinement": [
+                {
+                  "temperature_hz": 0.001,
+                  "period_days": 1054.3706818864523,
+                  "period_cell_days": [
+                    1054.2123679702531,
+                    1054.529090943226
+                  ],
+                  "regularized_mixture_score": 64.09551048753471
+                }
+              ],
+              "state": [
+                6.960699357867023,
+                0.0,
+                0.0,
+                2.5175696605819082,
+                5.30250622858211,
+                -6.822381128486604e-08,
+                3.510471633374609e-08
+              ]
+            },
+            {
+              "period_days": 1149.9772504172222,
+              "period_cell_days": [
+                1149.8771807289222,
+                1150.2540043377908
+              ],
+              "refined_period_cell_days": [
+                1149.9743069500255,
+                1149.9801939145555
+              ],
+              "regularized_mixture_score": 569.1568495065338,
+              "temperature_refinement": [
+                {
+                  "temperature_hz": 0.001,
+                  "period_days": 1150.0655307994755,
+                  "period_cell_days": [
+                    1149.8771807289222,
+                    1150.2540043377908
+                  ],
+                  "regularized_mixture_score": 65.10219849416583
+                },
+                {
+                  "temperature_hz": 0.0005,
+                  "period_days": 1149.9772504172222,
+                  "period_cell_days": [
+                    1149.9743069500255,
+                    1149.9801939145555
+                  ],
+                  "regularized_mixture_score": 569.1568495065338
+                }
+              ],
+              "state": [
+                7.047497438915731,
+                0.0,
+                0.0,
+                0.4752047366816452,
+                7.301595434228964,
+                -1.0032352565559248e-08,
+                -9.952869893137582e-08
+              ]
+            },
+            {
+              "period_days": 1153.088042049934,
+              "period_cell_days": [
+                1152.8987008279228,
+                1153.2775077157326
+              ],
+              "refined_period_cell_days": [
+                1152.8987008279228,
+                1153.2775077157326
+              ],
+              "regularized_mixture_score": 65.15819507984655,
+              "temperature_refinement": [
+                {
+                  "temperature_hz": 0.001,
+                  "period_days": 1153.088042049934,
+                  "period_cell_days": [
+                    1152.8987008279228,
+                    1153.2775077157326
+                  ],
+                  "regularized_mixture_score": 65.15819507984655
+                }
+              ],
+              "state": [
+                7.050198876460472,
+                0.0,
+                0.0,
+                2.4035774788871946,
+                5.341183951460096,
+                -6.627621035417755e-08,
+                4.4144266025778e-08
+              ]
+            },
+            {
+              "period_days": 1164.1791044776116,
+              "period_cell_days": [
+                1163.9861039629436,
+                1164.3722330616326
+              ],
+              "refined_period_cell_days": [
+                1163.9861039629436,
+                1164.3722330616326
+              ],
+              "regularized_mixture_score": 65.37205847533302,
+              "temperature_refinement": [
+                {
+                  "temperature_hz": 0.001,
+                  "period_days": 1164.1791044776116,
+                  "period_cell_days": [
+                    1163.9861039629436,
+                    1164.3722330616326
+                  ],
+                  "regularized_mixture_score": 65.37205847533302
+                }
+              ],
+              "state": [
+                7.059771486280763,
+                0.0,
+                0.0,
+                2.3890086704857927,
+                5.343946985619561,
+                -6.714643016825567e-08,
+                4.501367750096181e-08
+              ]
+            },
+            {
+              "period_days": 2000.0,
+              "period_cell_days": [
+                1999.4305239179955,
+                2000.0
+              ],
+              "refined_period_cell_days": [
+                1999.4305239179955,
+                2000.0
+              ],
+              "regularized_mixture_score": 82.44314853132082,
+              "temperature_refinement": [
+                {
+                  "temperature_hz": 0.001,
+                  "period_days": 2000.0,
+                  "period_cell_days": [
+                    1999.4305239179955,
+                    2000.0
+                  ],
+                  "regularized_mixture_score": 82.44314853132082
+                }
+              ],
+              "state": [
+                7.600902459542082,
+                0.0,
+                0.0,
+                2.2664764149151226,
+                5.435451953647401,
+                -1.330448909995938e-07,
+                5.120215046497114e-08
+              ]
+            },
+            {
+              "period_days": 617.0648811845191,
+              "period_cell_days": [
+                617.0343723508169,
+                617.1428619124674
+              ],
+              "refined_period_cell_days": [
+                617.0640336773417,
+                617.0657286963524
+              ],
+              "regularized_mixture_score": 330.12373966207036,
+              "temperature_refinement": [
+                {
+                  "temperature_hz": 0.001,
+                  "period_days": 617.0886075949367,
+                  "period_cell_days": [
+                    617.0343723508169,
+                    617.1428619124674
+                  ],
+                  "regularized_mixture_score": 82.83527577581386
+                },
+                {
+                  "temperature_hz": 0.0005,
+                  "period_days": 617.0648811845191,
+                  "period_cell_days": [
+                    617.0640336773417,
+                    617.0657286963524
+                  ],
+                  "regularized_mixture_score": 330.12373966207036
+                }
+              ],
+              "state": [
+                6.4249741742675255,
+                0.0,
+                0.0,
+                4.148549518208692,
+                7.138893642688314,
+                6.009851161881951e-07,
+                3.596596712554777e-08
+              ]
+            },
+            {
+              "period_days": 600.0,
+              "period_cell_days": [
+                600.0,
+                600.0512908189434
+              ],
+              "refined_period_cell_days": [
+                600.0,
+                600.0004006758065
+              ],
+              "regularized_mixture_score": 415.76695852783837,
+              "temperature_refinement": [
+                {
+                  "temperature_hz": 0.001,
+                  "period_days": 600.0,
+                  "period_cell_days": [
+                    600.0,
+                    600.0512908189434
+                  ],
+                  "regularized_mixture_score": 87.58478933196837
+                },
+                {
+                  "temperature_hz": 0.0005,
+                  "period_days": 600.0,
+                  "period_cell_days": [
+                    600.0,
+                    600.0004006758065
+                  ],
+                  "regularized_mixture_score": 415.76695852783837
+                }
+              ],
+              "state": [
+                6.396929655216146,
+                0.0,
+                0.0,
+                1.1498471731185596,
+                7.7331035352721464,
+                -1.725837102842248e-07,
+                8.538955456231858e-08
+              ]
+            },
+            {
+              "period_days": 1162.251655629139,
+              "period_cell_days": [
+                1162.0592935543905,
+                1162.4441451381865
+              ],
+              "refined_period_cell_days": [
+                1162.0592935543905,
+                1162.4441451381865
+              ],
+              "regularized_mixture_score": 96.19891732322478,
+              "temperature_refinement": [
+                {
+                  "temperature_hz": 0.001,
+                  "period_days": 1162.251655629139,
+                  "period_cell_days": [
+                    1162.0592935543905,
+                    1162.4441451381865
+                  ],
+                  "regularized_mixture_score": 96.19891732322478
+                }
+              ],
+              "state": [
+                7.058114485073133,
+                0.0,
+                0.0,
+                0.02757965751424623,
+                7.94877014655485,
+                6.787417237987309e-08,
+                3.210740995468832e-08
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "mode_count": 0,
+    "eligible_mode_count": 0,
+    "modes": []
+  },
+  "surrogate_modes": [
+    {
+      "period_stratum_days": [
+        17.524964693294574,
+        17.529966110362743
+      ],
+      "random_seed": 0,
+      "score": 6.735966531004956,
+      "state": [
+        2.863699036208098,
+        0.0,
+        0.0,
+        2.2250824167939434,
+        3.154863122471075,
+        -5.9562554038097834e-08,
+        -1.0332775168432198e-09
+      ],
+      "wrapped_rms_cycles": 0.004730919531148714,
+      "maximum_wrapped_residual_cycles": 0.01736702723428607
+    },
+    {
+      "period_stratum_days": [
+        10.074626933425899,
+        10.07627959534666
+      ],
+      "random_seed": 0,
+      "score": 49397.68453948276,
+      "state": [
+        2.310048268698017,
+        0.0,
+        0.0,
+        3.768473623017115,
+        3.656335437122084,
+        1.2002394495623114e-07,
+        2.203118323134373e-08
+      ],
+      "wrapped_rms_cycles": 0.20964251238690257,
+      "maximum_wrapped_residual_cycles": 0.42388153076171875
+    },
+    {
+      "period_stratum_days": [
+        80.54879441922927,
+        80.56067915479487
+      ],
+      "random_seed": 0,
+      "score": 12173.880396845334,
+      "state": [
+        4.389010678796753,
+        0.0,
+        0.0,
+        5.85306439734524,
+        6.037999461639037,
+        4.328990315240621e-07,
+        3.898380148443718e-08
+      ],
+      "wrapped_rms_cycles": 0.2627973938772414,
+      "maximum_wrapped_residual_cycles": 0.4589061737060547
+    },
+    {
+      "period_stratum_days": [
+        13.44386096204901,
+        13.446804013993876
+      ],
+      "random_seed": 0,
+      "score": 4611.905109298105,
+      "state": [
+        2.598652528098726,
+        0.0,
+        0.0,
+        1.385614393565796,
+        2.931198754120569,
+        -4.951478002551776e-07,
+        -3.3942414997179274e-09
+      ],
+      "wrapped_rms_cycles": 0.2259593401981842,
+      "maximum_wrapped_residual_cycles": 0.460479736328125
+    },
+    {
+      "period_stratum_days": [
+        37.738312721778065,
+        37.74555963746074
+      ],
+      "random_seed": 0,
+      "score": 59420.25918689491,
+      "state": [
+        3.6306758309859677,
+        0.0,
+        0.0,
+        3.278370911203213,
+        5.873867631967206,
+        1.0185423906082104e-06,
+        -6.279798156987419e-08
+      ],
+      "wrapped_rms_cycles": 0.22222235662962314,
+      "maximum_wrapped_residual_cycles": 0.46128082275390625
+    },
+    {
+      "period_stratum_days": [
+        3.737336986799768,
+        3.7387018502110623
+      ],
+      "random_seed": 0,
+      "score": 107995.15899421544,
+      "state": [
+        1.318671050096636,
+        0.0,
+        0.0,
+        4.187645565731627,
+        1.5800913324396082,
+        1.798468782813362e-06,
+        -3.865056554983057e-09
+      ],
+      "wrapped_rms_cycles": 0.26724557277345834,
+      "maximum_wrapped_residual_cycles": 0.4694733754731715
+    },
+    {
+      "period_stratum_days": [
+        152.53527326537017,
+        152.57789874510195
+      ],
+      "random_seed": 0,
+      "score": 25328.118438430294,
+      "state": [
+        5.027673093900759,
+        0.0,
+        0.0,
+        2.6047007150526467,
+        5.464278840090423,
+        9.539330239575101e-08,
+        6.956592605847341e-08
+      ],
+      "wrapped_rms_cycles": 0.25746473040605017,
+      "maximum_wrapped_residual_cycles": 0.4703559875488281
+    },
+    {
+      "period_stratum_days": [
+        0.776119544122739,
+        0.776782045041868
+      ],
+      "random_seed": 0,
+      "score": 2204.970141615371,
+      "state": [
+        -0.25316778749726543,
+        0.0,
+        0.0,
+        5.366686770926283,
+        -1.5808219338581662,
+        -1.8467591977640372e-06,
+        -9.984532850366639e-08
+      ],
+      "wrapped_rms_cycles": 0.2037044699411727,
+      "maximum_wrapped_residual_cycles": 0.47113800048828125
+    },
+    {
+      "period_stratum_days": [
+        0.8779548593916964,
+        0.8788027157592375
+      ],
+      "random_seed": 0,
+      "score": 15761342.269604376,
+      "state": [
+        -0.12967876860895242,
+        0.0,
+        0.0,
+        3.0063931690432795,
+        1.4573650496635246,
+        1.110894106097311e-07,
+        9.112621106133987e-08
+      ],
+      "wrapped_rms_cycles": 0.2060330815865644,
+      "maximum_wrapped_residual_cycles": 0.47238922119140625
+    },
+    {
+      "period_stratum_days": [
+        135.70274846076413,
+        135.7364843843573
+      ],
+      "random_seed": 0,
+      "score": 8788.390519858121,
+      "state": [
+        4.910657127003063,
+        0.0,
+        0.0,
+        5.707586013866916,
+        3.351651393145732,
+        -1.097551181676246e-06,
+        -3.547876039256404e-08
+      ],
+      "wrapped_rms_cycles": 0.24415384244761942,
+      "maximum_wrapped_residual_cycles": 0.47422398440539837
+    },
+    {
+      "period_stratum_days": [
+        18.02376799359333,
+        18.029058210432147
+      ],
+      "random_seed": 0,
+      "score": 15924.515282163853,
+      "state": [
+        2.8918541046409048,
+        0.0,
+        0.0,
+        2.445377824596363,
+        3.2953503594717306,
+        1.4390507650947027e-06,
+        -3.6587755001026466e-08
+      ],
+      "wrapped_rms_cycles": 0.22990853963895885,
+      "maximum_wrapped_residual_cycles": 0.47472190856933594
+    },
+    {
+      "period_stratum_days": [
+        52.521043021621836,
+        52.53508045176944
+      ],
+      "random_seed": 0,
+      "score": 33423.900339194224,
+      "state": [
+        3.961349606008792,
+        0.0,
+        0.0,
+        0.6680701212385108,
+        6.120024688092224,
+        1.1006617733550233e-06,
+        6.915703667753721e-08
+      ],
+      "wrapped_rms_cycles": 0.21427650040683358,
+      "maximum_wrapped_residual_cycles": 0.47484397888183594
+    },
+    {
+      "period_stratum_days": [
+        17.768296582282495,
+        17.77343787201802
+      ],
+      "random_seed": 0,
+      "score": 282830.34505312017,
+      "state": [
+        2.87755487831201,
+        0.0,
+        0.0,
+        3.932850593198167,
+        5.537006474552117,
+        -2.021628788661286e-06,
+        -3.171264171374517e-08
+      ],
+      "wrapped_rms_cycles": 0.2930821409290645,
+      "maximum_wrapped_residual_cycles": 0.4777069091796875
+    },
+    {
+      "period_stratum_days": [
+        1149.8771807289222,
+        1150.2540043377908
+      ],
+      "random_seed": 0,
+      "score": 17007.823249335273,
+      "state": [
+        7.047497438915731,
+        0.0,
+        0.0,
+        0.4752047366816452,
+        7.301595434228964,
+        -1.0032352565559248e-08,
+        -9.952869893137582e-08
+      ],
+      "wrapped_rms_cycles": 0.2794632110151256,
+      "maximum_wrapped_residual_cycles": 0.4777107238769531
+    },
+    {
+      "period_stratum_days": [
+        4.776624545512989,
+        4.778854268965345
+      ],
+      "random_seed": 0,
+      "score": 176004.9732525716,
+      "state": [
+        1.5640002675281972,
+        0.0,
+        0.0,
+        4.196618287415813,
+        2.444789071809879,
+        -1.4508264732433322e-06,
+        9.096128736749387e-08
+      ],
+      "wrapped_rms_cycles": 0.25361040853656464,
+      "maximum_wrapped_residual_cycles": 0.4791984558105469
+    },
+    {
+      "period_stratum_days": [
+        3.503293797487757,
+        3.504493042332503
+      ],
+      "random_seed": 0,
+      "score": 4119.637091472875,
+      "state": [
+        1.254013779690752,
+        0.0,
+        0.0,
+        4.983332309849216,
+        -0.06772854119513927,
+        -3.1674854095831505e-07,
+        -2.2549603367046153e-08
+      ],
+      "wrapped_rms_cycles": 0.2018576430227707,
+      "maximum_wrapped_residual_cycles": 0.4806327819824219
+    },
+    {
+      "period_stratum_days": [
+        80.63206128286062,
+        80.64397060450042
+      ],
+      "random_seed": 0,
+      "score": 30700.07885723371,
+      "state": [
+        4.389954041376141,
+        0.0,
+        0.0,
+        2.564662458400969,
+        6.673506340977594,
+        -8.922412361990326e-07,
+        7.824243273617621e-08
+      ],
+      "wrapped_rms_cycles": 0.2952902348384061,
+      "maximum_wrapped_residual_cycles": 0.48075103759765625
+    },
+    {
+      "period_stratum_days": [
+        203.69756399332985,
+        203.73134468434048
+      ],
+      "random_seed": 0,
+      "score": 23202.536145074795,
+      "state": [
+        5.316720568294872,
+        0.0,
+        0.0,
+        6.041360686751073,
+        6.282969077797305,
+        -1.9200726166580385e-06,
+        5.92634456543321e-08
+      ],
+      "wrapped_rms_cycles": 0.25864083006590105,
+      "maximum_wrapped_residual_cycles": 0.4808616638183594
+    },
+    {
+      "period_stratum_days": [
+        101.9703062397914,
+        101.98935364952682
+      ],
+      "random_seed": 0,
+      "score": 26182.116398697428,
+      "state": [
+        4.6248552980087645,
+        0.0,
+        0.0,
+        0.9601559148990608,
+        4.852101317018791,
+        1.2171886056848361e-06,
+        -3.3976037858176024e-09
+      ],
+      "wrapped_rms_cycles": 0.2943435012273693,
+      "maximum_wrapped_residual_cycles": 0.4818096160888672
+    },
+    {
+      "period_stratum_days": [
+        43.214246977067646,
+        43.22374983534622
+      ],
+      "random_seed": 0,
+      "score": 6305.100278051365,
+      "state": [
+        3.7661702320167465,
+        0.0,
+        0.0,
+        0.9708691717474652,
+        5.590651998819817,
+        1.6623552381286364e-07,
+        3.593660592462954e-08
+      ],
+      "wrapped_rms_cycles": 0.23084763139682815,
+      "maximum_wrapped_residual_cycles": 0.4830474853515625
+    },
+    {
+      "period_stratum_days": [
+        346.1538530244859,
+        346.25141612109576
+      ],
+      "random_seed": 0,
+      "score": 11145.35286077384,
+      "state": [
+        5.847024212978333,
+        0.0,
+        0.0,
+        5.676154481212503,
+        3.8647294208659613,
+        -2.266902781680005e-07,
+        1.2668252647405624e-08
+      ],
+      "wrapped_rms_cycles": 0.2793057991909425,
+      "maximum_wrapped_residual_cycles": 0.48427581787109375
+    },
+    {
+      "period_stratum_days": [
+        240.3639232551725,
+        240.4109612058295
+      ],
+      "random_seed": 0,
+      "score": 10045.169647951701,
+      "state": [
+        5.482320749308963,
+        0.0,
+        0.0,
+        1.6967204004907925,
+        5.701624473539732,
+        2.3037196847635645e-06,
+        -7.642384956126575e-08
+      ],
+      "wrapped_rms_cycles": 0.2141201593015554,
+      "maximum_wrapped_residual_cycles": 0.4843921661376953
+    },
+    {
+      "period_stratum_days": [
+        9.347182956925742,
+        9.355725051381594
+      ],
+      "random_seed": 0,
+      "score": 6182.867450485364,
+      "state": [
+        2.235517358508771,
+        0.0,
+        0.0,
+        2.748967191018547,
+        0.9723252396686155,
+        -8.210972672649546e-08,
+        -4.700689965748734e-08
+      ],
+      "wrapped_rms_cycles": 0.23578097111239538,
+      "maximum_wrapped_residual_cycles": 0.48485565185546875
+    },
+    {
+      "period_stratum_days": [
+        38.98066473626298,
+        38.988396694113426
+      ],
+      "random_seed": 0,
+      "score": 9770.361455977809,
+      "state": [
+        3.663188151819227,
+        0.0,
+        0.0,
+        1.941715057512848,
+        5.515370629842825,
+        1.3488302135072128e-06,
+        2.8176948987317202e-08
+      ],
+      "wrapped_rms_cycles": 0.23866855156686842,
+      "maximum_wrapped_residual_cycles": 0.4857654571533203
+    },
+    {
+      "period_stratum_days": [
+        1054.2123679702531,
+        1054.529090943226
+      ],
+      "random_seed": 0,
+      "score": 9247.68036661734,
+      "state": [
+        6.960699357867023,
+        0.0,
+        0.0,
+        2.5175696605819082,
+        5.30250622858211,
+        -6.822381128486604e-08,
+        3.510471633374609e-08
+      ],
+      "wrapped_rms_cycles": 0.2848592986148617,
+      "maximum_wrapped_residual_cycles": 0.4867688436061144
+    },
+    {
+      "period_stratum_days": [
+        5.370492172761622,
+        5.373310959226552
+      ],
+      "random_seed": 0,
+      "score": 50831.692697515835,
+      "state": [
+        1.681243379582484,
+        0.0,
+        0.0,
+        4.619963881447684,
+        1.941600452569305,
+        -2.927903771385307e-06,
+        -8.150458760819729e-08
+      ],
+      "wrapped_rms_cycles": 0.20816318778525464,
+      "maximum_wrapped_residual_cycles": 0.4871940612792969
+    },
+    {
+      "period_stratum_days": [
+        12.334337473733662,
+        12.336814745820927
+      ],
+      "random_seed": 0,
+      "score": 82370.53112301345,
+      "state": [
+        2.5124968577404334,
+        0.0,
+        0.0,
+        5.973009430112402,
+        4.273826834172496,
+        3.885170954183645e-07,
+        3.0694458478864575e-08
+      ],
+      "wrapped_rms_cycles": 0.23811565158460762,
+      "maximum_wrapped_residual_cycles": 0.4874229431152344
+    },
+    {
+      "period_stratum_days": [
+        2.6700137377817565,
+        2.6707102782705388
+      ],
+      "random_seed": 0,
+      "score": 10019.10159674062,
+      "state": [
+        0.9822955459465619,
+        0.0,
+        0.0,
+        2.979158943635572,
+        -0.15423855985444226,
+        -1.0297567874415523e-07,
+        -6.379524454413403e-08
+      ],
+      "wrapped_rms_cycles": 0.23515431394184938,
+      "maximum_wrapped_residual_cycles": 0.4875373840332031
+    },
+    {
+      "period_stratum_days": [
+        1152.8987008279228,
+        1153.2775077157326
+      ],
+      "random_seed": 0,
+      "score": 9352.41091728282,
+      "state": [
+        7.050198876460472,
+        0.0,
+        0.0,
+        2.4035774788871946,
+        5.341183951460096,
+        -6.627621035417755e-08,
+        4.4144266025778e-08
+      ],
+      "wrapped_rms_cycles": 0.27774752420968146,
+      "maximum_wrapped_residual_cycles": 0.4880867004394531
+    },
+    {
+      "period_stratum_days": [
+        617.0343723508169,
+        617.1428619124674
+      ],
+      "random_seed": 0,
+      "score": 10873.209635893762,
+      "state": [
+        6.4249741742675255,
+        0.0,
+        0.0,
+        4.148549518208692,
+        7.138893642688314,
+        6.009851161881951e-07,
+        3.596596712554777e-08
+      ],
+      "wrapped_rms_cycles": 0.27935473552371615,
+      "maximum_wrapped_residual_cycles": 0.4886853424832225
+    },
+    {
+      "period_stratum_days": [
+        110.26961639250436,
+        110.29189083319562
+      ],
+      "random_seed": 0,
+      "score": 4878.520181771906,
+      "state": [
+        4.702997850780925,
+        0.0,
+        0.0,
+        0.4233124468019411,
+        6.037144749949204,
+        -1.0181422605545691e-07,
+        -4.0546947298509504e-08
+      ],
+      "wrapped_rms_cycles": 0.22749565797778135,
+      "maximum_wrapped_residual_cycles": 0.4888648986816406
+    },
+    {
+      "period_stratum_days": [
+        1163.9861039629436,
+        1164.3722330616326
+      ],
+      "random_seed": 0,
+      "score": 9373.487342405651,
+      "state": [
+        7.059771486280763,
+        0.0,
+        0.0,
+        2.3890086704857927,
+        5.343946985619561,
+        -6.714643016825567e-08,
+        4.501367750096181e-08
+      ],
+      "wrapped_rms_cycles": 0.27891359218058037,
+      "maximum_wrapped_residual_cycles": 0.48931121826171875
+    },
+    {
+      "period_stratum_days": [
+        52.563177835018365,
+        52.57723780016888
+      ],
+      "random_seed": 0,
+      "score": 21991.981045485474,
+      "state": [
+        3.96205970725343,
+        0.0,
+        0.0,
+        0.6145999141111133,
+        5.780834968373935,
+        -1.819123032641909e-06,
+        9.670070394010459e-08
+      ],
+      "wrapped_rms_cycles": 0.19935716041397153,
+      "maximum_wrapped_residual_cycles": 0.4894676208496094
+    },
+    {
+      "period_stratum_days": [
+        600.0,
+        600.0512908189434
+      ],
+      "random_seed": 0,
+      "score": 13751.860882071634,
+      "state": [
+        6.396929655216146,
+        0.0,
+        0.0,
+        1.1498471731185596,
+        7.7331035352721464,
+        -1.725837102842248e-07,
+        8.538955456231858e-08
+      ],
+      "wrapped_rms_cycles": 0.23209561626254402,
+      "maximum_wrapped_residual_cycles": 0.490753173828125
+    },
+    {
+      "period_stratum_days": [
+        404.2448283168007,
+        404.3778911378056
+      ],
+      "random_seed": 0,
+      "score": 10107.330528232224,
+      "state": [
+        6.002267527275227,
+        0.0,
+        0.0,
+        2.434084196244933,
+        7.738889756998391,
+        2.4875145826576886e-07,
+        -2.044783960248022e-08
+      ],
+      "wrapped_rms_cycles": 0.24468557268698793,
+      "maximum_wrapped_residual_cycles": 0.4917106628417969
+    },
+    {
+      "period_stratum_days": [
+        16.160221274110164,
+        16.164473964066374
+      ],
+      "random_seed": 0,
+      "score": 6299.876122985742,
+      "state": [
+        2.782610298006703,
+        0.0,
+        0.0,
+        4.248015717533439,
+        1.5051812941878284,
+        1.1784456594239354e-07,
+        4.6360496707851616e-08
+      ],
+      "wrapped_rms_cycles": 0.2235544256897742,
+      "maximum_wrapped_residual_cycles": 0.4921836853027344
+    },
+    {
+      "period_stratum_days": [
+        2.1497191690591784,
+        2.1501706721763156
+      ],
+      "random_seed": 0,
+      "score": 16040.436479624896,
+      "state": [
+        0.765440571794052,
+        0.0,
+        0.0,
+        2.7167769589429636,
+        -0.6468481025789364,
+        -1.597206336729151e-06,
+        -8.16180113184869e-09
+      ],
+      "wrapped_rms_cycles": 0.26982731586873326,
+      "maximum_wrapped_residual_cycles": 0.49269866943359375
+    },
+    {
+      "period_stratum_days": [
+        1.392502727941142,
+        1.3946368342430877
+      ],
+      "random_seed": 0,
+      "score": 7308.602408605471,
+      "state": [
+        0.3321312997501619,
+        0.0,
+        0.0,
+        1.6822135941697034,
+        -0.9868345110342538,
+        -3.384512255043169e-07,
+        -2.728168387923519e-08
+      ],
+      "wrapped_rms_cycles": 0.20571436634205084,
+      "maximum_wrapped_residual_cycles": 0.49329376220703125
+    },
+    {
+      "period_stratum_days": [
+        54.97413056741915,
+        54.98951009818386
+      ],
+      "random_seed": 0,
+      "score": 6111.737350254784,
+      "state": [
+        4.006965490260092,
+        0.0,
+        0.0,
+        5.642380912486197,
+        5.654266261577146,
+        1.5206513367528503e-06,
+        6.284798085319395e-08
+      ],
+      "wrapped_rms_cycles": 0.22572717623449676,
+      "maximum_wrapped_residual_cycles": 0.4933052062988281
+    },
+    {
+      "period_stratum_days": [
+        1999.4305239179955,
+        2000.0
+      ],
+      "random_seed": 0,
+      "score": 11070.263142160557,
+      "state": [
+        7.600902459542082,
+        0.0,
+        0.0,
+        2.2664764149151226,
+        5.435451953647401,
+        -1.330448909995938e-07,
+        5.120215046497114e-08
+      ],
+      "wrapped_rms_cycles": 0.2626802501517605,
+      "maximum_wrapped_residual_cycles": 0.4941387176513672
+    },
+    {
+      "period_stratum_days": [
+        71.05006557765171,
+        71.07575715972432
+      ],
+      "random_seed": 0,
+      "score": 9428.89336245757,
+      "state": [
+        4.263658739705698,
+        0.0,
+        0.0,
+        2.235216363337076,
+        6.137870362116374,
+        -2.0491015150094953e-06,
+        3.097518084925945e-08
+      ],
+      "wrapped_rms_cycles": 0.26008242109815266,
+      "maximum_wrapped_residual_cycles": 0.4962806701660156
+    },
+    {
+      "period_stratum_days": [
+        1162.0592935543905,
+        1162.4441451381865
+      ],
+      "random_seed": 0,
+      "score": 12293.541283484432,
+      "state": [
+        7.058114485073133,
+        0.0,
+        0.0,
+        0.02757965751424623,
+        7.94877014655485,
+        6.787417237987309e-08,
+        3.210740995468832e-08
+      ],
+      "wrapped_rms_cycles": 0.26711250361808414,
+      "maximum_wrapped_residual_cycles": 0.49652099609375
+    },
+    {
+      "period_stratum_days": [
+        16.32775148459453,
+        16.332092817235228
+      ],
+      "random_seed": 0,
+      "score": 484889.7979244286,
+      "state": [
+        2.793015737908791,
+        0.0,
+        0.0,
+        2.4537096762759933,
+        5.48621495481736,
+        -3.4577102433197635e-08,
+        -9.850952849028313e-08
+      ],
+      "wrapped_rms_cycles": 0.2387922126658757,
+      "maximum_wrapped_residual_cycles": 0.4965705871582031
+    },
+    {
+      "period_stratum_days": [
+        43.03448327432349,
+        43.04390722796546
+      ],
+      "random_seed": 0,
+      "score": 12240.759184097264,
+      "state": [
+        3.7620017309263774,
+        0.0,
+        0.0,
+        3.5819494763870896,
+        0.45591564293629094,
+        -1.0827019241987387e-06,
+        3.488833742731276e-08
+      ],
+      "wrapped_rms_cycles": 0.28054685572369914,
+      "maximum_wrapped_residual_cycles": 0.49700927734375
+    },
+    {
+      "period_stratum_days": [
+        595.7808303750578,
+        596.0699040773807
+      ],
+      "random_seed": 0,
+      "score": 11323.58682505854,
+      "state": [
+        6.390297300570193,
+        0.0,
+        0.0,
+        1.1513540708688306,
+        8.056760635393893,
+        1.940240144682518e-07,
+        2.119339611068939e-08
+      ],
+      "wrapped_rms_cycles": 0.29564097724766136,
+      "maximum_wrapped_residual_cycles": 0.4974193572998047
+    },
+    {
+      "period_stratum_days": [
+        0.35721296763699595,
+        0.3573532437002885
+      ],
+      "random_seed": 0,
+      "score": 617967130.3412194,
+      "state": [
+        -1.029226165942161,
+        0.0,
+        0.0,
+        6.160599377346313,
+        1.4995066333024765,
+        -2.9100495729572327e-06,
+        -7.391301472039397e-08
+      ],
+      "wrapped_rms_cycles": 0.2901571834040985,
+      "maximum_wrapped_residual_cycles": 0.4975067232735455
+    },
+    {
+      "period_stratum_days": [
+        1.259516174143592,
+        1.261261866982223
+      ],
+      "random_seed": 0,
+      "score": 16622564.033146726,
+      "state": [
+        0.23138342130203876,
+        0.0,
+        0.0,
+        2.364458864352856,
+        2.228180696226993,
+        -3.239915829788426e-07,
+        7.619103794942363e-08
+      ],
+      "wrapped_rms_cycles": 0.25895109842602143,
+      "maximum_wrapped_residual_cycles": 0.4978656768798828
+    },
+    {
+      "period_stratum_days": [
+        306.3591070074052,
+        306.4355248464018
+      ],
+      "random_seed": 0,
+      "score": 9096.393356883109,
+      "state": [
+        5.724913838691385,
+        0.0,
+        0.0,
+        0.40869414014791605,
+        7.093561881970666,
+        -1.8674671837362415e-07,
+        7.217008965347707e-08
+      ],
+      "wrapped_rms_cycles": 0.2735835910354741,
+      "maximum_wrapped_residual_cycles": 0.49790370743721724
+    },
+    {
+      "period_stratum_days": [
+        100.82171630584664,
+        100.84033699437285
+      ],
+      "random_seed": 0,
+      "score": 17439.481958205793,
+      "state": [
+        4.613538444186139,
+        0.0,
+        0.0,
+        4.956146684849226,
+        5.40669202969082,
+        -2.625693512153953e-07,
+        5.375921459610035e-08
+      ],
+      "wrapped_rms_cycles": 0.29151830560594383,
+      "maximum_wrapped_residual_cycles": 0.4984016418457031
+    },
+    {
+      "period_stratum_days": [
+        3.3941153025508926,
+        3.3952409523275873
+      ],
+      "random_seed": 0,
+      "score": 1187106.6370202329,
+      "state": [
+        1.2222166929401452,
+        0.0,
+        0.0,
+        6.181473481983891,
+        2.82710052419348,
+        -2.809186808052465e-06,
+        6.328968103565878e-08
+      ],
+      "wrapped_rms_cycles": 0.25216220079690893,
+      "maximum_wrapped_residual_cycles": 0.4984569549560547
+    },
+    {
+      "period_stratum_days": [
+        0.8246490138883413,
+        0.825396995160863
+      ],
+      "random_seed": 0,
+      "score": 84952781.74811946,
+      "state": [
+        -0.19232993751305877,
+        0.0,
+        0.0,
+        4.8033223064333,
+        2.1795218937998224,
+        2.142038639320408e-06,
+        -7.425610846226694e-08
+      ],
+      "wrapped_rms_cycles": 0.2761041876071155,
+      "maximum_wrapped_residual_cycles": 0.4987030029296875
+    },
+    {
+      "period_stratum_days": [
+        173.3608552979782,
+        173.41591671263302
+      ],
+      "random_seed": 0,
+      "score": 11456.91110231248,
+      "state": [
+        5.155375290868323,
+        0.0,
+        0.0,
+        4.125141173322158,
+        5.363941208083415,
+        3.5262780577664597e-07,
+        4.0843659247653493e-08
+      ],
+      "wrapped_rms_cycles": 0.25607944369245844,
+      "maximum_wrapped_residual_cycles": 0.49877357482910156
+    },
+    {
+      "period_stratum_days": [
+        0.2626641705741013,
+        0.2627400083629047
+      ],
+      "random_seed": 0,
+      "score": 1795705906.699741,
+      "state": [
+        -1.3367359531998018,
+        0.0,
+        0.0,
+        1.8987751580685877,
+        1.4194684693271578,
+        -4.242398215427106e-07,
+        -8.702893291173764e-08
+      ],
+      "wrapped_rms_cycles": 0.2829463315569902,
+      "maximum_wrapped_residual_cycles": 0.49892616271972656
+    },
+    {
+      "period_stratum_days": [
+        0.3035863303819719,
+        0.3036876440303232
+      ],
+      "random_seed": 0,
+      "score": 14891.556586483724,
+      "state": [
+        -1.191976610511872,
+        0.0,
+        0.0,
+        6.116739853304944,
+        -2.535885230092875,
+        -1.6829060777458944e-06,
+        -8.787800916259718e-08
+      ],
+      "wrapped_rms_cycles": 0.21330851505793547,
+      "maximum_wrapped_residual_cycles": 0.49919293681159616
+    },
+    {
+      "period_stratum_days": [
+        239.9882812503354,
+        240.03517227921992
+      ],
+      "random_seed": 0,
+      "score": 10012.848236763642,
+      "state": [
+        5.480695405787836,
+        0.0,
+        0.0,
+        1.6986735643886248,
+        5.69834800995192,
+        6.713056671201722e-07,
+        -8.216720866743872e-08
+      ],
+      "wrapped_rms_cycles": 0.24896605247797501,
+      "maximum_wrapped_residual_cycles": 0.49939080607146025
+    },
+    {
+      "period_stratum_days": [
+        203.39404112891185,
+        203.42772121566748
+      ],
+      "random_seed": 0,
+      "score": 7926.513892192136,
+      "state": [
+        5.315266779525935,
+        0.0,
+        0.0,
+        3.0772775040434808,
+        6.897889263138588,
+        -5.658828028120888e-07,
+        -7.906436181769382e-08
+      ],
+      "wrapped_rms_cycles": 0.24018519309906758,
+      "maximum_wrapped_residual_cycles": 0.4999103546142578
+    }
+  ],
+  "sparse_expansion": {
+    "triggered": false,
+    "session_threshold": 10,
+    "expanded_period_strata_days": [],
+    "additional_seed_count": 0
+  },
+  "emitted_modes": [
+    {
+      "mode_id": "blind_ell1_000",
+      "par_path": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n17/blind_orbit_discovery/modes/blind_ell1_000.par",
+      "period_stratum_days": [
+        17.524964693294574,
+        17.529966110362743
+      ],
+      "random_seed": 0,
+      "surrogate_score": 6.735966531004956,
+      "initial_wrapped_rms_cycles": 0.004730919531148714,
+      "initial_max_wrapped_residual_cycles": 0.01736702723428607,
+      "refined_relative_chi2": 399.0546174271777,
+      "refined_relative_reduced_chi2": 8.313637863066202,
+      "pint_shape_chi2": 2150.062849609523,
+      "pint_shape_reduced_chi2": 44.79297603353172,
+      "parameter_values": {
+        "F0": 189.04722956595074,
+        "F1": -1.3792254440705769e-14,
+        "PB": 17.526251746615845,
+        "A1": 23.45906257470138,
+        "ECC": 1.0000000000044919e-10,
+        "OM": 5.729577951413236e-09,
+        "T0": 59362.51450106125,
+        "MASS_FUNCTION": 0.04512701387008926,
+        "STATE_COVARIANCE_TRACE": 1.2065354376181625e-13
+      },
+      "model_name": "ELL1",
+      "ell1_truncation_seconds": 2.345906257491213e-19,
+      "ell1_tolerance_seconds": 1.0432500000000001e-06,
+      "path_acquisition_tolerance_seconds": 0.0013224208605119249,
+      "representation_policy": "ell1_only_final_precision",
+      "continuous_mode_index": 0
+    }
+  ]
+}

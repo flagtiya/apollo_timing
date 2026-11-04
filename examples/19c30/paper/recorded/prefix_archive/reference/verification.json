@@ -1,0 +1,43 @@
+{
+  "toa_count": 96,
+  "pulse_number_present": true,
+  "pulse_number_finite": true,
+  "pulse_number_strictly_increasing": true,
+  "pulse_number_first_last": [
+    -13943860844.0,
+    9545095021.0
+  ],
+  "independent_fixed_path_chi2": 188.0072957255693,
+  "independent_fixed_path_reduced_chi2": 2.1861313456461544,
+  "independent_fixed_path_wrms_us": 5.075455825608969,
+  "certification_disk_chi2": 188.0072957255693,
+  "certification_disk_chi2_delta": 0.0,
+  "certification_disk_wrms_delta_us": 0.0,
+  "free_params": [
+    "RAJ",
+    "DECJ",
+    "F0",
+    "F1",
+    "PB",
+    "A1",
+    "TASC",
+    "EPS1",
+    "EPS2"
+  ],
+  "fit_parameters_match_contract": true,
+  "input_toa_count": 96,
+  "output_toa_count": 96,
+  "toa_count_preserved": true,
+  "toa_name_obs_order_preserved": true,
+  "mjd_max_abs_difference_us": 0.0006139089236967266,
+  "mjd_max_abs_difference_ns": 0.6139089236967266,
+  "rerun_matches_previous_certification": true,
+  "artifact_sha256": {
+    "solution.par": "e699bcfeb4b131d9fb3557aae8264b9553d9aafbb883f4820c2883f3af3b16ea",
+    "solution.tim": "4fcdf642306692d18ff8b41f9ce1b4ff20bffd6330109d9c6b5e02ff1a79c6d2",
+    "certification.json": "2c43a31e0a925e95c9e32466b7f8bf6703193d0a3a6eb2c788022a5b5527e5b4",
+    "audit.json": "b61d99d1d33ff3ca0684860fa568d6b6a5196dff642b7a32cbd6e539f20a3904",
+    "candidate_portfolio.json": "454a8dfe62b5a3166142f0f423a1be9345d63529a833f49da5d9477ea0bacaee",
+    "model_selection.json": "8a463d9423c2461ddafccfcc4a337d9fbc7a4556511239518a3446e45d17cb58"
+  }
+}

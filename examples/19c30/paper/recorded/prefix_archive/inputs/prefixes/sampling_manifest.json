@@ -1,0 +1,4023 @@
+{
+  "cases": [
+    {
+      "case_id": "sessions_12_chronological_prefix",
+      "design": "chronological_prefix",
+      "maximum_gap_days": 604.3383912063509,
+      "mjd_end": 60405.94758085763,
+      "mjd_start": 59367.796122670436,
+      "retained_fraction": 0.5416666666666666,
+      "seed": null,
+      "selected_session_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "selected_sessions": [
+        {
+          "index": 0,
+          "labels": [
+            "19C30N1_210603_0001.arz.N4",
+            "19C30N2_210603_0001.arz.N4"
+          ],
+          "mjd_end": 59367.80767348733,
+          "mjd_start": 59367.796122670436,
+          "source_lines": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "toa_count": 8
+        },
+        {
+          "index": 1,
+          "labels": [
+            "19C30_230128_0001.arz.N4"
+          ],
+          "mjd_end": 59972.14826955825,
+          "mjd_start": 59972.14606469368,
+          "source_lines": [
+            10,
+            11,
+            12,
+            13
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 2,
+          "labels": [
+            "19C30_230209_0001.arz.N4"
+          ],
+          "mjd_end": 59984.11563657222,
+          "mjd_start": 59984.11355320763,
+          "source_lines": [
+            14,
+            15,
+            16,
+            17
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 3,
+          "labels": [
+            "19C30_230220_0001.arz.N4"
+          ],
+          "mjd_end": 59995.08994213125,
+          "mjd_start": 59995.08785879757,
+          "source_lines": [
+            18,
+            19,
+            20,
+            21
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 4,
+          "labels": [
+            "19C30_230330_0001.arz.N4"
+          ],
+          "mjd_end": 60032.99341429552,
+          "mjd_start": 60032.99133113956,
+          "source_lines": [
+            22,
+            23,
+            24,
+            25
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 5,
+          "labels": [
+            "19C30_230807_0001.new.N4"
+          ],
+          "mjd_end": 60163.6246643514,
+          "mjd_start": 60163.62258113141,
+          "source_lines": [
+            26,
+            27,
+            28,
+            29
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 6,
+          "labels": [
+            "19C30_231004_0001.new.N4"
+          ],
+          "mjd_end": 60221.487164253085,
+          "mjd_start": 60221.48508103539,
+          "source_lines": [
+            30,
+            31,
+            32,
+            33
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 7,
+          "labels": [
+            "19C30_231124_0001.arz.N4"
+          ],
+          "mjd_end": 60272.31910875562,
+          "mjd_start": 60272.3170254396,
+          "source_lines": [
+            34,
+            35,
+            36,
+            37
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 8,
+          "labels": [
+            "19C30_240112_0001.arz.N4"
+          ],
+          "mjd_end": 60321.19410868372,
+          "mjd_start": 60321.1920253332,
+          "source_lines": [
+            38,
+            39,
+            40,
+            41
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 9,
+          "labels": [
+            "19C30_240130_0001.arz.N4"
+          ],
+          "mjd_end": 60339.16216428877,
+          "mjd_start": 60339.160080969814,
+          "source_lines": [
+            42,
+            43,
+            44,
+            45
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 10,
+          "labels": [
+            "19C30_240306_0001.arz.N4"
+          ],
+          "mjd_end": 60375.06633097839,
+          "mjd_start": 60375.064247695474,
+          "source_lines": [
+            46,
+            47,
+            48,
+            49
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 11,
+          "labels": [
+            "19C30_240406_0001.arz.N4"
+          ],
+          "mjd_end": 60405.94758085763,
+          "mjd_start": 60405.94549771177,
+          "source_lines": [
+            50,
+            51,
+            52,
+            53
+          ],
+          "toa_count": 4
+        }
+      ],
+      "session_count": 12,
+      "span_days": 1038.151458187196,
+      "tim_file": "sessions_12_chronological_prefix.tim",
+      "tim_sha256": "3ac1800f59a61aafe946dda83c4eab62f16d17cc0dc045a73e6f8dee1aed99c7",
+      "toa_count": 52
+    },
+    {
+      "case_id": "sessions_13_chronological_prefix",
+      "design": "chronological_prefix",
+      "maximum_gap_days": 604.3383912063509,
+      "mjd_end": 60433.86077530563,
+      "mjd_start": 59367.796122670436,
+      "retained_fraction": 0.5833333333333334,
+      "seed": null,
+      "selected_session_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "selected_sessions": [
+        {
+          "index": 0,
+          "labels": [
+            "19C30N1_210603_0001.arz.N4",
+            "19C30N2_210603_0001.arz.N4"
+          ],
+          "mjd_end": 59367.80767348733,
+          "mjd_start": 59367.796122670436,
+          "source_lines": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "toa_count": 8
+        },
+        {
+          "index": 1,
+          "labels": [
+            "19C30_230128_0001.arz.N4"
+          ],
+          "mjd_end": 59972.14826955825,
+          "mjd_start": 59972.14606469368,
+          "source_lines": [
+            10,
+            11,
+            12,
+            13
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 2,
+          "labels": [
+            "19C30_230209_0001.arz.N4"
+          ],
+          "mjd_end": 59984.11563657222,
+          "mjd_start": 59984.11355320763,
+          "source_lines": [
+            14,
+            15,
+            16,
+            17
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 3,
+          "labels": [
+            "19C30_230220_0001.arz.N4"
+          ],
+          "mjd_end": 59995.08994213125,
+          "mjd_start": 59995.08785879757,
+          "source_lines": [
+            18,
+            19,
+            20,
+            21
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 4,
+          "labels": [
+            "19C30_230330_0001.arz.N4"
+          ],
+          "mjd_end": 60032.99341429552,
+          "mjd_start": 60032.99133113956,
+          "source_lines": [
+            22,
+            23,
+            24,
+            25
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 5,
+          "labels": [
+            "19C30_230807_0001.new.N4"
+          ],
+          "mjd_end": 60163.6246643514,
+          "mjd_start": 60163.62258113141,
+          "source_lines": [
+            26,
+            27,
+            28,
+            29
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 6,
+          "labels": [
+            "19C30_231004_0001.new.N4"
+          ],
+          "mjd_end": 60221.487164253085,
+          "mjd_start": 60221.48508103539,
+          "source_lines": [
+            30,
+            31,
+            32,
+            33
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 7,
+          "labels": [
+            "19C30_231124_0001.arz.N4"
+          ],
+          "mjd_end": 60272.31910875562,
+          "mjd_start": 60272.3170254396,
+          "source_lines": [
+            34,
+            35,
+            36,
+            37
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 8,
+          "labels": [
+            "19C30_240112_0001.arz.N4"
+          ],
+          "mjd_end": 60321.19410868372,
+          "mjd_start": 60321.1920253332,
+          "source_lines": [
+            38,
+            39,
+            40,
+            41
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 9,
+          "labels": [
+            "19C30_240130_0001.arz.N4"
+          ],
+          "mjd_end": 60339.16216428877,
+          "mjd_start": 60339.160080969814,
+          "source_lines": [
+            42,
+            43,
+            44,
+            45
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 10,
+          "labels": [
+            "19C30_240306_0001.arz.N4"
+          ],
+          "mjd_end": 60375.06633097839,
+          "mjd_start": 60375.064247695474,
+          "source_lines": [
+            46,
+            47,
+            48,
+            49
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 11,
+          "labels": [
+            "19C30_240406_0001.arz.N4"
+          ],
+          "mjd_end": 60405.94758085763,
+          "mjd_start": 60405.94549771177,
+          "source_lines": [
+            50,
+            51,
+            52,
+            53
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 12,
+          "labels": [
+            "19C30_240504_0001.arz.N4"
+          ],
+          "mjd_end": 60433.86077530563,
+          "mjd_start": 60433.85869210813,
+          "source_lines": [
+            54,
+            55,
+            56,
+            57
+          ],
+          "toa_count": 4
+        }
+      ],
+      "session_count": 13,
+      "span_days": 1066.064652635192,
+      "tim_file": "sessions_13_chronological_prefix.tim",
+      "tim_sha256": "32f594015d4d0893a1aa049272580d9f8537c7561d4e6a8595b5695cb7282a0a",
+      "toa_count": 56
+    },
+    {
+      "case_id": "sessions_14_chronological_prefix",
+      "design": "chronological_prefix",
+      "maximum_gap_days": 604.3383912063509,
+      "mjd_end": 60464.78160866354,
+      "mjd_start": 59367.796122670436,
+      "retained_fraction": 0.625,
+      "seed": null,
+      "selected_session_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "selected_sessions": [
+        {
+          "index": 0,
+          "labels": [
+            "19C30N1_210603_0001.arz.N4",
+            "19C30N2_210603_0001.arz.N4"
+          ],
+          "mjd_end": 59367.80767348733,
+          "mjd_start": 59367.796122670436,
+          "source_lines": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "toa_count": 8
+        },
+        {
+          "index": 1,
+          "labels": [
+            "19C30_230128_0001.arz.N4"
+          ],
+          "mjd_end": 59972.14826955825,
+          "mjd_start": 59972.14606469368,
+          "source_lines": [
+            10,
+            11,
+            12,
+            13
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 2,
+          "labels": [
+            "19C30_230209_0001.arz.N4"
+          ],
+          "mjd_end": 59984.11563657222,
+          "mjd_start": 59984.11355320763,
+          "source_lines": [
+            14,
+            15,
+            16,
+            17
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 3,
+          "labels": [
+            "19C30_230220_0001.arz.N4"
+          ],
+          "mjd_end": 59995.08994213125,
+          "mjd_start": 59995.08785879757,
+          "source_lines": [
+            18,
+            19,
+            20,
+            21
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 4,
+          "labels": [
+            "19C30_230330_0001.arz.N4"
+          ],
+          "mjd_end": 60032.99341429552,
+          "mjd_start": 60032.99133113956,
+          "source_lines": [
+            22,
+            23,
+            24,
+            25
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 5,
+          "labels": [
+            "19C30_230807_0001.new.N4"
+          ],
+          "mjd_end": 60163.6246643514,
+          "mjd_start": 60163.62258113141,
+          "source_lines": [
+            26,
+            27,
+            28,
+            29
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 6,
+          "labels": [
+            "19C30_231004_0001.new.N4"
+          ],
+          "mjd_end": 60221.487164253085,
+          "mjd_start": 60221.48508103539,
+          "source_lines": [
+            30,
+            31,
+            32,
+            33
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 7,
+          "labels": [
+            "19C30_231124_0001.arz.N4"
+          ],
+          "mjd_end": 60272.31910875562,
+          "mjd_start": 60272.3170254396,
+          "source_lines": [
+            34,
+            35,
+            36,
+            37
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 8,
+          "labels": [
+            "19C30_240112_0001.arz.N4"
+          ],
+          "mjd_end": 60321.19410868372,
+          "mjd_start": 60321.1920253332,
+          "source_lines": [
+            38,
+            39,
+            40,
+            41
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 9,
+          "labels": [
+            "19C30_240130_0001.arz.N4"
+          ],
+          "mjd_end": 60339.16216428877,
+          "mjd_start": 60339.160080969814,
+          "source_lines": [
+            42,
+            43,
+            44,
+            45
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 10,
+          "labels": [
+            "19C30_240306_0001.arz.N4"
+          ],
+          "mjd_end": 60375.06633097839,
+          "mjd_start": 60375.064247695474,
+          "source_lines": [
+            46,
+            47,
+            48,
+            49
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 11,
+          "labels": [
+            "19C30_240406_0001.arz.N4"
+          ],
+          "mjd_end": 60405.94758085763,
+          "mjd_start": 60405.94549771177,
+          "source_lines": [
+            50,
+            51,
+            52,
+            53
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 12,
+          "labels": [
+            "19C30_240504_0001.arz.N4"
+          ],
+          "mjd_end": 60433.86077530563,
+          "mjd_start": 60433.85869210813,
+          "source_lines": [
+            54,
+            55,
+            56,
+            57
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 13,
+          "labels": [
+            "19C30_240604_0001.arz.N4"
+          ],
+          "mjd_end": 60464.78160866354,
+          "mjd_start": 60464.77952538012,
+          "source_lines": [
+            58,
+            59,
+            60,
+            61
+          ],
+          "toa_count": 4
+        }
+      ],
+      "session_count": 14,
+      "span_days": 1096.9854859931074,
+      "tim_file": "sessions_14_chronological_prefix.tim",
+      "tim_sha256": "8488b7913cf991040a09e01363295b24536bc0d67708e40afc32e22218974931",
+      "toa_count": 60
+    },
+    {
+      "case_id": "sessions_15_chronological_prefix",
+      "design": "chronological_prefix",
+      "maximum_gap_days": 604.3383912063509,
+      "mjd_end": 60481.74827541256,
+      "mjd_start": 59367.796122670436,
+      "retained_fraction": 0.6666666666666666,
+      "seed": null,
+      "selected_session_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "selected_sessions": [
+        {
+          "index": 0,
+          "labels": [
+            "19C30N1_210603_0001.arz.N4",
+            "19C30N2_210603_0001.arz.N4"
+          ],
+          "mjd_end": 59367.80767348733,
+          "mjd_start": 59367.796122670436,
+          "source_lines": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "toa_count": 8
+        },
+        {
+          "index": 1,
+          "labels": [
+            "19C30_230128_0001.arz.N4"
+          ],
+          "mjd_end": 59972.14826955825,
+          "mjd_start": 59972.14606469368,
+          "source_lines": [
+            10,
+            11,
+            12,
+            13
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 2,
+          "labels": [
+            "19C30_230209_0001.arz.N4"
+          ],
+          "mjd_end": 59984.11563657222,
+          "mjd_start": 59984.11355320763,
+          "source_lines": [
+            14,
+            15,
+            16,
+            17
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 3,
+          "labels": [
+            "19C30_230220_0001.arz.N4"
+          ],
+          "mjd_end": 59995.08994213125,
+          "mjd_start": 59995.08785879757,
+          "source_lines": [
+            18,
+            19,
+            20,
+            21
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 4,
+          "labels": [
+            "19C30_230330_0001.arz.N4"
+          ],
+          "mjd_end": 60032.99341429552,
+          "mjd_start": 60032.99133113956,
+          "source_lines": [
+            22,
+            23,
+            24,
+            25
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 5,
+          "labels": [
+            "19C30_230807_0001.new.N4"
+          ],
+          "mjd_end": 60163.6246643514,
+          "mjd_start": 60163.62258113141,
+          "source_lines": [
+            26,
+            27,
+            28,
+            29
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 6,
+          "labels": [
+            "19C30_231004_0001.new.N4"
+          ],
+          "mjd_end": 60221.487164253085,
+          "mjd_start": 60221.48508103539,
+          "source_lines": [
+            30,
+            31,
+            32,
+            33
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 7,
+          "labels": [
+            "19C30_231124_0001.arz.N4"
+          ],
+          "mjd_end": 60272.31910875562,
+          "mjd_start": 60272.3170254396,
+          "source_lines": [
+            34,
+            35,
+            36,
+            37
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 8,
+          "labels": [
+            "19C30_240112_0001.arz.N4"
+          ],
+          "mjd_end": 60321.19410868372,
+          "mjd_start": 60321.1920253332,
+          "source_lines": [
+            38,
+            39,
+            40,
+            41
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 9,
+          "labels": [
+            "19C30_240130_0001.arz.N4"
+          ],
+          "mjd_end": 60339.16216428877,
+          "mjd_start": 60339.160080969814,
+          "source_lines": [
+            42,
+            43,
+            44,
+            45
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 10,
+          "labels": [
+            "19C30_240306_0001.arz.N4"
+          ],
+          "mjd_end": 60375.06633097839,
+          "mjd_start": 60375.064247695474,
+          "source_lines": [
+            46,
+            47,
+            48,
+            49
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 11,
+          "labels": [
+            "19C30_240406_0001.arz.N4"
+          ],
+          "mjd_end": 60405.94758085763,
+          "mjd_start": 60405.94549771177,
+          "source_lines": [
+            50,
+            51,
+            52,
+            53
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 12,
+          "labels": [
+            "19C30_240504_0001.arz.N4"
+          ],
+          "mjd_end": 60433.86077530563,
+          "mjd_start": 60433.85869210813,
+          "source_lines": [
+            54,
+            55,
+            56,
+            57
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 13,
+          "labels": [
+            "19C30_240604_0001.arz.N4"
+          ],
+          "mjd_end": 60464.78160866354,
+          "mjd_start": 60464.77952538012,
+          "source_lines": [
+            58,
+            59,
+            60,
+            61
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 14,
+          "labels": [
+            "19C30_240621_0001.arz.N4"
+          ],
+          "mjd_end": 60481.74827541256,
+          "mjd_start": 60481.746192166946,
+          "source_lines": [
+            62,
+            63,
+            64,
+            65
+          ],
+          "toa_count": 4
+        }
+      ],
+      "session_count": 15,
+      "span_days": 1113.9521527421239,
+      "tim_file": "sessions_15_chronological_prefix.tim",
+      "tim_sha256": "3321a8a0eab8fc5a088bf91aa45291044b6157708aaa7f9992f36b1cbdbe479d",
+      "toa_count": 64
+    },
+    {
+      "case_id": "sessions_16_chronological_prefix",
+      "design": "chronological_prefix",
+      "maximum_gap_days": 604.3383912063509,
+      "mjd_end": 60501.69202533193,
+      "mjd_start": 59367.796122670436,
+      "retained_fraction": 0.7083333333333334,
+      "seed": null,
+      "selected_session_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "selected_sessions": [
+        {
+          "index": 0,
+          "labels": [
+            "19C30N1_210603_0001.arz.N4",
+            "19C30N2_210603_0001.arz.N4"
+          ],
+          "mjd_end": 59367.80767348733,
+          "mjd_start": 59367.796122670436,
+          "source_lines": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "toa_count": 8
+        },
+        {
+          "index": 1,
+          "labels": [
+            "19C30_230128_0001.arz.N4"
+          ],
+          "mjd_end": 59972.14826955825,
+          "mjd_start": 59972.14606469368,
+          "source_lines": [
+            10,
+            11,
+            12,
+            13
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 2,
+          "labels": [
+            "19C30_230209_0001.arz.N4"
+          ],
+          "mjd_end": 59984.11563657222,
+          "mjd_start": 59984.11355320763,
+          "source_lines": [
+            14,
+            15,
+            16,
+            17
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 3,
+          "labels": [
+            "19C30_230220_0001.arz.N4"
+          ],
+          "mjd_end": 59995.08994213125,
+          "mjd_start": 59995.08785879757,
+          "source_lines": [
+            18,
+            19,
+            20,
+            21
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 4,
+          "labels": [
+            "19C30_230330_0001.arz.N4"
+          ],
+          "mjd_end": 60032.99341429552,
+          "mjd_start": 60032.99133113956,
+          "source_lines": [
+            22,
+            23,
+            24,
+            25
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 5,
+          "labels": [
+            "19C30_230807_0001.new.N4"
+          ],
+          "mjd_end": 60163.6246643514,
+          "mjd_start": 60163.62258113141,
+          "source_lines": [
+            26,
+            27,
+            28,
+            29
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 6,
+          "labels": [
+            "19C30_231004_0001.new.N4"
+          ],
+          "mjd_end": 60221.487164253085,
+          "mjd_start": 60221.48508103539,
+          "source_lines": [
+            30,
+            31,
+            32,
+            33
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 7,
+          "labels": [
+            "19C30_231124_0001.arz.N4"
+          ],
+          "mjd_end": 60272.31910875562,
+          "mjd_start": 60272.3170254396,
+          "source_lines": [
+            34,
+            35,
+            36,
+            37
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 8,
+          "labels": [
+            "19C30_240112_0001.arz.N4"
+          ],
+          "mjd_end": 60321.19410868372,
+          "mjd_start": 60321.1920253332,
+          "source_lines": [
+            38,
+            39,
+            40,
+            41
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 9,
+          "labels": [
+            "19C30_240130_0001.arz.N4"
+          ],
+          "mjd_end": 60339.16216428877,
+          "mjd_start": 60339.160080969814,
+          "source_lines": [
+            42,
+            43,
+            44,
+            45
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 10,
+          "labels": [
+            "19C30_240306_0001.arz.N4"
+          ],
+          "mjd_end": 60375.06633097839,
+          "mjd_start": 60375.064247695474,
+          "source_lines": [
+            46,
+            47,
+            48,
+            49
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 11,
+          "labels": [
+            "19C30_240406_0001.arz.N4"
+          ],
+          "mjd_end": 60405.94758085763,
+          "mjd_start": 60405.94549771177,
+          "source_lines": [
+            50,
+            51,
+            52,
+            53
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 12,
+          "labels": [
+            "19C30_240504_0001.arz.N4"
+          ],
+          "mjd_end": 60433.86077530563,
+          "mjd_start": 60433.85869210813,
+          "source_lines": [
+            54,
+            55,
+            56,
+            57
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 13,
+          "labels": [
+            "19C30_240604_0001.arz.N4"
+          ],
+          "mjd_end": 60464.78160866354,
+          "mjd_start": 60464.77952538012,
+          "source_lines": [
+            58,
+            59,
+            60,
+            61
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 14,
+          "labels": [
+            "19C30_240621_0001.arz.N4"
+          ],
+          "mjd_end": 60481.74827541256,
+          "mjd_start": 60481.746192166946,
+          "source_lines": [
+            62,
+            63,
+            64,
+            65
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 15,
+          "labels": [
+            "19C30_240711_0001.arz.N4"
+          ],
+          "mjd_end": 60501.69202533193,
+          "mjd_start": 60501.68994206954,
+          "source_lines": [
+            66,
+            67,
+            68,
+            69
+          ],
+          "toa_count": 4
+        }
+      ],
+      "session_count": 16,
+      "span_days": 1133.8959026614975,
+      "tim_file": "sessions_16_chronological_prefix.tim",
+      "tim_sha256": "abb03aa7364b1cb7d1c4c1e256a34f167d73933b5f67181a184a147f7f15c053",
+      "toa_count": 68
+    },
+    {
+      "case_id": "sessions_17_chronological_prefix",
+      "design": "chronological_prefix",
+      "maximum_gap_days": 604.3383912063509,
+      "mjd_end": 60534.63091422331,
+      "mjd_start": 59367.796122670436,
+      "retained_fraction": 0.75,
+      "seed": null,
+      "selected_session_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "selected_sessions": [
+        {
+          "index": 0,
+          "labels": [
+            "19C30N1_210603_0001.arz.N4",
+            "19C30N2_210603_0001.arz.N4"
+          ],
+          "mjd_end": 59367.80767348733,
+          "mjd_start": 59367.796122670436,
+          "source_lines": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "toa_count": 8
+        },
+        {
+          "index": 1,
+          "labels": [
+            "19C30_230128_0001.arz.N4"
+          ],
+          "mjd_end": 59972.14826955825,
+          "mjd_start": 59972.14606469368,
+          "source_lines": [
+            10,
+            11,
+            12,
+            13
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 2,
+          "labels": [
+            "19C30_230209_0001.arz.N4"
+          ],
+          "mjd_end": 59984.11563657222,
+          "mjd_start": 59984.11355320763,
+          "source_lines": [
+            14,
+            15,
+            16,
+            17
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 3,
+          "labels": [
+            "19C30_230220_0001.arz.N4"
+          ],
+          "mjd_end": 59995.08994213125,
+          "mjd_start": 59995.08785879757,
+          "source_lines": [
+            18,
+            19,
+            20,
+            21
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 4,
+          "labels": [
+            "19C30_230330_0001.arz.N4"
+          ],
+          "mjd_end": 60032.99341429552,
+          "mjd_start": 60032.99133113956,
+          "source_lines": [
+            22,
+            23,
+            24,
+            25
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 5,
+          "labels": [
+            "19C30_230807_0001.new.N4"
+          ],
+          "mjd_end": 60163.6246643514,
+          "mjd_start": 60163.62258113141,
+          "source_lines": [
+            26,
+            27,
+            28,
+            29
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 6,
+          "labels": [
+            "19C30_231004_0001.new.N4"
+          ],
+          "mjd_end": 60221.487164253085,
+          "mjd_start": 60221.48508103539,
+          "source_lines": [
+            30,
+            31,
+            32,
+            33
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 7,
+          "labels": [
+            "19C30_231124_0001.arz.N4"
+          ],
+          "mjd_end": 60272.31910875562,
+          "mjd_start": 60272.3170254396,
+          "source_lines": [
+            34,
+            35,
+            36,
+            37
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 8,
+          "labels": [
+            "19C30_240112_0001.arz.N4"
+          ],
+          "mjd_end": 60321.19410868372,
+          "mjd_start": 60321.1920253332,
+          "source_lines": [
+            38,
+            39,
+            40,
+            41
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 9,
+          "labels": [
+            "19C30_240130_0001.arz.N4"
+          ],
+          "mjd_end": 60339.16216428877,
+          "mjd_start": 60339.160080969814,
+          "source_lines": [
+            42,
+            43,
+            44,
+            45
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 10,
+          "labels": [
+            "19C30_240306_0001.arz.N4"
+          ],
+          "mjd_end": 60375.06633097839,
+          "mjd_start": 60375.064247695474,
+          "source_lines": [
+            46,
+            47,
+            48,
+            49
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 11,
+          "labels": [
+            "19C30_240406_0001.arz.N4"
+          ],
+          "mjd_end": 60405.94758085763,
+          "mjd_start": 60405.94549771177,
+          "source_lines": [
+            50,
+            51,
+            52,
+            53
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 12,
+          "labels": [
+            "19C30_240504_0001.arz.N4"
+          ],
+          "mjd_end": 60433.86077530563,
+          "mjd_start": 60433.85869210813,
+          "source_lines": [
+            54,
+            55,
+            56,
+            57
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 13,
+          "labels": [
+            "19C30_240604_0001.arz.N4"
+          ],
+          "mjd_end": 60464.78160866354,
+          "mjd_start": 60464.77952538012,
+          "source_lines": [
+            58,
+            59,
+            60,
+            61
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 14,
+          "labels": [
+            "19C30_240621_0001.arz.N4"
+          ],
+          "mjd_end": 60481.74827541256,
+          "mjd_start": 60481.746192166946,
+          "source_lines": [
+            62,
+            63,
+            64,
+            65
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 15,
+          "labels": [
+            "19C30_240711_0001.arz.N4"
+          ],
+          "mjd_end": 60501.69202533193,
+          "mjd_start": 60501.68994206954,
+          "source_lines": [
+            66,
+            67,
+            68,
+            69
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 16,
+          "labels": [
+            "19C30_240812_0001.arz.N4"
+          ],
+          "mjd_end": 60534.63091422331,
+          "mjd_start": 60534.62883091091,
+          "source_lines": [
+            70,
+            71,
+            72,
+            73
+          ],
+          "toa_count": 4
+        }
+      ],
+      "session_count": 17,
+      "span_days": 1166.834791552872,
+      "tim_file": "sessions_17_chronological_prefix.tim",
+      "tim_sha256": "7f20cbef04d622fbb16734f0025aac849fdc4385732b30140a5175d6e1048f5c",
+      "toa_count": 72
+    },
+    {
+      "case_id": "sessions_18_chronological_prefix",
+      "design": "chronological_prefix",
+      "maximum_gap_days": 604.3383912063509,
+      "mjd_end": 60576.4816087711,
+      "mjd_start": 59367.796122670436,
+      "retained_fraction": 0.7916666666666666,
+      "seed": null,
+      "selected_session_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "selected_sessions": [
+        {
+          "index": 0,
+          "labels": [
+            "19C30N1_210603_0001.arz.N4",
+            "19C30N2_210603_0001.arz.N4"
+          ],
+          "mjd_end": 59367.80767348733,
+          "mjd_start": 59367.796122670436,
+          "source_lines": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "toa_count": 8
+        },
+        {
+          "index": 1,
+          "labels": [
+            "19C30_230128_0001.arz.N4"
+          ],
+          "mjd_end": 59972.14826955825,
+          "mjd_start": 59972.14606469368,
+          "source_lines": [
+            10,
+            11,
+            12,
+            13
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 2,
+          "labels": [
+            "19C30_230209_0001.arz.N4"
+          ],
+          "mjd_end": 59984.11563657222,
+          "mjd_start": 59984.11355320763,
+          "source_lines": [
+            14,
+            15,
+            16,
+            17
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 3,
+          "labels": [
+            "19C30_230220_0001.arz.N4"
+          ],
+          "mjd_end": 59995.08994213125,
+          "mjd_start": 59995.08785879757,
+          "source_lines": [
+            18,
+            19,
+            20,
+            21
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 4,
+          "labels": [
+            "19C30_230330_0001.arz.N4"
+          ],
+          "mjd_end": 60032.99341429552,
+          "mjd_start": 60032.99133113956,
+          "source_lines": [
+            22,
+            23,
+            24,
+            25
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 5,
+          "labels": [
+            "19C30_230807_0001.new.N4"
+          ],
+          "mjd_end": 60163.6246643514,
+          "mjd_start": 60163.62258113141,
+          "source_lines": [
+            26,
+            27,
+            28,
+            29
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 6,
+          "labels": [
+            "19C30_231004_0001.new.N4"
+          ],
+          "mjd_end": 60221.487164253085,
+          "mjd_start": 60221.48508103539,
+          "source_lines": [
+            30,
+            31,
+            32,
+            33
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 7,
+          "labels": [
+            "19C30_231124_0001.arz.N4"
+          ],
+          "mjd_end": 60272.31910875562,
+          "mjd_start": 60272.3170254396,
+          "source_lines": [
+            34,
+            35,
+            36,
+            37
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 8,
+          "labels": [
+            "19C30_240112_0001.arz.N4"
+          ],
+          "mjd_end": 60321.19410868372,
+          "mjd_start": 60321.1920253332,
+          "source_lines": [
+            38,
+            39,
+            40,
+            41
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 9,
+          "labels": [
+            "19C30_240130_0001.arz.N4"
+          ],
+          "mjd_end": 60339.16216428877,
+          "mjd_start": 60339.160080969814,
+          "source_lines": [
+            42,
+            43,
+            44,
+            45
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 10,
+          "labels": [
+            "19C30_240306_0001.arz.N4"
+          ],
+          "mjd_end": 60375.06633097839,
+          "mjd_start": 60375.064247695474,
+          "source_lines": [
+            46,
+            47,
+            48,
+            49
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 11,
+          "labels": [
+            "19C30_240406_0001.arz.N4"
+          ],
+          "mjd_end": 60405.94758085763,
+          "mjd_start": 60405.94549771177,
+          "source_lines": [
+            50,
+            51,
+            52,
+            53
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 12,
+          "labels": [
+            "19C30_240504_0001.arz.N4"
+          ],
+          "mjd_end": 60433.86077530563,
+          "mjd_start": 60433.85869210813,
+          "source_lines": [
+            54,
+            55,
+            56,
+            57
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 13,
+          "labels": [
+            "19C30_240604_0001.arz.N4"
+          ],
+          "mjd_end": 60464.78160866354,
+          "mjd_start": 60464.77952538012,
+          "source_lines": [
+            58,
+            59,
+            60,
+            61
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 14,
+          "labels": [
+            "19C30_240621_0001.arz.N4"
+          ],
+          "mjd_end": 60481.74827541256,
+          "mjd_start": 60481.746192166946,
+          "source_lines": [
+            62,
+            63,
+            64,
+            65
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 15,
+          "labels": [
+            "19C30_240711_0001.arz.N4"
+          ],
+          "mjd_end": 60501.69202533193,
+          "mjd_start": 60501.68994206954,
+          "source_lines": [
+            66,
+            67,
+            68,
+            69
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 16,
+          "labels": [
+            "19C30_240812_0001.arz.N4"
+          ],
+          "mjd_end": 60534.63091422331,
+          "mjd_start": 60534.62883091091,
+          "source_lines": [
+            70,
+            71,
+            72,
+            73
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 17,
+          "labels": [
+            "19C30_240923_0001.arz.N4"
+          ],
+          "mjd_end": 60576.4816087711,
+          "mjd_start": 60576.4795253556,
+          "source_lines": [
+            74,
+            75,
+            76,
+            77
+          ],
+          "toa_count": 4
+        }
+      ],
+      "session_count": 18,
+      "span_days": 1208.685486100665,
+      "tim_file": "sessions_18_chronological_prefix.tim",
+      "tim_sha256": "faf9a9495bcfaae27c426e5e33808f23201135491f966f13198e4590fb308644",
+      "toa_count": 76
+    },
+    {
+      "case_id": "sessions_19_chronological_prefix",
+      "design": "chronological_prefix",
+      "maximum_gap_days": 604.3383912063509,
+      "mjd_end": 60619.4010530438,
+      "mjd_start": 59367.796122670436,
+      "retained_fraction": 0.8333333333333334,
+      "seed": null,
+      "selected_session_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "selected_sessions": [
+        {
+          "index": 0,
+          "labels": [
+            "19C30N1_210603_0001.arz.N4",
+            "19C30N2_210603_0001.arz.N4"
+          ],
+          "mjd_end": 59367.80767348733,
+          "mjd_start": 59367.796122670436,
+          "source_lines": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "toa_count": 8
+        },
+        {
+          "index": 1,
+          "labels": [
+            "19C30_230128_0001.arz.N4"
+          ],
+          "mjd_end": 59972.14826955825,
+          "mjd_start": 59972.14606469368,
+          "source_lines": [
+            10,
+            11,
+            12,
+            13
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 2,
+          "labels": [
+            "19C30_230209_0001.arz.N4"
+          ],
+          "mjd_end": 59984.11563657222,
+          "mjd_start": 59984.11355320763,
+          "source_lines": [
+            14,
+            15,
+            16,
+            17
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 3,
+          "labels": [
+            "19C30_230220_0001.arz.N4"
+          ],
+          "mjd_end": 59995.08994213125,
+          "mjd_start": 59995.08785879757,
+          "source_lines": [
+            18,
+            19,
+            20,
+            21
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 4,
+          "labels": [
+            "19C30_230330_0001.arz.N4"
+          ],
+          "mjd_end": 60032.99341429552,
+          "mjd_start": 60032.99133113956,
+          "source_lines": [
+            22,
+            23,
+            24,
+            25
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 5,
+          "labels": [
+            "19C30_230807_0001.new.N4"
+          ],
+          "mjd_end": 60163.6246643514,
+          "mjd_start": 60163.62258113141,
+          "source_lines": [
+            26,
+            27,
+            28,
+            29
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 6,
+          "labels": [
+            "19C30_231004_0001.new.N4"
+          ],
+          "mjd_end": 60221.487164253085,
+          "mjd_start": 60221.48508103539,
+          "source_lines": [
+            30,
+            31,
+            32,
+            33
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 7,
+          "labels": [
+            "19C30_231124_0001.arz.N4"
+          ],
+          "mjd_end": 60272.31910875562,
+          "mjd_start": 60272.3170254396,
+          "source_lines": [
+            34,
+            35,
+            36,
+            37
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 8,
+          "labels": [
+            "19C30_240112_0001.arz.N4"
+          ],
+          "mjd_end": 60321.19410868372,
+          "mjd_start": 60321.1920253332,
+          "source_lines": [
+            38,
+            39,
+            40,
+            41
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 9,
+          "labels": [
+            "19C30_240130_0001.arz.N4"
+          ],
+          "mjd_end": 60339.16216428877,
+          "mjd_start": 60339.160080969814,
+          "source_lines": [
+            42,
+            43,
+            44,
+            45
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 10,
+          "labels": [
+            "19C30_240306_0001.arz.N4"
+          ],
+          "mjd_end": 60375.06633097839,
+          "mjd_start": 60375.064247695474,
+          "source_lines": [
+            46,
+            47,
+            48,
+            49
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 11,
+          "labels": [
+            "19C30_240406_0001.arz.N4"
+          ],
+          "mjd_end": 60405.94758085763,
+          "mjd_start": 60405.94549771177,
+          "source_lines": [
+            50,
+            51,
+            52,
+            53
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 12,
+          "labels": [
+            "19C30_240504_0001.arz.N4"
+          ],
+          "mjd_end": 60433.86077530563,
+          "mjd_start": 60433.85869210813,
+          "source_lines": [
+            54,
+            55,
+            56,
+            57
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 13,
+          "labels": [
+            "19C30_240604_0001.arz.N4"
+          ],
+          "mjd_end": 60464.78160866354,
+          "mjd_start": 60464.77952538012,
+          "source_lines": [
+            58,
+            59,
+            60,
+            61
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 14,
+          "labels": [
+            "19C30_240621_0001.arz.N4"
+          ],
+          "mjd_end": 60481.74827541256,
+          "mjd_start": 60481.746192166946,
+          "source_lines": [
+            62,
+            63,
+            64,
+            65
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 15,
+          "labels": [
+            "19C30_240711_0001.arz.N4"
+          ],
+          "mjd_end": 60501.69202533193,
+          "mjd_start": 60501.68994206954,
+          "source_lines": [
+            66,
+            67,
+            68,
+            69
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 16,
+          "labels": [
+            "19C30_240812_0001.arz.N4"
+          ],
+          "mjd_end": 60534.63091422331,
+          "mjd_start": 60534.62883091091,
+          "source_lines": [
+            70,
+            71,
+            72,
+            73
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 17,
+          "labels": [
+            "19C30_240923_0001.arz.N4"
+          ],
+          "mjd_end": 60576.4816087711,
+          "mjd_start": 60576.4795253556,
+          "source_lines": [
+            74,
+            75,
+            76,
+            77
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 18,
+          "labels": [
+            "19C30_241105_0001.arz.N4"
+          ],
+          "mjd_end": 60619.4010530438,
+          "mjd_start": 60619.39896978442,
+          "source_lines": [
+            78,
+            79,
+            80,
+            81
+          ],
+          "toa_count": 4
+        }
+      ],
+      "session_count": 19,
+      "span_days": 1251.604930373367,
+      "tim_file": "sessions_19_chronological_prefix.tim",
+      "tim_sha256": "1d6eff51080098aed745c1af54a447e443a0a3b64cce2d4d4829ab03ff196015",
+      "toa_count": 80
+    },
+    {
+      "case_id": "sessions_20_chronological_prefix",
+      "design": "chronological_prefix",
+      "maximum_gap_days": 604.3383912063509,
+      "mjd_end": 60668.27258093462,
+      "mjd_start": 59367.796122670436,
+      "retained_fraction": 0.875,
+      "seed": null,
+      "selected_session_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "selected_sessions": [
+        {
+          "index": 0,
+          "labels": [
+            "19C30N1_210603_0001.arz.N4",
+            "19C30N2_210603_0001.arz.N4"
+          ],
+          "mjd_end": 59367.80767348733,
+          "mjd_start": 59367.796122670436,
+          "source_lines": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "toa_count": 8
+        },
+        {
+          "index": 1,
+          "labels": [
+            "19C30_230128_0001.arz.N4"
+          ],
+          "mjd_end": 59972.14826955825,
+          "mjd_start": 59972.14606469368,
+          "source_lines": [
+            10,
+            11,
+            12,
+            13
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 2,
+          "labels": [
+            "19C30_230209_0001.arz.N4"
+          ],
+          "mjd_end": 59984.11563657222,
+          "mjd_start": 59984.11355320763,
+          "source_lines": [
+            14,
+            15,
+            16,
+            17
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 3,
+          "labels": [
+            "19C30_230220_0001.arz.N4"
+          ],
+          "mjd_end": 59995.08994213125,
+          "mjd_start": 59995.08785879757,
+          "source_lines": [
+            18,
+            19,
+            20,
+            21
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 4,
+          "labels": [
+            "19C30_230330_0001.arz.N4"
+          ],
+          "mjd_end": 60032.99341429552,
+          "mjd_start": 60032.99133113956,
+          "source_lines": [
+            22,
+            23,
+            24,
+            25
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 5,
+          "labels": [
+            "19C30_230807_0001.new.N4"
+          ],
+          "mjd_end": 60163.6246643514,
+          "mjd_start": 60163.62258113141,
+          "source_lines": [
+            26,
+            27,
+            28,
+            29
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 6,
+          "labels": [
+            "19C30_231004_0001.new.N4"
+          ],
+          "mjd_end": 60221.487164253085,
+          "mjd_start": 60221.48508103539,
+          "source_lines": [
+            30,
+            31,
+            32,
+            33
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 7,
+          "labels": [
+            "19C30_231124_0001.arz.N4"
+          ],
+          "mjd_end": 60272.31910875562,
+          "mjd_start": 60272.3170254396,
+          "source_lines": [
+            34,
+            35,
+            36,
+            37
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 8,
+          "labels": [
+            "19C30_240112_0001.arz.N4"
+          ],
+          "mjd_end": 60321.19410868372,
+          "mjd_start": 60321.1920253332,
+          "source_lines": [
+            38,
+            39,
+            40,
+            41
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 9,
+          "labels": [
+            "19C30_240130_0001.arz.N4"
+          ],
+          "mjd_end": 60339.16216428877,
+          "mjd_start": 60339.160080969814,
+          "source_lines": [
+            42,
+            43,
+            44,
+            45
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 10,
+          "labels": [
+            "19C30_240306_0001.arz.N4"
+          ],
+          "mjd_end": 60375.06633097839,
+          "mjd_start": 60375.064247695474,
+          "source_lines": [
+            46,
+            47,
+            48,
+            49
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 11,
+          "labels": [
+            "19C30_240406_0001.arz.N4"
+          ],
+          "mjd_end": 60405.94758085763,
+          "mjd_start": 60405.94549771177,
+          "source_lines": [
+            50,
+            51,
+            52,
+            53
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 12,
+          "labels": [
+            "19C30_240504_0001.arz.N4"
+          ],
+          "mjd_end": 60433.86077530563,
+          "mjd_start": 60433.85869210813,
+          "source_lines": [
+            54,
+            55,
+            56,
+            57
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 13,
+          "labels": [
+            "19C30_240604_0001.arz.N4"
+          ],
+          "mjd_end": 60464.78160866354,
+          "mjd_start": 60464.77952538012,
+          "source_lines": [
+            58,
+            59,
+            60,
+            61
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 14,
+          "labels": [
+            "19C30_240621_0001.arz.N4"
+          ],
+          "mjd_end": 60481.74827541256,
+          "mjd_start": 60481.746192166946,
+          "source_lines": [
+            62,
+            63,
+            64,
+            65
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 15,
+          "labels": [
+            "19C30_240711_0001.arz.N4"
+          ],
+          "mjd_end": 60501.69202533193,
+          "mjd_start": 60501.68994206954,
+          "source_lines": [
+            66,
+            67,
+            68,
+            69
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 16,
+          "labels": [
+            "19C30_240812_0001.arz.N4"
+          ],
+          "mjd_end": 60534.63091422331,
+          "mjd_start": 60534.62883091091,
+          "source_lines": [
+            70,
+            71,
+            72,
+            73
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 17,
+          "labels": [
+            "19C30_240923_0001.arz.N4"
+          ],
+          "mjd_end": 60576.4816087711,
+          "mjd_start": 60576.4795253556,
+          "source_lines": [
+            74,
+            75,
+            76,
+            77
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 18,
+          "labels": [
+            "19C30_241105_0001.arz.N4"
+          ],
+          "mjd_end": 60619.4010530438,
+          "mjd_start": 60619.39896978442,
+          "source_lines": [
+            78,
+            79,
+            80,
+            81
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 19,
+          "labels": [
+            "19C30_241224_0001.arz.N4"
+          ],
+          "mjd_end": 60668.27258093462,
+          "mjd_start": 60668.270497595935,
+          "source_lines": [
+            82,
+            83,
+            84,
+            85
+          ],
+          "toa_count": 4
+        }
+      ],
+      "session_count": 20,
+      "span_days": 1300.4764582641874,
+      "tim_file": "sessions_20_chronological_prefix.tim",
+      "tim_sha256": "b8228597d2de4e4f48a320d0a7c1fde9ef83a040951b5327e93459a60f7a3761",
+      "toa_count": 84
+    },
+    {
+      "case_id": "sessions_21_chronological_prefix",
+      "design": "chronological_prefix",
+      "maximum_gap_days": 604.3383912063509,
+      "mjd_end": 60746.04063638329,
+      "mjd_start": 59367.796122670436,
+      "retained_fraction": 0.9166666666666666,
+      "seed": null,
+      "selected_session_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "selected_sessions": [
+        {
+          "index": 0,
+          "labels": [
+            "19C30N1_210603_0001.arz.N4",
+            "19C30N2_210603_0001.arz.N4"
+          ],
+          "mjd_end": 59367.80767348733,
+          "mjd_start": 59367.796122670436,
+          "source_lines": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "toa_count": 8
+        },
+        {
+          "index": 1,
+          "labels": [
+            "19C30_230128_0001.arz.N4"
+          ],
+          "mjd_end": 59972.14826955825,
+          "mjd_start": 59972.14606469368,
+          "source_lines": [
+            10,
+            11,
+            12,
+            13
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 2,
+          "labels": [
+            "19C30_230209_0001.arz.N4"
+          ],
+          "mjd_end": 59984.11563657222,
+          "mjd_start": 59984.11355320763,
+          "source_lines": [
+            14,
+            15,
+            16,
+            17
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 3,
+          "labels": [
+            "19C30_230220_0001.arz.N4"
+          ],
+          "mjd_end": 59995.08994213125,
+          "mjd_start": 59995.08785879757,
+          "source_lines": [
+            18,
+            19,
+            20,
+            21
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 4,
+          "labels": [
+            "19C30_230330_0001.arz.N4"
+          ],
+          "mjd_end": 60032.99341429552,
+          "mjd_start": 60032.99133113956,
+          "source_lines": [
+            22,
+            23,
+            24,
+            25
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 5,
+          "labels": [
+            "19C30_230807_0001.new.N4"
+          ],
+          "mjd_end": 60163.6246643514,
+          "mjd_start": 60163.62258113141,
+          "source_lines": [
+            26,
+            27,
+            28,
+            29
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 6,
+          "labels": [
+            "19C30_231004_0001.new.N4"
+          ],
+          "mjd_end": 60221.487164253085,
+          "mjd_start": 60221.48508103539,
+          "source_lines": [
+            30,
+            31,
+            32,
+            33
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 7,
+          "labels": [
+            "19C30_231124_0001.arz.N4"
+          ],
+          "mjd_end": 60272.31910875562,
+          "mjd_start": 60272.3170254396,
+          "source_lines": [
+            34,
+            35,
+            36,
+            37
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 8,
+          "labels": [
+            "19C30_240112_0001.arz.N4"
+          ],
+          "mjd_end": 60321.19410868372,
+          "mjd_start": 60321.1920253332,
+          "source_lines": [
+            38,
+            39,
+            40,
+            41
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 9,
+          "labels": [
+            "19C30_240130_0001.arz.N4"
+          ],
+          "mjd_end": 60339.16216428877,
+          "mjd_start": 60339.160080969814,
+          "source_lines": [
+            42,
+            43,
+            44,
+            45
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 10,
+          "labels": [
+            "19C30_240306_0001.arz.N4"
+          ],
+          "mjd_end": 60375.06633097839,
+          "mjd_start": 60375.064247695474,
+          "source_lines": [
+            46,
+            47,
+            48,
+            49
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 11,
+          "labels": [
+            "19C30_240406_0001.arz.N4"
+          ],
+          "mjd_end": 60405.94758085763,
+          "mjd_start": 60405.94549771177,
+          "source_lines": [
+            50,
+            51,
+            52,
+            53
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 12,
+          "labels": [
+            "19C30_240504_0001.arz.N4"
+          ],
+          "mjd_end": 60433.86077530563,
+          "mjd_start": 60433.85869210813,
+          "source_lines": [
+            54,
+            55,
+            56,
+            57
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 13,
+          "labels": [
+            "19C30_240604_0001.arz.N4"
+          ],
+          "mjd_end": 60464.78160866354,
+          "mjd_start": 60464.77952538012,
+          "source_lines": [
+            58,
+            59,
+            60,
+            61
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 14,
+          "labels": [
+            "19C30_240621_0001.arz.N4"
+          ],
+          "mjd_end": 60481.74827541256,
+          "mjd_start": 60481.746192166946,
+          "source_lines": [
+            62,
+            63,
+            64,
+            65
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 15,
+          "labels": [
+            "19C30_240711_0001.arz.N4"
+          ],
+          "mjd_end": 60501.69202533193,
+          "mjd_start": 60501.68994206954,
+          "source_lines": [
+            66,
+            67,
+            68,
+            69
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 16,
+          "labels": [
+            "19C30_240812_0001.arz.N4"
+          ],
+          "mjd_end": 60534.63091422331,
+          "mjd_start": 60534.62883091091,
+          "source_lines": [
+            70,
+            71,
+            72,
+            73
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 17,
+          "labels": [
+            "19C30_240923_0001.arz.N4"
+          ],
+          "mjd_end": 60576.4816087711,
+          "mjd_start": 60576.4795253556,
+          "source_lines": [
+            74,
+            75,
+            76,
+            77
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 18,
+          "labels": [
+            "19C30_241105_0001.arz.N4"
+          ],
+          "mjd_end": 60619.4010530438,
+          "mjd_start": 60619.39896978442,
+          "source_lines": [
+            78,
+            79,
+            80,
+            81
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 19,
+          "labels": [
+            "19C30_241224_0001.arz.N4"
+          ],
+          "mjd_end": 60668.27258093462,
+          "mjd_start": 60668.270497595935,
+          "source_lines": [
+            82,
+            83,
+            84,
+            85
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 20,
+          "labels": [
+            "19C30_250312_0001.arz.N4"
+          ],
+          "mjd_end": 60746.04063638329,
+          "mjd_start": 60746.03855325745,
+          "source_lines": [
+            86,
+            87,
+            88,
+            89
+          ],
+          "toa_count": 4
+        }
+      ],
+      "session_count": 21,
+      "span_days": 1378.2445137128525,
+      "tim_file": "sessions_21_chronological_prefix.tim",
+      "tim_sha256": "5c490b7d48ea2de3d39a1365ae27d019536994135e9d35e4d8b6d231ad928e4e",
+      "toa_count": 88
+    },
+    {
+      "case_id": "sessions_22_chronological_prefix",
+      "design": "chronological_prefix",
+      "maximum_gap_days": 604.3383912063509,
+      "mjd_end": 60775.97188643754,
+      "mjd_start": 59367.796122670436,
+      "retained_fraction": 0.9583333333333334,
+      "seed": null,
+      "selected_session_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "selected_sessions": [
+        {
+          "index": 0,
+          "labels": [
+            "19C30N1_210603_0001.arz.N4",
+            "19C30N2_210603_0001.arz.N4"
+          ],
+          "mjd_end": 59367.80767348733,
+          "mjd_start": 59367.796122670436,
+          "source_lines": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "toa_count": 8
+        },
+        {
+          "index": 1,
+          "labels": [
+            "19C30_230128_0001.arz.N4"
+          ],
+          "mjd_end": 59972.14826955825,
+          "mjd_start": 59972.14606469368,
+          "source_lines": [
+            10,
+            11,
+            12,
+            13
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 2,
+          "labels": [
+            "19C30_230209_0001.arz.N4"
+          ],
+          "mjd_end": 59984.11563657222,
+          "mjd_start": 59984.11355320763,
+          "source_lines": [
+            14,
+            15,
+            16,
+            17
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 3,
+          "labels": [
+            "19C30_230220_0001.arz.N4"
+          ],
+          "mjd_end": 59995.08994213125,
+          "mjd_start": 59995.08785879757,
+          "source_lines": [
+            18,
+            19,
+            20,
+            21
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 4,
+          "labels": [
+            "19C30_230330_0001.arz.N4"
+          ],
+          "mjd_end": 60032.99341429552,
+          "mjd_start": 60032.99133113956,
+          "source_lines": [
+            22,
+            23,
+            24,
+            25
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 5,
+          "labels": [
+            "19C30_230807_0001.new.N4"
+          ],
+          "mjd_end": 60163.6246643514,
+          "mjd_start": 60163.62258113141,
+          "source_lines": [
+            26,
+            27,
+            28,
+            29
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 6,
+          "labels": [
+            "19C30_231004_0001.new.N4"
+          ],
+          "mjd_end": 60221.487164253085,
+          "mjd_start": 60221.48508103539,
+          "source_lines": [
+            30,
+            31,
+            32,
+            33
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 7,
+          "labels": [
+            "19C30_231124_0001.arz.N4"
+          ],
+          "mjd_end": 60272.31910875562,
+          "mjd_start": 60272.3170254396,
+          "source_lines": [
+            34,
+            35,
+            36,
+            37
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 8,
+          "labels": [
+            "19C30_240112_0001.arz.N4"
+          ],
+          "mjd_end": 60321.19410868372,
+          "mjd_start": 60321.1920253332,
+          "source_lines": [
+            38,
+            39,
+            40,
+            41
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 9,
+          "labels": [
+            "19C30_240130_0001.arz.N4"
+          ],
+          "mjd_end": 60339.16216428877,
+          "mjd_start": 60339.160080969814,
+          "source_lines": [
+            42,
+            43,
+            44,
+            45
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 10,
+          "labels": [
+            "19C30_240306_0001.arz.N4"
+          ],
+          "mjd_end": 60375.06633097839,
+          "mjd_start": 60375.064247695474,
+          "source_lines": [
+            46,
+            47,
+            48,
+            49
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 11,
+          "labels": [
+            "19C30_240406_0001.arz.N4"
+          ],
+          "mjd_end": 60405.94758085763,
+          "mjd_start": 60405.94549771177,
+          "source_lines": [
+            50,
+            51,
+            52,
+            53
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 12,
+          "labels": [
+            "19C30_240504_0001.arz.N4"
+          ],
+          "mjd_end": 60433.86077530563,
+          "mjd_start": 60433.85869210813,
+          "source_lines": [
+            54,
+            55,
+            56,
+            57
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 13,
+          "labels": [
+            "19C30_240604_0001.arz.N4"
+          ],
+          "mjd_end": 60464.78160866354,
+          "mjd_start": 60464.77952538012,
+          "source_lines": [
+            58,
+            59,
+            60,
+            61
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 14,
+          "labels": [
+            "19C30_240621_0001.arz.N4"
+          ],
+          "mjd_end": 60481.74827541256,
+          "mjd_start": 60481.746192166946,
+          "source_lines": [
+            62,
+            63,
+            64,
+            65
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 15,
+          "labels": [
+            "19C30_240711_0001.arz.N4"
+          ],
+          "mjd_end": 60501.69202533193,
+          "mjd_start": 60501.68994206954,
+          "source_lines": [
+            66,
+            67,
+            68,
+            69
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 16,
+          "labels": [
+            "19C30_240812_0001.arz.N4"
+          ],
+          "mjd_end": 60534.63091422331,
+          "mjd_start": 60534.62883091091,
+          "source_lines": [
+            70,
+            71,
+            72,
+            73
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 17,
+          "labels": [
+            "19C30_240923_0001.arz.N4"
+          ],
+          "mjd_end": 60576.4816087711,
+          "mjd_start": 60576.4795253556,
+          "source_lines": [
+            74,
+            75,
+            76,
+            77
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 18,
+          "labels": [
+            "19C30_241105_0001.arz.N4"
+          ],
+          "mjd_end": 60619.4010530438,
+          "mjd_start": 60619.39896978442,
+          "source_lines": [
+            78,
+            79,
+            80,
+            81
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 19,
+          "labels": [
+            "19C30_241224_0001.arz.N4"
+          ],
+          "mjd_end": 60668.27258093462,
+          "mjd_start": 60668.270497595935,
+          "source_lines": [
+            82,
+            83,
+            84,
+            85
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 20,
+          "labels": [
+            "19C30_250312_0001.arz.N4"
+          ],
+          "mjd_end": 60746.04063638329,
+          "mjd_start": 60746.03855325745,
+          "source_lines": [
+            86,
+            87,
+            88,
+            89
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 21,
+          "labels": [
+            "19C30_250411_0001.arz.N4"
+          ],
+          "mjd_end": 60775.97188643754,
+          "mjd_start": 60775.969803213935,
+          "source_lines": [
+            90,
+            91,
+            92,
+            93
+          ],
+          "toa_count": 4
+        }
+      ],
+      "session_count": 22,
+      "span_days": 1408.1757637671035,
+      "tim_file": "sessions_22_chronological_prefix.tim",
+      "tim_sha256": "d9b9f8ee97f182d688357caf46cb59e852f1cf85968694c52db35b9a80e71875",
+      "toa_count": 92
+    },
+    {
+      "case_id": "sessions_23_chronological_prefix",
+      "design": "chronological_prefix",
+      "maximum_gap_days": 604.3383912063509,
+      "mjd_end": 60805.8663309659,
+      "mjd_start": 59367.796122670436,
+      "retained_fraction": 1.0,
+      "seed": null,
+      "selected_session_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "selected_sessions": [
+        {
+          "index": 0,
+          "labels": [
+            "19C30N1_210603_0001.arz.N4",
+            "19C30N2_210603_0001.arz.N4"
+          ],
+          "mjd_end": 59367.80767348733,
+          "mjd_start": 59367.796122670436,
+          "source_lines": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "toa_count": 8
+        },
+        {
+          "index": 1,
+          "labels": [
+            "19C30_230128_0001.arz.N4"
+          ],
+          "mjd_end": 59972.14826955825,
+          "mjd_start": 59972.14606469368,
+          "source_lines": [
+            10,
+            11,
+            12,
+            13
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 2,
+          "labels": [
+            "19C30_230209_0001.arz.N4"
+          ],
+          "mjd_end": 59984.11563657222,
+          "mjd_start": 59984.11355320763,
+          "source_lines": [
+            14,
+            15,
+            16,
+            17
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 3,
+          "labels": [
+            "19C30_230220_0001.arz.N4"
+          ],
+          "mjd_end": 59995.08994213125,
+          "mjd_start": 59995.08785879757,
+          "source_lines": [
+            18,
+            19,
+            20,
+            21
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 4,
+          "labels": [
+            "19C30_230330_0001.arz.N4"
+          ],
+          "mjd_end": 60032.99341429552,
+          "mjd_start": 60032.99133113956,
+          "source_lines": [
+            22,
+            23,
+            24,
+            25
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 5,
+          "labels": [
+            "19C30_230807_0001.new.N4"
+          ],
+          "mjd_end": 60163.6246643514,
+          "mjd_start": 60163.62258113141,
+          "source_lines": [
+            26,
+            27,
+            28,
+            29
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 6,
+          "labels": [
+            "19C30_231004_0001.new.N4"
+          ],
+          "mjd_end": 60221.487164253085,
+          "mjd_start": 60221.48508103539,
+          "source_lines": [
+            30,
+            31,
+            32,
+            33
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 7,
+          "labels": [
+            "19C30_231124_0001.arz.N4"
+          ],
+          "mjd_end": 60272.31910875562,
+          "mjd_start": 60272.3170254396,
+          "source_lines": [
+            34,
+            35,
+            36,
+            37
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 8,
+          "labels": [
+            "19C30_240112_0001.arz.N4"
+          ],
+          "mjd_end": 60321.19410868372,
+          "mjd_start": 60321.1920253332,
+          "source_lines": [
+            38,
+            39,
+            40,
+            41
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 9,
+          "labels": [
+            "19C30_240130_0001.arz.N4"
+          ],
+          "mjd_end": 60339.16216428877,
+          "mjd_start": 60339.160080969814,
+          "source_lines": [
+            42,
+            43,
+            44,
+            45
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 10,
+          "labels": [
+            "19C30_240306_0001.arz.N4"
+          ],
+          "mjd_end": 60375.06633097839,
+          "mjd_start": 60375.064247695474,
+          "source_lines": [
+            46,
+            47,
+            48,
+            49
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 11,
+          "labels": [
+            "19C30_240406_0001.arz.N4"
+          ],
+          "mjd_end": 60405.94758085763,
+          "mjd_start": 60405.94549771177,
+          "source_lines": [
+            50,
+            51,
+            52,
+            53
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 12,
+          "labels": [
+            "19C30_240504_0001.arz.N4"
+          ],
+          "mjd_end": 60433.86077530563,
+          "mjd_start": 60433.85869210813,
+          "source_lines": [
+            54,
+            55,
+            56,
+            57
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 13,
+          "labels": [
+            "19C30_240604_0001.arz.N4"
+          ],
+          "mjd_end": 60464.78160866354,
+          "mjd_start": 60464.77952538012,
+          "source_lines": [
+            58,
+            59,
+            60,
+            61
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 14,
+          "labels": [
+            "19C30_240621_0001.arz.N4"
+          ],
+          "mjd_end": 60481.74827541256,
+          "mjd_start": 60481.746192166946,
+          "source_lines": [
+            62,
+            63,
+            64,
+            65
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 15,
+          "labels": [
+            "19C30_240711_0001.arz.N4"
+          ],
+          "mjd_end": 60501.69202533193,
+          "mjd_start": 60501.68994206954,
+          "source_lines": [
+            66,
+            67,
+            68,
+            69
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 16,
+          "labels": [
+            "19C30_240812_0001.arz.N4"
+          ],
+          "mjd_end": 60534.63091422331,
+          "mjd_start": 60534.62883091091,
+          "source_lines": [
+            70,
+            71,
+            72,
+            73
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 17,
+          "labels": [
+            "19C30_240923_0001.arz.N4"
+          ],
+          "mjd_end": 60576.4816087711,
+          "mjd_start": 60576.4795253556,
+          "source_lines": [
+            74,
+            75,
+            76,
+            77
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 18,
+          "labels": [
+            "19C30_241105_0001.arz.N4"
+          ],
+          "mjd_end": 60619.4010530438,
+          "mjd_start": 60619.39896978442,
+          "source_lines": [
+            78,
+            79,
+            80,
+            81
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 19,
+          "labels": [
+            "19C30_241224_0001.arz.N4"
+          ],
+          "mjd_end": 60668.27258093462,
+          "mjd_start": 60668.270497595935,
+          "source_lines": [
+            82,
+            83,
+            84,
+            85
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 20,
+          "labels": [
+            "19C30_250312_0001.arz.N4"
+          ],
+          "mjd_end": 60746.04063638329,
+          "mjd_start": 60746.03855325745,
+          "source_lines": [
+            86,
+            87,
+            88,
+            89
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 21,
+          "labels": [
+            "19C30_250411_0001.arz.N4"
+          ],
+          "mjd_end": 60775.97188643754,
+          "mjd_start": 60775.969803213935,
+          "source_lines": [
+            90,
+            91,
+            92,
+            93
+          ],
+          "toa_count": 4
+        },
+        {
+          "index": 22,
+          "labels": [
+            "19C30_250511_0001.arz.N4"
+          ],
+          "mjd_end": 60805.8663309659,
+          "mjd_start": 60805.86424765305,
+          "source_lines": [
+            94,
+            95,
+            96,
+            97
+          ],
+          "toa_count": 4
+        }
+      ],
+      "session_count": 23,
+      "span_days": 1438.0702082954667,
+      "tim_file": "sessions_23_chronological_prefix.tim",
+      "tim_sha256": "b42405b29763a905ebfc342d06df8e7596800e7e1d91a8c2a92f9e1119acad35",
+      "toa_count": 96
+    }
+  ],
+  "protocol": {
+    "case_unit": "complete phase session; all TOAs retained in source order",
+    "chronological_prefix_policy": "retain session indices 0 through N-1 when enabled",
+    "endpoint_policy": "session indices 0 and last are always retained",
+    "first_session_contains_first_day_N1_N2": true,
+    "maximum_baseline_policy": "remaining sessions selected at evenly spaced time ranks",
+    "random_replicates": 0,
+    "random_seed_base": 191201,
+    "seed_replacement_after_results": false,
+    "session_counts": [
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ]
+  },
+  "schema_version": 1,
+  "session_gap_days": 0.5,
+  "sessions": [
+    {
+      "index": 0,
+      "labels": [
+        "19C30N1_210603_0001.arz.N4",
+        "19C30N2_210603_0001.arz.N4"
+      ],
+      "mjd_end": 59367.80767348733,
+      "mjd_start": 59367.796122670436,
+      "source_lines": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "toa_count": 8
+    },
+    {
+      "index": 1,
+      "labels": [
+        "19C30_230128_0001.arz.N4"
+      ],
+      "mjd_end": 59972.14826955825,
+      "mjd_start": 59972.14606469368,
+      "source_lines": [
+        10,
+        11,
+        12,
+        13
+      ],
+      "toa_count": 4
+    },
+    {
+      "index": 2,
+      "labels": [
+        "19C30_230209_0001.arz.N4"
+      ],
+      "mjd_end": 59984.11563657222,
+      "mjd_start": 59984.11355320763,
+      "source_lines": [
+        14,
+        15,
+        16,
+        17
+      ],
+      "toa_count": 4
+    },
+    {
+      "index": 3,
+      "labels": [
+        "19C30_230220_0001.arz.N4"
+      ],
+      "mjd_end": 59995.08994213125,
+      "mjd_start": 59995.08785879757,
+      "source_lines": [
+        18,
+        19,
+        20,
+        21
+      ],
+      "toa_count": 4
+    },
+    {
+      "index": 4,
+      "labels": [
+        "19C30_230330_0001.arz.N4"
+      ],
+      "mjd_end": 60032.99341429552,
+      "mjd_start": 60032.99133113956,
+      "source_lines": [
+        22,
+        23,
+        24,
+        25
+      ],
+      "toa_count": 4
+    },
+    {
+      "index": 5,
+      "labels": [
+        "19C30_230807_0001.new.N4"
+      ],
+      "mjd_end": 60163.6246643514,
+      "mjd_start": 60163.62258113141,
+      "source_lines": [
+        26,
+        27,
+        28,
+        29
+      ],
+      "toa_count": 4
+    },
+    {
+      "index": 6,
+      "labels": [
+        "19C30_231004_0001.new.N4"
+      ],
+      "mjd_end": 60221.487164253085,
+      "mjd_start": 60221.48508103539,
+      "source_lines": [
+        30,
+        31,
+        32,
+        33
+      ],
+      "toa_count": 4
+    },
+    {
+      "index": 7,
+      "labels": [
+        "19C30_231124_0001.arz.N4"
+      ],
+      "mjd_end": 60272.31910875562,
+      "mjd_start": 60272.3170254396,
+      "source_lines": [
+        34,
+        35,
+        36,
+        37
+      ],
+      "toa_count": 4
+    },
+    {
+      "index": 8,
+      "labels": [
+        "19C30_240112_0001.arz.N4"
+      ],
+      "mjd_end": 60321.19410868372,
+      "mjd_start": 60321.1920253332,
+      "source_lines": [
+        38,
+        39,
+        40,
+        41
+      ],
+      "toa_count": 4
+    },
+    {
+      "index": 9,
+      "labels": [
+        "19C30_240130_0001.arz.N4"
+      ],
+      "mjd_end": 60339.16216428877,
+      "mjd_start": 60339.160080969814,
+      "source_lines": [
+        42,
+        43,
+        44,
+        45
+      ],
+      "toa_count": 4
+    },
+    {
+      "index": 10,
+      "labels": [
+        "19C30_240306_0001.arz.N4"
+      ],
+      "mjd_end": 60375.06633097839,
+      "mjd_start": 60375.064247695474,
+      "source_lines": [
+        46,
+        47,
+        48,
+        49
+      ],
+      "toa_count": 4
+    },
+    {
+      "index": 11,
+      "labels": [
+        "19C30_240406_0001.arz.N4"
+      ],
+      "mjd_end": 60405.94758085763,
+      "mjd_start": 60405.94549771177,
+      "source_lines": [
+        50,
+        51,
+        52,
+        53
+      ],
+      "toa_count": 4
+    },
+    {
+      "index": 12,
+      "labels": [
+        "19C30_240504_0001.arz.N4"
+      ],
+      "mjd_end": 60433.86077530563,
+      "mjd_start": 60433.85869210813,
+      "source_lines": [
+        54,
+        55,
+        56,
+        57
+      ],
+      "toa_count": 4
+    },
+    {
+      "index": 13,
+      "labels": [
+        "19C30_240604_0001.arz.N4"
+      ],
+      "mjd_end": 60464.78160866354,
+      "mjd_start": 60464.77952538012,
+      "source_lines": [
+        58,
+        59,
+        60,
+        61
+      ],
+      "toa_count": 4
+    },
+    {
+      "index": 14,
+      "labels": [
+        "19C30_240621_0001.arz.N4"
+      ],
+      "mjd_end": 60481.74827541256,
+      "mjd_start": 60481.746192166946,
+      "source_lines": [
+        62,
+        63,
+        64,
+        65
+      ],
+      "toa_count": 4
+    },
+    {
+      "index": 15,
+      "labels": [
+        "19C30_240711_0001.arz.N4"
+      ],
+      "mjd_end": 60501.69202533193,
+      "mjd_start": 60501.68994206954,
+      "source_lines": [
+        66,
+        67,
+        68,
+        69
+      ],
+      "toa_count": 4
+    },
+    {
+      "index": 16,
+      "labels": [
+        "19C30_240812_0001.arz.N4"
+      ],
+      "mjd_end": 60534.63091422331,
+      "mjd_start": 60534.62883091091,
+      "source_lines": [
+        70,
+        71,
+        72,
+        73
+      ],
+      "toa_count": 4
+    },
+    {
+      "index": 17,
+      "labels": [
+        "19C30_240923_0001.arz.N4"
+      ],
+      "mjd_end": 60576.4816087711,
+      "mjd_start": 60576.4795253556,
+      "source_lines": [
+        74,
+        75,
+        76,
+        77
+      ],
+      "toa_count": 4
+    },
+    {
+      "index": 18,
+      "labels": [
+        "19C30_241105_0001.arz.N4"
+      ],
+      "mjd_end": 60619.4010530438,
+      "mjd_start": 60619.39896978442,
+      "source_lines": [
+        78,
+        79,
+        80,
+        81
+      ],
+      "toa_count": 4
+    },
+    {
+      "index": 19,
+      "labels": [
+        "19C30_241224_0001.arz.N4"
+      ],
+      "mjd_end": 60668.27258093462,
+      "mjd_start": 60668.270497595935,
+      "source_lines": [
+        82,
+        83,
+        84,
+        85
+      ],
+      "toa_count": 4
+    },
+    {
+      "index": 20,
+      "labels": [
+        "19C30_250312_0001.arz.N4"
+      ],
+      "mjd_end": 60746.04063638329,
+      "mjd_start": 60746.03855325745,
+      "source_lines": [
+        86,
+        87,
+        88,
+        89
+      ],
+      "toa_count": 4
+    },
+    {
+      "index": 21,
+      "labels": [
+        "19C30_250411_0001.arz.N4"
+      ],
+      "mjd_end": 60775.97188643754,
+      "mjd_start": 60775.969803213935,
+      "source_lines": [
+        90,
+        91,
+        92,
+        93
+      ],
+      "toa_count": 4
+    },
+    {
+      "index": 22,
+      "labels": [
+        "19C30_250511_0001.arz.N4"
+      ],
+      "mjd_end": 60805.8663309659,
+      "mjd_start": 60805.86424765305,
+      "source_lines": [
+        94,
+        95,
+        96,
+        97
+      ],
+      "toa_count": 4
+    }
+  ],
+  "source_observing_scan_count": 24,
+  "source_phase_session_count": 23,
+  "source_tim": "${BUNDLE}/recorded/prefix_archive/inputs/sessions_23_max_baseline.tim",
+  "source_tim_sha256": "b42405b29763a905ebfc342d06df8e7596800e7e1d91a8c2a92f9e1119acad35",
+  "source_toa_count": 96
+}

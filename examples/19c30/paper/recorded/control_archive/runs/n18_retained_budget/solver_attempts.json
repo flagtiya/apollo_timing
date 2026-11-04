@@ -1,0 +1,57 @@
+[
+  {
+    "mode": {
+      "mode_id": "blind_ell1_000",
+      "model_name": "ELL1",
+      "par": "${BUNDLE}/recorded/control_archive/runs/n18_retained_budget/frozen_discovery_inputs/blind_ell1_000.par",
+      "par_sha256": "77c8d0115f132459b781c73e7a0c9cfc5550f9b47457b6fd1b6569496bf527ad",
+      "parameter_values": {
+        "A1": 23.46789606428481,
+        "ECC": 9.936378169425377e-11,
+        "F0": 189.04722500435847,
+        "F1": 4.715746168960917e-14,
+        "MASS_FUNCTION": 0.04517802369573594,
+        "OM": 5.586496580007115e-09,
+        "PB": 17.52624922224043,
+        "STATE_COVARIANCE_TRACE": 2.2851168119425103e-07,
+        "T0": 59362.5140555171
+      },
+      "random_seed": 0
+    },
+    "output": "${BUNDLE}/recorded/control_archive/runs/n18_retained_budget/blind_binary_candidates/blind_ell1_000",
+    "result": {
+      "accepted": true,
+      "annealed_modes": 8,
+      "certified_modes": 1,
+      "chi2": 124.52118681427964,
+      "disk_reload_chi2": 124.52211037510834,
+      "engine": "mature_ell1_phase_adapted",
+      "fit_parameters": [
+        "RAJ",
+        "DECJ",
+        "F0",
+        "F1",
+        "PB",
+        "A1",
+        "TASC",
+        "EPS1",
+        "EPS2"
+      ],
+      "model_family": "ell1",
+      "model_name": "ELL1",
+      "observation_plan_dir": null,
+      "observation_plan_status": "not_required_qualified_solution",
+      "output_dir": "${BUNDLE}/recorded/control_archive/runs/n18_retained_budget/blind_binary_candidates/blind_ell1_000",
+      "reduced_chi2": 1.8866846487012068,
+      "residuals_csv": "${BUNDLE}/recorded/control_archive/runs/n18_retained_budget/blind_binary_candidates/blind_ell1_000/residuals.csv",
+      "residuals_png": "${BUNDLE}/recorded/control_archive/runs/n18_retained_budget/blind_binary_candidates/blind_ell1_000/residuals.png",
+      "resumed": false,
+      "scientific_status": "not_evaluated",
+      "searched_cells": 17,
+      "solution_par": "${BUNDLE}/recorded/control_archive/runs/n18_retained_budget/blind_binary_candidates/blind_ell1_000/solution.par",
+      "solution_tim": "${BUNDLE}/recorded/control_archive/runs/n18_retained_budget/blind_binary_candidates/blind_ell1_000/solution.tim",
+      "target_reached": true,
+      "weighted_rms_us": 4.477338113859113
+    }
+  }
+]

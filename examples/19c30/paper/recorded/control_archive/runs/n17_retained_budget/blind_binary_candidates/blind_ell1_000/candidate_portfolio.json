@@ -1,0 +1,198 @@
+[
+  {
+    "schema_version": 2,
+    "run_fingerprint": "a5b5a6cf03010c3525eff767432d6f788912674205512b7c5c4faca496aa1d60",
+    "candidate_id": "candidate_0000",
+    "source_cell_id": "C000007",
+    "destination_cell_id": "C000007",
+    "source_grid_index": [
+      -1,
+      -1
+    ],
+    "annealed_total_chi2": 114.60085529625229,
+    "annealed_shape_chi2": 93.90350703564015,
+    "annealed_phase_chi2": 20.697348260612145,
+    "integer_offsets": [
+      545,
+      547,
+      559,
+      580,
+      752,
+      830,
+      865,
+      881,
+      887,
+      903,
+      929,
+      960,
+      999,
+      1025,
+      1058,
+      1109
+    ],
+    "fit_parameters": [
+      "RAJ",
+      "DECJ",
+      "F0",
+      "F1",
+      "PB",
+      "A1",
+      "TASC",
+      "EPS1",
+      "EPS2"
+    ],
+    "prohibited_automatic_parameters": [
+      "PBDOT",
+      "EPS1DOT",
+      "EPS2DOT"
+    ],
+    "parameter_expansion": "disabled",
+    "optimizer_mode": "pint_wls",
+    "optimizer_fallback_reason": null,
+    "optimizer_function_evaluations": null,
+    "optimizer_termination_status": null,
+    "optimizer_termination_message": null,
+    "optimizer_optimality": null,
+    "support_valid": true,
+    "active_bounds": [],
+    "support_boundary_hit": false,
+    "chi2": 114.60089555735819,
+    "reduced_chi2": 1.8484015412477128,
+    "weighted_rms_us": 4.534956940224328,
+    "disk_reload_chi2": 114.60130048362792,
+    "disk_reload_reduced_chi2": 1.8484080723165794,
+    "disk_reload_weighted_rms_us": 4.534964952035955,
+    "disk_reload_chi2_delta": 0.0004049262697378708,
+    "accepted": true,
+    "target_reached": true,
+    "fitted_parameters": {
+      "RAJ": 19.209582600794807,
+      "DECJ": -12.256105443023849,
+      "F0": 189.0472394777199,
+      "F1": -3.027998611857774e-16,
+      "PB": 17.526125703826015,
+      "A1": 23.447644730816965,
+      "TASC": 59362.5214504031,
+      "EPS1": -2.5715131828617694e-05,
+      "EPS2": 6.6452328987762354e-06
+    },
+    "covariance_parameter_names": [
+      "RAJ",
+      "DECJ",
+      "F0",
+      "F1",
+      "PB",
+      "A1",
+      "TASC",
+      "EPS1",
+      "EPS2"
+    ],
+    "parameter_covariance": [
+      [
+        7.931825480412109e-17,
+        -8.742615596975831e-16,
+        1.922484283307374e-20,
+        2.540202890525749e-28,
+        -5.76378008315534e-17,
+        -9.192702682832627e-15,
+        2.2215375010588153e-15,
+        -4.2566135208080578e-16,
+        3.405357461013934e-16
+      ],
+      [
+        -8.742615596975831e-16,
+        2.648015440263012e-13,
+        -1.7311074720338376e-18,
+        3.665697436440092e-26,
+        2.1575427300820363e-15,
+        -1.0549917149080528e-13,
+        -1.0008921136386784e-13,
+        -1.2673420293673354e-15,
+        -2.019185175679965e-15
+      ],
+      [
+        1.922484283307374e-20,
+        -1.7311074720338376e-18,
+        3.5849483699697e-22,
+        -5.571018190752906e-30,
+        7.823740623232243e-20,
+        -1.3166479035513578e-17,
+        -4.616429385875419e-18,
+        -7.609694116953474e-19,
+        7.471244394409791e-19
+      ],
+      [
+        2.540202890525749e-28,
+        3.665697436440092e-26,
+        -5.571018190752906e-30,
+        1.0206912587440798e-37,
+        -1.8483363207176427e-27,
+        4.198267342899103e-26,
+        9.044988024716421e-26,
+        4.912210656345985e-27,
+        -6.235817111897528e-27
+      ],
+      [
+        -5.76378008315534e-17,
+        2.1575427300820363e-15,
+        7.823740623232243e-20,
+        -1.8483363207176427e-27,
+        2.2636052136998727e-16,
+        9.868877389717845e-15,
+        -1.0781010534258993e-14,
+        2.392531298840919e-16,
+        -7.76043057994581e-16
+      ],
+      [
+        -9.192702682832627e-15,
+        -1.0549917149080528e-13,
+        -1.3166479035513578e-17,
+        4.198267342899103e-26,
+        9.868877389717845e-15,
+        2.992390262121113e-12,
+        -3.412331134087688e-13,
+        1.239542485251646e-13,
+        -1.1417855684330564e-13
+      ],
+      [
+        2.2215375010588153e-15,
+        -1.0008921136386784e-13,
+        -4.616429385875419e-18,
+        9.044988024716421e-26,
+        -1.0781010534258993e-14,
+        -3.412331134087688e-13,
+        5.380415272500584e-13,
+        -6.907536794284874e-15,
+        3.031258394107199e-14
+      ],
+      [
+        -4.2566135208080578e-16,
+        -1.2673420293673354e-15,
+        -7.609694116953474e-19,
+        4.912210656345985e-27,
+        2.392531298840919e-16,
+        1.239542485251646e-13,
+        -6.907536794284874e-15,
+        9.558281177278598e-15,
+        -4.965247915276647e-15
+      ],
+      [
+        3.405357461013934e-16,
+        -2.019185175679965e-15,
+        7.471244394409791e-19,
+        -6.235817111897528e-27,
+        -7.76043057994581e-16,
+        -1.1417855684330564e-13,
+        3.031258394107199e-14,
+        -4.965247915276647e-15,
+        1.0602702832812437e-14
+      ]
+    ],
+    "artifacts": {
+      "par": "${BUNDLE}/recorded/control_archive/runs/n17_retained_budget/blind_binary_candidates/blind_ell1_000/candidates/candidate_0000/solution.par",
+      "tim": "${BUNDLE}/recorded/control_archive/runs/n17_retained_budget/blind_binary_candidates/blind_ell1_000/candidates/candidate_0000/solution.tim",
+      "residuals_csv": "${BUNDLE}/recorded/control_archive/runs/n17_retained_budget/blind_binary_candidates/blind_ell1_000/candidates/candidate_0000/solution_residuals.csv",
+      "residuals_png": "${BUNDLE}/recorded/control_archive/runs/n17_retained_budget/blind_binary_candidates/blind_ell1_000/candidates/candidate_0000/solution_residuals.png"
+    }
+  }
+]

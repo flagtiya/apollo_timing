@@ -1,0 +1,35 @@
+{
+  "schema_version": 2,
+  "architecture": "apollo_bayesian_ell1_dual_lattice_annealed_solver",
+  "run_fingerprint": "666537b96ae773f7fa9c5b3f602f8aec85b6e792b058d213d49e17225675a3b7",
+  "artifacts": {
+    "solution.par": {
+      "path": "${BUNDLE}/recorded/epoch60604/blind_binary_candidates/blind_ell1_000/solution.par",
+      "sha256": "322204e3d009553f0785186e164a78eccca72da625e19d35352ee31544cdc8c1"
+    },
+    "solution.tim": {
+      "path": "${BUNDLE}/recorded/epoch60604/blind_binary_candidates/blind_ell1_000/solution.tim",
+      "sha256": "052594efcff5ec44a8f3d3359ac0db6574c1bd14d4761f27661d17a52553463a"
+    },
+    "residuals.csv": {
+      "path": "${BUNDLE}/recorded/epoch60604/blind_binary_candidates/blind_ell1_000/residuals.csv",
+      "sha256": "f03eafde65571f3a998a4ab3e0fa9e4e044835b6086c7efb14dd1d523293d0a5"
+    },
+    "residuals.png": {
+      "path": "${BUNDLE}/recorded/epoch60604/blind_binary_candidates/blind_ell1_000/residuals.png",
+      "sha256": "be59177ec3c4a34007ff09f21f6b4b7c63217129b554360f67d0246bfbd06c56"
+    },
+    "audit.json": {
+      "path": "${BUNDLE}/recorded/epoch60604/blind_binary_candidates/blind_ell1_000/audit.json",
+      "sha256": "59265b61603ecf2b5bd5c8675b40c984ac3adf78477d4f757bca54f3c802fc17"
+    },
+    "certification.json": {
+      "path": "${BUNDLE}/recorded/epoch60604/blind_binary_candidates/blind_ell1_000/certification.json",
+      "sha256": "fade483c60373cefb858141e094654bc4edb48800ddfffea27de00219e5c9a7a"
+    },
+    "candidate_portfolio.json": {
+      "path": "${BUNDLE}/recorded/epoch60604/blind_binary_candidates/blind_ell1_000/candidate_portfolio.json",
+      "sha256": "1a182ad9ace84107488e6a1584cc5cfa0e10010f1763d13417fc4f7cc8957efe"
+    }
+  }
+}

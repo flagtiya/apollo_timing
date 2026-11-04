@@ -1,0 +1,22 @@
+{
+  "case_id": "n17_baseline",
+  "counts": {
+    "accepted_candidates": 1,
+    "accepted_reference_agreements": 1,
+    "attempted_numerical_fits": 1,
+    "completed_numerical_fits": 1,
+    "conflicting_candidate_copies": 0,
+    "distinct_accepted_paths": 1,
+    "distinct_rejected_paths": 0,
+    "failed_numerical_fits": 0,
+    "portfolio_files": 1,
+    "raw_candidate_records": 1,
+    "rejected_candidates": 0,
+    "rejected_paths_distinct_from_accepted": 0,
+    "unavailable_accepted_paths": 0,
+    "unavailable_rejected_paths": 0
+  },
+  "return_code": 0,
+  "timeout": false,
+  "wall_seconds": 659.704028291
+}

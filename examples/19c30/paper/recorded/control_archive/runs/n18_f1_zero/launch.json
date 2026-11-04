@@ -1,0 +1,14 @@
+{
+  "command": [
+    "python",
+    "${EXTERNAL_RESOURCE}",
+    "--worker",
+    "${BUNDLE}/recorded/control_archive/tasks/n18_f1_zero.json",
+    "--cpu",
+    "1"
+  ],
+  "source_sha256": "3d80867a913edb633c77f044e9fa480249fbf42c219eb027b7a11dea0bf7d821",
+  "started_unix": 1791453906.2993848,
+  "task_sha256": "dd7b9ee040ffbc968d573a62186926dd02963ebe47977c33c680503359b5aab9",
+  "timeout_seconds": 3600
+}

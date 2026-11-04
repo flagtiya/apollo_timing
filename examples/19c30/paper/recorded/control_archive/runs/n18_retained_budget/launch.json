@@ -1,0 +1,14 @@
+{
+  "command": [
+    "python",
+    "${EXTERNAL_RESOURCE}",
+    "--worker",
+    "${BUNDLE}/recorded/control_archive/tasks/n18_retained_budget.json",
+    "--cpu",
+    "1"
+  ],
+  "source_sha256": "3d80867a913edb633c77f044e9fa480249fbf42c219eb027b7a11dea0bf7d821",
+  "started_unix": 1791452826.0393848,
+  "task_sha256": "4d95f7fd1ce456159ccaff470a32312229b3ef52a9f958a201d9d163bf615db4",
+  "timeout_seconds": 3600
+}

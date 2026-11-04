@@ -1,0 +1,58 @@
+{
+  "annealed_chi2_window": 2000.0,
+  "annealing": {
+    "beam_size": 4,
+    "coordinate_prior_sigma": 0.2,
+    "finite_difference_step": 2e-05,
+    "lattice": {
+      "added_session_phase_sigma_cycles": 0.0,
+      "initial_lattice_candidates": 32,
+      "lattice_log_mass_tolerance": 1e-06,
+      "maximum_lattice_candidates": 128,
+      "maximum_lattice_nodes": 1000000
+    },
+    "maximum_closure_evaluations": 300,
+    "paths_per_state": 3,
+    "phase_sigma_schedule": [
+      0.1,
+      0.05,
+      0.02,
+      0.01,
+      0.005,
+      0.002,
+      0.001,
+      0.0005,
+      0.0002,
+      0.0001,
+      0.0
+    ]
+  },
+  "astrometric_bound_arcsec": 300.0,
+  "cell_search": {
+    "fast_prior_sigma": 0.75,
+    "fast_shape_maximum_evaluations": 60,
+    "finite_difference_step": 2e-05,
+    "lattice": {
+      "added_session_phase_sigma_cycles": 0.05,
+      "initial_lattice_candidates": 32,
+      "lattice_log_mass_tolerance": 1e-05,
+      "maximum_lattice_candidates": 128,
+      "maximum_lattice_nodes": 500000
+    },
+    "local_integer_radius": 0,
+    "modes_per_cell": 32,
+    "orbital_samples_per_cell": 2,
+    "phase_samples": 12
+  },
+  "conditional_score_window": 2000.0,
+  "disk_reload_chi2_tolerance": 0.01,
+  "fit_iterations": 10,
+  "maximum_cell_width": 0.25,
+  "maximum_modes_to_anneal": 24,
+  "maximum_modes_to_certify": 16,
+  "minimum_eccentricity_half_width": 0.005,
+  "minimum_f1_half_width": 1e-09,
+  "strict_reduced_chi2_threshold": 20.0,
+  "support_width_scale": 1.0,
+  "target_reduced_chi2_threshold": 10.0
+}

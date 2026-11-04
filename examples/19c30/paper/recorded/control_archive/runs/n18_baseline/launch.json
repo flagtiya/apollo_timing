@@ -1,0 +1,14 @@
+{
+  "command": [
+    "python",
+    "${EXTERNAL_RESOURCE}",
+    "--worker",
+    "${BUNDLE}/recorded/control_archive/tasks/n18_baseline.json",
+    "--cpu",
+    "1"
+  ],
+  "source_sha256": "3d80867a913edb633c77f044e9fa480249fbf42c219eb027b7a11dea0bf7d821",
+  "started_unix": 1791451409.8329375,
+  "task_sha256": "6d0cff85caef425f26a654f17a3ba70479a6b0665978b5609db9ef059a4fdafa",
+  "timeout_seconds": 3600
+}

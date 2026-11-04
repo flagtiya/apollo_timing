@@ -1,0 +1,24 @@
+{
+  "modes": [
+    {
+      "mode_id": "blind_ell1_000",
+      "model_name": "ELL1",
+      "par": "${BUNDLE}/recorded/control_archive/runs/n18_f1_width_broad/frozen_discovery_inputs/blind_ell1_000.par",
+      "par_sha256": "77c8d0115f132459b781c73e7a0c9cfc5550f9b47457b6fd1b6569496bf527ad",
+      "parameter_values": {
+        "A1": 23.46789606428481,
+        "ECC": 9.936378169425377e-11,
+        "F0": 189.04722500435847,
+        "F1": 4.715746168960917e-14,
+        "MASS_FUNCTION": 0.04517802369573594,
+        "OM": 5.586496580007115e-09,
+        "PB": 17.52624922224043,
+        "STATE_COVARIANCE_TRACE": 2.2851168119425103e-07,
+        "T0": 59362.5140555171
+      },
+      "random_seed": 0
+    }
+  ],
+  "parent_portfolio": "${BUNDLE}/recorded/control_archive/runs/n18_baseline/discovery_portfolio.json",
+  "parent_sha256": "a68ad7bce59a3abc2cb26c5f069567b5ddd7656257f6c97778f23bde1ef1ab26"
+}

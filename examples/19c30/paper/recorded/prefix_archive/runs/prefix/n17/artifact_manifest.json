@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "architecture": "apollo_blind_orbit_discovery_plus_phase_lattice_solver",
+  "artifacts": {
+    "solution.par": {
+      "path": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n17/solution.par",
+      "sha256": "8c7115098ad2862a3f4dd36344775df33f28de02f6fa070c3310c9642b6bacaa"
+    },
+    "solution.tim": {
+      "path": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n17/solution.tim",
+      "sha256": "382db339f0be39df11bf6918e28f0d87308d00b5798130cf0357c6e250b2ab4b"
+    },
+    "residuals.csv": {
+      "path": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n17/residuals.csv",
+      "sha256": "d4b72a90aed98729d5cbf56ac35bb3e43f247c2a94291e6bad6e45ea8f60d832"
+    },
+    "residuals.png": {
+      "path": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n17/residuals.png",
+      "sha256": "03321ba31c64691b1f09247d0fc1699b1cc3a70b3e7c292cde2f74122b366f97"
+    },
+    "audit.json": {
+      "path": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n17/audit.json",
+      "sha256": "8b3ceb1f40492cc6eb1c8bb557fd2d9962ab2b79275961597b3e2ba2249fb6a3"
+    },
+    "certification.json": {
+      "path": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n17/certification.json",
+      "sha256": "9b60972137c55664e0141361a859b410db09e8cf973c9df9e9b6c5baefd05c70"
+    },
+    "model_selection.json": {
+      "path": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n17/model_selection.json",
+      "sha256": "8d9173e0d368fe15765a46f1daeae8e80acf74908743a0e126f43a48368d2930"
+    },
+    "input.normalized.tim": {
+      "path": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n17/input.normalized.tim",
+      "sha256": "7f20cbef04d622fbb16734f0025aac849fdc4385732b30140a5175d6e1048f5c"
+    },
+    "input_normalization.json": {
+      "path": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n17/input_normalization.json",
+      "sha256": "7edc18f7b510e86edc058037d21f1e77357b2e0b173d84ceecf7cc1156657438"
+    }
+  },
+  "input_normalization": {
+    "schema_version": 1,
+    "operation": "canonical_tempo2_normalization",
+    "source_tim": {
+      "path": "${BUNDLE}/recorded/prefix_archive/inputs/prefixes/sessions_17_chronological_prefix.tim",
+      "sha256": "7f20cbef04d622fbb16734f0025aac849fdc4385732b30140a5175d6e1048f5c"
+    },
+    "normalized_tim": {
+      "path": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n17/input.normalized.tim",
+      "sha256": "7f20cbef04d622fbb16734f0025aac849fdc4385732b30140a5175d6e1048f5c"
+    },
+    "source_tim_was_modified": false
+  }
+}

@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "timing-accelerator"
+version = "0.7.1+singlebinary.20261001"
+description = "APOLLO isolated and Bayesian binary pulsar timing solver"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "dynesty>=3.1,<4",
+    "emcee>=3.1.6",
+    "matplotlib>=3.8",
+    "numpy>=1.26",
+    "PyYAML>=6.0",
+    "pint-pulsar>=1.1.4",
+    "scipy>=1.11",
+]
+
+[project.optional-dependencies]
+multinest = ["pymultinest>=2.12"]
+test = ["build>=1.2", "pytest>=8"]
+
+[project.scripts]
+apollo-timing = "timing_accelerator.pipeline.apollo_timing:main"
+apollo-bootstrap-binary = "timing_accelerator.inference.bayesian_coarse_binary_bootstrap:main"
+apollo-bootstrap-ell1 = "timing_accelerator.inference.bayesian_partial_ell1_bootstrap:main"
+apollo-observe = "timing_accelerator.inference.bayesian_observation_planner:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.setuptools.package-data]
+timing_accelerator = ["release_profile.json"]

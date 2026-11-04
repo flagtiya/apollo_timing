@@ -1,0 +1,213 @@
+{
+  "schema_version": 2,
+  "run_fingerprint": "c351d57cc9d26fb752d6810e3ff3442d5a4d9133086dd9696bae419892284982",
+  "candidate_id": "candidate_0000",
+  "source_cell_id": "C000008",
+  "destination_cell_id": "C000008",
+  "source_grid_index": [
+    -1,
+    -1
+  ],
+  "annealed_total_chi2": 158.9715964275606,
+  "annealed_shape_chi2": 129.53168248518148,
+  "annealed_phase_chi2": 29.439913942379135,
+  "integer_offsets": [
+    511,
+    511,
+    525,
+    542,
+    715,
+    792,
+    825,
+    844,
+    849,
+    865,
+    890,
+    925,
+    961,
+    988,
+    1023,
+    1072,
+    1133,
+    1174,
+    1199
+  ],
+  "fit_parameters": [
+    "RAJ",
+    "DECJ",
+    "F0",
+    "F1",
+    "PB",
+    "A1",
+    "TASC",
+    "EPS1",
+    "EPS2"
+  ],
+  "prohibited_automatic_parameters": [
+    "PBDOT",
+    "EPS1DOT",
+    "EPS2DOT"
+  ],
+  "parameter_expansion": "disabled",
+  "optimizer_mode": "pint_wls",
+  "optimizer_fallback_reason": null,
+  "optimizer_function_evaluations": null,
+  "optimizer_termination_status": null,
+  "optimizer_termination_message": null,
+  "optimizer_optimality": null,
+  "support_valid": true,
+  "active_bounds": [],
+  "support_boundary_hit": false,
+  "chi2": 158.97161971334086,
+  "reduced_chi2": 2.148265131261363,
+  "weighted_rms_us": 4.943887334380958,
+  "disk_reload_chi2": 158.9724835559533,
+  "disk_reload_reduced_chi2": 2.1482768048101795,
+  "disk_reload_weighted_rms_us": 4.943900766762022,
+  "disk_reload_chi2_delta": 0.0008638426124321086,
+  "accepted": true,
+  "target_reached": true,
+  "fitted_parameters": {
+    "RAJ": 19.209582596498674,
+    "DECJ": -12.256105550055215,
+    "F0": 189.04723947769207,
+    "F1": -3.0239160970029076e-16,
+    "PB": 17.526125685244107,
+    "A1": 23.447646103987466,
+    "TASC": 59362.521451310065,
+    "EPS1": -2.5562594788399113e-05,
+    "EPS2": 6.636990570876137e-06
+  },
+  "covariance_parameter_names": [
+    "RAJ",
+    "DECJ",
+    "F0",
+    "F1",
+    "PB",
+    "A1",
+    "TASC",
+    "EPS1",
+    "EPS2"
+  ],
+  "parameter_covariance": [
+    [
+      3.6289787476047436e-17,
+      -1.2743090405991797e-15,
+      8.024469415870136e-21,
+      -2.675024308360979e-28,
+      -8.512919147951979e-18,
+      7.711625445668129e-16,
+      3.794489267737397e-16,
+      1.8516153716375382e-17,
+      -3.23244513235272e-17
+    ],
+    [
+      -1.2743090405991797e-15,
+      2.55393160202452e-13,
+      -1.4276624947823335e-18,
+      2.560665732179595e-26,
+      2.4181705792011445e-15,
+      -4.285981558061056e-14,
+      -1.0915551534583788e-13,
+      2.548640680658506e-15,
+      -2.9219742062098756e-15
+    ],
+    [
+      8.024469415870136e-21,
+      -1.4276624947823335e-18,
+      1.9434240191254008e-22,
+      -3.0290265056121344e-30,
+      1.639930719010355e-20,
+      -5.363836488028359e-18,
+      -1.5030493682429772e-18,
+      -1.5434708830421824e-19,
+      4.611965685673316e-19
+    ],
+    [
+      -2.675024308360979e-28,
+      2.560665732179595e-26,
+      -3.0290265056121344e-30,
+      5.120829601842461e-38,
+      3.326835803268009e-29,
+      7.828908928023882e-26,
+      6.366858916025373e-27,
+      2.0285558769905577e-27,
+      -7.872397695068687e-27
+    ],
+    [
+      -8.512919147951979e-18,
+      2.4181705792011445e-15,
+      1.639930719010355e-20,
+      3.326835803268009e-29,
+      1.0396303618241924e-16,
+      -4.856965405253646e-16,
+      -5.599350181948935e-15,
+      3.599189894780827e-17,
+      -2.6546906397400985e-16
+    ],
+    [
+      7.711625445668129e-16,
+      -4.285981558061056e-14,
+      -5.363836488028359e-18,
+      7.828908928023882e-26,
+      -4.856965405253646e-16,
+      4.560268297079695e-13,
+      3.1182633940502815e-14,
+      8.5865365163901e-15,
+      -1.4198450815963508e-14
+    ],
+    [
+      3.794489267737397e-16,
+      -1.0915551534583788e-13,
+      -1.5030493682429772e-18,
+      6.366858916025373e-27,
+      -5.599350181948935e-15,
+      3.1182633940502815e-14,
+      3.1604257994293357e-13,
+      -2.245855766967278e-15,
+      1.0881793806143938e-14
+    ],
+    [
+      1.8516153716375382e-17,
+      2.548640680658506e-15,
+      -1.5434708830421824e-19,
+      2.0285558769905577e-27,
+      3.599189894780827e-17,
+      8.5865365163901e-15,
+      -2.245855766967278e-15,
+      3.2932220286320634e-15,
+      -9.564771218907762e-16
+    ],
+    [
+      -3.23244513235272e-17,
+      -2.9219742062098756e-15,
+      4.611965685673316e-19,
+      -7.872397695068687e-27,
+      -2.6546906397400985e-16,
+      -1.4198450815963508e-14,
+      1.0881793806143938e-14,
+      -9.564771218907762e-16,
+      6.216111108188162e-15
+    ]
+  ],
+  "architecture": "apollo_bayesian_ell1_dual_lattice_annealed_solver",
+  "portfolio_counts": {
+    "searched_cells": 18,
+    "conditional_modes": 433,
+    "selected_conditional_modes": 1,
+    "annealed_modes": 4,
+    "selected_annealed_modes": 1,
+    "certified_modes": 1
+  },
+  "thresholds": {
+    "strict_reduced_chi2": 20.0,
+    "target_reduced_chi2": 10.0,
+    "disk_reload_chi2_tolerance": 0.01
+  },
+  "artifacts": {
+    "par": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n20/blind_binary_candidates/blind_ell1_000/solution.par",
+    "tim": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n20/blind_binary_candidates/blind_ell1_000/solution.tim",
+    "residuals_csv": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n20/blind_binary_candidates/blind_ell1_000/residuals.csv",
+    "residuals_png": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n20/blind_binary_candidates/blind_ell1_000/residuals.png"
+  }
+}

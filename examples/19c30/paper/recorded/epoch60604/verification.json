@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "outcome": "reference_path_recovered",
+  "toa_count": 96,
+  "same_pulse_path": true,
+  "global_pulse_offset": "-4.0",
+  "metrics": {
+    "chi2": {
+      "value": 188.0051436968989,
+      "expected": 188.00517911734016,
+      "absolute_tolerance": 0.1,
+      "passed": true
+    },
+    "weighted_rms_us": {
+      "value": 5.075426777380637,
+      "expected": 5.075427255489491,
+      "absolute_tolerance": 0.01,
+      "passed": true
+    }
+  },
+  "solver_solution_claim": null,
+  "portfolio_counts": {
+    "searched_cells": 20,
+    "conditional_modes": 481,
+    "selected_conditional_modes": 1,
+    "annealed_modes": 4,
+    "selected_annealed_modes": 1,
+    "certified_modes": 1
+  }
+}

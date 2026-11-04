@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "architecture": "apollo_blind_orbit_discovery_plus_phase_lattice_solver",
+  "selected_family": "binary",
+  "discovery_error": null,
+  "blind_discovery": {
+    "normalized_tim_path": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n12/blind_orbit_discovery/input.normalized.tim",
+    "audit_path": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n12/blind_orbit_discovery/audit.json",
+    "modes": [
+      {
+        "mode_id": "blind_ell1_000",
+        "par_path": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n12/blind_orbit_discovery/modes/blind_ell1_000.par",
+        "period_stratum_days": [
+          17.524964693294574,
+          17.529966110362743
+        ],
+        "random_seed": 0,
+        "surrogate_score": 6.461685524133698,
+        "initial_wrapped_rms_cycles": 0.0023426101619822633,
+        "initial_max_wrapped_residual_cycles": 0.00618743896484375,
+        "refined_relative_chi2": 166.46094019861522,
+        "refined_relative_reduced_chi2": 5.044270915109552,
+        "pint_shape_chi2": 2194.2987228142965,
+        "pint_shape_reduced_chi2": 66.49390069134232,
+        "parameter_values": {
+          "F0": 189.04722797321048,
+          "F1": 1.1348064879547227e-14,
+          "PB": 17.52631657370707,
+          "A1": 23.451480689278846,
+          "ECC": 9.999999999999045e-11,
+          "OM": 5.729577951284398e-09,
+          "T0": 59362.51381607663,
+          "MASS_FUNCTION": 0.04508293982845922,
+          "STATE_COVARIANCE_TRACE": 2.1538620194256673e-08
+        },
+        "model_name": "ELL1",
+        "ell1_truncation_seconds": 2.345148068927437e-19,
+        "ell1_tolerance_seconds": 1.153875e-06,
+        "path_acquisition_tolerance_seconds": 0.001322420871653442,
+        "representation_policy": "ell1_only_final_precision",
+        "continuous_mode_index": 0
+      },
+      {
+        "mode_id": "blind_ell1_001",
+        "par_path": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n12/blind_orbit_discovery/modes/blind_ell1_001.par",
+        "period_stratum_days": [
+          4.774396901784376,
+          4.776624545512989
+        ],
+        "random_seed": 0,
+        "surrogate_score": 46202.507598627475,
+        "initial_wrapped_rms_cycles": 0.10455260326676649,
+        "initial_max_wrapped_residual_cycles": 0.24322128295898438,
+        "refined_relative_chi2": 383009.8889556212,
+        "refined_relative_reduced_chi2": 11606.360271382462,
+        "pint_shape_chi2": 353213.99747750635,
+        "pint_shape_reduced_chi2": 10703.454469015343,
+        "parameter_values": {
+          "F0": 189.04721321408894,
+          "F1": 2.373323159766253e-13,
+          "PB": 4.7762008213420435,
+          "A1": 5.471217042153786,
+          "ECC": 9.999999985322511e-11,
+          "OM": 5.729577995092098e-09,
+          "T0": 59369.28687606392,
+          "MASS_FUNCTION": 0.007708491523179774,
+          "STATE_COVARIANCE_TRACE": 0.0006165661221611806
+        },
+        "model_name": "ELL1",
+        "ell1_truncation_seconds": 5.47121702609304e-20,
+        "ell1_tolerance_seconds": 1.153875e-06,
+        "path_acquisition_tolerance_seconds": 0.0013224209748962778,
+        "representation_policy": "ell1_only_final_precision",
+        "continuous_mode_index": 1
+      },
+      {
+        "mode_id": "blind_ell1_002",
+        "par_path": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n12/blind_orbit_discovery/modes/blind_ell1_002.par",
+        "period_stratum_days": [
+          0.8246490138883413,
+          0.825396995160863
+        ],
+        "random_seed": 0,
+        "surrogate_score": 964595.0614420917,
+        "initial_wrapped_rms_cycles": 0.09833683720262912,
+        "initial_max_wrapped_residual_cycles": 0.21778488159179688,
+        "refined_relative_chi2": 420046.17548913637,
+        "refined_relative_reduced_chi2": 12728.671984519284,
+        "pint_shape_chi2": 1209396.670781412,
+        "pint_shape_reduced_chi2": 36648.38396307309,
+        "parameter_values": {
+          "F0": 189.04720034288394,
+          "F1": 4.359216178149087e-13,
+          "PB": 0.8250143483944076,
+          "A1": 0.9854212677133484,
+          "ECC": 1.0000004285831802e-10,
+          "OM": 5.72957303980159e-09,
+          "T0": 59368.055909358045,
+          "MASS_FUNCTION": 0.0015094735816463104,
+          "STATE_COVARIANCE_TRACE": 0.00018448908453298736
+        },
+        "model_name": "ELL1",
+        "ell1_truncation_seconds": 9.85422112383491e-21,
+        "ell1_tolerance_seconds": 1.153875e-06,
+        "path_acquisition_tolerance_seconds": 0.0013224210649327949,
+        "representation_policy": "ell1_only_final_precision",
+        "continuous_mode_index": 2
+      }
+    ],
+    "session_count": 12,
+    "toa_count": 52,
+    "observation_span_days": 1038.1514581898882
+  },
+  "binary_candidate_attempts": [
+    {
+      "mode_id": "blind_ell1_000",
+      "par": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n12/blind_orbit_discovery/modes/blind_ell1_000.par",
+      "output": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n12/blind_binary_candidates/blind_ell1_000",
+      "chi2": 49.77624560054019,
+      "reduced_chi2": 1.1851487047747664,
+      "model_name": "ELL1",
+      "model_family": "ell1",
+      "accepted": true,
+      "target_reached": true
+    }
+  ],
+  "binary_model_selection": null,
+  "isolated_update_model_selection": null
+}

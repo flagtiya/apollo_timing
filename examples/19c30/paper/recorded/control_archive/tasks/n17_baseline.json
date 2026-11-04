@@ -1,0 +1,16 @@
+{
+  "arm": "baseline",
+  "baseline": "${BUNDLE}/recorded/control_archive/runs/n17_baseline",
+  "case_id": "n17_baseline",
+  "inference_contract": "no reference solution; no manual orbit or pulse-path seed; all emitted models; no resume",
+  "output": "${BUNDLE}/recorded/control_archive/runs/n17_baseline",
+  "par": "${BUNDLE}/recorded/control_archive/inputs/blind_original_f1.par",
+  "par_sha256": "77148abcfee6ac2314d1d65131edd48081ba53c39a5e645a16cc2da7b46ab1b1",
+  "session_count": 17,
+  "source_sha256": "3d80867a913edb633c77f044e9fa480249fbf42c219eb027b7a11dea0bf7d821",
+  "source_snapshot": "${BUNDLE}/frozen/controls",
+  "tim": "${BUNDLE}/recorded/control_archive/inputs/sessions_17_chronological_prefix.tim",
+  "tim_sha256": "7f20cbef04d622fbb16734f0025aac849fdc4385732b30140a5175d6e1048f5c",
+  "timeout_seconds": 3600,
+  "toa_count": 72
+}

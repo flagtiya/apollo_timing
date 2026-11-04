@@ -1,0 +1,14 @@
+{
+  "command": [
+    "python",
+    "${EXTERNAL_RESOURCE}",
+    "--worker",
+    "${BUNDLE}/recorded/control_archive/tasks/n18_f1_width_broad.json",
+    "--cpu",
+    "1"
+  ],
+  "source_sha256": "3d80867a913edb633c77f044e9fa480249fbf42c219eb027b7a11dea0bf7d821",
+  "started_unix": 1791454653.0000384,
+  "task_sha256": "5d9faf6068606c1751b2983e4e3e5424049c9a08c3b8fa551fc421c2010c3d5f",
+  "timeout_seconds": 3600
+}

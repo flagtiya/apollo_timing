@@ -1,0 +1,14 @@
+{
+  "command": [
+    "python",
+    "${EXTERNAL_RESOURCE}",
+    "--worker",
+    "${BUNDLE}/recorded/control_archive/tasks/n19_phase_grid13.json",
+    "--cpu",
+    "2"
+  ],
+  "source_sha256": "3d80867a913edb633c77f044e9fa480249fbf42c219eb027b7a11dea0bf7d821",
+  "started_unix": 1791452165.4881861,
+  "task_sha256": "ad1f8ac148d5c71df7646c8aae36cc6d67ef60b1f586aa6006bac849fd88777c",
+  "timeout_seconds": 3600
+}

@@ -1,0 +1,372 @@
+{
+  "accepted": true,
+  "accepted_wrong_path": false,
+  "apollo_result": {
+    "accepted": true,
+    "chi2": 174.84295981594934,
+    "disk_reload_chi2_delta": 0.0015611989227011236,
+    "fit_parameters": [
+      "RAJ",
+      "DECJ",
+      "F0",
+      "F1",
+      "PB",
+      "A1",
+      "TASC",
+      "EPS1",
+      "EPS2"
+    ],
+    "portfolio_counts": {
+      "annealed_modes": 4,
+      "certified_modes": 1,
+      "conditional_modes": 481,
+      "searched_cells": 20,
+      "selected_annealed_modes": 1,
+      "selected_conditional_modes": 1
+    },
+    "reduced_chi2": 2.132231217267675,
+    "weighted_rms_us": 5.005736573258787
+  },
+  "arm": "blind",
+  "case": {
+    "design": "chronological_prefix",
+    "maximum_gap_days": 604.3383912063509,
+    "seed": null,
+    "selected_session_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
+    ],
+    "session_count": 22,
+    "toa_count": 92
+  },
+  "case_id": "sessions_22_chronological_prefix",
+  "certification": {
+    "accepted": true,
+    "active_bounds": [],
+    "annealed_phase_chi2": 30.58721026020293,
+    "annealed_shape_chi2": 144.2556988047024,
+    "annealed_total_chi2": 174.84290906490534,
+    "architecture": "apollo_blind_orbit_discovery_plus_phase_lattice_solver",
+    "artifacts": {
+      "par": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n22/solution.par",
+      "residuals_csv": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n22/residuals.csv",
+      "residuals_png": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n22/residuals.png",
+      "tim": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n22/solution.tim"
+    },
+    "blind_orbit_discovery": {
+      "audit": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n22/blind_orbit_discovery/audit.json",
+      "emitted_mode_count": 1,
+      "normalized_tim": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n22/blind_orbit_discovery/input.normalized.tim",
+      "selected_candidate_output": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n22/blind_binary_candidates/blind_ell1_000"
+    },
+    "candidate_id": "candidate_0000",
+    "chi2": 174.84295981594934,
+    "covariance_parameter_names": [
+      "RAJ",
+      "DECJ",
+      "F0",
+      "F1",
+      "PB",
+      "A1",
+      "TASC",
+      "EPS1",
+      "EPS2"
+    ],
+    "destination_cell_id": "C000009",
+    "disk_reload_chi2": 174.84452101487204,
+    "disk_reload_chi2_delta": 0.0015611989227011236,
+    "disk_reload_reduced_chi2": 2.1322502562789274,
+    "disk_reload_weighted_rms_us": 5.005758921693944,
+    "engine": "blind_keplerian_discovery_plus_phase_lattice",
+    "fit_parameters": [
+      "RAJ",
+      "DECJ",
+      "F0",
+      "F1",
+      "PB",
+      "A1",
+      "TASC",
+      "EPS1",
+      "EPS2"
+    ],
+    "fitted_parameters": {
+      "A1": 23.44764604242032,
+      "DECJ": -12.256105304103672,
+      "EPS1": -2.5555186238331646e-05,
+      "EPS2": 6.628366929814486e-06,
+      "F0": 189.04723947769196,
+      "F1": -3.02373563533824e-16,
+      "PB": 17.526125691460052,
+      "RAJ": 19.20958259514953,
+      "TASC": 59362.521451001674
+    },
+    "integer_offsets": [
+      346,
+      344,
+      356,
+      370,
+      527,
+      604,
+      638,
+      650,
+      656,
+      674,
+      697,
+      734,
+      777,
+      804,
+      839,
+      892,
+      955,
+      998,
+      1031,
+      1080,
+      1112
+    ],
+    "optimizer_fallback_reason": null,
+    "optimizer_function_evaluations": null,
+    "optimizer_mode": "pint_wls",
+    "optimizer_optimality": null,
+    "optimizer_termination_message": null,
+    "optimizer_termination_status": null,
+    "parameter_covariance": [
+      [
+        3.184496913735887e-17,
+        -1.0677956347760587e-15,
+        -6.346925310969579e-21,
+        2.0055755217648925e-29,
+        -3.4580226934757962e-18,
+        1.1191802893387897e-15,
+        1.4165736219636793e-16,
+        4.350487894443502e-17,
+        -9.064566407096031e-17
+      ],
+      [
+        -1.0677956347760587e-15,
+        2.001426994776482e-13,
+        -1.8247257217487183e-18,
+        2.9487880637859437e-26,
+        1.0165740920204733e-15,
+        -1.738854797285144e-14,
+        -3.924056047834298e-14,
+        1.4354004547472698e-15,
+        -2.468873825127477e-15
+      ],
+      [
+        -6.346925310969579e-21,
+        -1.8247257217487183e-18,
+        1.2304259510261185e-22,
+        -1.6971563576386892e-30,
+        5.532523364335862e-21,
+        -3.267445968031089e-18,
+        -8.990041072364472e-19,
+        -7.243703869898617e-20,
+        2.199985636841617e-19
+      ],
+      [
+        2.0055755217648925e-29,
+        2.9487880637859437e-26,
+        -1.6971563576386892e-30,
+        2.6093435755559594e-38,
+        1.468552609283069e-28,
+        4.0048569347157937e-26,
+        -4.799964407504996e-28,
+        3.9386473198305767e-28,
+        -3.2471025078634234e-27
+      ],
+      [
+        -3.4580226934757962e-18,
+        1.0165740920204733e-15,
+        5.532523364335862e-21,
+        1.468552609283069e-28,
+        6.839804802805613e-17,
+        1.8265732290374314e-16,
+        -3.824565171215875e-15,
+        8.79426436968084e-18,
+        -2.568108003533505e-16
+      ],
+      [
+        1.1191802893387897e-15,
+        -1.738854797285144e-14,
+        -3.267445968031089e-18,
+        4.0048569347157937e-26,
+        1.8265732290374314e-16,
+        3.907989864169615e-13,
+        -3.889145451860018e-15,
+        6.586411760591978e-15,
+        -7.573896185035254e-15
+      ],
+      [
+        1.4165736219636793e-16,
+        -3.924056047834298e-14,
+        -8.990041072364472e-19,
+        -4.799964407504996e-28,
+        -3.824565171215875e-15,
+        -3.889145451860018e-15,
+        2.274200938014456e-13,
+        -9.705954556481712e-16,
+        1.0671275265429921e-14
+      ],
+      [
+        4.350487894443502e-17,
+        1.4354004547472698e-15,
+        -7.243703869898617e-20,
+        3.9386473198305767e-28,
+        8.79426436968084e-18,
+        6.586411760591978e-15,
+        -9.705954556481712e-16,
+        3.15268561163909e-15,
+        -6.262346405229349e-16
+      ],
+      [
+        -9.064566407096031e-17,
+        -2.468873825127477e-15,
+        2.199985636841617e-19,
+        -3.2471025078634234e-27,
+        -2.568108003533505e-16,
+        -7.573896185035254e-15,
+        1.0671275265429921e-14,
+        -6.262346405229349e-16,
+        5.3393326504588365e-15
+      ]
+    ],
+    "parameter_expansion": "disabled",
+    "portfolio_counts": {
+      "annealed_modes": 4,
+      "certified_modes": 1,
+      "conditional_modes": 481,
+      "searched_cells": 20,
+      "selected_annealed_modes": 1,
+      "selected_conditional_modes": 1
+    },
+    "prohibited_automatic_parameters": [
+      "PBDOT",
+      "EPS1DOT",
+      "EPS2DOT"
+    ],
+    "reduced_chi2": 2.132231217267675,
+    "run_fingerprint": "b972b80fb601a0b368dc9c14ca6f15112c8509f310a91d8085d9b5e4ce5abf1c",
+    "schema_version": 2,
+    "source_cell_id": "C000009",
+    "source_grid_index": [
+      -1,
+      -1
+    ],
+    "support_boundary_hit": false,
+    "support_valid": true,
+    "target_reached": true,
+    "thresholds": {
+      "disk_reload_chi2_tolerance": 0.01,
+      "strict_reduced_chi2": 20.0,
+      "target_reduced_chi2": 10.0
+    },
+    "weighted_rms_us": 5.005736573258787
+  },
+  "command": [
+    "python",
+    "-m",
+    "timing_accelerator.pipeline.apollo_timing",
+    "--par",
+    "${BUNDLE}/recorded/prefix_archive/inputs/blind_f1_initial.par",
+    "--tim",
+    "${BUNDLE}/recorded/prefix_archive/inputs/prefixes/sessions_22_chronological_prefix.tim",
+    "--output",
+    "${BUNDLE}/recorded/prefix_archive/runs/prefix/n22",
+    "--source-type",
+    "binary",
+    "--orbital-samples-per-cell",
+    "2",
+    "--phase-samples",
+    "12",
+    "--modes-per-cell",
+    "32",
+    "--chart-evaluations",
+    "60",
+    "--maximum-modes-to-anneal",
+    "24",
+    "--maximum-modes-to-certify",
+    "16",
+    "--blind-workers",
+    "1",
+    "--no-observation-plan"
+  ],
+  "finished_unix": 1788275726.5923204,
+  "input": {
+    "par": "${BUNDLE}/recorded/prefix_archive/inputs/blind_f1_initial.par",
+    "tim": "${BUNDLE}/recorded/prefix_archive/inputs/prefixes/sessions_22_chronological_prefix.tim"
+  },
+  "max_rss_kib": 278328,
+  "orbit_discovery": {
+    "available": true,
+    "best_candidate": {
+      "A1": 23.456025021274055,
+      "PB": 17.52620400637352,
+      "TASC": 59362.5153599165,
+      "eccentricity": 9.808885266134427e-11
+    },
+    "initialized_modes": 1,
+    "matching_modes": 1,
+    "orbit_initialized": true,
+    "prior_boundary": false
+  },
+  "outcome": "unique_within_support",
+  "outcome_reason": "blind_certified_path",
+  "par_sha256": "77148abcfee6ac2314d1d65131edd48081ba53c39a5e645a16cc2da7b46ab1b1",
+  "phase_timings": {},
+  "protocol_sha256": "04b92592fe8af0cbb2073fa5c23b4638e52e9c18f471b182a80ff7ad39ecaa96",
+  "pulse_path": {
+    "exact": true,
+    "global_offset": 189.0,
+    "matched_toas": 92
+  },
+  "result_artifacts": {
+    "audit.json": {
+      "path": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n22/audit.json",
+      "sha256": "90786f98bb1d1d31819f8b5cda88801751c37b7ef362cfe3ab79179abf0529a5"
+    },
+    "certification.json": {
+      "path": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n22/certification.json",
+      "sha256": "a65f6646434e9d1c538288e43fa8539dc2e44c128a2f0aed38dfdbc74bce09f5"
+    },
+    "solution.par": {
+      "path": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n22/solution.par",
+      "sha256": "7955a2f1555e9df62b73d2d7bd10f3eebe5b9e905f26607dd34c5514360d6b48"
+    },
+    "solution.tim": {
+      "path": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n22/solution.tim",
+      "sha256": "447e53ae30840727b45d18e2f121ca6e94b384051d07757fe7ce693109813dc8"
+    }
+  },
+  "return_code": 0,
+  "run_tag": "blind_f1_chronological_prefix_20260901",
+  "schema_version": 2,
+  "started_unix": 1788274834.174073,
+  "stderr_sha256": "4306e239e94e6f74b6c01b3b305801c7c7abf25d7a1d40fcfeaf5cdc6c3b76e1",
+  "stdout_sha256": "9c4bda57f708905a625656c17c201421cf0d241dc185134b241cb7cdfb2428cb",
+  "system_cpu_seconds": 0.292147,
+  "tim_sha256": "d9b9f8ee97f182d688357caf46cb59e852f1cf85968694c52db35b9a80e71875",
+  "timeout": false,
+  "timeout_seconds": 43200,
+  "user_cpu_seconds": 890.522296,
+  "wall_seconds": 892.3742242171429
+}

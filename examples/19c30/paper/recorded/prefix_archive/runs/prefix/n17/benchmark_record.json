@@ -1,0 +1,362 @@
+{
+  "accepted": true,
+  "accepted_wrong_path": false,
+  "apollo_result": {
+    "accepted": true,
+    "chi2": 114.60087885340896,
+    "disk_reload_chi2_delta": 0.00038629701576553543,
+    "fit_parameters": [
+      "RAJ",
+      "DECJ",
+      "F0",
+      "F1",
+      "PB",
+      "A1",
+      "TASC",
+      "EPS1",
+      "EPS2"
+    ],
+    "portfolio_counts": {
+      "annealed_modes": 4,
+      "certified_modes": 1,
+      "conditional_modes": 385,
+      "searched_cells": 16,
+      "selected_annealed_modes": 1,
+      "selected_conditional_modes": 1
+    },
+    "reduced_chi2": 1.8484012718291767,
+    "weighted_rms_us": 4.5349566097221405
+  },
+  "arm": "blind",
+  "case": {
+    "design": "chronological_prefix",
+    "maximum_gap_days": 604.3383912063509,
+    "seed": null,
+    "selected_session_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "session_count": 17,
+    "toa_count": 72
+  },
+  "case_id": "sessions_17_chronological_prefix",
+  "certification": {
+    "accepted": true,
+    "active_bounds": [],
+    "annealed_phase_chi2": 20.697309863647156,
+    "annealed_shape_chi2": 93.90354880199723,
+    "annealed_total_chi2": 114.60085866564438,
+    "architecture": "apollo_blind_orbit_discovery_plus_phase_lattice_solver",
+    "artifacts": {
+      "par": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n17/solution.par",
+      "residuals_csv": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n17/residuals.csv",
+      "residuals_png": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n17/residuals.png",
+      "tim": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n17/solution.tim"
+    },
+    "blind_orbit_discovery": {
+      "audit": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n17/blind_orbit_discovery/audit.json",
+      "emitted_mode_count": 1,
+      "normalized_tim": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n17/blind_orbit_discovery/input.normalized.tim",
+      "selected_candidate_output": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n17/blind_binary_candidates/blind_ell1_000"
+    },
+    "candidate_id": "candidate_0000",
+    "chi2": 114.60087885340896,
+    "covariance_parameter_names": [
+      "RAJ",
+      "DECJ",
+      "F0",
+      "F1",
+      "PB",
+      "A1",
+      "TASC",
+      "EPS1",
+      "EPS2"
+    ],
+    "destination_cell_id": "C000007",
+    "disk_reload_chi2": 114.60126515042472,
+    "disk_reload_chi2_delta": 0.00038629701576553543,
+    "disk_reload_reduced_chi2": 1.8484075024262052,
+    "disk_reload_weighted_rms_us": 4.534964252938956,
+    "engine": "blind_keplerian_discovery_plus_phase_lattice",
+    "fit_parameters": [
+      "RAJ",
+      "DECJ",
+      "F0",
+      "F1",
+      "PB",
+      "A1",
+      "TASC",
+      "EPS1",
+      "EPS2"
+    ],
+    "fitted_parameters": {
+      "A1": 23.447644730816243,
+      "DECJ": -12.256105443024575,
+      "EPS1": -2.5715131840373908e-05,
+      "EPS2": 6.64523299115874e-06,
+      "F0": 189.0472394777199,
+      "F1": -3.027998612789873e-16,
+      "PB": 17.526125703825997,
+      "RAJ": 19.209582600794818,
+      "TASC": 59362.5214504031
+    },
+    "integer_offsets": [
+      545,
+      547,
+      559,
+      580,
+      752,
+      830,
+      865,
+      881,
+      887,
+      903,
+      929,
+      960,
+      999,
+      1025,
+      1058,
+      1109
+    ],
+    "optimizer_fallback_reason": null,
+    "optimizer_function_evaluations": null,
+    "optimizer_mode": "pint_wls",
+    "optimizer_optimality": null,
+    "optimizer_termination_message": null,
+    "optimizer_termination_status": null,
+    "parameter_covariance": [
+      [
+        7.931825480413304e-17,
+        -8.742615596977788e-16,
+        1.9224842833074228e-20,
+        2.5402028905268096e-28,
+        -5.763780083157428e-17,
+        -9.192702682832616e-15,
+        2.22153750105973e-15,
+        -4.256613520808457e-16,
+        3.4053574610155115e-16
+      ],
+      [
+        -8.742615596977788e-16,
+        2.6480154402629324e-13,
+        -1.731107472034029e-18,
+        3.665697436439891e-26,
+        2.1575427300827115e-15,
+        -1.0549917149075351e-13,
+        -1.000892113639003e-13,
+        -1.2673420293653652e-15,
+        -2.019185175684637e-15
+      ],
+      [
+        1.9224842833074228e-20,
+        -1.731107472034029e-18,
+        3.5849483699690146e-22,
+        -5.571018190752097e-30,
+        7.82374062322933e-20,
+        -1.3166479035508476e-17,
+        -4.616429385873718e-18,
+        -7.609694116951543e-19,
+        7.471244394408468e-19
+      ],
+      [
+        2.5402028905268096e-28,
+        3.665697436439891e-26,
+        -5.571018190752097e-30,
+        1.0206912587439952e-37,
+        -1.8483363207174827e-27,
+        4.1982673428940107e-26,
+        9.044988024715158e-26,
+        4.912210656344309e-27,
+        -6.2358171118945315e-27
+      ],
+      [
+        -5.763780083157428e-17,
+        2.1575427300827115e-15,
+        7.82374062322933e-20,
+        -1.8483363207174827e-27,
+        2.2636052137002213e-16,
+        9.868877389718115e-15,
+        -1.0781010534260488e-14,
+        2.3925312988413193e-16,
+        -7.76043057994833e-16
+      ],
+      [
+        -9.192702682832616e-15,
+        -1.0549917149075351e-13,
+        -1.3166479035508476e-17,
+        4.1982673428940107e-26,
+        9.868877389718115e-15,
+        2.9923902621201105e-12,
+        -3.412331134088016e-13,
+        1.2395424852512346e-13,
+        -1.141785568432849e-13
+      ],
+      [
+        2.22153750105973e-15,
+        -1.000892113639003e-13,
+        -4.616429385873718e-18,
+        9.044988024715158e-26,
+        -1.0781010534260488e-14,
+        -3.412331134088016e-13,
+        5.380415272501227e-13,
+        -6.9075367942879915e-15,
+        3.0312583941082984e-14
+      ],
+      [
+        -4.256613520808457e-16,
+        -1.2673420293653652e-15,
+        -7.609694116951543e-19,
+        4.912210656344309e-27,
+        2.3925312988413193e-16,
+        1.2395424852512346e-13,
+        -6.9075367942879915e-15,
+        9.558281177277257e-15,
+        -4.9652479152764085e-15
+      ],
+      [
+        3.4053574610155115e-16,
+        -2.019185175684637e-15,
+        7.471244394408468e-19,
+        -6.2358171118945315e-27,
+        -7.76043057994833e-16,
+        -1.141785568432849e-13,
+        3.0312583941082984e-14,
+        -4.9652479152764085e-15,
+        1.0602702832813055e-14
+      ]
+    ],
+    "parameter_expansion": "disabled",
+    "portfolio_counts": {
+      "annealed_modes": 4,
+      "certified_modes": 1,
+      "conditional_modes": 385,
+      "searched_cells": 16,
+      "selected_annealed_modes": 1,
+      "selected_conditional_modes": 1
+    },
+    "prohibited_automatic_parameters": [
+      "PBDOT",
+      "EPS1DOT",
+      "EPS2DOT"
+    ],
+    "reduced_chi2": 1.8484012718291767,
+    "run_fingerprint": "b2cbac542d6c0a5d8aa3ef6037f1d32bc66708e7acf3efd2d90e7b0a670b9be3",
+    "schema_version": 2,
+    "source_cell_id": "C000007",
+    "source_grid_index": [
+      -1,
+      -1
+    ],
+    "support_boundary_hit": false,
+    "support_valid": true,
+    "target_reached": true,
+    "thresholds": {
+      "disk_reload_chi2_tolerance": 0.01,
+      "strict_reduced_chi2": 20.0,
+      "target_reduced_chi2": 10.0
+    },
+    "weighted_rms_us": 4.5349566097221405
+  },
+  "command": [
+    "python",
+    "-m",
+    "timing_accelerator.pipeline.apollo_timing",
+    "--par",
+    "${BUNDLE}/recorded/prefix_archive/inputs/blind_f1_initial.par",
+    "--tim",
+    "${BUNDLE}/recorded/prefix_archive/inputs/prefixes/sessions_17_chronological_prefix.tim",
+    "--output",
+    "${BUNDLE}/recorded/prefix_archive/runs/prefix/n17",
+    "--source-type",
+    "binary",
+    "--orbital-samples-per-cell",
+    "2",
+    "--phase-samples",
+    "12",
+    "--modes-per-cell",
+    "32",
+    "--chart-evaluations",
+    "60",
+    "--maximum-modes-to-anneal",
+    "24",
+    "--maximum-modes-to-certify",
+    "16",
+    "--blind-workers",
+    "1",
+    "--no-observation-plan"
+  ],
+  "finished_unix": 1788279539.1012552,
+  "input": {
+    "par": "${BUNDLE}/recorded/prefix_archive/inputs/blind_f1_initial.par",
+    "tim": "${BUNDLE}/recorded/prefix_archive/inputs/prefixes/sessions_17_chronological_prefix.tim"
+  },
+  "max_rss_kib": 279412,
+  "orbit_discovery": {
+    "available": true,
+    "best_candidate": {
+      "A1": 23.45906257470138,
+      "PB": 17.526251746615845,
+      "TASC": 59362.51450106097,
+      "eccentricity": 1.0000000000044919e-10
+    },
+    "initialized_modes": 1,
+    "matching_modes": 1,
+    "orbit_initialized": true,
+    "prior_boundary": false
+  },
+  "outcome": "unique_within_support",
+  "outcome_reason": "blind_certified_path",
+  "par_sha256": "77148abcfee6ac2314d1d65131edd48081ba53c39a5e645a16cc2da7b46ab1b1",
+  "phase_timings": {},
+  "protocol_sha256": "04b92592fe8af0cbb2073fa5c23b4638e52e9c18f471b182a80ff7ad39ecaa96",
+  "pulse_path": {
+    "exact": true,
+    "global_offset": -37.0,
+    "matched_toas": 72
+  },
+  "result_artifacts": {
+    "audit.json": {
+      "path": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n17/audit.json",
+      "sha256": "8b3ceb1f40492cc6eb1c8bb557fd2d9962ab2b79275961597b3e2ba2249fb6a3"
+    },
+    "certification.json": {
+      "path": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n17/certification.json",
+      "sha256": "9b60972137c55664e0141361a859b410db09e8cf973c9df9e9b6c5baefd05c70"
+    },
+    "solution.par": {
+      "path": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n17/solution.par",
+      "sha256": "8c7115098ad2862a3f4dd36344775df33f28de02f6fa070c3310c9642b6bacaa"
+    },
+    "solution.tim": {
+      "path": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n17/solution.tim",
+      "sha256": "382db339f0be39df11bf6918e28f0d87308d00b5798130cf0357c6e250b2ab4b"
+    }
+  },
+  "return_code": 0,
+  "run_tag": "blind_f1_chronological_prefix_20260901",
+  "schema_version": 2,
+  "started_unix": 1788278878.3399372,
+  "stderr_sha256": "e4366ed8c108087c8ee270d7b0aa5ea888b5f221e4b61ae7370d82a14821df99",
+  "stdout_sha256": "e4f2a7027d883001e4cd4c4d685872266b2ab832223e524d770ef61b57250219",
+  "system_cpu_seconds": 0.29671199999999986,
+  "tim_sha256": "7f20cbef04d622fbb16734f0025aac849fdc4385732b30140a5175d6e1048f5c",
+  "timeout": false,
+  "timeout_seconds": 43200,
+  "user_cpu_seconds": 658.812833,
+  "wall_seconds": 660.719934429042
+}

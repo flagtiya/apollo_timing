@@ -1,0 +1,360 @@
+{
+  "accepted": true,
+  "accepted_wrong_path": false,
+  "apollo_result": {
+    "accepted": true,
+    "chi2": 106.82443445668775,
+    "disk_reload_chi2_delta": 0.0003416840909551411,
+    "fit_parameters": [
+      "RAJ",
+      "DECJ",
+      "F0",
+      "F1",
+      "PB",
+      "A1",
+      "TASC",
+      "EPS1",
+      "EPS2"
+    ],
+    "portfolio_counts": {
+      "annealed_modes": 4,
+      "certified_modes": 2,
+      "conditional_modes": 385,
+      "searched_cells": 16,
+      "selected_annealed_modes": 2,
+      "selected_conditional_modes": 1
+    },
+    "reduced_chi2": 1.8418005940808233,
+    "weighted_rms_us": 4.595895789721028
+  },
+  "arm": "blind",
+  "case": {
+    "design": "chronological_prefix",
+    "maximum_gap_days": 604.3383912063509,
+    "seed": null,
+    "selected_session_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "session_count": 16,
+    "toa_count": 68
+  },
+  "case_id": "sessions_16_chronological_prefix",
+  "certification": {
+    "accepted": true,
+    "active_bounds": [],
+    "annealed_phase_chi2": 20.296529649998234,
+    "annealed_shape_chi2": 86.5278984148445,
+    "annealed_total_chi2": 106.82442806484273,
+    "architecture": "apollo_blind_orbit_discovery_plus_phase_lattice_solver",
+    "artifacts": {
+      "par": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n16/solution.par",
+      "residuals_csv": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n16/residuals.csv",
+      "residuals_png": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n16/residuals.png",
+      "tim": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n16/solution.tim"
+    },
+    "blind_orbit_discovery": {
+      "audit": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n16/blind_orbit_discovery/audit.json",
+      "emitted_mode_count": 1,
+      "normalized_tim": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n16/blind_orbit_discovery/input.normalized.tim",
+      "selected_candidate_output": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n16/blind_binary_candidates/blind_ell1_000"
+    },
+    "candidate_id": "candidate_0000",
+    "chi2": 106.82443445668775,
+    "covariance_parameter_names": [
+      "RAJ",
+      "DECJ",
+      "F0",
+      "F1",
+      "PB",
+      "A1",
+      "TASC",
+      "EPS1",
+      "EPS2"
+    ],
+    "destination_cell_id": "C000007",
+    "disk_reload_chi2": 106.82477614077871,
+    "disk_reload_chi2_delta": 0.0003416840909551411,
+    "disk_reload_reduced_chi2": 1.8418064851858398,
+    "disk_reload_weighted_rms_us": 4.595903139833515,
+    "engine": "blind_keplerian_discovery_plus_phase_lattice",
+    "fit_parameters": [
+      "RAJ",
+      "DECJ",
+      "F0",
+      "F1",
+      "PB",
+      "A1",
+      "TASC",
+      "EPS1",
+      "EPS2"
+    ],
+    "fitted_parameters": {
+      "A1": 23.44764528416972,
+      "DECJ": -12.256105492783448,
+      "EPS1": -2.56933920442734e-05,
+      "EPS2": 6.615391000244897e-06,
+      "F0": 189.04723947772126,
+      "F1": -3.0288621369707997e-16,
+      "PB": 17.526125704815325,
+      "RAJ": 19.209582596118654,
+      "TASC": 59362.5214503902
+    },
+    "integer_offsets": [
+      595,
+      598,
+      611,
+      633,
+      806,
+      884,
+      919,
+      934,
+      940,
+      955,
+      981,
+      1010,
+      1047,
+      1073,
+      1104
+    ],
+    "optimizer_fallback_reason": null,
+    "optimizer_function_evaluations": null,
+    "optimizer_mode": "pint_wls",
+    "optimizer_optimality": null,
+    "optimizer_termination_message": null,
+    "optimizer_termination_status": null,
+    "parameter_covariance": [
+      [
+        1.3381092659966864e-16,
+        -2.97372387338642e-16,
+        3.455413282762024e-21,
+        1.2594049538180371e-27,
+        -6.93013370099738e-17,
+        -1.5648217863681176e-14,
+        2.377848953479705e-15,
+        -6.79837998089666e-16,
+        6.888265529890314e-16
+      ],
+      [
+        -2.97372387338642e-16,
+        2.709088123334677e-13,
+        -1.8980516247563227e-18,
+        4.730052992679217e-26,
+        2.0340662252277972e-15,
+        -1.7384074723452448e-13,
+        -9.843441328350815e-14,
+        -3.9581919649942904e-15,
+        1.6680101763514233e-15
+      ],
+      [
+        3.455413282762024e-21,
+        -1.8980516247563227e-18,
+        3.6305830748807564e-22,
+        -5.861962838418755e-30,
+        8.16126557594099e-20,
+        -1.1298344459954279e-17,
+        -4.661662936967408e-18,
+        -6.874142744074214e-19,
+        6.463339435181419e-19
+      ],
+      [
+        1.2594049538180371e-27,
+        4.730052992679217e-26,
+        -5.861962838418755e-30,
+        1.2061837974932406e-37,
+        -2.063527271907189e-27,
+        -7.71209404375454e-26,
+        9.333380259824985e-26,
+        2.2267626812831364e-28,
+        1.90114758413273e-28
+      ],
+      [
+        -6.93013370099738e-17,
+        2.0340662252277972e-15,
+        8.16126557594099e-20,
+        -2.063527271907189e-27,
+        2.288569697140656e-16,
+        1.1250609120312217e-14,
+        -1.0814467162313092e-14,
+        2.9365687795586654e-16,
+        -8.505908007036985e-16
+      ],
+      [
+        -1.5648217863681176e-14,
+        -1.7384074723452448e-13,
+        -1.1298344459954279e-17,
+        -7.71209404375454e-26,
+        1.1250609120312217e-14,
+        3.75714807095258e-12,
+        -3.597507634151769e-13,
+        1.5406549110870552e-13,
+        -1.5543910380704197e-13
+      ],
+      [
+        2.377848953479705e-15,
+        -9.843441328350815e-14,
+        -4.661662936967408e-18,
+        9.333380259824985e-26,
+        -1.0814467162313092e-14,
+        -3.597507634151769e-13,
+        5.384898949300054e-13,
+        -7.63664451148923e-15,
+        3.131165409242693e-14
+      ],
+      [
+        -6.79837998089666e-16,
+        -3.9581919649942904e-15,
+        -6.874142744074214e-19,
+        2.2267626812831364e-28,
+        2.9365687795586654e-16,
+        1.5406549110870552e-13,
+        -7.63664451148923e-15,
+        1.0743868069392438e-14,
+        -6.589822676914007e-15
+      ],
+      [
+        6.888265529890314e-16,
+        1.6680101763514233e-15,
+        6.463339435181419e-19,
+        1.90114758413273e-28,
+        -8.505908007036985e-16,
+        -1.5543910380704197e-13,
+        3.131165409242693e-14,
+        -6.589822676914007e-15,
+        1.2828809723942822e-14
+      ]
+    ],
+    "parameter_expansion": "disabled",
+    "portfolio_counts": {
+      "annealed_modes": 4,
+      "certified_modes": 2,
+      "conditional_modes": 385,
+      "searched_cells": 16,
+      "selected_annealed_modes": 2,
+      "selected_conditional_modes": 1
+    },
+    "prohibited_automatic_parameters": [
+      "PBDOT",
+      "EPS1DOT",
+      "EPS2DOT"
+    ],
+    "reduced_chi2": 1.8418005940808233,
+    "run_fingerprint": "1b1e5428fd2a8d91069c9140f8e84fff38041a5c65cc3bf0a38d7f921da4906b",
+    "schema_version": 2,
+    "source_cell_id": "C000007",
+    "source_grid_index": [
+      -1,
+      -1
+    ],
+    "support_boundary_hit": false,
+    "support_valid": true,
+    "target_reached": true,
+    "thresholds": {
+      "disk_reload_chi2_tolerance": 0.01,
+      "strict_reduced_chi2": 20.0,
+      "target_reduced_chi2": 10.0
+    },
+    "weighted_rms_us": 4.595895789721028
+  },
+  "command": [
+    "python",
+    "-m",
+    "timing_accelerator.pipeline.apollo_timing",
+    "--par",
+    "${BUNDLE}/recorded/prefix_archive/inputs/blind_f1_initial.par",
+    "--tim",
+    "${BUNDLE}/recorded/prefix_archive/inputs/prefixes/sessions_16_chronological_prefix.tim",
+    "--output",
+    "${BUNDLE}/recorded/prefix_archive/runs/prefix/n16",
+    "--source-type",
+    "binary",
+    "--orbital-samples-per-cell",
+    "2",
+    "--phase-samples",
+    "12",
+    "--modes-per-cell",
+    "32",
+    "--chart-evaluations",
+    "60",
+    "--maximum-modes-to-anneal",
+    "24",
+    "--maximum-modes-to-certify",
+    "16",
+    "--blind-workers",
+    "1",
+    "--no-observation-plan"
+  ],
+  "finished_unix": 1788280220.410513,
+  "input": {
+    "par": "${BUNDLE}/recorded/prefix_archive/inputs/blind_f1_initial.par",
+    "tim": "${BUNDLE}/recorded/prefix_archive/inputs/prefixes/sessions_16_chronological_prefix.tim"
+  },
+  "max_rss_kib": 279412,
+  "orbit_discovery": {
+    "available": true,
+    "best_candidate": {
+      "A1": 23.46152364660487,
+      "PB": 17.526264471834484,
+      "TASC": 59362.51422548455,
+      "eccentricity": 9.999999999792401e-11
+    },
+    "initialized_modes": 1,
+    "matching_modes": 1,
+    "orbit_initialized": true,
+    "prior_boundary": false
+  },
+  "outcome": "phase_connected",
+  "outcome_reason": "blind_certified_path",
+  "par_sha256": "77148abcfee6ac2314d1d65131edd48081ba53c39a5e645a16cc2da7b46ab1b1",
+  "phase_timings": {},
+  "protocol_sha256": "04b92592fe8af0cbb2073fa5c23b4638e52e9c18f471b182a80ff7ad39ecaa96",
+  "pulse_path": {
+    "exact": true,
+    "global_offset": -91.0,
+    "matched_toas": 68
+  },
+  "result_artifacts": {
+    "audit.json": {
+      "path": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n16/audit.json",
+      "sha256": "0cd0b3bf3caaf278b3543ceb32917fd6bc0bf8d1dd394c91d0fed4e21b087374"
+    },
+    "certification.json": {
+      "path": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n16/certification.json",
+      "sha256": "1b2778c4a24f7fbcd1400ee7829b04e835ab5d52529acc7a1441605443a03e20"
+    },
+    "solution.par": {
+      "path": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n16/solution.par",
+      "sha256": "3b6738266df55cce6bd1cd0c48207e408c6fd950736a235783f5c1b549998d89"
+    },
+    "solution.tim": {
+      "path": "${BUNDLE}/recorded/prefix_archive/runs/prefix/n16/solution.tim",
+      "sha256": "442d840397ea6878646d0ab2ea533ea47c30357259d6fb172f31fc40989d9e8e"
+    }
+  },
+  "return_code": 0,
+  "run_tag": "blind_f1_chronological_prefix_20260901",
+  "schema_version": 2,
+  "started_unix": 1788279539.2189798,
+  "stderr_sha256": "31e84c959307a8906009db85f970f43d36d91f5a2e5a8050a2794e65d60c7eef",
+  "stdout_sha256": "769f611efe268d3063e181dfe2d3ab8124f1f95a71fd60e73dd53abe7a9cc35b",
+  "system_cpu_seconds": 0.32411100000000004,
+  "tim_sha256": "abb03aa7364b1cb7d1c4c1e256a34f167d73933b5f67181a184a147f7f15c053",
+  "timeout": false,
+  "timeout_seconds": 43200,
+  "user_cpu_seconds": 679.0690869999999,
+  "wall_seconds": 681.1505510779098
+}

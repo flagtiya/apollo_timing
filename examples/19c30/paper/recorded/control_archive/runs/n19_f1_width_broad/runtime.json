@@ -1,0 +1,22 @@
+{
+  "case_id": "n19_f1_width_broad",
+  "counts": {
+    "accepted_candidates": 1,
+    "accepted_reference_agreements": 1,
+    "attempted_numerical_fits": 2,
+    "completed_numerical_fits": 2,
+    "conflicting_candidate_copies": 0,
+    "distinct_accepted_paths": 1,
+    "distinct_rejected_paths": 1,
+    "failed_numerical_fits": 0,
+    "portfolio_files": 1,
+    "raw_candidate_records": 2,
+    "rejected_candidates": 1,
+    "rejected_paths_distinct_from_accepted": 1,
+    "unavailable_accepted_paths": 0,
+    "unavailable_rejected_paths": 0
+  },
+  "return_code": 0,
+  "timeout": false,
+  "wall_seconds": 655.9246213239999
+}
