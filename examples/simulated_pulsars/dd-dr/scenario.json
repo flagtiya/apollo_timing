@@ -1,0 +1,39 @@
+{
+  "schema": 1,
+  "source_name": "SIM044",
+  "source_type": "binary",
+  "input_par": "PSRJ SIM044\nEPHEM                               DE421\nCLOCK                             TT(TAI)\nUNITS                                 TDB\nDILATEFREQ                              N\nDMDATA                                  N\nNTOA                                    0\nRAJ                     12:00:00.00000000\nDECJ                    10:00:00.00000000\nPMRA                                  0.0\nPMDEC                                 0.0\nPX                                    0.0\nPOSEPOCH           59000.0000000000000000\nF0                                  100.0\nF1                                    0.0\nPEPOCH             59000.0000000000000000\nPLANET_SHAPIRO                          N\nDM                                   10.0\nDMEPOCH            59000.0000000000000000\nBINARY                                 DD\nPB                                    3.0\nPBDOT                                 0.0\nA1                                    1.0\nA1DOT                                 0.0\nECC                                   0.1\nEDOT                                  0.0\nT0                 59000.0000000000000000\nOM                                   40.0\nOMDOT                                 0.0\nM2                                    0.5\nSINI                                  0.7\nA0                                    0.0\nB0                                    0.0\nGAMMA                                 0.0\nDR                                    0.0\nDTH                                   0.0\n",
+  "signals": [
+    {
+      "parameter": "DR",
+      "null": 0.0,
+      "increment": 0.1,
+      "bounds": [
+        -0.4,
+        0.4
+      ],
+      "units": "dimensionless"
+    }
+  ],
+  "nuisance_bounds": {
+    "F0": [
+      99.9999999,
+      100.0000001
+    ],
+    "F1": [
+      -1e-14,
+      1e-14
+    ]
+  },
+  "cadence": {
+    "epochs": 48,
+    "half_span_days": 730,
+    "frequencies_mhz": [
+      700,
+      1400,
+      2100
+    ],
+    "error_us": 0.1
+  },
+  "seed": 1729
+}

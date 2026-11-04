@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "input_contract": {
+    "provided_parameters": ["RAJ", "DECJ", "F0", "F1", "PEPOCH", "PB"],
+    "inferred_parameters": ["A1", "TASC", "EPS1", "EPS2"],
+    "forbidden_search_inputs": [
+      "published_solution",
+      "source_class_prior",
+      "manual_pulse_wraps"
+    ],
+    "prohibited_automatic_parameters": [
+      "F2",
+      "PBDOT",
+      "XDOT",
+      "EPS1DOT",
+      "EPS2DOT"
+    ]
+  },
+  "bootstrap": {
+    "informative_session_toas": 39,
+    "mode_count": 1,
+    "informative_session_chi2": 17.01272449194586,
+    "all_session_shape_chi2": 176.6934036151072
+  },
+  "full_solver": {
+    "fit_parameters": [
+      "RAJ",
+      "DECJ",
+      "F0",
+      "F1",
+      "PB",
+      "A1",
+      "TASC",
+      "EPS1",
+      "EPS2"
+    ],
+    "searched_cells": 27,
+    "annealed_modes": 4,
+    "certified_modes": 1,
+    "chi2": 182.8643388884994,
+    "reduced_chi2": 1.2877770344260522,
+    "weighted_rms_us": 90.40068449955714,
+    "disk_reload_chi2_delta": 0.00013363743323679955,
+    "accepted": true,
+    "target_reached": true
+  },
+  "reference_wall_time": {
+    "seconds": 122.567,
+    "scope": "fresh end-to-end solver process without resume",
+    "note": "Hardware and filesystem-cache dependent; not an acceptance threshold."
+  }
+}
+

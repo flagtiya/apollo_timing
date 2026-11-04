@@ -1,0 +1,61 @@
+{
+  "schema": 1,
+  "source_name": "SIM090",
+  "source_type": "binary",
+  "input_par": "PSRJ SIM090\nEPHEM                               DE421\nCLOCK                             TT(TAI)\nUNITS                                 TDB\nDILATEFREQ                              N\nDMDATA                                  N\nNTOA                                    0\nRAJ                     12:00:00.00000000\nDECJ                    10:00:00.00000000\nPMRA                                  0.0\nPMDEC                                 0.0\nPX                                    0.0\nPOSEPOCH           59000.0000000000000000\nF0                                  100.0\nF1                                    0.0\nPEPOCH             59000.0000000000000000\nPLANET_SHAPIRO                          N\nDM                                   10.0\nDMEPOCH            59000.0000000000000000\nBINARY                               ELL1\nPB                                    3.0\nA1                                    1.0\nTASC               59000.0000000000000000\nEPS1                                0.001\nEPS2                                0.002\n",
+  "signals": [
+    {
+      "parameter": "EPS1",
+      "null": 0.0,
+      "increment": 0.0001,
+      "bounds": [
+        -0.0004,
+        0.0004
+      ],
+      "units": "dimensionless"
+    },
+    {
+      "parameter": "EPS2",
+      "null": 0.0,
+      "increment": 0.0002,
+      "bounds": [
+        -0.0008,
+        0.0008
+      ],
+      "units": "dimensionless"
+    }
+  ],
+  "nuisance_bounds": {
+    "F0": [
+      99.9999999,
+      100.0000001
+    ],
+    "F1": [
+      -1e-14,
+      1e-14
+    ],
+    "PB": [
+      2.999,
+      3.001
+    ],
+    "A1": [
+      0.99,
+      1.01
+    ],
+    "TASC": [
+      58999.99,
+      59000.01
+    ]
+  },
+  "cadence": {
+    "epochs": 64,
+    "half_span_days": 730,
+    "frequencies_mhz": [
+      700,
+      1400,
+      2100
+    ],
+    "error_us": 0.1
+  },
+  "seed": 1729
+}

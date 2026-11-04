@@ -1,0 +1,53 @@
+{
+  "schema": 1,
+  "source_name": "SIM095",
+  "source_type": "single",
+  "input_par": "PSRJ SIM095\nEPHEM                               DE421\nCLOCK                             TT(TAI)\nUNITS                                 TDB\nDILATEFREQ                              N\nDMDATA                                  N\nNTOA                                    0\nRAJ                     12:00:00.00000000\nDECJ                    10:00:00.00000000\nPMRA                                  0.0\nPMDEC                                 0.0\nPX                                    0.0\nPOSEPOCH           59000.0000000000000000\nF0                                  100.0\nF1                                    0.0\nPEPOCH             59000.0000000000000000\nPLANET_SHAPIRO                          N\nDM                                   10.0\nDM1                                   0.0\nDM2                                   0.0\nDMEPOCH            59000.0000000000000000\n",
+  "signals": [
+    {
+      "parameter": "DM1",
+      "null": 0.0,
+      "increment": 0.03,
+      "bounds": [
+        -0.12,
+        0.12
+      ],
+      "units": "pc / (yr cm3)"
+    },
+    {
+      "parameter": "DM2",
+      "null": 0.0,
+      "increment": 0.02,
+      "bounds": [
+        -0.08,
+        0.08
+      ],
+      "units": "pc / (yr2 cm3)"
+    }
+  ],
+  "nuisance_bounds": {
+    "F0": [
+      99.9999999,
+      100.0000001
+    ],
+    "F1": [
+      -1e-14,
+      1e-14
+    ],
+    "DM": [
+      9.9,
+      10.1
+    ]
+  },
+  "cadence": {
+    "epochs": 64,
+    "half_span_days": 730,
+    "frequencies_mhz": [
+      700,
+      1400,
+      2100
+    ],
+    "error_us": 0.1
+  },
+  "seed": 1729
+}

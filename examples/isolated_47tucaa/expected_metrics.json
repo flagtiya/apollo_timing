@@ -1,0 +1,7 @@
+{
+  "model_family": "isolated",
+  "fit_parameters": ["F0", "F1"],
+  "maximum_chi2": 1e-6,
+  "maximum_disk_reload_chi2_delta": 1e-12,
+  "expected_toa_count": 49
+}

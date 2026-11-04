@@ -34,7 +34,121 @@ apollo-timing --version
 
 Ephemerides, observatory clocks and PRESTO are obtained separately. Replace the PAR, TIM, FITS and resource paths below with your own files. Use a different output directory for each new run.
 
-## Timing Examples
+## Bundled Examples
+
+Run these commands from the repository root after installation. Set the ephemeris directory to your own resource location. Examples use DE421 unless noted otherwise.
+
+```bash
+export APOLLO_TIMING_EPHEM_DIR=/path/to/ephemerides
+```
+
+### 19C30: Binary Timing
+
+The PSR J1912-1215 example includes 96 TOAs. Check the inputs, evaluate the supplied reference path, or run a full connection search:
+
+```bash
+python examples/19c30/run.py --verify-only \
+  --output "$HOME/apollo-runs/19c30-inputs"
+
+python examples/19c30/run.py --workflow evaluate \
+  --output "$HOME/apollo-runs/19c30-evaluate"
+
+python examples/19c30/run.py --workflow solve \
+  --output "$HOME/apollo-runs/19c30-solve"
+```
+
+To try an update from the supplied reference model, or automatic system comparison:
+
+```bash
+python examples/19c30/run.py --workflow update \
+  --output "$HOME/apollo-runs/19c30-update"
+
+python examples/19c30/run.py --workflow auto-discovery \
+  --output "$HOME/apollo-runs/19c30-auto"
+```
+
+Input checks and fixed-path evaluation are not blind searches. The solve and discovery commands can take substantially longer.
+
+### J1928: Initialize An Incomplete Binary Model
+
+This example requires DE440.
+
+```bash
+apollo-bootstrap-ell1 \
+  --par examples/j1928_coarse_ell1/coarse.par \
+  --tim examples/j1928_coarse_ell1/observations.tim \
+  --output "$HOME/apollo-runs/j1928-bootstrap"
+
+apollo-timing \
+  --par examples/j1928_coarse_ell1/coarse.par \
+  --tim examples/j1928_coarse_ell1/observations.tim \
+  --output "$HOME/apollo-runs/j1928-solve"
+```
+
+### 47 Tuc AA: Single-Star Fixture
+
+```bash
+apollo-timing --source-type single \
+  --par examples/isolated_47tucaa/initial.par \
+  --tim examples/isolated_47tucaa/data.tim \
+  --output "$HOME/apollo-runs/47tucaa" --no-observation-plan
+
+python examples/isolated_47tucaa/run.py --retained-paths 32 \
+  --output "$HOME/apollo-runs/47tucaa-path-check"
+```
+
+This synthetic fixture checks runtime and connection ambiguity. Inspect the path-check report; a small residual alone does not establish reference-path recovery.
+
+### Simulated Sources: Parameters And Connections
+
+List the 95 parameter cases, run a single null/injection comparison, or run the parameter suite:
+
+```bash
+python examples/simulated_pulsars/run.py --list
+
+python examples/simulated_pulsars/run.py --case single-f2 \
+  --output "$HOME/apollo-runs/sim-f2"
+
+python examples/simulated_pulsars/run.py --workers 4 \
+  --output "$HOME/apollo-runs/sim-parameters"
+```
+
+Separate examples cover isolated connection recovery, eccentric and Shapiro model comparisons, and observing plans with ambiguous candidates:
+
+```bash
+bash examples/simulated_pulsars/isolated-connection/run.sh \
+  "$HOME/apollo-runs/sim-connection"
+
+bash examples/simulated_pulsars/eccentric-model/run.sh \
+  "$HOME/apollo-runs/sim-eccentric"
+
+bash examples/simulated_pulsars/shapiro-model/run.sh \
+  "$HOME/apollo-runs/sim-shapiro"
+
+bash examples/simulated_pulsars/ambiguity-planning/run.sh \
+  "$HOME/apollo-runs/sim-planning"
+```
+
+Check parameter intervals and the joint sky-position limit:
+
+```bash
+bash examples/simulated_pulsars/parameter-ranges/run.sh \
+  "$HOME/apollo-runs/sim-ranges" 4
+
+bash examples/simulated_pulsars/sky-position/run.sh \
+  "$HOME/apollo-runs/sim-sky"
+```
+
+Parameter and model comparisons use known pulse paths; the isolated-connection example searches without input pulse numbers. All generated results go to the specified external directories.
+
+The separate noiseless parameter checks can be run with:
+
+```bash
+python examples/parameter_exploration/run.py --case single-F2 \
+  --output "$HOME/apollo-runs/parameter-check"
+```
+
+## Commands For Your Own Data
 
 ### Automatic Isolated Or Binary Dispatch
 

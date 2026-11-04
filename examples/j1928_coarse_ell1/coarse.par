@@ -1,0 +1,18 @@
+PSRJ           J1928+1815
+RAJ             19:28:08.3498    
+DECJ           +18:15:30.25    
+F0             94.791231418508138102  
+F1             -3.2649355565125076364e-14 
+PEPOCH         59408                       
+POSEPOCH       59408                       
+DMEPOCH        59408                       
+DM             346.15755877791453465      
+BINARY         ELL1
+PB             0.1499024626247338651          
+CLK            TT(TAI)
+MODE 1
+UNITS          TDB
+EPHEM          DE440
+NITS           1
+NTOA           152
+CHI2R          1.2961 140

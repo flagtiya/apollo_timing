@@ -34,7 +34,121 @@ apollo-timing --version
 
 星历、台站钟差和 PRESTO 需自行准备。以下命令中的 PAR、TIM、FITS 和资源路径均替换为自己的文件；每次新运行使用不同的输出目录。
 
-## 定时示例
+## 内置示例
+
+安装后在仓库根目录运行。星历目录替换为自己的资源位置；除单独注明外，示例使用 DE421。
+
+```bash
+export APOLLO_TIMING_EPHEM_DIR=/path/to/ephemerides
+```
+
+### 19C30：双星定时
+
+PSR J1912-1215 示例包含 96 个 TOA，可分别检查输入、评价给定参考路径或搜索完整连接：
+
+```bash
+python examples/19c30/run.py --verify-only \
+  --output "$HOME/apollo-runs/19c30-inputs"
+
+python examples/19c30/run.py --workflow evaluate \
+  --output "$HOME/apollo-runs/19c30-evaluate"
+
+python examples/19c30/run.py --workflow solve \
+  --output "$HOME/apollo-runs/19c30-solve"
+```
+
+还可从给定参考模型执行更新，或自动比较单星与双星：
+
+```bash
+python examples/19c30/run.py --workflow update \
+  --output "$HOME/apollo-runs/19c30-update"
+
+python examples/19c30/run.py --workflow auto-discovery \
+  --output "$HOME/apollo-runs/19c30-auto"
+```
+
+输入检查与固定路径评价不执行盲搜。完整求解和轨道发现可能需要较长时间。
+
+### J1928：不完整双星模型初始化
+
+此例使用 DE440。
+
+```bash
+apollo-bootstrap-ell1 \
+  --par examples/j1928_coarse_ell1/coarse.par \
+  --tim examples/j1928_coarse_ell1/observations.tim \
+  --output "$HOME/apollo-runs/j1928-bootstrap"
+
+apollo-timing \
+  --par examples/j1928_coarse_ell1/coarse.par \
+  --tim examples/j1928_coarse_ell1/observations.tim \
+  --output "$HOME/apollo-runs/j1928-solve"
+```
+
+### 47 Tuc AA：单星测试数据
+
+```bash
+apollo-timing --source-type single \
+  --par examples/isolated_47tucaa/initial.par \
+  --tim examples/isolated_47tucaa/data.tim \
+  --output "$HOME/apollo-runs/47tucaa" --no-observation-plan
+
+python examples/isolated_47tucaa/run.py --retained-paths 32 \
+  --output "$HOME/apollo-runs/47tucaa-path-check"
+```
+
+此模拟数据用于耗时与连接歧义检查。参考路径是否恢复应查看路径检查报告，不能只看残差大小。
+
+### 模拟源：参数比较与相位连接
+
+列出 95 个参数案例、运行单个空信号／注入对照，或执行整组参数示例：
+
+```bash
+python examples/simulated_pulsars/run.py --list
+
+python examples/simulated_pulsars/run.py --case single-f2 \
+  --output "$HOME/apollo-runs/sim-f2"
+
+python examples/simulated_pulsars/run.py --workers 4 \
+  --output "$HOME/apollo-runs/sim-parameters"
+```
+
+另有单星连接恢复、偏心轨道模型比较、Shapiro 模型比较和多候选观测规划：
+
+```bash
+bash examples/simulated_pulsars/isolated-connection/run.sh \
+  "$HOME/apollo-runs/sim-connection"
+
+bash examples/simulated_pulsars/eccentric-model/run.sh \
+  "$HOME/apollo-runs/sim-eccentric"
+
+bash examples/simulated_pulsars/shapiro-model/run.sh \
+  "$HOME/apollo-runs/sim-shapiro"
+
+bash examples/simulated_pulsars/ambiguity-planning/run.sh \
+  "$HOME/apollo-runs/sim-planning"
+```
+
+参数区间与位置总角距离限制示例：
+
+```bash
+bash examples/simulated_pulsars/parameter-ranges/run.sh \
+  "$HOME/apollo-runs/sim-ranges" 4
+
+bash examples/simulated_pulsars/sky-position/run.sh \
+  "$HOME/apollo-runs/sim-sky"
+```
+
+参数和模型比较使用已知脉冲路径；单星连接示例不提供输入脉冲编号。生成结果均写入指定的源码目录外路径。
+
+另有独立的无噪声参数检查：
+
+```bash
+python examples/parameter_exploration/run.py --case single-F2 \
+  --output "$HOME/apollo-runs/parameter-check"
+```
+
+## 使用自己的数据
 
 ### 自动选择单星或双星流程
 

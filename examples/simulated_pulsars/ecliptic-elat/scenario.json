@@ -1,0 +1,39 @@
+{
+  "schema": 1,
+  "source_name": "SIM030",
+  "source_type": "single",
+  "input_par": "PSRJ SIM030\nEPHEM                               DE421\nCLOCK                             TT(TAI)\nUNITS                                 TDB\nDILATEFREQ                              N\nDMDATA                                  N\nNTOA                                    0\nELONG                 180.000000000000000\nELAT                   20.000000000000000\nPMELONG                               0.0\nPMELAT                                0.0\nPX                                    0.0\nECL                              IERS2010\nPOSEPOCH           59000.0000000000000000\nF0                                  100.0\nF1                                    0.0\nPEPOCH             59000.0000000000000000\nPLANET_SHAPIRO                          N\nDM                                   10.0\nDMEPOCH            59000.0000000000000000\n",
+  "signals": [
+    {
+      "parameter": "ELAT",
+      "null": 20.0,
+      "increment": 0.0001,
+      "bounds": [
+        19.9996,
+        20.0004
+      ],
+      "units": "deg"
+    }
+  ],
+  "nuisance_bounds": {
+    "F0": [
+      99.9999999,
+      100.0000001
+    ],
+    "F1": [
+      -1e-14,
+      1e-14
+    ]
+  },
+  "cadence": {
+    "epochs": 48,
+    "half_span_days": 730,
+    "frequencies_mhz": [
+      700,
+      1400,
+      2100
+    ],
+    "error_us": 0.1
+  },
+  "seed": 1729
+}

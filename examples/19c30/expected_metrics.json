@@ -1,0 +1,33 @@
+{
+  "example": "19C30 / PSR J1912-1215 full96 timing experiment",
+  "engine": "blind_keplerian_discovery_plus_phase_lattice",
+  "reference_kind": "archived blind full-data fit, post-run comparison only",
+  "toa_count": 96,
+  "phase_session_count": 23,
+  "observing_scan_count": 24,
+  "time_span_days": 1438.070208295468,
+  "pepoch_mjd": 59368,
+  "input_contains_binary_model": false,
+  "input_contains_orbital_parameters": false,
+  "searched_orbital_cycle_cells": 20,
+  "total_orbital_cycle_cells": 20,
+  "pint_chi2": 188.00517911734016,
+  "disk_reload_chi2": 188.00730754096887,
+  "disk_reload_chi2_delta": 0.0021284236287044678,
+  "reduced_chi2": 2.18610673392256,
+  "weighted_rms_us": 5.075427255489491,
+  "accepted": true,
+  "target_reached": true,
+  "fit_parameters": [
+    "RAJ",
+    "DECJ",
+    "F0",
+    "F1",
+    "PB",
+    "A1",
+    "TASC",
+    "EPS1",
+    "EPS2"
+  ],
+  "automatically_released_parameters": []
+}
