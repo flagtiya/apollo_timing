@@ -350,4 +350,4 @@ apollo-foldbank --help
 
 If you use APOLLO-Timing in scientific work, cite:
 
-Wen, Y. et al. (2025), “Long-Term Timing Analysis of PSR J1741-3016: Efficient Noise Characterization Using PINT,” [arXiv:2503.00338](https://arxiv.org/abs/2503.00338).
+
