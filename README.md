@@ -1,26 +1,28 @@
 # APOLLO-Timing 0.8.3
 
-APOLLO-Timing 用于单星和双星脉冲星定时，支持命令行和 Python 接口。
+English | [中文](README.zh-CN.md)
 
-## 功能
+APOLLO-Timing provides isolated and binary pulsar timing through command-line and Python interfaces.
 
-| 功能 | 用途 |
+## Features
+
+| Feature | Use |
 | --- | --- |
-| 相位连接与参数拟合 | 从 PAR/TIM 搜索连接，按输入拟合标记调整参数并保存备选结果 |
-| 模型评价 | 检查给定模型与脉冲路径，不重新拟合 |
-| 观测更新 | 将新增 TOA 加入已有定时任务 |
-| 轨道初始化与搜索 | 补全不完整双星输入，或在指定周期范围内寻找轨道 |
-| 参数与模型比较 | 比较额外参数及不同双星模型 |
-| 参数范围限制 | 设置参数硬区间和位置总角距离限制 |
-| 单星 glitch 拟合 | 显式搜索一次永久频率跃变，可同时拟合频率导数跃变 |
-| 观测规划 | 根据保留候选推荐后续观测时间 |
-| Foldbank | 生成 ELL1 参数文件库与 PRESTO 折叠命令 |
+| Phase connection and parameter fitting | Search connections from PAR/TIM files, fit parameters according to input fit flags, and retain alternatives |
+| Model evaluation | Check a supplied model and pulse path without refitting |
+| Timing updates | Add new TOAs to an existing timing task |
+| Orbit initialization and search | Complete incomplete binary inputs or search a specified period range |
+| Parameter and model comparison | Compare additional parameters and binary models |
+| Parameter limits | Set hard parameter intervals and a joint sky-position radius |
+| Single-star glitch fitting | Explicitly search for one permanent frequency step, optionally with a frequency-derivative step |
+| Observation planning | Recommend future observing times using retained candidates |
+| Foldbank | Generate ELL1 parameter banks and PRESTO folding commands |
 
-支持的双星模型：`BT`、`DD`、`DDS`、`DDGR`、`DDH`、`DDK`、`ELL1`、`ELL1H`、`ELL1k`、`BT_piecewise`。
+Supported binary models: `BT`, `DD`, `DDS`, `DDGR`, `DDH`, `DDK`, `ELL1`, `ELL1H`, `ELL1k`, and `BT_piecewise`.
 
-## 安装
+## Installation
 
-Linux 或 WSL，Python 3.11 及以上。在源码根目录运行：
+Use Linux or WSL with Python 3.11 or later. Run from the source root:
 
 ```bash
 python3 -m venv .venv
@@ -30,18 +32,18 @@ python -m pip install .
 apollo-timing --version
 ```
 
-星历、台站钟差和 PRESTO 需自行准备。以下命令中的 PAR、TIM、FITS 和资源路径均替换为自己的文件；每次新运行使用不同的输出目录。
+Ephemerides, observatory clocks and PRESTO are obtained separately. Replace the PAR, TIM, FITS and resource paths below with your own files. Use a different output directory for each new run.
 
-## 定时示例
+## Timing Examples
 
-### 自动选择单星或双星流程
+### Automatic Isolated Or Binary Dispatch
 
 ```bash
 apollo-timing --par source.par --tim observations.tim \
   --output "$HOME/apollo-runs/source"
 ```
 
-### 单星与双星求解
+### Isolated And Binary Solving
 
 ```bash
 apollo-timing --source-type single \
@@ -53,7 +55,7 @@ apollo-timing --source-type binary \
   --output "$HOME/apollo-runs/binary"
 ```
 
-### 评价已有结果
+### Evaluate An Existing Result
 
 ```bash
 apollo-timing --task evaluate \
@@ -61,7 +63,7 @@ apollo-timing --task evaluate \
   --output "$HOME/apollo-runs/evaluate"
 ```
 
-### 加入新观测
+### Add New Observations
 
 ```bash
 apollo-timing --task update \
@@ -69,16 +71,16 @@ apollo-timing --task update \
   --output "$HOME/apollo-runs/update"
 ```
 
-### 继续未完成的运行
+### Resume An Unfinished Run
 
-输入、配置及资源不变时，在原命令后加 `--resume`：
+Add `--resume` to the original command only when inputs, configuration and resources are unchanged:
 
 ```bash
 apollo-timing --par source.par --tim observations.tim \
   --output "$HOME/apollo-runs/source" --resume
 ```
 
-### 使用指定钟差和星历
+### Specify Clocks And Ephemerides
 
 ```bash
 apollo-timing --par source.par --tim observations.tim \
@@ -86,11 +88,11 @@ apollo-timing --par source.par --tim observations.tim \
   --output "$HOME/apollo-runs/local-resources"
 ```
 
-星历必须匹配 PAR 中的 `EPHEM`；也可用 `--ephem-dir /path/to/ephemerides` 指定星历目录。
+The ephemeris must match the PAR file's `EPHEM`. Alternatively, use `--ephem-dir /path/to/ephemerides` to specify a kernel directory.
 
-## 轨道与参数示例
+## Orbit And Parameter Examples
 
-### 搜索未知轨道
+### Search For An Unknown Orbit
 
 ```bash
 apollo-timing --source-type binary \
@@ -99,9 +101,9 @@ apollo-timing --source-type binary \
   --output "$HOME/apollo-runs/orbit-search"
 ```
 
-### 设置参数与位置范围
+### Set Parameter And Position Limits
 
-以下 F0 范围仅为示例，应按输入频率修改；区间不会自动开放固定参数。
+Adjust the example F0 interval to your input frequency. Setting a bound does not release a fixed parameter.
 
 ```bash
 apollo-timing --source-type binary \
@@ -110,7 +112,7 @@ apollo-timing --source-type binary \
   --output "$HOME/apollo-runs/bounded"
 ```
 
-### 比较额外参数
+### Compare Additional Parameters
 
 ```bash
 apollo-timing --source-type binary \
@@ -119,7 +121,7 @@ apollo-timing --source-type binary \
   --output "$HOME/apollo-runs/pbdot"
 ```
 
-### 比较双星模型
+### Compare Binary Models
 
 ```bash
 apollo-timing --binary-model-selection --binary-models ELL1 DD ELL1H \
@@ -127,9 +129,9 @@ apollo-timing --binary-model-selection --binary-models ELL1 DD ELL1H \
   --output "$HOME/apollo-runs/model-comparison"
 ```
 
-### 单星 glitch 搜索
+### Search For A Single-Star Glitch
 
-历元范围使用 TDB MJD，按自己的观测时间修改。
+Epoch bounds use TDB MJD. Adjust them to your observation span.
 
 ```bash
 apollo-timing --source-type single --glitch-search \
@@ -138,9 +140,9 @@ apollo-timing --source-type single --glitch-search \
   --output "$HOME/apollo-runs/glitch" --no-observation-plan
 ```
 
-## 观测规划
+## Observation Planning
 
-从已有运行目录生成后续观测建议：
+Generate observing recommendations from an existing run directory:
 
 ```bash
 apollo-observe --run-output "$HOME/apollo-runs/source" \
@@ -149,7 +151,7 @@ apollo-observe --run-output "$HOME/apollo-runs/source" \
 
 ## Foldbank
 
-输入粗略 ELL1 模型、训练 TOA 和对应 SEARCH 模式 PSRFITS，生成候选参数文件及折叠脚本：
+Supply a coarse ELL1 model, training TOAs and corresponding SEARCH-mode PSRFITS to generate candidate parameter files and folding scripts:
 
 ```bash
 apollo-foldbank --par coarse-ell1.par --tim training.tim \
@@ -159,22 +161,22 @@ apollo-foldbank --par coarse-ell1.par --tim training.tim \
   --output "$HOME/apollo-runs/foldbank"
 ```
 
-周期范围和 TOA 来源声明须与实际输入一致。默认只生成脚本；安装 PRESTO 后加 `--run-presto` 可执行折叠。
+Set the period range and TOA origin to match your actual inputs. By default, this generates scripts only. With PRESTO installed, add `--run-presto` to execute folding.
 
-## 输出
+## Outputs
 
-| 文件 | 内容 |
+| File | Contents |
 | --- | --- |
-| `run_summary.json` | 运行状态与结果摘要 |
-| `certification.json` | 候选验收结果与诊断 |
-| `solution.par`、`solution.tim` | 保存的模型与脉冲路径 |
-| `candidate_portfolio.json` | 保留的备选候选 |
-| `residuals.csv`、`residuals.png` | 残差数据与图 |
-| `observation_plan/` | 可生成时的观测建议 |
+| `run_summary.json` | Run status and result summary |
+| `certification.json` | Candidate acceptance checks and diagnostics |
+| `solution.par`, `solution.tim` | Saved model and pulse path |
+| `candidate_portfolio.json` | Retained alternative candidates |
+| `residuals.csv`, `residuals.png` | Residual data and plot |
+| `observation_plan/` | Observing recommendations, when available |
 
-先检查 JSON 状态；存在 `solution.par` 不表示运行已通过验收。
+Check the JSON status first. The presence of `solution.par` does not mean that the run passed acceptance checks.
 
-## Python 接口
+## Python API
 
 ```python
 from pathlib import Path
@@ -189,7 +191,7 @@ result = solve_apollo_timing(
 print(result.accepted, result.solution_par)
 ```
 
-## 命令帮助
+## Command Help
 
 ```bash
 apollo-timing --help
@@ -199,6 +201,6 @@ apollo-observe --help
 apollo-foldbank --help
 ```
 
-## 许可
+## License
 
 [MIT](LICENSE)
