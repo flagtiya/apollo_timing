@@ -1,0 +1,3 @@
+include LICENSE README.md THIRD_PARTY_NOTICES.md
+recursive-include src *.py *.json
+global-exclude __pycache__ *.py[cod]

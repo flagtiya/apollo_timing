@@ -1,0 +1,18 @@
+{
+  "project": "APOLLO-Timing",
+  "distribution_version": "0.8.3",
+  "source_version": "0.7.1+singlebinary.20261001",
+  "release_profile": "single-binary",
+  "public_source_types": [
+    "auto",
+    "single",
+    "binary"
+  ],
+  "public_entry_points": [
+    "apollo-timing",
+    "apollo-bootstrap-binary",
+    "apollo-bootstrap-ell1",
+    "apollo-observe",
+    "apollo-foldbank"
+  ]
+}
