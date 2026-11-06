@@ -13,7 +13,7 @@ This directory contains the timing experiments reported for PSR J1912-1215:
 
 Ready-to-view outputs: [prefix table](tables/prefixes.csv), [control table](tables/controls.csv), [path-count figure](figures/paper-path-counts.png), and [timing residuals](figures/epoch60604-residuals.png). The tables and figures are generated from the recorded experiments, not new blind runs.
 
-`recorded/` contains the historical results. `frozen/prefix/` contains the historical engine retained with the epoch-60604 run; its PINT backend hash matches the prefix-run record. A complete source-file match to the original prefix runs has not been established. `frozen/controls/` contains the engine saved for the stability controls. These are separate from the current `apollo_timing` package. Full numerical identity across dependency versions is not guaranteed; the complete original Python environments were not preserved here.
+`recorded/` contains the historical results. `frozen/prefix/` contains the historical engine retained with the epoch-60604 run. A complete source-file match to the original prefix runs has not been established. `frozen/controls/` contains the engine saved for the stability controls. These are separate from the current `apollo_timing` package. Full numerical identity across dependency versions is not guaranteed; the complete original Python environments were not preserved here.
 
 ## Check Recorded Results
 
@@ -24,7 +24,7 @@ python examples/19c30/paper/run.py --task verify \
   --output "$HOME/apollo-runs/paper-verify"
 ```
 
-This checks the distributed file hashes, recounts distinct accepted pulse paths, compares them with the reference and writes summary JSON/CSV. It does not run a new blind search. Input pulse numbers are compared only after inference in the recorded blind experiments.
+This recounts distinct accepted pulse paths, compares them with the reference and writes summary JSON/CSV. It does not run a new blind search. Input pulse numbers are compared only after inference in the recorded blind experiments.
 
 ## Generate Plots
 
@@ -84,6 +84,6 @@ Each invocation requires a new output directory outside the repository. The defa
 
 The paper's prefix counts describe accepted distinct paths, not all completed numerical fits. The second 19-session fit was rejected. The transferred 15-session fit is a fixed-path diagnostic and does not change the original blind-search count. The controls did not establish complete search coverage; likelihood ratios are not integrated evidence ratios or path probabilities.
 
-Machine names, user names, environment paths, raw logs and internal review drafts were omitted. `${BUNDLE}` marks paths resolved relative to this directory by the scripts. `${EXTERNAL_RESOURCE}` marks an omitted external resource or obsolete build location. Historical hash fields remain historical: use `files.sha256.json` for the actual distributed bytes. Recorded checkpoints and requests are evidence, not resumable caches after this sanitization.
+Machine names, user names, environment paths, raw logs and internal review drafts were omitted. `${BUNDLE}` marks paths resolved relative to this directory by the scripts. `${EXTERNAL_RESOURCE}` marks an omitted external resource or obsolete build location. Recorded checkpoints and requests are evidence, not resumable caches after this sanitization.
 
 The full long-running matrix has not been rerun as part of preparing this public bundle. Fresh verification results belong in the external output directory, not among the historical records.

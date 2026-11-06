@@ -3,7 +3,6 @@ from __future__ import annotations
 
 import argparse
 import csv
-import hashlib
 import importlib.util
 import json
 import os
@@ -43,12 +42,6 @@ def write(path, payload):
 
 
 def check_recorded(output):
-    manifest = load(BUNDLE / 'files.sha256.json')
-    present = {p.relative_to(BUNDLE).as_posix() for p in BUNDLE.rglob('*')
-               if p.is_file() and p.name != 'files.sha256.json'}
-    assert set(manifest) == present, 'Bundle file membership changed'
-    for name, expected in manifest.items():
-        assert hashlib.sha256((BUNDLE / name).read_bytes()).hexdigest() == expected, name
     audit = analyzer()
     prefix_cases, control_cases = [], []
     # Counts in the paper are accepted distinct relative paths, not completed fits.

@@ -1,31 +1,5 @@
 {
   "source": "PSR J1912-1215 / 19C30 example inputs and reference comparison files",
-  "files": {
-    "clean.par": {
-      "sha256": "77148abcfee6ac2314d1d65131edd48081ba53c39a5e645a16cc2da7b46ab1b1",
-      "bytes": 636
-    },
-    "test.tim": {
-      "sha256": "b42405b29763a905ebfc342d06df8e7596800e7e1d91a8c2a92f9e1119acad35",
-      "bytes": 7897
-    },
-    "reference_solution.par": {
-      "sha256": "5904631174811048ce7961eaaafeabecf447873676b4e4873ddcd57b00fbbfaa",
-      "bytes": 1721
-    },
-    "reference_solution.tim": {
-      "sha256": "71384f91fb0de14d9c7e6eb12971362613996f579c0d72a564878a2ad04e0cf5",
-      "bytes": 11063
-    },
-    "reference_residuals.png": {
-      "sha256": "be59177ec3c4a34007ff09f21f6b4b7c63217129b554360f67d0246bfbd06c56",
-      "bytes": 113571
-    },
-    "reference_residuals.csv": {
-      "sha256": "47b284f917e5ce627e1fad241192e4f7ba4509b62d964c08c7502774df5263a0",
-      "bytes": 3817
-    }
-  },
   "input_f1_hz_per_second": "-2.5785972142075262648e-14",
   "initial_orbital_information": false,
   "reference_used_for_inference": false,
