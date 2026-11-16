@@ -1,4 +1,4 @@
-# APOLLO-Timing 0.8.3
+# APOLLO-Timing 0.8.4
 
 English | [中文](README.zh-CN.md)
 
@@ -107,7 +107,7 @@ python examples/19c30/paper/run.py --task epoch60604 \
   --ephem-file /path/to/de421.bsp --output "$HOME/apollo-runs/paper-epoch60604"
 ```
 
-Plot commands and resource requirements are in the bundle guide. The historical paper records are separate from runs with the current 0.8.3 solver.
+Plot commands and resource requirements are in the bundle guide. The historical paper records are separate from runs with the current 0.8.4 solver.
 
 ### J1928: Initialize An Incomplete Binary Model
 
