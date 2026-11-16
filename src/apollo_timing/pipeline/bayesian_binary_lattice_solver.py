@@ -138,7 +138,8 @@ PARTIAL_ELL1_SOLVER_ARCHITECTURE = (
 COARSE_BINARY_SOLVER_ARCHITECTURE = (
     "apollo_canonical_keplerian_bootstrap_plus_bayesian_lattice_solver"
 )
-SOLVER_SCHEMA_VERSION = 17
+# Acquisition retains reference and start-profiled local integer paths.
+SOLVER_SCHEMA_VERSION = 18
 
 
 def _par_declares_binary_model(path: Path) -> bool:

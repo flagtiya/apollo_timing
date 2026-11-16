@@ -624,6 +624,21 @@ class TwoLevelPulseProfile:
     local_log_likelihood: float
 
 
+def local_pulse_component_candidates(
+    profile: TwoLevelPulseProfile,
+) -> tuple[tuple[tuple[int, ...], ...], ...]:
+    """Retain the reference path as well as the start's profiled integer path.
+
+    A phase error at the start can change nearest-integer assignments even
+    when the reference pulse counts are correct. Optimize the discrete paths
+    separately; re-rounding during continuous optimization is not equivalent.
+    """
+
+    profiled = profile.local_integer_offsets
+    reference = tuple(tuple(0 for _ in offsets) for offsets in profiled)
+    return (reference,) if reference == profiled else (reference, profiled)
+
+
 def circular_session_anchor_residuals(
     profile: TwoLevelPulseProfile,
     phase_sigma_cycles: float,

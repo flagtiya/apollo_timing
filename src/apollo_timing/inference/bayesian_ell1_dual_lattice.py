@@ -31,6 +31,7 @@ from apollo_timing.inference.bayesian_dual_lattice_enumerator import (
     _initialize_session_local_pulse_numbers,
     _session_shape_profile,
     infer_contiguous_source_sessions,
+    local_pulse_component_candidates,
     profile_fixed_local_pulse_component,
     profile_two_level_pulse_lattice,
     tile_orbital_cycle_support,
@@ -1097,12 +1098,12 @@ class PintELL1DualLatticeProjector:
         )
 
 
-def _local_component_at_state(
+def _local_components_at_state(
     projector: PintELL1DualLatticeProjector,
     state: np.ndarray,
     *,
     radius: int,
-) -> tuple[tuple[int, ...], ...]:
+) -> tuple[tuple[tuple[int, ...], ...], ...]:
     slow, fast = projector.support.denormalize(state)
     physical = projector.coordinates.combine_physical(slow, fast)
     profile = projector.evaluator.evaluate_values(
@@ -1110,7 +1111,7 @@ def _local_component_at_state(
         local_integer_radius=max(int(radius), 0),
         maximum_retained_local_modes=1,
     )
-    return profile.local_integer_offsets
+    return local_pulse_component_candidates(profile)
 
 
 def locate_ell1_posterior_cell(
@@ -1407,78 +1408,81 @@ def search_ell1_orbital_cycle_cell(
 
     for grid_index, reference in starts:
         try:
-            local_component = _local_component_at_state(
+            local_components = _local_components_at_state(
                 projector,
                 reference,
                 radius=active.local_integer_radius,
             )
-            conditional = projector.profile_full_shape(
-                reference,
-                normalized_lower=lower,
-                normalized_upper=upper,
-                local_integer_offsets=local_component,
-                maximum_function_evaluations=active.fast_shape_maximum_evaluations,
-            )
-            linearization = projector.linearize_full(
-                conditional,
-                normalized_lower=lower,
-                normalized_upper=upper,
-                finite_difference_step=active.finite_difference_step,
-            )
-            prior_covariance = ell1_physical_prior_covariance(
-                context=context,
-                normalized_reference=conditional.normalized_values,
-                prior_sigma=sigma,
-            )
-            marginal: SpinIntegerMarginalEvaluation = marginalize_spin_and_integer_paths(
-                linearization,
-                spin_prior_mean=np.zeros(9, dtype=float),
-                spin_prior_covariance=prior_covariance,
-                config=active.lattice,
-            )
-            if not marginal.path_modes:
-                continue
-            path = marginal.path_modes[0]
-            posterior = conditional.normalized_values.copy()
-            posterior += np.asarray(path.spin_posterior_mean, dtype=float)
-            location = transport_ell1_posterior_to_support(
-                context=context,
-                reference_values=conditional.normalized_values,
-                posterior_values=posterior,
-            )
-            in_support = location is not None
-            physical = conditional.parameter_values
-            if in_support:
-                posterior = location.normalized_values
-                physical = location.parameter_values
-            strict_score = float(
-                marginal.shape_quadratic + path.squared_mahalanobis
-            )
-            modes.append(
-                ELL1ConditionalMode(
-                    cell_id=(location.cell.cell_id if location is not None else cell.cell_id),
-                    grid_index=grid_index,
-                    normalized_values=posterior,
-                    parameter_values=np.asarray(physical, dtype=float),
-                    local_integer_offsets=conditional.profile.local_integer_offsets,
-                    shape_chi2=float(conditional.profile.local_chi2),
-                    strict_score=strict_score,
-                    log_likelihood=float(marginal.log_likelihood),
-                    integer_offsets=tuple(int(value) for value in path.integer_offsets),
-                    posterior_weight=float(path.posterior_weight),
-                    lattice_mass_converged=bool(marginal.lattice_mass_converged),
-                    lattice_log_mass_increment=float(marginal.lattice_log_mass_increment),
-                    lattice_visited_nodes=int(marginal.lattice_visited_nodes),
-                    posterior_in_support=in_support,
-                    source_cell_id=cell.cell_id,
-                    posterior_transport_fraction=(
-                        location.transport_fraction if location is not None else 0.0
-                    ),
-                )
-            )
         except (ArithmeticError, RuntimeError, ValueError, np.linalg.LinAlgError):
             continue
-
+        for local_component in local_components:
+            try:
+                conditional = projector.profile_full_shape(
+                    reference,
+                    normalized_lower=lower,
+                    normalized_upper=upper,
+                    local_integer_offsets=local_component,
+                    maximum_function_evaluations=active.fast_shape_maximum_evaluations,
+                )
+                linearization = projector.linearize_full(
+                    conditional,
+                    normalized_lower=lower,
+                    normalized_upper=upper,
+                    finite_difference_step=active.finite_difference_step,
+                )
+                prior_covariance = ell1_physical_prior_covariance(
+                    context=context,
+                    normalized_reference=conditional.normalized_values,
+                    prior_sigma=sigma,
+                )
+                marginal: SpinIntegerMarginalEvaluation = marginalize_spin_and_integer_paths(
+                    linearization,
+                    spin_prior_mean=np.zeros(9, dtype=float),
+                    spin_prior_covariance=prior_covariance,
+                    config=active.lattice,
+                )
+                if not marginal.path_modes:
+                    continue
+                path = marginal.path_modes[0]
+                posterior = conditional.normalized_values.copy()
+                posterior += np.asarray(path.spin_posterior_mean, dtype=float)
+                location = transport_ell1_posterior_to_support(
+                    context=context,
+                    reference_values=conditional.normalized_values,
+                    posterior_values=posterior,
+                )
+                in_support = location is not None
+                physical = conditional.parameter_values
+                if in_support:
+                    posterior = location.normalized_values
+                    physical = location.parameter_values
+                strict_score = float(
+                    marginal.shape_quadratic + path.squared_mahalanobis
+                )
+                modes.append(
+                    ELL1ConditionalMode(
+                        cell_id=(location.cell.cell_id if location is not None else cell.cell_id),
+                        grid_index=grid_index,
+                        normalized_values=posterior,
+                        parameter_values=np.asarray(physical, dtype=float),
+                        local_integer_offsets=conditional.profile.local_integer_offsets,
+                        shape_chi2=float(conditional.profile.local_chi2),
+                        strict_score=strict_score,
+                        log_likelihood=float(marginal.log_likelihood),
+                        integer_offsets=tuple(int(value) for value in path.integer_offsets),
+                        posterior_weight=float(path.posterior_weight),
+                        lattice_mass_converged=bool(marginal.lattice_mass_converged),
+                        lattice_log_mass_increment=float(marginal.lattice_log_mass_increment),
+                        lattice_visited_nodes=int(marginal.lattice_visited_nodes),
+                        posterior_in_support=in_support,
+                        source_cell_id=cell.cell_id,
+                        posterior_transport_fraction=(
+                            location.transport_fraction if location is not None else 0.0
+                        ),
+                    )
+                )
+            except (ArithmeticError, RuntimeError, ValueError, np.linalg.LinAlgError):
+                continue
     modes.sort(
         key=lambda item: (
             not item.posterior_in_support,

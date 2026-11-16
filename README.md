@@ -20,6 +20,19 @@ APOLLO-Timing provides isolated and binary pulsar timing through command-line an
 
 Supported binary models: `BT`, `DD`, `DDS`, `DDGR`, `DDH`, `DDK`, `ELL1`, `ELL1H`, `ELL1k`, and `BT_piecewise`.
 
+### Native pulse-count acquisition repair
+
+The native generic and mature ELL1 cell searches retain both the reference
+within-session pulse-count component and the start-profiled component when they
+differ. Each discrete path is optimized with its pulse counts fixed; this adds
+no timing parameters or per-session phase jumps. It repairs a reproduced
+branch-loss blind spot, not exhaustive coverage of every integer path.
+
+Binary solver schema 18 rejects older search checkpoints because the candidate
+policy changed. Start a new output directory; existing results are not deleted
+or converted. The regression tests cover a noiseless 200-TOA case, exact
+relative pulse-path recovery, saved-file reload, and resume validation.
+
 ## Installation
 
 Use Linux or WSL with Python 3.11 or later. Run from the source root:

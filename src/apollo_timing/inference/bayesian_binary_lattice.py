@@ -47,6 +47,7 @@ from apollo_timing.inference.bayesian_dual_lattice_enumerator import (
     TwoLevelPulseProfile,
     _initialize_session_local_pulse_numbers,
     infer_contiguous_source_sessions,
+    local_pulse_component_candidates,
     profile_fixed_local_pulse_component,
     profile_two_level_pulse_lattice,
 )
@@ -956,19 +957,19 @@ class PintBinaryLatticeProjector:
         )
 
 
-def _local_component_at_state(
+def _local_components_at_state(
     projector: PintBinaryLatticeProjector,
     state: np.ndarray,
     *,
     radius: int,
-) -> tuple[tuple[int, ...], ...]:
+) -> tuple[tuple[tuple[int, ...], ...], ...]:
     physical = projector.support.denormalize_physical(state)
     profile = projector.evaluator.evaluate_values(
         physical,
         local_integer_radius=max(int(radius), 0),
         maximum_retained_local_modes=1,
     )
-    return profile.local_integer_offsets
+    return local_pulse_component_candidates(profile)
 
 
 def _continuous_prior_components(
@@ -1131,125 +1132,129 @@ def search_binary_orbital_cycle_cell(
     modes: list[BinaryConditionalMode] = []
     for grid_index, reference, start_component_id in unique_starts:
         try:
-            local_component = _local_component_at_state(
+            local_components = _local_components_at_state(
                 projector,
                 reference,
                 radius=active.local_integer_radius,
             )
-            conditional = projector.profile_full_shape(
-                reference,
-                normalized_lower=lower,
-                normalized_upper=upper,
-                local_integer_offsets=local_component,
-                maximum_function_evaluations=active.chart_maximum_evaluations,
-            )
-            linearization = projector.linearize_full(
-                conditional,
-                normalized_lower=lower,
-                normalized_upper=upper,
-                finite_difference_step=active.finite_difference_step,
-            )
-            components = _continuous_prior_components(
-                context,
-                reference=conditional.normalized_values,
-                default_sigma=active.coordinate_prior_sigma,
-            )
-            if start_component_id is not None:
-                components = tuple(
-                    component
-                    for component in components
-                    if component.component_id == start_component_id
-                )
-            for component in components:
-                marginal: SpinIntegerMarginalEvaluation = marginalize_spin_and_integer_paths(
-                    linearization,
-                    spin_prior_mean=(
-                        component.normalized_mean - conditional.normalized_values
-                    ),
-                    spin_prior_covariance=component.normalized_covariance,
-                    config=active.lattice,
-                )
-                paths = tuple(
-                    path
-                    for path in marginal.path_modes
-                    if _path_matches_prior_component(path.integer_offsets, component)
-                )
-                if not paths:
-                    continue
-                for path in paths[: max(int(active.paths_per_component), 1)]:
-                    unconstrained_posterior = (
-                        conditional.normalized_values
-                        + np.asarray(path.spin_posterior_mean, dtype=float)
-                    )
-                    try:
-                        posterior = _project_to_support_segment(
-                            reference=conditional.normalized_values,
-                            target=unconstrained_posterior,
-                            projector=projector,
-                            lower=lower,
-                            upper=upper,
-                            local_integer_offsets=local_component,
-                        )
-                    except (
-                        ArithmeticError,
-                        RuntimeError,
-                        ValueError,
-                        np.linalg.LinAlgError,
-                    ):
-                        continue
-                    try:
-                        exact = _select_coherent_fixed_path_state(
-                            projector=projector,
-                            normalized_states=(
-                                conditional.normalized_values,
-                                posterior,
-                            ),
-                            local_integer_offsets=local_component,
-                            integer_offsets=path.integer_offsets,
-                        )
-                    except ValueError:
-                        continue
-                    in_support = bool(
-                        context.support.contains_physical(exact.parameter_values)
-                    )
-                    modes.append(
-                        BinaryConditionalMode(
-                            model_name=context.evaluator.model_name,
-                            cell_id=cell.cell_id,
-                            grid_index=grid_index,
-                            normalized_values=exact.normalized_values.copy(),
-                            parameter_values=exact.parameter_values.copy(),
-                            local_integer_offsets=exact.local_integer_offsets,
-                            shape_chi2=exact.shape_chi2,
-                            phase_chi2=exact.phase_chi2,
-                            total_chi2=exact.total_chi2,
-                            strict_score=exact.total_chi2,
-                            log_likelihood=float(
-                                marginal.log_likelihood + component.log_weight
-                            ),
-                            integer_offsets=tuple(
-                                int(value) for value in path.integer_offsets
-                            ),
-                            posterior_weight=float(
-                                path.posterior_weight
-                                * math.exp(component.log_weight)
-                            ),
-                            lattice_mass_converged=bool(
-                                marginal.lattice_mass_converged
-                            ),
-                            lattice_log_mass_increment=float(
-                                marginal.lattice_log_mass_increment
-                            ),
-                            lattice_visited_nodes=int(
-                                marginal.lattice_visited_nodes
-                            ),
-                            posterior_in_support=in_support,
-                            prior_component_id=component.component_id,
-                            prior_log_weight=float(component.log_weight),
-                        )
-                    )
         except (ArithmeticError, RuntimeError, ValueError, np.linalg.LinAlgError):
             continue
+        for local_component in local_components:
+            try:
+                conditional = projector.profile_full_shape(
+                    reference,
+                    normalized_lower=lower,
+                    normalized_upper=upper,
+                    local_integer_offsets=local_component,
+                    maximum_function_evaluations=active.chart_maximum_evaluations,
+                )
+                linearization = projector.linearize_full(
+                    conditional,
+                    normalized_lower=lower,
+                    normalized_upper=upper,
+                    finite_difference_step=active.finite_difference_step,
+                )
+                components = _continuous_prior_components(
+                    context,
+                    reference=conditional.normalized_values,
+                    default_sigma=active.coordinate_prior_sigma,
+                )
+                if start_component_id is not None:
+                    components = tuple(
+                        component
+                        for component in components
+                        if component.component_id == start_component_id
+                    )
+                for component in components:
+                    marginal: SpinIntegerMarginalEvaluation = marginalize_spin_and_integer_paths(
+                        linearization,
+                        spin_prior_mean=(
+                            component.normalized_mean - conditional.normalized_values
+                        ),
+                        spin_prior_covariance=component.normalized_covariance,
+                        config=active.lattice,
+                    )
+                    paths = tuple(
+                        path
+                        for path in marginal.path_modes
+                        if _path_matches_prior_component(path.integer_offsets, component)
+                    )
+                    if not paths:
+                        continue
+                    for path in paths[: max(int(active.paths_per_component), 1)]:
+                        unconstrained_posterior = (
+                            conditional.normalized_values
+                            + np.asarray(path.spin_posterior_mean, dtype=float)
+                        )
+                        try:
+                            posterior = _project_to_support_segment(
+                                reference=conditional.normalized_values,
+                                target=unconstrained_posterior,
+                                projector=projector,
+                                lower=lower,
+                                upper=upper,
+                                local_integer_offsets=local_component,
+                            )
+                        except (
+                            ArithmeticError,
+                            RuntimeError,
+                            ValueError,
+                            np.linalg.LinAlgError,
+                        ):
+                            continue
+                        try:
+                            exact = _select_coherent_fixed_path_state(
+                                projector=projector,
+                                normalized_states=(
+                                    conditional.normalized_values,
+                                    posterior,
+                                ),
+                                local_integer_offsets=local_component,
+                                integer_offsets=path.integer_offsets,
+                            )
+                        except ValueError:
+                            continue
+                        in_support = bool(
+                            context.support.contains_physical(exact.parameter_values)
+                        )
+                        modes.append(
+                            BinaryConditionalMode(
+                                model_name=context.evaluator.model_name,
+                                cell_id=cell.cell_id,
+                                grid_index=grid_index,
+                                normalized_values=exact.normalized_values.copy(),
+                                parameter_values=exact.parameter_values.copy(),
+                                local_integer_offsets=exact.local_integer_offsets,
+                                shape_chi2=exact.shape_chi2,
+                                phase_chi2=exact.phase_chi2,
+                                total_chi2=exact.total_chi2,
+                                strict_score=exact.total_chi2,
+                                log_likelihood=float(
+                                    marginal.log_likelihood + component.log_weight
+                                ),
+                                integer_offsets=tuple(
+                                    int(value) for value in path.integer_offsets
+                                ),
+                                posterior_weight=float(
+                                    path.posterior_weight
+                                    * math.exp(component.log_weight)
+                                ),
+                                lattice_mass_converged=bool(
+                                    marginal.lattice_mass_converged
+                                ),
+                                lattice_log_mass_increment=float(
+                                    marginal.lattice_log_mass_increment
+                                ),
+                                lattice_visited_nodes=int(
+                                    marginal.lattice_visited_nodes
+                                ),
+                                posterior_in_support=in_support,
+                                prior_component_id=component.component_id,
+                                prior_log_weight=float(component.log_weight),
+                            )
+                        )
+            except (ArithmeticError, RuntimeError, ValueError, np.linalg.LinAlgError):
+                continue
     modes.sort(
         key=lambda item: (
             not item.posterior_in_support,
