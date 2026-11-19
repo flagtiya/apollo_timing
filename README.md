@@ -222,6 +222,8 @@ apollo-timing --source-type binary \
   --output "$HOME/apollo-runs/binary"
 ```
 
+**Single-star searches start in fast mode, without annealing.** If the candidate fails certification or misses the fit target, APOLLO automatically falls back to annealing. For a broader search, add `--single-deep-search` and use a new output directory.
+
 ### Evaluate An Existing Result
 
 ```bash

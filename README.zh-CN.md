@@ -220,6 +220,8 @@ apollo-timing --source-type binary \
   --output "$HOME/apollo-runs/binary"
 ```
 
+**单星默认先走快速搜索模式（没有退火）。** 如果候选解未通过认证或未达到拟合目标，APOLLO 会自动转入退火搜索。要主动扩大搜索范围，请加 `--single-deep-search`，并使用新的输出目录。
+
 ### 评价已有结果
 
 ```bash
