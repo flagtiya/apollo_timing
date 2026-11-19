@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "apollo-timing"
-version = "0.8.4"
+version = "0.8.5"
 description = "APOLLO isolated and Bayesian binary pulsar timing solver"
 readme = "README.md"
 requires-python = ">=3.11"

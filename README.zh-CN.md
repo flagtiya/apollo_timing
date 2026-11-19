@@ -1,4 +1,4 @@
-# APOLLO-Timing 0.8.4
+# APOLLO-Timing 0.8.5
 
 [English](README.md) | 中文
 
@@ -105,7 +105,7 @@ python examples/19c30/paper/run.py --task epoch60604 \
   --ephem-file /path/to/de421.bsp --output "$HOME/apollo-runs/paper-epoch60604"
 ```
 
-绘图命令与资源要求见实验包说明。论文历史记录与当前 0.8.4 求解器的新运行分开保存。
+绘图命令与资源要求见实验包说明。论文历史记录与当前 0.8.5 求解器的新运行分开保存。
 
 ### J1928：不完整双星模型初始化
 
