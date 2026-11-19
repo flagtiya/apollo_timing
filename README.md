@@ -139,6 +139,19 @@ python examples/isolated_47tucaa/run.py --retained-paths 32 \
 
 This synthetic fixture checks runtime and connection ambiguity. Inspect the path-check report; a small residual alone does not establish reference-path recovery.
 
+### J1744-1134: Reconnect Across An Observing Gap
+
+Use the narrowband PAR and TIM from the [NANOGrav 12.5-year release](https://nanograv.org/science/data/125-year-pulsar-timing-array-data-release). Select the first 20 distinct integer MJD days between 56000 and 57500 for `natural.tim`; keep only the first and last five of those days for `gap.tim`. Keep all TOAs on each selected day and remove input pulse numbers. For `seed.par`, retain the published sky and propagation model, freeze parameters except F0 and F1, and offset them by 2e-8 Hz and 1e-16 Hz/s respectively. Use ELONG/ELAT and PMELONG/PMELAT for ecliptic coordinates and proper motion.
+
+```bash
+for sample in gap natural; do
+  apollo-timing --source-type single --par seed.par --tim "$sample.tim" \
+    --output "$HOME/apollo-runs/j1744-$sample"
+done
+```
+
+Compute reference pulse numbers separately with the unmodified DE436 solution. Match TOAs by identifier, frequency and epoch. The output minus reference count must be constant across all 528 gap TOAs or all 1060 natural TOAs, including across the 145-day gap.
+
 ### Simulated Sources: Parameters And Connections
 
 List the 95 parameter cases, run a single null/injection comparison, or run the parameter suite:

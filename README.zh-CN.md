@@ -137,6 +137,19 @@ python examples/isolated_47tucaa/run.py --retained-paths 32 \
 
 此模拟数据用于耗时与连接歧义检查。参考路径是否恢复应查看路径检查报告，不能只看残差大小。
 
+### J1744-1134：跨观测缺口恢复相位连接
+
+使用 [NANOGrav 12.5 年公开数据](https://nanograv.org/science/data/125-year-pulsar-timing-array-data-release)中的窄带 PAR 和 TIM。在整数 MJD 大于 56000、小于 57500 的观测日中，取最早的 20 天生成 `natural.tim`，再取其中最早和最晚的各 5 天生成 `gap.tim`。保留所选日期的全部 TOA，移除输入脉冲编号。生成 `seed.par` 时保留发布模型的天球位置和传播参数，只放开 F0 和 F1，分别加上 2e-8 Hz 和 1e-16 Hz/s。黄道坐标和自行使用 ELONG/ELAT 和 PMELONG/PMELAT。
+
+```bash
+for sample in gap natural; do
+  apollo-timing --source-type single --par seed.par --tim "$sample.tim" \
+    --output "$HOME/apollo-runs/j1744-$sample"
+done
+```
+
+另用未扰动的 DE436 发布解计算参考编号，按 TOA 标识、频率和历元匹配。缺口组的 528 个 TOA、自然采样组的 1060 个 TOA 都应满足同一判据：组内输出编号与参考编号之差恒定，跨越 145 天缺口也不例外。
+
 ### 模拟源：参数比较与相位连接
 
 列出 95 个参数案例、运行单个空信号／注入对照，或执行整组参数示例：

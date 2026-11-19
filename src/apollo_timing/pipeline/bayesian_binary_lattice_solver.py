@@ -679,6 +679,31 @@ def _attach_mode_pulse_numbers(context: Any, mode: Any) -> Any:
     )
 
 
+def _isolated_spin_proposal(context: Any) -> BinaryAnnealedMode:
+    from apollo_timing.inference.isolated_spin_lut import propose_spin_lut_path
+
+    evaluator = context.evaluator
+    state = context.support.normalize_physical(evaluator.base_parameter_values)
+    physical = context.support.denormalize_physical(state)
+    phase = evaluator.raw_phase_residuals(physical)
+    offsets = propose_spin_lut_path(phase, evaluator.toas.table["tdbld"])
+    groups = [offsets[np.asarray(s.toa_indices, dtype=int)] for s in evaluator.sessions]
+    anchors = [int(group[0]) for group in groups]
+    local = tuple(tuple(int(v - group[0]) for v in group) for group in groups)
+    path = tuple(v - anchors[0] for v in anchors[1:])
+    exact = PintBinaryLatticeProjector(context).evaluate_fixed_path(
+        state, local_integer_offsets=local, integer_offsets=path,
+    )
+    return BinaryAnnealedMode(
+        model_name="ISOLATED", cell_id=context.cells[0].cell_id,
+        source_grid_index=(-3, 0), normalized_values=state,
+        parameter_values=exact.parameter_values, local_integer_offsets=local,
+        integer_offsets=path, shape_chi2=exact.shape_chi2,
+        phase_chi2=exact.phase_chi2, total_chi2=exact.total_chi2,
+        converged=False, trace=(),
+    )
+
+
 def _certify_mode(
     *,
     context: Any,
@@ -2447,17 +2472,37 @@ def _solve_phase_lattice_model(
         else (None, tuple())
     )
 
-    search_result = run_phase_lattice_search(
-        context=context, output=output, config=active,
-        run_fingerprint=run_fingerprint, model_name=model_name,
-        schema_version=SOLVER_SCHEMA_VERSION, resume=resume, backend=mature_backend,
-    )
-    all_conditional = search_result.conditional_modes
-    selected_conditional = search_result.selected_conditional_modes
-    all_annealed = search_result.annealed_modes
-    cell_summaries = search_result.cell_summaries
-    anneal_summaries = search_result.annealing_summaries
-    selected_annealed = _select_annealed_modes(all_annealed, active)
+    fast_mode = fast_record = None
+    if model_name == "ISOLATED" and update_conditioning is None and len(active.annealing.phase_sigma_schedule) == 3:
+        try:
+            proposal = _isolated_spin_proposal(context)
+            record = _certify_mode(
+                context=context, seed_par_path=par, mode=proposal,
+                candidate_id="spin_proposal", candidate_dir=output / "candidates" / "spin_proposal",
+                config=active, clock_override_path=clock_override,
+                run_fingerprint=run_fingerprint,
+            )
+            if record["accepted"] and record["target_reached"]:
+                fast_mode, fast_record = proposal, record
+            audit["isolated_spin_proposal"] = {"accepted": fast_mode is not None}
+        except (ArithmeticError, RuntimeError, ValueError, np.linalg.LinAlgError) as error:
+            audit["isolated_spin_proposal"] = {"accepted": False, "error": str(error)}
+        _atomic_json(audit_path, audit)
+    if fast_mode is None:
+        search_result = run_phase_lattice_search(
+            context=context, output=output, config=active,
+            run_fingerprint=run_fingerprint, model_name=model_name,
+            schema_version=SOLVER_SCHEMA_VERSION, resume=resume, backend=mature_backend,
+        )
+        all_conditional = search_result.conditional_modes
+        selected_conditional = search_result.selected_conditional_modes
+        all_annealed = search_result.annealed_modes
+        cell_summaries = search_result.cell_summaries
+        anneal_summaries = search_result.annealing_summaries
+        selected_annealed = _select_annealed_modes(all_annealed, active)
+    else:
+        all_conditional = selected_conditional = cell_summaries = anneal_summaries = ()
+        all_annealed = selected_annealed = (fast_mode,)
     if not selected_annealed:
         audit.update({
             "status": "failed",
@@ -2524,7 +2569,9 @@ def _solve_phase_lattice_model(
         candidate_id = f"candidate_{rank:04d}"
         candidate_dir = output / "candidates" / candidate_id
         candidate_checkpoint = candidate_dir / "certification.json"
-        if resume and candidate_checkpoint.is_file():
+        if fast_record is not None:
+            record = fast_record
+        elif resume and candidate_checkpoint.is_file():
             record = json.loads(candidate_checkpoint.read_text(encoding="utf-8"))
             _require_current_schema(
                 record,

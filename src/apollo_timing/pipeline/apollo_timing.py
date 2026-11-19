@@ -692,7 +692,8 @@ def build_arg_parser() -> argparse.ArgumentParser:
             "single 0 for the no-annealing ablation."
         ),
     )
-    parser.add_argument("--maximum-modes-to-anneal", type=int, default=24)
+    parser.add_argument("--maximum-modes-to-anneal", type=int)
+    parser.add_argument("--single-deep-search", action="store_true", help="Use the legacy deep annealing budget for isolated cold starts.")
     parser.add_argument("--maximum-modes-to-certify", type=int, default=16)
     parser.add_argument("--fit-iterations", type=int, default=10)
     parser.add_argument("--strict-reduced-chi2", type=float, default=20.0)
@@ -848,7 +849,7 @@ def main(argv: Sequence[str] | None = None) -> int:
             chart_maximum_evaluations=args.chart_evaluations,
         ),
         annealing=annealing,
-        maximum_modes_to_anneal=args.maximum_modes_to_anneal,
+        maximum_modes_to_anneal=24 if args.maximum_modes_to_anneal is None else args.maximum_modes_to_anneal,
         maximum_modes_to_certify=args.maximum_modes_to_certify,
         fit_iterations=args.fit_iterations,
         strict_reduced_chi2_threshold=args.strict_reduced_chi2,
@@ -875,7 +876,7 @@ def main(argv: Sequence[str] | None = None) -> int:
     )
     isolated_config = IsolatedPulsarSolverConfig(
         sky_radius_arcmin=args.sky_radius_arcmin,
-        annealing=IsolatedAnnealingConfig(phase_sigma_schedule=tuple(args.phase_sigma_schedule)) if args.phase_sigma_schedule is not None else IsolatedAnnealingConfig(),
+        annealing=IsolatedAnnealingConfig(phase_sigma_schedule=tuple(args.phase_sigma_schedule)) if args.phase_sigma_schedule is not None else (IsolatedAnnealingConfig.deep() if args.single_deep_search else IsolatedAnnealingConfig()),
         parameter_policy=args.parameter_policy,
         parameter_exploration=exploration,
         maximum_cell_width=args.maximum_cell_width,
@@ -886,7 +887,10 @@ def main(argv: Sequence[str] | None = None) -> int:
             modes_per_cell=args.modes_per_cell,
             chart_maximum_evaluations=args.chart_evaluations,
         ),
-        maximum_modes_to_anneal=args.maximum_modes_to_anneal,
+        maximum_modes_to_anneal=(
+            (24 if args.single_deep_search else IsolatedPulsarSolverConfig().maximum_modes_to_anneal)
+            if args.maximum_modes_to_anneal is None else args.maximum_modes_to_anneal
+        ),
         maximum_modes_to_certify=args.maximum_modes_to_certify,
         fit_iterations=args.fit_iterations,
         strict_reduced_chi2_threshold=args.strict_reduced_chi2,

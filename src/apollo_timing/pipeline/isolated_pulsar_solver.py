@@ -119,33 +119,38 @@ class IsolatedCellSearchConfig:
 class IsolatedAnnealingConfig:
     """Single-star phase-noise transport controls."""
 
-    phase_sigma_schedule: tuple[float, ...] = (
-        0.10,
-        0.05,
-        0.02,
-        0.01,
-        0.005,
-        0.002,
-        0.001,
-        0.0005,
-        0.0002,
-        0.0001,
-        0.0,
-    )
+    phase_sigma_schedule: tuple[float, ...] = (0.02, 0.005, 0.0)
     coordinate_prior_sigma: float = 0.20
     paths_per_state: int = 3
     integer_path_transport: bool = True
-    beam_size: int = 4
+    beam_size: int = 2
     finite_difference_step: float = 2.0e-5
-    maximum_closure_evaluations: int = 300
+    maximum_closure_evaluations: int = 80
     lattice: SpinIntegerMarginalConfig = field(
         default_factory=lambda: SpinIntegerMarginalConfig(
-            initial_lattice_candidates=32,
-            maximum_lattice_candidates=128,
+            initial_lattice_candidates=16,
+            maximum_lattice_candidates=32,
             lattice_log_mass_tolerance=1.0e-6,
-            maximum_lattice_nodes=1_000_000,
+            maximum_lattice_nodes=100_000,
         )
     )
+
+    @classmethod
+    def deep(cls) -> IsolatedAnnealingConfig:
+        return cls(
+            phase_sigma_schedule=(
+                0.10, 0.05, 0.02, 0.01, 0.005, 0.002,
+                0.001, 0.0005, 0.0002, 0.0001, 0.0,
+            ),
+            beam_size=4,
+            maximum_closure_evaluations=300,
+            lattice=SpinIntegerMarginalConfig(
+                initial_lattice_candidates=32,
+                maximum_lattice_candidates=128,
+                lattice_log_mass_tolerance=1.0e-6,
+                maximum_lattice_nodes=1_000_000,
+            ),
+        )
 
     def __post_init__(self) -> None:
         schedule = tuple(float(value) for value in self.phase_sigma_schedule)
@@ -198,7 +203,7 @@ class IsolatedPulsarSolverConfig:
     annealing: IsolatedAnnealingConfig = field(
         default_factory=IsolatedAnnealingConfig
     )
-    maximum_modes_to_anneal: int = 8
+    maximum_modes_to_anneal: int = 4
     conditional_score_window: float = 2_000.0
     maximum_modes_to_certify: int = 8
     annealed_chi2_window: float = 2_000.0
@@ -339,6 +344,8 @@ def _write_automatic_isolated_fit_par(source: Path, target: Path) -> Path:
         astrometry = ("RAJ", "DECJ")
     elif {"ELONG", "ELAT"}.issubset(parameter_names):
         astrometry = ("ELONG", "ELAT")
+    elif {"LAMBDA", "BETA"}.issubset(parameter_names):
+        astrometry = ("LAMBDA", "BETA")
     else:
         raise ValueError(
             "Automatic isolated fitting requires RAJ/DECJ or ELONG/ELAT in the input par."
